@@ -1,3 +1,29 @@
 //-------------------------------------------------------
 //- Modules :: Selectbox
 //-------------------------------------------------------
+
+//- Select option
+mixin selectbox({ id, options, size, disabled, valid, noticeError})
+  select.custom-select(
+    id= id ? id : null
+    class=size ? `custom-select--${size}` : null
+    class= valid ? 'is-valid' : 'is-invalid'
+    disabled= disabled ? disabled : null
+  )&attributes(attributes)
+    each option, index in options
+      option(
+        value=option.value
+        selected = option.selected ? 'selected' : null
+      )= option.display
+  if (!valid)
+    .invalid-feedback
+      i(class= 'fa fa-exclamation-circle fa-fw')
+      | #{noticeError}
+
+//- Group select option
+mixin group-selectbox({ label, id, options, size })
+  .form-group&attributes(attributes)
+    label(
+      for= id ? id : null
+    )= label
+    +selectbox({ id, options })

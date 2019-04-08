@@ -1,3 +1,40 @@
 //-------------------------------------------------------
 //- Modules :: Switch
 //-------------------------------------------------------
+
+mixin custom-switch({ label, id})  
+  .custom-control.custom-switch&attributes(attributes)
+    input.custom-control-input(type='checkbox', id=id)
+    label(for= id ? id : null)= label
+
+mixin switch({ size, color, checked, disabled, iconBefore, iconAfter, textBefore, textAfter })
+  label.switcher-control(
+    class= size ? `switcher-control--${size}` : null
+    class= color ? `switcher-control--${color}` : null
+  )
+    input.switcher-input(
+      type='checkbox',
+      checked= checked ? 'checked' : null,
+      disabled= disabled ? 'disabled' : null,
+    )
+    span.switcher-indicator
+    if (iconBefore || textBefore)
+      span.switcher-label-on
+        if iconBefore
+          i(class= iconBefore)
+        else
+        | #{textBefore}
+    if (iconAfter || textAfter)
+      span.switcher-label-off
+        if iconAfter
+          i(class= iconAfter)
+        else
+        | #{textAfter}
+    
+mixin switcher-radio({ name })
+  label.switcher-control
+    input.switcher-input(
+      type='radio',
+      name= name
+    )
+    span.switcher-indicator
