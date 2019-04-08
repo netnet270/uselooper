@@ -1,0 +1,16 @@
+include ../page-list/_page-list
+include ../head/_head
+include ../header/_header
+include ../menu/_menu
+include ../_sidebar
+
+doctype html
+html(lang='en')
+  head
+    block head
+
+  body
+    block body
+
+    block scripts
+      script(src='js/main.js')

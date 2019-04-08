@@ -1,0 +1,18 @@
+{
+  "pageList": {
+    "data": [
+      {
+        "title": "Style Guides",
+        "url": "styleguides",
+        "categories": "N/A",
+        "bg": "gray"
+      },
+      {
+        "title": "Owner Top page",
+        "url": "SO-0-01-Toppage",
+        "categories": "Owner Toppage",
+        "bg": "#1984c6"
+      }
+    ]
+  }
+}

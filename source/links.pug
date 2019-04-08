@@ -1,0 +1,9 @@
+extends modules/layout/_page-other
+
+block head
+  +head('List links')
+
+  style.
+    
+block body
+  +page-list(pageList.data)

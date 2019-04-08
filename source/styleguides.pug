@@ -1,0 +1,94 @@
+extends modules/layout/_page-other
+
+block head
+  +head(head.styleguide)
+  style(type='text/css').
+    body {
+      background-color: #fff;
+      background: none;
+    }
+    .code-example {
+      margin-bottom: 25px;
+    }
+    .code-example .demo {
+      box-sizing: border-box;
+      padding: 1.5rem;
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem 0.25rem 0 0;
+    }
+    .code-example pre {
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.125);
+      padding: 15px;
+      border-radius: 0 0 0.25rem 0.25rem;
+    }
+
+block main
+  .container
+    .row.justify-content-between.align-items-center.pt-4.pb-4
+      .col-auto.mr-auto
+        h1 Lawson Coding Style Guides
+      .col-auto
+        a.btn.btn-success(href="links.html") Back to list of page
+
+    -
+      var components = [
+        { key: 'colors', value: 'Colors' },
+        { key: 'buttons', value: 'Buttons' },
+        { key: 'inputs', value: 'Inputs' },
+        { key: 'checkbox', value: 'Checkbox' },
+        { key: 'radio', value: 'Radio' },
+        { key: 'selectbox', value: 'Selectboxes' },
+        { key: 'textarea', value: 'Textarea' },
+        { key: 'switch', value: 'Switch' },
+      ];
+
+    .row
+      .col-2
+        - var style = 'position: fixed; z-index: 1; width: 160px; min-width: 160px;';
+        #v-pills-tab.list-group(
+          role="tablist"
+          aria-orientation="vertical"
+          style=`${style}`
+        )
+          each val, index in components
+            - var findFirstItem = index === 0
+            a(
+              data-toggle="pill"
+              role="tab"
+              aria-selected="true"
+              id=`v-pills-${val.key}-tab`
+              href=`#v-pills-${val.key}`
+              aria-controls=`v-pills-${val.key}`
+              class=findFirstItem ? 'list-group-item active' : 'list-group-item'
+            )= val.value
+      .col-10
+        #v-pills-tabContent.tab-content
+          each val, index in components
+            - var findFirstItem = index === 0
+            div(
+              role="tabpanel"
+              id=`v-pills-${val.key}`
+              aria-labelledby=`v-pills-${val.key}-tab`
+              class=findFirstItem ? 'tab-pane fade show active' : 'tab-pane fade'
+            )
+              case val.key
+                when 'colors'
+                  include styleguides/_colors
+                when 'buttons'
+                  include styleguides/_buttons
+                when 'inputs'
+                  include styleguides/_inputs
+                when 'checkbox'
+                  include styleguides/_checkbox
+                when 'radio'
+                  include styleguides/_radio
+                when 'selectbox'
+                  include styleguides/_selectbox
+                when 'textarea'
+                  include styleguides/_textarea
+                when 'switch'
+                  include styleguides/_switch
+                default
+                  - throw new Error('"val.key" must be in "components" variable')

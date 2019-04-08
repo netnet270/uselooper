@@ -1,0 +1,14 @@
+extends modules/layout/_core
+
+block head
+  +head(head.home)
+
+block body
+  #main-wapper
+    +sidebar()
+
+    main#js-main-body.main-body
+      +header()
+
+      .main-content
+        | Content this page

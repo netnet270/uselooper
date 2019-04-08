@@ -1,0 +1,31 @@
+// ======================================================
+// Base :: Global like html, body, img, a, ul
+// ======================================================
+
+body {
+  font-size: 14px;
+  font-family: $font-family-base;
+  font-weight: $font-weight-light;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: $blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
