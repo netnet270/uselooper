@@ -13594,4 +13594,30 @@ ol {
   color: #008974;
   background-color: rgba(0, 162, 138, 0.08); }
 
+.page-list__title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.2;
+  color: inherit; }
+
+.page-list__link {
+  color: #fff; }
+  .page-list__link:hover {
+    color: #fff;
+    text-decoration: none; }
+
+.page-list .table {
+  color: #fff; }
+
+.page-list thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e6e8ed; }
+
+.page-list th,
+.page-list td {
+  vertical-align: top;
+  border-top: 1px solid #e6e8ed;
+  font-weight: 300;
+  padding: 12px; }
+
 /*# sourceMappingURL=main.css.map */
