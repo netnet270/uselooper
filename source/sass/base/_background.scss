@@ -1,0 +1,57 @@
+// ======================================================
+// Base :: Background
+// ======================================================
+
+.bg {
+  &--white {
+    background: $bg-white;
+  }
+
+  &--blue {
+    background: $bg-blue;
+  }
+
+  &--light-blue {
+    background: $bg-light-blue;
+  }
+
+  &--dark-blue {
+    background: $bg-dark-blue;
+  }
+
+  &--black {
+    background: $bg-black;
+  }
+
+  &--gray {
+    background: $bg-gray;
+  }
+
+  &--light-gray {
+    background: $bg-light-gray;
+  }
+
+  &--orange {
+    background: $bg-orange;
+  }
+
+  &--red {
+    background: $bg-red;
+  }
+
+  &--green {
+    background: $bg-green;
+  }
+
+  &--purple {
+    background: $bg-purple;
+  }
+
+  &--light-purple {
+    background: $bg-light-purple;
+  }
+
+  &--dark-purple {
+    background: $bg-dark-purple;
+  }
+}

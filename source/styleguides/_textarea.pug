@@ -1,3 +1,79 @@
 //-------------------------------------------------------
 //- Styleguides :: Textarea
 //-------------------------------------------------------
+
+h2 Textarea
+
+.row
+  .col-6
+    .code-example
+      .demo
+        +textarea({
+          label: 'Label',
+          id: 'textarea-1',
+          row: '3',
+        })
+      pre
+        code
+          |+textarea({
+          |  label: 'Label',
+          |  id: 'textarea-1',
+          |  row: '3'
+          |})
+
+  .col-6
+    .code-example
+      .demo
+        +textarea({
+          label: 'Label',
+          id: 'textarea-2',
+          row: '3',
+          placeholder: 'Placeholder'
+        })
+      pre
+        code
+          |+textarea({
+          |  label: 'Label',
+          |  id: 'textarea-2',
+          |  row: '3'
+          |  placeholder: 'Placeholder'
+          |})
+.row
+  .col-6
+    .code-example
+      .demo
+        +textarea({
+          label: 'Label',
+          id: 'textarea-3',
+          row: '3',
+          placeholder: 'Placeholder',
+          badge: 'Optional'
+        })
+      pre
+        code
+          |+textarea({
+          |  label: 'Label',
+          |  id: 'textarea-3',
+          |  row: '3'
+          |  placeholder: 'Placeholder',
+          |  badge: 'Optional'
+          |})
+  .col-6
+    .code-example
+      .demo
+        +textarea({
+          label: 'Label',
+          id: 'textarea-4',
+          row: '3',
+          placeholder: 'Placeholder',
+          textNote: '0 of 80 characters used'
+        })
+      pre
+        code
+          |+textarea({
+          |  label: 'Label',
+          |  id: 'textarea-4',
+          |  row: '3'
+          |  placeholder: 'Placeholder',
+          |  textNote: '0 of 80 characters used'
+          |})

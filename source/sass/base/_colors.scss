@@ -1,3 +1,57 @@
 // ======================================================
 // Base :: Colors
 // ======================================================
+
+.color {
+  &--white {
+    color: $cl-white;
+  }
+
+  &--blue {
+    color: $cl-blue;
+  }
+
+  &--light-blue {
+    color: $cl-light-blue;
+  }
+
+  &--dark-blue {
+    color: $cl-dark-blue;
+  }
+
+  &--black {
+    color: $cl-black;
+  }
+
+  &--gray {
+    color: $cl-gray;
+  }
+
+  &--light-gray {
+    color: $cl-light-gray;
+  }
+
+  &--orange {
+    color: $cl-orange;
+  }
+
+  &--red {
+    color: $cl-red;
+  }
+
+  &--green {
+    color: $cl-green;
+  }
+
+  &--purple {
+    color: $cl-purple;
+  }
+
+  &--light-purple {
+    color: $cl-light-purple;
+  }
+
+  &--dark-purple {
+    color: $cl-dark-purple;
+  }
+}

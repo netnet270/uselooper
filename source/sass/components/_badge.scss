@@ -1,0 +1,25 @@
+// ======================================================
+// Components :: Badge
+// ======================================================
+
+.badge {
+  &--success {
+    background-color: $bg-green;
+    color: $cl-white;
+  }
+
+  &--warning {
+    color: $cl-dark-gray;
+    background-color: $bg-yellow;
+  }
+
+  &--danger {
+    color: $cl-white;
+    background-color: $bg-light-purple;
+  }
+
+  &--infor {
+    color: $cl-dark-green;
+    background-color: rgba($cl-light-green, .08);
+  }
+}

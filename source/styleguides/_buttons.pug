@@ -1,3 +1,97 @@
 //-------------------------------------------------------
 //- Styleguides :: Buttons
 //-------------------------------------------------------
+
+h2 Buttons Type
+- var buttonType = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'link'];
+- var buttonSize = ['large', 'default', 'small', 'xsmall'];
+
+.row
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +buttons({ text: 'Button', type: val })
+        pre
+          code
+            | +buttons({
+            |   text: 'Button',
+            |   type: '#{val}' 
+            | })
+
+h2 Button Disable
+.row
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +buttons({ text: 'Disabled', type: val, disabled: 'disabled' })
+        pre
+          code
+            | +button({
+            |   text: 'Disabled', 
+            |   disabled: 'disabled',
+            |   type: '#{val}'
+            | })
+
+h2 Button Outline
+.row
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +button-outline({ text: 'Outline', type: val})
+        pre
+          code
+            | +button({
+            |   text: 'Outline', 
+            |   type: '#{val}'
+            | })
+
+h2 Button Subtle
+.row
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +button-subtle({ text: 'Subtle', type: val})
+        pre
+          code
+            | +button({
+            |   text: 'Subtle', 
+            |   type: '#{val}'
+            | })
+
+h2 Button Size
+.row
+  each val, btnIndex in buttonSize
+    each item, typeIndex in buttonType
+      .col-3
+        .code-example
+          .demo
+            +buttons({ text: val, type: item, size: val })
+          pre
+            code
+              | +button({
+              |   text: '#{val}',
+              |   type: '#{item}',
+              |   size: '#{val}' 
+              | })
+
+h2 Button Full size
+.row
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +buttons({ text: 'Button', type: val, size: 'large', isFull: true })
+        pre
+          code
+            | +button({
+            |   text: 'Button',
+            |   type: '#{val}',
+            |   size: 'large',
+            |   isFull: true
+            | })
+
+         

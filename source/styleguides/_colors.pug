@@ -4,13 +4,28 @@
 
 -
   var colors = [
-    { key: '$white', color: '#fff' },
-    { key: '$black', color: '#000' },
+    { key: '$cl-white', color: '#fff' },
+    { key: '$cl-black', color: '#000' },
+    { key: '$cl-dark-blue', color: '#346cb0' },
+    { key: '$cl-light-blue', color: '#015e82' },
+    { key: '$cl-blue', color: '#0179a8' },
+    { key: '$cl-green', color: '#007c69' },
+    { key: '$cl-light-green', color: '#00a28a' },
+    { key: '$cl-dark-green', color: '#008974' },
+    { key: '$cl-red', color: '#f05151' },
+    { key: '$cl-orange', color: '#f5b548' },
+    { key: '$cl-yellow', color: '#f7c46c' },
+    { key: '$cl-light-purple', color: '#b76ba3' },
+    { key: '$cl-purple', color: '#a95292' },
+    { key: '$cl-dark-purple', color: '#5f4b8b' },
+    { key: '$cl-gray', color: '#e6e8ed' },
+    { key: '$cl-light-gray', color: '#f6f7f9' },
+    { key: '$cl-dark-gray', color: '#363642' },
   ];
 
 .row
   each val in colors
-    .col-3
+    .col-4
       .code-example
         .demo(style=`background-color: ${val.color}; width: 100%; height: 100px`)
         pre

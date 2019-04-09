@@ -32,4 +32,4 @@ yarn-error.log*
 !.framgia-ci-reports/.keep
 .framgia-ci-result.temp.yml
 .history/
-package-lock.json
+#package-lock.json

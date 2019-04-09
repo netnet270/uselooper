@@ -13494,10 +13494,104 @@ ol {
   list-style: none;
   padding: 0; }
 
+.color--white {
+  color: #fff; }
+
+.color--blue {
+  color: #0179a8; }
+
+.color--light-blue {
+  color: #015e82; }
+
+.color--dark-blue {
+  color: #346cb0; }
+
+.color--black {
+  color: #000; }
+
+.color--gray {
+  color: #e6e8ed; }
+
+.color--light-gray {
+  color: #f6f7f9; }
+
+.color--orange {
+  color: #f5b548; }
+
+.color--red {
+  color: #f05151; }
+
+.color--green {
+  color: #007c69; }
+
+.color--purple {
+  color: #a95292; }
+
+.color--light-purple {
+  color: #b76ba3; }
+
+.color--dark-purple {
+  color: #5f4b8b; }
+
+.bg--white {
+  background: #fff; }
+
+.bg--blue {
+  background: #0179a8; }
+
+.bg--light-blue {
+  background: #015e82; }
+
+.bg--dark-blue {
+  background: #346cb0; }
+
+.bg--black {
+  background: #000; }
+
+.bg--gray {
+  background: #e6e8ed; }
+
+.bg--light-gray {
+  background: #f6f7f9; }
+
+.bg--orange {
+  background: #f5b548; }
+
+.bg--red {
+  background: #f05151; }
+
+.bg--green {
+  background: #007c69; }
+
+.bg--purple {
+  background: #a95292; }
+
+.bg--light-purple {
+  background: #b76ba3; }
+
+.bg--dark-purple {
+  background: #5f4b8b; }
+
 .l-header {
   color: green; }
 
 .l-footer {
   color: green; }
+
+.badge--success {
+  background-color: #007c69;
+  color: #fff; }
+
+.badge--warning {
+  color: #363642;
+  background-color: #f7c46c; }
+
+.badge--danger {
+  color: #fff;
+  background-color: #b76ba3; }
+
+.badge--infor {
+  color: #008974;
+  background-color: rgba(0, 162, 138, 0.08); }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,110 @@
 //-------------------------------------------------------
 //- Styleguides :: Selectbox
 //-------------------------------------------------------
+
+
+h2 Selectbox
+
+.row
+  .col-6
+    .code-example
+      .demo
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  options
+          |})
+
+  .col-6
+    .code-example
+      .demo
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          disabled: 'disabled',
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  disabled: 'disabled',
+          |  options
+          |})
+.row
+  .col-6
+    .code-example
+      .demo
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          isValid: true,
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  isValid: true,
+          |  options
+          |})
+  .col-6
+    .code-example
+      .demo
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          isInvalid: true,
+          noticeError: ' Please select your state.',
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  isInvalid: true,
+          |  noticeError: ' Please select your state.',
+          |  options
+          |})

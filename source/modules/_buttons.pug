@@ -1,0 +1,33 @@
+//-------------------------------------------------------
+//- Modules :: Button
+//-------------------------------------------------------
+
+mixin buttons({ text, type, disabled, size, isFull })
+  button.btn.button(
+    type= 'button'
+    class= type ? `button--${type}` : null
+    class= size ? `button--${size}` : null
+    class= isFull ? 'button--full' : null
+    class= disabled ? 'button--disabled' : null
+  )
+    | #{text}
+    
+mixin button-outline({ text, type, disabled, size, isFull })
+  button.btn.button(
+    type= 'button'
+    class= type ? `button--outline-${type}` : null
+    class= size ? `button--${size}` : null
+    class= isFull ? 'button--full' : null
+    class= disabled ? 'button--disabled' : null
+  )
+    | #{text}
+
+mixin button-subtle({ text, type, disabled, size, isFull })
+  button.btn.button(
+    type= 'button'
+    class= type ? `button--subtle-${type}` : null
+    class= size ? `button--${size}` : null
+    class= isFull ? 'button--full' : null
+    class= disabled ? 'button--disabled' : null
+  )
+    | #{text}

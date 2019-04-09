@@ -1,0 +1,14 @@
+//-------------------------------------------------------
+//- Modules :: Badge
+//-------------------------------------------------------
+
+mixin custom-badge({ text, textColor, bgColor})
+  span.badge(
+    class = textColor ? `color--${textColor}` : null
+    class = bgColor ? `bg--${bgColor}` : null
+  )= text
+
+mixin badge({ text, type })
+  span.badge(
+    class = type ? `badge--${type}` : null
+  )= text

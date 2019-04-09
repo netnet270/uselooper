@@ -1,0 +1,95 @@
+//-------------------------------------------------------
+//- Modules :: Input
+//-------------------------------------------------------
+
+mixin input-field({ type, placeholder, value })
+  input.form-control(
+    type= type ? type : 'text'
+    placeholder= placeholder ? placeholder : null
+    value= value ? value : null
+  )&attributes(attributes)
+
+mixin group-input-field({ label, id, required, badge, iconAfter, labelInput, type, placeholder, disabled, min, max, value, clearable, spinner, valid, noteText, noticeSuccess, noticeError })
+  .form-group&attributes(attributes)
+    label(
+      for= id ? id : null
+      class= (text || iconAfter) ? 'd-flex justify-content-between' : null
+    )= label
+      if required
+        abbr(title="Required") *
+      if badge
+        span.badge(
+          class= (badge == "Required") ? 'badge--danger' : 'badge--secondary'
+        )= badge
+      if text
+        span.text-muted= text
+      if iconAfter
+        span.label__icon.label__icon--after.js-toggle-icon
+          i(class= iconAfter)
+     
+    div(
+      class= (type == 'file') ? 'custom-file' : 'null'
+      class= (type == 'number') ? 'custom-number' : 'null'
+      class= clearable ? 'custom-clearable' : null
+      class= spinner ? 'custom-spinner' : null
+    )
+      if clearable
+        button.close(
+          type= 'button'
+          aria-label="Close"
+        )
+          span(aria-hidden="true")
+            i(class= 'fa fa-times-circle')
+
+      if spinner
+        .custom-spinner__border
+          span.sr-only Loading...
+
+      +input-field({ type, placeholder, value })(
+        id= id ? id : null
+        min = min ? min : null
+        max = max ? max : null
+        value = value ? value : null
+        multiple= (type == 'file') ? 'multiple' : null
+        class= valid ? 'is-valid' : 'is-invalid'
+        class= size ? `input-field--${size}`: null
+      )
+
+      if (valid)
+        .valid-feedback= noticeSuccess
+      
+      if (!valid)
+        .invalid-feedback
+          i(class= 'fa fa-exclamation-circle fa-fw')
+          | #{noticeError}
+
+      if (type == 'file')
+        label.custom-file__label(for= id ? id : null)= labelInput
+
+      if (type == 'number')
+        .custom-number__controls
+          .custom-number__btn.custom-number__up
+            i(class = 'fas fa-plus')
+          .custom-number__btn.custom-number__down
+            i(class = 'fas fa-minus')
+
+    if noteText
+      small.form-text.text-muted
+        |#{noteText}
+
+mixin group-input-field-readonly({ label, value })
+  .form-group.form-readonly
+    label= label
+    +input-field({ type, placeholder, value })(
+      readonly
+    )
+
+mixin input-field-disabled({ label, id, type, placeholder, value, disabled })
+  .form-group&attributes(attributes)
+    label(
+      for= id ? id : null
+    )= label
+
+    +input-field({ type, placeholder, value })(
+      disabled= disabled ? disabled : null
+    )

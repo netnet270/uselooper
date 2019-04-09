@@ -36,7 +36,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row justify-content-between align-items-center pt-4 pb-4">
         <div class="col-auto mr-auto">
           <h1>Lawson Coding Style Guides</h1>
@@ -45,28 +45,1165 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed; z-index: 1; width: 160px; min-width: 160px;"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-inputs-tab" href="#v-pills-inputs" aria-controls="v-pills-inputs">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-textarea-tab" href="#v-pills-textarea" aria-controls="v-pills-textarea">Textarea</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switch</a>
+          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed; z-index: 1; width: 160px; min-width: 160px;"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-typography-tab" href="#v-pills-typography" aria-controls="v-pills-typography">Typography</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-avatar-tab" href="#v-pills-avatar" aria-controls="v-pills-avatar">Avatar</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-badge-tab" href="#v-pills-badge" aria-controls="v-pills-badge">Badge</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-inputs-tab" href="#v-pills-inputs" aria-controls="v-pills-inputs">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-textarea-tab" href="#v-pills-textarea" aria-controls="v-pills-textarea">Textarea</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switch</a>
           </div>
         </div>
         <div class="col-10">
           <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" role="tabpanel" id="v-pills-colors" aria-labelledby="v-pills-colors-tab">
+            <div class="tab-pane fade show active" role="tabpanel" id="v-pills-typography" aria-labelledby="v-pills-typography-tab">
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-colors" aria-labelledby="v-pills-colors-tab">
               <div class="row">
-                <div class="col-2">
+                <div class="col-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #fff; width: 100%; height: 100px"></div>
-                    <pre><code>$white: #fff</code></pre>
+                    <pre><code>$cl-white: #fff</code></pre>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #000; width: 100%; height: 100px"></div>
-                    <pre><code>$black: #000</code></pre>
+                    <pre><code>$cl-black: #000</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #346cb0; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-dark-blue: #346cb0</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #015e82; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-light-blue: #015e82</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #0179a8; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-blue: #0179a8</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #007c69; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-green: #007c69</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #00a28a; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-light-green: #00a28a</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #008974; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-dark-green: #008974</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #f05151; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-red: #f05151</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #f5b548; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-orange: #f5b548</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #f7c46c; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-yellow: #f7c46c</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #b76ba3; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-light-purple: #b76ba3</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #a95292; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-purple: #a95292</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #5f4b8b; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-dark-purple: #5f4b8b</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #e6e8ed; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-gray: #e6e8ed</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #f6f7f9; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-light-gray: #f6f7f9</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #363642; width: 100%; height: 100px"></div>
+                    <pre><code>$cl-dark-gray: #363642</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-avatar" aria-labelledby="v-pills-avatar-tab">
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-badge" aria-labelledby="v-pills-badge-tab">
+              <h2>Badge</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo"><span class="badge color--white bg--blue">Badge</span>
+                    </div>
+                    <pre><code>+custom-badge({
+ text: 'Badge',
+ textColor: 'white',
+ bgColor: 'blue'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo"><span class="badge color--white bg--purple">Badge</span>
+                    </div>
+                    <pre><code>+custom-badge({
+ text: 'Badge',
+ textColor: 'white',
+ bgColor: 'bg-purple'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo"><span class="badge badge--success">Badge</span>
+                    </div>
+                    <pre><code>+badge({
+ text: 'Badge',
+ type: 'success'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo"><span class="badge badge--warning">Badge</span>
+                    </div>
+                    <pre><code>+badge({
+ text: 'Badge',
+ type: 'warning'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo"><span class="badge badge--danger">Badge</span>
+                    </div>
+                    <pre><code>+badge({
+ text: 'Badge',
+ type: 'danger'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo"><span class="badge badge--infor">Badge</span>
+                    </div>
+                    <pre><code>+badge({
+ text: 'Badge',
+ type: 'infor'
+})</code></pre>
                   </div>
                 </div>
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-buttons" aria-labelledby="v-pills-buttons-tab">
+              <h2>Buttons Type</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'primary' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'secondary' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'success' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'info' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'warning' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'danger' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'light' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'dark' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link" type="button">Button</button>
+                    </div>
+                    <pre><code>+buttons({
+  text: 'Button',
+  type: 'link' 
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Button Disable</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'primary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'secondary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'success'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'info'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'warning'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'danger'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'light'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'dark'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link button--disabled" type="button">Disabled</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Disabled', 
+  disabled: 'disabled',
+  type: 'link'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Button Outline</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-primary" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'primary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-secondary" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'secondary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-success" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'success'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-info" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'info'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-warning" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'warning'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-danger" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'danger'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-light" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'light'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-dark" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'dark'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--outline-link" type="button">Outline</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Outline', 
+  type: 'link'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Button Subtle</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-primary" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'primary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-secondary" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'secondary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-success" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'success'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-info" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'info'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-warning" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'warning'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-danger" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'danger'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-light" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'light'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-dark" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'dark'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--subtle-link" type="button">Subtle</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Subtle', 
+  type: 'link'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Button Size</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'primary',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'secondary',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'success',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'info',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'warning',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'danger',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'light',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'dark',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link button--large" type="button">large</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'large',
+  type: 'link',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'primary',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'secondary',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'success',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'info',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'warning',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'danger',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'light',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'dark',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link button--default" type="button">default</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'default',
+  type: 'link',
+  size: 'default' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'primary',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'secondary',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'success',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'info',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'warning',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'danger',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'light',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'dark',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link button--small" type="button">small</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'small',
+  type: 'link',
+  size: 'small' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'primary',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'secondary',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'success',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'info',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'warning',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'danger',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'light',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'dark',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link button--xsmall" type="button">xsmall</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'xsmall',
+  type: 'link',
+  size: 'xsmall' 
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Button Full size</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'primary',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'secondary',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--success button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'success',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--info button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'info',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--warning button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'warning',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--danger button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'danger',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--light button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'light',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--dark button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'dark',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--link button--large button--full" type="button">Button</button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'link',
+  size: 'large',
+  isFull: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-inputs" aria-labelledby="v-pills-inputs-tab">
             </div>
@@ -75,10 +1212,207 @@
             <div class="tab-pane fade" role="tabpanel" id="v-pills-radio" aria-labelledby="v-pills-radio-tab">
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-selectbox" aria-labelledby="v-pills-selectbox-tab">
+              <h2>Selectbox</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="member"></label>
+                        <select class="custom-select" id="member">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ options
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="member"></label>
+                        <select class="custom-select" id="member" disabled="disabled">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ disabled: 'disabled',
+ options
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="member"></label>
+                        <select class="custom-select is-valid" id="member">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ isValid: true,
+ options
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="member"></label>
+                        <select class="custom-select is-invalid" id="member">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                        <div class="invalid-feedback"><i class="fa fa-exclamation-circle fa-fw"></i> Please select your state.</div>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ isInvalid: true,
+ noticeError: ' Please select your state.',
+ options
+})</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-textarea" aria-labelledby="v-pills-textarea-tab">
+              <h2>Textarea</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="textarea-1">Label
+                        </label>
+                        <textarea class="form-control" id="textarea-1" row="3"></textarea>
+                      </div>
+                    </div>
+                    <pre><code>+textarea({
+ label: 'Label',
+ id: 'textarea-1',
+ row: '3'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="textarea-2">Label
+                        </label>
+                        <textarea class="form-control" placeholder="Placeholder" id="textarea-2" row="3"></textarea>
+                      </div>
+                    </div>
+                    <pre><code>+textarea({
+ label: 'Label',
+ id: 'textarea-2',
+ row: '3'
+ placeholder: 'Placeholder'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label for="textarea-3">Label<span class="badge badge--secondary">Optional</span>
+                        </label>
+                        <textarea class="form-control" placeholder="Placeholder" id="textarea-3" row="3"></textarea>
+                      </div>
+                    </div>
+                    <pre><code>+textarea({
+ label: 'Label',
+ id: 'textarea-3',
+ row: '3'
+ placeholder: 'Placeholder',
+ badge: 'Optional'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-group">
+                        <label class="d-flex justify-content-between" for="textarea-4">Label<span class="text-muted">0 of 80 characters used</span>
+                        </label>
+                        <textarea class="form-control" placeholder="Placeholder" id="textarea-4" row="3"></textarea>
+                      </div>
+                    </div>
+                    <pre><code>+textarea({
+ label: 'Label',
+ id: 'textarea-4',
+ row: '3'
+ placeholder: 'Placeholder',
+ textNote: '0 of 80 characters used'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-switch" aria-labelledby="v-pills-switch-tab">
+              <h2>Switch</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="custom-control custom-switch">
+                        <input class="custom-control-input" type="checkbox" id="toggles-1" />
+                        <label for="toggles-1">Switch-1</label>
+                      </div>
+                    </div>
+                    <pre><code>+custom-switch({
+ label: 'Switch-1',
+ id: 'toggles-1'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <label class="switcher-control">
+                          <input class="switcher-input" type="checkbox" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-readonly({
+    label: '発注日',
+    value: 'Kazuki Jin'
+   })(class='form-readonly')</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

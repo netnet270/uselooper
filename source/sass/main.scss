@@ -25,6 +25,7 @@
 @import 'base/global';
 @import 'base/typography';
 @import 'base/colors';
+@import 'base/background';
 @import 'base/images';
 
 // 4. Layout
@@ -35,6 +36,7 @@
 // 5. Components
 // -------------
 @import 'components/button';
+@import 'components/badge';
 @import 'components/input';
 @import 'components/checkbox';
 @import 'components/radio';

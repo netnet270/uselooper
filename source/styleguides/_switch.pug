@@ -1,3 +1,36 @@
 //-------------------------------------------------------
 //- Styleguides :: Switch
 //-------------------------------------------------------
+
+h2 Switch
+
+.row
+  .col-6
+    .code-example
+      .demo
+        +custom-switch({
+          label: 'Switch-1',
+          id: 'toggles-1'
+        })
+      pre
+        code
+          |+custom-switch({
+          |  label: 'Switch-1',
+          |  id: 'toggles-1'
+          |})
+
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+          +switch({
+            label: 'Switch-2',
+            value: 'Kazuki Jin'
+          })
+      pre
+        code
+          | form.form-custom
+          |   +group-input-field-readonly({
+          |     label: '発注日',
+          |     value: 'Kazuki Jin'
+          |    })(class='form-readonly')

@@ -25,7 +25,7 @@ block head
     }
 
 block main
-  .container
+  .container-fluid
     .row.justify-content-between.align-items-center.pt-4.pb-4
       .col-auto.mr-auto
         h1 Lawson Coding Style Guides
@@ -34,7 +34,10 @@ block main
 
     -
       var components = [
+        { key: 'typography', value: 'Typography' },
         { key: 'colors', value: 'Colors' },
+        { key: 'avatar', value: 'Avatar' },
+        { key: 'badge', value: 'Badge' },
         { key: 'buttons', value: 'Buttons' },
         { key: 'inputs', value: 'Inputs' },
         { key: 'checkbox', value: 'Checkbox' },
@@ -74,8 +77,14 @@ block main
               class=findFirstItem ? 'tab-pane fade show active' : 'tab-pane fade'
             )
               case val.key
+                when 'typography'
+                  include styleguides/_typography
                 when 'colors'
                   include styleguides/_colors
+                when 'avatar'
+                  include styleguides/_avatar
+                when 'badge'
+                  include styleguides/_badge
                 when 'buttons'
                   include styleguides/_buttons
                 when 'inputs'
