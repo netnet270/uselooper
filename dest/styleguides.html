@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>[object Object]</title>
+    <title>Styleguides</title>
     <meta charset="utf-8" />
-    <meta name="description" content="{&quot;title&quot;:&quot;Style Guide&quot;}" />
-    <meta name="keywords" content="{&quot;title&quot;:&quot;Style Guide&quot;}" />
+    <meta name="description" content="Styleguides" />
+    <meta name="keywords" content="Styleguides" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
-    <style type="text/css">
+    <style>
       body {
         background-color: #fff;
         background: none;
+        font-size: 14px;
       }
 
       .code-example {
@@ -33,6 +34,13 @@
         border-radius: 0 0 0.25rem 0.25rem;
       }
 
+      .list-group {
+        position: fixed;
+        z-index: 1;
+        width: 160px;
+        min-width: 160px;
+      }
+
     </style>
   </head>
   <body>
@@ -45,7 +53,7 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed; z-index: 1; width: 160px; min-width: 160px;"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-typography-tab" href="#v-pills-typography" aria-controls="v-pills-typography">Typography</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-avatar-tab" href="#v-pills-avatar" aria-controls="v-pills-avatar">Avatar</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-badge-tab" href="#v-pills-badge" aria-controls="v-pills-badge">Badge</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-inputs-tab" href="#v-pills-inputs" aria-controls="v-pills-inputs">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-textarea-tab" href="#v-pills-textarea" aria-controls="v-pills-textarea">Textarea</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switch</a>
+          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed; z-index: 1; width: 160px; min-width: 160px;"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-typography-tab" href="#v-pills-typography" aria-controls="v-pills-typography">Typography</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-avatar-tab" href="#v-pills-avatar" aria-controls="v-pills-avatar">Avatar</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-inputs-tab" href="#v-pills-inputs" aria-controls="v-pills-inputs">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-textarea-tab" href="#v-pills-textarea" aria-controls="v-pills-textarea">Textarea</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switch</a>
           </div>
         </div>
         <div class="col-10">
@@ -159,77 +167,6 @@
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-avatar" aria-labelledby="v-pills-avatar-tab">
-            </div>
-            <div class="tab-pane fade" role="tabpanel" id="v-pills-badge" aria-labelledby="v-pills-badge-tab">
-              <h2>Badge</h2>
-              <div class="row">
-                <div class="col-6">
-                  <div class="code-example">
-                    <div class="demo"><span class="badge color--white bg--blue">Badge</span>
-                    </div>
-                    <pre><code>+custom-badge({
- text: 'Badge',
- textColor: 'white',
- bgColor: 'blue'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="code-example">
-                    <div class="demo"><span class="badge color--white bg--purple">Badge</span>
-                    </div>
-                    <pre><code>+custom-badge({
- text: 'Badge',
- textColor: 'white',
- bgColor: 'bg-purple'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <div class="code-example">
-                    <div class="demo"><span class="badge badge--success">Badge</span>
-                    </div>
-                    <pre><code>+badge({
- text: 'Badge',
- type: 'success'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="code-example">
-                    <div class="demo"><span class="badge badge--warning">Badge</span>
-                    </div>
-                    <pre><code>+badge({
- text: 'Badge',
- type: 'warning'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <div class="code-example">
-                    <div class="demo"><span class="badge badge--danger">Badge</span>
-                    </div>
-                    <pre><code>+badge({
- text: 'Badge',
- type: 'danger'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="code-example">
-                    <div class="demo"><span class="badge badge--infor">Badge</span>
-                    </div>
-                    <pre><code>+badge({
- text: 'Badge',
- type: 'infor'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-buttons" aria-labelledby="v-pills-buttons-tab">
               <h2>Buttons Type</h2>
@@ -1206,6 +1143,526 @@
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-inputs" aria-labelledby="v-pills-inputs-tab">
+              <h2>Input field</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-1">Label
+                          </label>
+                          <div class="input-field">
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-1" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-1',
+    placeholder: 'e.g. johndoe@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-2">Label
+                          </label>
+                          <div class="input-field">
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-2" />
+                          </div>
+                          <p class="note-text">We'll never share your email with anyone else.</p>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+     label: 'Label',
+    id: 'input-2',
+    placeholder: 'e.g. johndoe@looper.com',
+    noteText: "We'll never share your email with anyone else."
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-readonly">
+                          <label>Label</label>
+                          <input class="form-control" type="text" value="Value" readonly="readonly" />
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+ +group-input-field-readonly({
+    label: 'Label',
+    id: 'input-3',
+    value: 'Value'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-control__disabled">
+                          <label for="input-4">Label</label>
+                          <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" disabled="disabled" />
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-disabled({
+    label: 'Label',
+    id: 'input-4',
+    placeholder: 'e.g. johndoe@looper.com',
+    disabled: 'disabled'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-5">Label
+                          </label>
+                          <div class="input-field input-field--number">
+                            <input class="form-control" type="number" placeholder="Amount (to the nearest dollar)" value="0" id="input-5" min="0" max="10" />
+                            <div class="custom-number">
+                              <div class="custom-number__btn custom-number__up"><i class="fas fa-plus"></i></div>
+                              <div class="custom-number__btn custom-number__down"><i class="fas fa-minus"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-5',
+    type: 'number',
+    min: '0',
+    max: '10',
+    value: '0',
+    placeholder: 'Amount (to the nearest dollar)'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-6">Label
+                          </label>
+                          <div class="input-field input-field--file">
+                            <input class="form-control" type="file" id="input-6" multiple="multiple" />
+                            <label class="input-field__file-label" for="input-6">Choose file</label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-6',
+    type: 'file',
+    labelInput: 'Choose file'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-7">Label
+                          </label>
+                          <div class="input-field input-field--clearable">
+                            <button class="close" type="button" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times-circle"></i></span></button>
+                            <input class="form-control" type="text" placeholder="Type something..." value="Moonlight" id="input-7" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-7',
+    clearable: true,
+    value: 'Moonlight',
+    placeholder: 'Type something...'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-8">Label
+                          </label>
+                          <div class="input-field input-field--spinner">
+                            <div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
+                            <input class="form-control" type="text" placeholder="Type something..." value="Moon" id="input-8" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-8',
+    spinner: true,
+    value: 'Moon',
+    placeholder: 'Type something...'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Input field states</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-9">Label</label>
+                          <div class="input-field input-field--isValid">
+                            <input class="form-control" type="text" placeholder="Type something..." id="input-9" />
+                          </div>
+                          <p class="success-notice">Success! You've done it.</p>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-states({
+    label: 'Label',
+    id: 'input-9',
+    isValid: true,
+    noticeSuccess: "Success! You've done it.",
+    placeholder: 'Type something...'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize form-error">
+                          <label for="input-10">Label</label>
+                          <div class="input-field input-field--isInvalid">
+                            <input class="form-control" type="text" placeholder="Type something..." id="input-10" />
+                          </div>
+                          <p class="error-notice"><i class="error-notice__icon fa fa-exclamation-circle fa-fw"></i> Sorry, the image must be at least 300×300.</p>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-states({
+    label: 'Label',
+    id: 'input-10',
+    isInvalid: true,
+    noticeError: " Sorry, the image must be at least 300×300.",
+    placeholder: 'Type something...'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Input size</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-11">Label
+                          </label>
+                          <div class="input-field input-field--small">
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-11" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-11',
+    size: 'small',
+    placeholder: 'e.g. johndoe@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-11">Label
+                          </label>
+                          <div class="input-field input-field--medium">
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-11" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-11',
+    size: 'medium',
+    placeholder: 'e.g. johndoe@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-11">Label
+                          </label>
+                          <div class="input-field input-field--large">
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-11" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-11',
+    size: 'large',
+    placeholder: 'e.g. johndoe@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Labels</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-12">Label
+                          </label>
+                          <div class="input-field">
+                            <input class="form-control" type="text" placeholder="Required asterisks" id="input-12" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-12',
+    require: true,
+    placeholder: 'Required asterisks'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label for="input-13">Label<span class="badge label__badge badge--danger">Required</span>
+                          </label>
+                          <div class="input-field">
+                            <input class="form-control" type="text" placeholder="Required label" id="input-13" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-13',
+    badge: 'Required',
+    placeholder: 'Required label'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label class="d-flex justify-content-between" for="input-14">Label<span class="label__text text-muted">0 of 80 characters used</span>
+                          </label>
+                          <div class="input-field">
+                            <input class="form-control" type="text" placeholder="Label with description" id="input-14" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-14',
+    textLabel: '0 of 80 characters used',
+    placeholder:'Label with description'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <label class="d-flex justify-content-between" for="input-15">Label<span class="label__icon label__icon--after js-toggle-icon"><i class="fa fa-eye fa-fw"></i><span>Show</span></span>
+                          </label>
+                          <div class="input-field input-field--password">
+                            <input class="form-control" type="password" value="label_with_action" id="input-15" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-15',
+    type: 'password',
+    iconLabel: 'fa fa-eye fa-fw',
+    value:'label_with_action'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Floating label</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <div class="input-label">
+                            <label for="input-16">Label</label>
+                            <input class="form-control" type="text" placeholder="Email address" value="johndoe@looper.com" id="input-16" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-float-label({
+    label: 'Label',
+    id: 'input-16',
+    type: 'email',
+    value: 'johndoe@looper.com',
+    placeholder:'Email address'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <div class="input-label">
+                            <label for="input-18">Label</label>
+                            <input class="form-control" type="text" placeholder="Email address" id="input-18" disabled="disabled" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-float-label({
+    label: 'Label',
+    id: 'input-18',
+    type: 'email',
+    placeholder:'Email address',
+    disabled: 'disabled'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <div class="input-label input-label--spinner">
+                            <label for="input-19">Label</label>
+                            <div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
+                            <input class="form-control" type="text" placeholder="Email address" value="hasloading@looper.com" id="input-19" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-float-label({
+    label: 'Label',
+    id: 'input-19',
+    spinner: true,
+    placeholder:'Email address',
+    value: 'hasloading@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <div class="input-label input-label--isValid">
+                            <label for="input-20">Label</label>
+                            <input class="form-control" type="text" placeholder="Email address" value="hasloading@looper.com" id="input-20" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-float-label({
+    label: 'Label',
+    id: 'input-20',
+    isValid: true,
+    placeholder:'Email address',
+    value: 'hasloading@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <div class="input-label input-label--isInvalid">
+                            <label for="input-20">Label</label>
+                            <input class="form-control" type="text" placeholder="Email address" value="hasloading@looper.com" id="input-20" />
+                          </div>
+                          <p class="error-notice"><i class="error-notice__icon fa fa-exclamation-circle fa-fw"></i>Sorry, that password isn't right.</p>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-float-label({
+    label: 'Label',
+    id: 'input-20',
+    isInvalid: true,
+    noticeError: "Sorry, that password isn't right.",
+    placeholder:'Email address',
+    value: 'hasloading@looper.com'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-checkbox" aria-labelledby="v-pills-checkbox-tab">
             </div>
@@ -1217,8 +1674,9 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
-                        <label for="member"></label>
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
                         <select class="custom-select" id="member">
                           <option value="owner">Owner</option>
                           <option value="member">Member</option>
@@ -1237,9 +1695,10 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
-                        <label for="member"></label>
-                        <select class="custom-select" id="member" disabled="disabled">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
+                        <select class="custom-select custom-select--disabled" id="member" disabled="disabled">
                           <option value="owner">Owner</option>
                           <option value="member">Member</option>
                           <option value="viewer">Viewer</option>
@@ -1260,9 +1719,10 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
-                        <label for="member"></label>
-                        <select class="custom-select is-valid" id="member">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
+                        <select class="custom-select custom-select--isValid" id="member">
                           <option value="owner">Owner</option>
                           <option value="member">Member</option>
                           <option value="viewer">Viewer</option>
@@ -1281,15 +1741,16 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
-                        <label for="member"></label>
-                        <select class="custom-select is-invalid" id="member">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
+                        <select class="custom-select custom-select--isInvalid" id="member">
                           <option value="owner">Owner</option>
                           <option value="member">Member</option>
                           <option value="viewer">Viewer</option>
                           <option value="non-member">Non-member</option>
                         </select>
-                        <div class="invalid-feedback"><i class="fa fa-exclamation-circle fa-fw"></i> Please select your state.</div>
+                        <p class="error-notice"><i class="error-notice__icon fa fa-exclamation-circle fa-fw"></i> Please select your state.</p>
                       </div>
                     </div>
                     <pre><code>+selectbox({
@@ -1302,6 +1763,125 @@
                   </div>
                 </div>
               </div>
+              <h2>Select Size</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
+                        <select class="custom-select custom-select--small" id="member">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ size: 'small',
+ options
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
+                        <select class="custom-select custom-select--medium" id="member">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ size: 'medium',
+ options
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <label for="member">Employee</label>
+                        <select class="custom-select custom-select--large" id="member">
+                          <option value="owner">Owner</option>
+                          <option value="member">Member</option>
+                          <option value="viewer">Viewer</option>
+                          <option value="non-member">Non-member</option>
+                        </select>
+                      </div>
+                    </div>
+                    <pre><code>+selectbox({
+ id: 'member',
+ label: 'Employee',
+ size: 'large',
+ options
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Select Float Label</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <div class="select-label">
+                          <label for="member">Employee</label>
+                          <select class="custom-select" id="member">
+                            <option value="owner">Owner</option>
+                            <option value="member">Member</option>
+                            <option value="viewer">Viewer</option>
+                            <option value="non-member">Non-member</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code>+select-float-label({
+ id: 'member',
+ label: 'Employee',
+ options
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom"></form>
+                      <div class="form-group form-customize">
+                        <div class="select-label custom-select--disabled">
+                          <label for="member">Employee</label>
+                          <select class="custom-select" id="member" disabled="disabled">
+                            <option value="owner">Owner</option>
+                            <option value="member">Member</option>
+                            <option value="viewer">Viewer</option>
+                            <option value="non-member">Non-member</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code>+select-float-label({
+ id: 'member',
+ label: 'Employee',
+ disabled: 'disabled',
+ options
+})</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-textarea" aria-labelledby="v-pills-textarea-tab">
               <h2>Textarea</h2>
@@ -1309,10 +1889,10 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
+                      <div class="form-group form-customize form-textarea">
                         <label for="textarea-1">Label
                         </label>
-                        <textarea class="form-control" id="textarea-1" row="3"></textarea>
+                        <textarea class="form-control form-control--textarea" id="textarea-1" row="3"></textarea>
                       </div>
                     </div>
                     <pre><code>+textarea({
@@ -1325,10 +1905,10 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
+                      <div class="form-group form-customize form-textarea">
                         <label for="textarea-2">Label
                         </label>
-                        <textarea class="form-control" placeholder="Placeholder" id="textarea-2" row="3"></textarea>
+                        <textarea class="form-control form-control--textarea" placeholder="Placeholder" id="textarea-2" row="3"></textarea>
                       </div>
                     </div>
                     <pre><code>+textarea({
@@ -1344,10 +1924,10 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
+                      <div class="form-group form-customize form-textarea">
                         <label for="textarea-3">Label<span class="badge badge--secondary">Optional</span>
                         </label>
-                        <textarea class="form-control" placeholder="Placeholder" id="textarea-3" row="3"></textarea>
+                        <textarea class="form-control form-control--textarea" placeholder="Placeholder" id="textarea-3" row="3"></textarea>
                       </div>
                     </div>
                     <pre><code>+textarea({
@@ -1362,10 +1942,10 @@
                 <div class="col-6">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="form-group">
-                        <label class="d-flex justify-content-between" for="textarea-4">Label<span class="text-muted">0 of 80 characters used</span>
+                      <div class="form-group form-customize form-textarea">
+                        <label for="textarea-4">Label
                         </label>
-                        <textarea class="form-control" placeholder="Placeholder" id="textarea-4" row="3"></textarea>
+                        <textarea class="form-control form-control--textarea" placeholder="Placeholder" id="textarea-4" row="3"></textarea>
                       </div>
                     </div>
                     <pre><code>+textarea({

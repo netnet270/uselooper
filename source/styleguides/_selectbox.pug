@@ -9,6 +9,7 @@ h2 Selectbox
   .col-6
     .code-example
       .demo
+        form.form-custom
         -
           var options = [
             { value: 'owner', display: 'Owner' },
@@ -33,6 +34,7 @@ h2 Selectbox
   .col-6
     .code-example
       .demo
+        form.form-custom
         -
           var options = [
             { value: 'owner', display: 'Owner' },
@@ -59,6 +61,7 @@ h2 Selectbox
   .col-6
     .code-example
       .demo
+        form.form-custom
         -
           var options = [
             { value: 'owner', display: 'Owner' },
@@ -84,6 +87,7 @@ h2 Selectbox
   .col-6
     .code-example
       .demo
+        form.form-custom
         -
           var options = [
             { value: 'owner', display: 'Owner' },
@@ -106,5 +110,139 @@ h2 Selectbox
           |  label: 'Employee',
           |  isInvalid: true,
           |  noticeError: ' Please select your state.',
+          |  options
+          |})
+
+h2 Select Size
+.row
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          size: 'small',
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  size: 'small',
+          |  options
+          |})
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          size: 'medium',
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  size: 'medium',
+          |  options
+          |})
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +selectbox({
+          id: 'member',
+          label: 'Employee',
+          size: 'large',
+          options
+        })
+      pre
+        code
+          |+selectbox({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  size: 'large',
+          |  options
+          |})
+
+h2 Select Float Label
+.row
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +select-float-label({
+          id: 'member',
+          label: 'Employee',
+          options
+        })
+      pre
+        code
+          |+select-float-label({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  options
+          |})
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+        -
+          var options = [
+            { value: 'owner', display: 'Owner' },
+            { value: 'member', display: 'Member' },
+            { value: 'viewer', display: 'Viewer' },
+            { value: 'non-member', display: 'Non-member' }
+          ];
+
+        +select-float-label({
+          id: 'member',
+          label: 'Employee',
+          disabled: 'disabled',
+          options
+        })
+      pre
+        code
+          |+select-float-label({
+          |  id: 'member',
+          |  label: 'Employee',
+          |  disabled: 'disabled',
           |  options
           |})

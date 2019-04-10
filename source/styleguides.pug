@@ -1,11 +1,12 @@
 extends modules/layout/_page-other
 
 block head
-  +head(head.styleguide)
-  style(type='text/css').
+  +head('Styleguides')
+  style.
     body {
       background-color: #fff;
       background: none;
+      font-size: 14px;
     }
     .code-example {
       margin-bottom: 25px;
@@ -23,7 +24,12 @@ block head
       padding: 15px;
       border-radius: 0 0 0.25rem 0.25rem;
     }
-
+    .list-group {
+      position: fixed;
+      z-index: 1;
+      width: 160px;
+      min-width: 160px;
+    }
 block main
   .container-fluid
     .row.justify-content-between.align-items-center.pt-4.pb-4
@@ -37,7 +43,6 @@ block main
         { key: 'typography', value: 'Typography' },
         { key: 'colors', value: 'Colors' },
         { key: 'avatar', value: 'Avatar' },
-        { key: 'badge', value: 'Badge' },
         { key: 'buttons', value: 'Buttons' },
         { key: 'inputs', value: 'Inputs' },
         { key: 'checkbox', value: 'Checkbox' },
@@ -83,8 +88,6 @@ block main
                   include styleguides/_colors
                 when 'avatar'
                   include styleguides/_avatar
-                when 'badge'
-                  include styleguides/_badge
                 when 'buttons'
                   include styleguides/_buttons
                 when 'inputs'

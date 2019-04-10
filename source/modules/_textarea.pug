@@ -3,11 +3,11 @@
 //-------------------------------------------------------
 
 //- Textarea
-mixin textarea({ label, id, required, badge, textNote, placeholder, row })
-  .form-group&attributes(attributes)
+mixin textarea({ label, id, required, badge, textLabel, placeholder, row })
+  .form-group.form-customize.form-textarea&attributes(attributes)
     label(
       for= id ? id : null
-      class= textNote ? 'd-flex justify-content-between' : null
+      class= textLabel ? 'd-flex justify-content-between' : null
     )= label
       if required
         abbr(title="Required") *
@@ -15,9 +15,9 @@ mixin textarea({ label, id, required, badge, textNote, placeholder, row })
         span.badge(
           class= (badge == "Required") ? 'badge--danger' : 'badge--secondary'
         )= badge
-      if textNote
-        span.text-muted= textNote
-    textarea.form-control(
+      if textLabel
+        span.label__text.text-muted= textLabel
+    textarea.form-control.form-control--textarea(
       placeholder= placeholder ? placeholder : null
       id= id ? id : null
       row= row ? row : null

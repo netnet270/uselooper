@@ -1,3 +1,106 @@
 // ======================================================
 // Components :: Selectbox
 // ======================================================
+
+.custom-select {
+  border-radius: 4px;
+  padding: 6px 28px 6px 12px;
+  line-height: 21px;
+  border: 1px solid $border-dark-gray;
+  color: $cl-black;
+  margin-bottom: 0;
+  height: 36px;
+  font-size: 14px;
+  background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, linear-gradient(180deg, $cl-white, #f6f7f9);
+
+  &--disabled {
+    color: #888c9b;
+    background-color: #e6e8ed;
+  }
+
+  &:focus {
+    border-color: $border-dark-blue;
+    outline: 0;
+    box-shadow: 0 0 0 1px $border-dark-blue;
+  }
+
+  &--isValid {
+    background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('#{$path-image}/ic-is-valid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
+    border-color: #00a28a;
+    padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
+
+    &:focus {
+      box-shadow: 0 0 0 1px #00a28a;
+      border-color: #00a28a;
+    }
+  }
+
+  &--isInvalid {
+    background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('#{$path-image}/ic-is-invalid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
+    border-color: #b76ba3;
+    padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
+
+    &:focus {
+      box-shadow: 0 0 0 1px #b76ba3;
+      border-color: #b76ba3;
+    }
+  }
+
+  &--small {
+    padding: 4px 8px;
+    height: 29px;
+    line-height: 19.5px;
+    font-size: 13px;
+  }
+
+  &--medium {
+    height: 36px;
+    line-height: 21px;
+    font-size: 14px;
+    padding: 6px 28px 6px 12px;
+  }
+
+  &--large {
+    height: 46px;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+.error-notice {
+  color: #b76ba3;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 4px;
+}
+
+.select-label {
+  position: relative;
+
+  > label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 12px;
+    width: 100%;
+    margin-bottom: 0;
+    line-height: 18px;
+    text-align: left;
+    font-size: 12px;
+    color: #888c9b;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all .1s ease-in-out;
+    pointer-events: none;
+  }
+
+  select {
+    padding: 20px 28px 4px 12px;
+    font-size: 14px;
+    height: 47px;
+    line-height: 21px;
+  }
+}

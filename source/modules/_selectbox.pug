@@ -3,16 +3,17 @@
 //-------------------------------------------------------
 
 //- Select option
-mixin selectbox({ id, options, size, disabled, isValid, isInvalid, noticeError})
-  .form-group&attributes(attributes)
+mixin selectbox({ id, options, label, size, disabled, isValid, isInvalid, noticeError})
+  .form-group.form-customize&attributes(attributes)
     label(
       for= id ? id : null
     )= label
     select.custom-select(
       id= id ? id : null
       class=size ? `custom-select--${size}` : null
-      class= isValid ? 'is-valid' : null
-      class= isInvalid ? 'is-invalid' : null
+      class= isValid ? 'custom-select--isValid' : null
+      class= isInvalid ? 'custom-select--isInvalid' : null
+      class= disabled ? "custom-select--disabled" : null
       disabled= disabled ? disabled : null
     )&attributes(attributes)
       each option, index in options
@@ -20,8 +21,28 @@ mixin selectbox({ id, options, size, disabled, isValid, isInvalid, noticeError})
           value=option.value
           selected = option.selected ? 'selected' : null
         )= option.display
-    if (isInvalid)
-      .invalid-feedback
-        i(class= 'fa fa-exclamation-circle fa-fw')
+
+    if noticeError
+      p.error-notice
+        i.error-notice__icon(class= "fa fa-exclamation-circle fa-fw")
         | #{noticeError}
 
+//- Select float label
+mixin select-float-label({ label, id, options, disabled })
+  .form-group.form-customize&attributes(attributes)
+    .select-label(
+      class= disabled ? "custom-select--disabled" : null
+    )&attributes(attributes)
+      label(
+        for= id ? id : null
+      )= label
+
+      select.custom-select(
+        id= id ? id : null
+        disabled= disabled ? disabled : null
+      )&attributes(attributes)
+        each option, index in options
+          option(
+            value=option.value
+            selected = option.selected ? 'selected' : null
+          )= option.display

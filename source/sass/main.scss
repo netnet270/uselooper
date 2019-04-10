@@ -13,6 +13,8 @@
 @import 'bootstrap/scss/bootstrap-reboot';
 @import 'bootstrap/scss/bootstrap';
 @import 'extensions/fontawesome/fontawesome';
+@import 'extensions/bootstrap-override/custom';
+
 
 // 2. Abstracts
 // ------------
@@ -36,7 +38,6 @@
 // 5. Components
 // -------------
 @import 'components/button';
-@import 'components/badge';
 @import 'components/input';
 @import 'components/checkbox';
 @import 'components/radio';
