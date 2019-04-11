@@ -2,35 +2,192 @@
 //- Styleguides :: Switch
 //-------------------------------------------------------
 
-h2 Switch
-
+h2 Switcher Normal
 .row
-  .col-6
+  .col-4
     .code-example
       .demo
-        +custom-switch({
-          label: 'Switch-1',
-          id: 'toggles-1'
-        })
+        form.form-customize
+          +switcher({ isOn: true})
       pre
         code
-          |+custom-switch({
-          |  label: 'Switch-1',
-          |  id: 'toggles-1'
+          |form.form-customize
+          | +switcher({ isOn: true})
+  .col-4
+    .code-example
+      .demo
+        form.form-customize
+          +switcher({})
+      pre
+        code
+          |form.form-customize
+          | +switcher()
+  .col-4
+    .code-example
+      .demo
+        form.form-customize
+          +switcher({ isOn: true, disabled: 'disabled'})
+      pre
+        code
+          |form.form-customize
+          | +switcher({ 
+          |  isOn: true,
+          |  disabled: 'disabled',
           |})
-
-  .col-6
+h2 Switcher Type
+.row
+  each val, index in ['success', 'danger']
+    .col-4
+      .code-example
+        .demo
+          form.form-customize
+            +switcher({ isOn: true, type: val})
+        pre
+          code
+            |form.form-customize
+            | +switcher({
+            |  isOn: true,
+            |  type: #{val}
+            | })
+h2 Switcher Size
+.row
+  .col-4
     .code-example
       .demo
-        form.form-custom
-          +switch({
-            label: 'Switch-2',
-            value: 'Kazuki Jin'
-          })
+        form.form-customize
+          +switcher({ isOn: true})
       pre
         code
-          | form.form-custom
-          |   +group-input-field-readonly({
-          |     label: '発注日',
-          |     value: 'Kazuki Jin'
-          |    })(class='form-readonly')
+          |form.form-customize
+          | +switcher({
+          |  isOn: true,
+          | })
+  .col-4
+    .code-example
+      .demo
+        form.form-customize
+          +switcher({ isOn: true, size: 'large'})
+      pre
+        code
+          |form.form-customize
+          | +switcher({
+          |  isOn: true,
+          |  size: large
+          | })
+h2 Switcher Icon
+.row
+  each val, typeIndex in ['success', 'danger']
+    .col-4
+      .code-example
+        .demo
+          form.form-customize
+            +switcher({
+                        isOn: true,
+                        type: val,
+                        onIcon: 'fas fa-check',
+                        offIcon: 'fas fa-times'
+                      })
+        pre
+          code
+            |form.form-customize
+            | +switcher({
+            |  isOn: true,
+            |  type: #{val}
+            |  size: 'large'
+            |  onIcon: 'fas fa-check'
+            |  offIcon: 'fas fa-times'
+            | })
+.row
+  each val, typeIndex in ['success', 'danger']
+    .col-4
+      .code-example
+        .demo
+          form.form-customize
+            +switcher({ 
+                        isOn: true,
+                        type: val,
+                        size: 'large',
+                        onIcon: 'fas fa-check',
+                        offIcon: 'fas fa-times'
+                      })
+        pre
+          code
+            |form.form-customize
+            | +switcher({
+            |  isOn: true,
+            |  type: #{val}
+            |  size: 'large'
+            |  onIcon: 'fas fa-check'
+            |  offIcon: 'fas fa-times'
+            | })
+h2 Switcher Text
+.row
+  each val, typeIndex in ['success', 'danger']
+    .col-4
+      .code-example
+        .demo
+          form.form-customize
+            +switcher({
+                        isOn: true,
+                        type: val,
+                        onText: 'on',
+                        offText: 'off'
+                      })
+        pre
+          code
+            |form.form-customize
+            | +switcher({
+            |  isOn: true,
+            |  type: #{val}
+            |  onText: 'on'
+            |  offText: 'off'
+            | })
+.row
+  each val, typeIndex in ['success', 'danger']
+    .col-4
+      .code-example
+        .demo
+          form.form-customize
+            +switcher({
+                        isOn: true,
+                        size: 'large',
+                        type: val,
+                        onText: 'on',
+                        offText: 'off'
+                      })
+        pre
+          code
+            |form.form-customize
+            | +switcher({
+            |  isOn: true,
+            |  type: #{val}
+            |  onText: 'on'
+            |  offText: 'off'
+            | })
+h2 Switcher Radio
+.row
+  .col-4
+    .code-example
+      .demo
+        form.form-customize
+          +switcher({
+                      isSwitcherRadio: true,
+                      name: 'switchRadio',
+                      isOn: true
+                    })
+          +switcher({
+                      isSwitcherRadio: true,
+                      name: 'switchRadio'
+                    })
+      pre
+        code
+          |form.form-customize
+          |  +switcher({
+          |              isSwitcherRadio: true,
+          |              name: 'switchRadio',
+          |              isOn: true
+          |            })
+          |  +switcher({
+          |              isSwitcherRadio: true,
+          |              name: 'switchRadio'
+          |            })

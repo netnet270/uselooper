@@ -11,10 +11,10 @@
   margin-bottom: 0;
   height: 36px;
   font-size: 14px;
-  background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, linear-gradient(180deg, $cl-white, #f6f7f9);
+  background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, linear-gradient(180deg, $cl-white, $bg-light-gray);
 
   &--disabled {
-    color: #888c9b;
+    color: $cl-dark-gray;
     background-color: #e6e8ed;
   }
 
@@ -25,24 +25,24 @@
   }
 
   &--isValid {
-    background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('#{$path-image}/ic-is-valid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
-    border-color: #00a28a;
+    background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('#{$path-image}/ic-is-valid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, $bg-white, $bg-light-gray);
+    border-color: $cl-light-green;
     padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
 
     &:focus {
-      box-shadow: 0 0 0 1px #00a28a;
-      border-color: #00a28a;
+      box-shadow: 0 0 0 1px $cl-light-green;
+      border-color: $cl-light-green;
     }
   }
 
   &--isInvalid {
-    background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('#{$path-image}/ic-is-invalid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
-    border-color: #b76ba3;
+    background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('#{$path-image}/ic-is-invalid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, $bg-white, $bg-light-gray);
+    border-color: $cl-light-purple;
     padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
 
     &:focus {
-      box-shadow: 0 0 0 1px #b76ba3;
-      border-color: #b76ba3;
+      box-shadow: 0 0 0 1px $cl-light-purple;
+      border-color: $cl-light-purple;
     }
   }
 
@@ -86,7 +86,7 @@
     line-height: 18px;
     text-align: left;
     font-size: 12px;
-    color: #888c9b;
+    color: $cl-dark-gray;
     border: 1px solid transparent;
     border-radius: 4px;
     transition: all .1s ease-in-out;

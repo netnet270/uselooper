@@ -1,35 +1,6 @@
 //-------------------------------------------------------
 //- Modules :: Switch
 //-------------------------------------------------------
-
-mixin custom-switch({ label, id})  
-  .custom-control.custom-switch&attributes(attributes)
-    input.custom-control-input(type='checkbox', id=id)
-    label(for= id ? id : null)= label
-
-mixin switch({ size, color, checked, disabled, iconBefore, iconAfter, textBefore, textAfter })
-  label.switcher-control(
-    class= size ? `switcher-control--${size}` : null
-    class= color ? `switcher-control--${color}` : null
-  )
-    input.switcher-input(
-      type='checkbox',
-      checked= checked ? 'checked' : null,
-      disabled= disabled ? 'disabled' : null,
-    )
-    span.switcher-indicator
-    if (iconBefore || textBefore)
-      span.switcher-label-on
-        if iconBefore
-          i(class= iconBefore)
-        else
-        | #{textBefore}
-    if (iconAfter || textAfter)
-      span.switcher-label-off
-        if iconAfter
-          i(class= iconAfter)
-        else
-        | #{textAfter}
     
 mixin switcher-radio({ name })
   label.switcher-control
@@ -38,3 +9,28 @@ mixin switcher-radio({ name })
       name= name
     )
     span.switcher-indicator
+
+mixin switcher({isSwitcherRadio, name, disabled, isOn, type, size, onIcon, offIcon, onText, offText})
+  label.custom-switcher(
+    class= type ? `custom-switcher--${type}` : null
+    class= size ? `custom-switcher--${size}` : null
+  )
+    input.switcher-input(
+      type= isSwitcherRadio ? 'radio' : 'checkbox'
+      name= name ? `${name}` : null
+      checked= isOn ? 'checked' : null
+      disabled= disabled ? 'disabled' : null
+    )
+    span.switcher-indicator
+    if (onIcon || onText)
+      span.switcher-label--on
+        if onIcon
+          i(class= onIcon ? `${onIcon}` : null)
+        else
+          | #{onText}
+    if (offIcon || offText)
+      span.switcher-label--off
+        if offIcon
+          i(class= offIcon ? `${offIcon}` : null)
+        else
+          | #{offText}

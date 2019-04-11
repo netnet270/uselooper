@@ -37,6 +37,8 @@ $z-indexes: (
 //color
 $cl-white       : #fff;
 $cl-black       : #000;
+$cl-light-black   : #363642;
+
 $cl-dark-blue   : #346cb0;
 $cl-light-blue  : #015e82;
 $cl-blue        : #0179a8;
@@ -54,9 +56,25 @@ $cl-dark-purple : #5f4b8b;
 
 $cl-gray        : #e6e8ed;
 $cl-light-gray  : #f6f7f9;
+$cl-dark-gray   : #888c9b;
+//
+$cl-white       : #fff;
+$cl-dark-blue   : #346cb0;
+$cl-xdark-blue   : #2b5a92;
+$cl-light-blue  : #0179a8;
+$cl-xlight-blue : #5282bc;
+$cl-green       : #00a28a;
+$cl-red         : #f05151;
+$cl-orange      : #f7c46c;
+$cl-purple      : #b76ba3;
+$cl-light-gray  : #e6e8ed;
+$cl-gray        : #888c9b;
 $cl-dark-gray   : #363642;
 
 //Background
+$bsh-primary : rgba(255, 107, 0, .2);
+$bsh-secondary : rgba(0, 0, 0, .1);
+
 $bg-white       : #fff;
 $bg-black       : #000;
 $bg-dark-blue   : #346cb0;

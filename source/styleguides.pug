@@ -40,9 +40,7 @@ block main
 
     -
       var components = [
-        { key: 'typography', value: 'Typography' },
         { key: 'colors', value: 'Colors' },
-        { key: 'avatar', value: 'Avatar' },
         { key: 'buttons', value: 'Buttons' },
         { key: 'inputs', value: 'Inputs' },
         { key: 'checkbox', value: 'Checkbox' },
@@ -82,12 +80,8 @@ block main
               class=findFirstItem ? 'tab-pane fade show active' : 'tab-pane fade'
             )
               case val.key
-                when 'typography'
-                  include styleguides/_typography
                 when 'colors'
                   include styleguides/_colors
-                when 'avatar'
-                  include styleguides/_avatar
                 when 'buttons'
                   include styleguides/_buttons
                 when 'inputs'

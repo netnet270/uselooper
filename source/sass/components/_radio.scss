@@ -1,3 +1,125 @@
 // ======================================================
 // Components :: Radio
 // ======================================================
+.input-radio-custom {
+  position: relative;
+  min-height: 24px;
+  padding-left: 24px;
+  margin-bottom: 0;
+  label {
+    position: relative;
+    margin-bottom: 0;
+    &:before {
+      position: absolute;
+      top: 2px;
+      left: -24px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background: lighten($cl-light-gray, 8%);
+      border: 1px solid $border-gray;
+      box-shadow: 0 1px 0 0 rgba(34, 34, 48, .05);
+      pointer-events: auto;
+      border-radius: 50%;
+    }
+    &:after {
+      position: absolute;
+      top: 2px;
+      left: -24px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background: no-repeat 50%/63% 63%;
+      transform: scale(0);
+      transition: transform .2s ease, -webkit-transform .2s ease;
+      background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='%230179A8' width='8' height='8' viewBox='0 0 8 8'><path d='M3 0c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z' transform='translate(1 1)' /></svg>");
+    }
+  }
+  &--line-through {
+    .input-radio:checked {
+      & + label {
+        color: $cl-gray;
+        text-decoration: line-through;
+      }
+    }
+  }
+  &--no-label {
+    display: flex;
+  }
+}
+.input-radio {
+  $radio: &;
+
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  &#{$radio}--valid {
+    & ~ label {
+      color: $cl-green;
+    }
+    &:focus {
+      & ~ label:before {
+        box-shadow: 0 0 0 1px rgba(0, 162, 138, .25);
+        border-color: $cl-green;
+      }
+    }
+    &:focus:not(:checked) {
+      & ~ label:before {
+        box-shadow: 0 0 0 1px rgba(0, 162, 138, .25);
+        border-color: $cl-green;
+      }
+    }
+    &:checked {
+      & ~ label:before {
+        border-color: $cl-green;
+        box-shadow: 0 0 0 1px rgba(0, 162, 138, .25);
+      }
+    }
+  }
+  &:checked {
+    & ~ label {
+      &:after {
+        transform: scale(1);
+      }
+      &:before {
+        border-color: $cl-dark-blue;
+      }
+    }
+  }
+  &#{$radio}--invalid {
+    & ~ label {
+      color: $cl-purple;
+    }
+    &:focus {
+      & ~ label:before {
+        box-shadow: 0 0 0 1px rgba(183, 107, 163, .25);
+        border-color: $cl-purple;
+      }
+    }
+    &:focus:not(:checked) {
+      & ~ label:before {
+        box-shadow: 0 0 0 1px rgba(183, 107, 163, .25);
+        border-color: $cl-purple;
+      }
+    }
+    &:checked {
+      & ~ label:before {
+        border-color: $cl-purple;
+        box-shadow: 0 0 0 1px rgba(183, 107, 163, .25);
+      }
+    }
+  }
+}
+.error-notice {
+  color: $cl-purple;
+  font-size: 85%;
+  margin-top: 4px;
+  i {
+    margin-right: 4px;
+  }
+}
+.input-desc {
+  color: $cl-gray;
+}

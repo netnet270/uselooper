@@ -1,3 +1,92 @@
 //-------------------------------------------------------
 //- Styleguides :: Radio
 //-------------------------------------------------------
+h2 radio
+.row
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+          +group-input-radio({ name: 'radio', id: 'radio1', label: 'radio label 1', checked: true})
+          +group-input-radio({ name: 'radio', id: 'radio2', label: 'radio label 2'})
+          +group-input-radio({ name: 'radio', id: 'radio3', label: 'radio label 3', disabled: true})
+          +group-input-radio({ name: 'radio', id: 'radio4', label: 'radio label 4', desc: 'This is a help text to guide users'})
+      pre
+        code
+          |form.form-custom
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio1',
+          |    label: 'radio label 1',
+          |    checked: true
+          |  })
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio2',
+          |    label: 'radio label 2',
+          |  })
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio3',
+          |    label: 'radio label 3',
+          |    disabled: true
+          |  })
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio4',
+          |    label: 'radio label 4',
+          |    desc: 'This is a help text to guide users'
+          |  })
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+          +group-input-radio({ name: 'radio', id: 'radio9', label: 'radio label 9', checked: true})
+          +group-input-radio({ name: 'radio', id: 'radio10', label: 'radio label 10', isValid: true})
+          +group-input-radio({ name: 'radio', id: 'radio11', label: 'radio label 11', isInValid: true, noticeError: "Can't update your setting, please try again."})
+      pre
+        code
+          |form.form-custom
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio9',
+          |    label: 'radio label 9',
+          |    checked: true,
+          |  })
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio10',
+          |    label: 'radio label 10',
+          |    isValid: true,
+          |  })
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio11',
+          |    label: 'radio label 11',
+          |    isInValid: true,
+          |    noticeError: "Can't update your setting, please try again."
+          |  })
+
+  .col-6
+    .code-example
+      .demo
+        form.form-custom
+          +group-input-radio({ name: 'radio', id: 'radio12', checked: true})(class= 'input-radio-custom--no-label')
+          +group-input-radio({ name: 'radio', id: 'radio13'})(class= 'input-radio-custom--no-label')
+          +group-input-radio({ name: 'radio', id: 'radio14', disabled: true})(class= 'input-radio-custom--no-label')
+      pre
+        code
+          |form.form-custom
+          |    name: 'radio',
+          |    id: 'radio12',
+          |    checked: true
+          |  })(class= 'input-radio-custom--no-label')
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio13',
+          |  })(class= 'input-radio-custom--no-label')
+          |  +group-input-radio({
+          |    name: 'radio',
+          |    id: 'radio14',
+          |    disabled: true
+          |  })(class= 'input-radio-custom--no-label')

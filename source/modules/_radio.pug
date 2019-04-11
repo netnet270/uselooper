@@ -1,3 +1,25 @@
 //-------------------------------------------------------
 //- Modules :: Radio
 //-------------------------------------------------------
+mixin group-input-radio({name, id, label, disabled, isValid, isInValid, desc, noticeError, checked})
+  .form-group.input-radio-custom()&attributes(attributes)
+    input.input-radio(
+      type= 'radio'
+      name= name ? `${name}` : null
+      id= id ? `${id}` : null
+      checked= checked ? 'checked' : null
+      disabled= disabled ? 'disabled' : null
+      class= isValid ? 'input-radio--valid' : null
+      class= isInValid ? 'input-radio--invalid' : null
+    )
+    label(for= id ? `${id}` : null)
+      | #{label}
+    block
+    if desc
+      .input-desc
+        | #{desc}
+    if noticeError
+      .error-notice
+        i.fa.fa-exclamation-circle.fa-fw
+        | #{noticeError}
+

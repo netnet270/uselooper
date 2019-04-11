@@ -53,14 +53,12 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed; z-index: 1; width: 160px; min-width: 160px;"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-typography-tab" href="#v-pills-typography" aria-controls="v-pills-typography">Typography</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-avatar-tab" href="#v-pills-avatar" aria-controls="v-pills-avatar">Avatar</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-inputs-tab" href="#v-pills-inputs" aria-controls="v-pills-inputs">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-textarea-tab" href="#v-pills-textarea" aria-controls="v-pills-textarea">Textarea</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switch</a>
+          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed; z-index: 1; width: 160px; min-width: 160px;"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-inputs-tab" href="#v-pills-inputs" aria-controls="v-pills-inputs">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-textarea-tab" href="#v-pills-textarea" aria-controls="v-pills-textarea">Textarea</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switch</a>
           </div>
         </div>
         <div class="col-10">
           <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" role="tabpanel" id="v-pills-typography" aria-labelledby="v-pills-typography-tab">
-            </div>
-            <div class="tab-pane fade" role="tabpanel" id="v-pills-colors" aria-labelledby="v-pills-colors-tab">
+            <div class="tab-pane fade show active" role="tabpanel" id="v-pills-colors" aria-labelledby="v-pills-colors-tab">
               <div class="row">
                 <div class="col-4">
                   <div class="code-example">
@@ -166,15 +164,13 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" role="tabpanel" id="v-pills-avatar" aria-labelledby="v-pills-avatar-tab">
-            </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-buttons" aria-labelledby="v-pills-buttons-tab">
               <h2>Buttons Type</h2>
               <div class="row">
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--primary" type="button">Button</button>
+                      <button class="btn button button--primary" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+buttons({
   text: 'Button',
@@ -185,7 +181,7 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--secondary" type="button">Button</button>
+                      <button class="btn button button--secondary" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+buttons({
   text: 'Button',
@@ -196,77 +192,22 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--success" type="button">Button</button>
+                      <button class="btn button button--plight" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+buttons({
   text: 'Button',
-  type: 'success' 
+  type: 'plight' 
 })</code></pre>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--info" type="button">Button</button>
+                      <button class="btn button button--slight" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+buttons({
   text: 'Button',
-  type: 'info' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--warning" type="button">Button</button>
-                    </div>
-                    <pre><code>+buttons({
-  text: 'Button',
-  type: 'warning' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--danger" type="button">Button</button>
-                    </div>
-                    <pre><code>+buttons({
-  text: 'Button',
-  type: 'danger' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--light" type="button">Button</button>
-                    </div>
-                    <pre><code>+buttons({
-  text: 'Button',
-  type: 'light' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--dark" type="button">Button</button>
-                    </div>
-                    <pre><code>+buttons({
-  text: 'Button',
-  type: 'dark' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--link" type="button">Button</button>
-                    </div>
-                    <pre><code>+buttons({
-  text: 'Button',
-  type: 'link' 
+  type: 'slight' 
 })</code></pre>
                   </div>
                 </div>
@@ -276,7 +217,7 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--primary button--disabled" type="button">Disabled</button>
+                      <button class="btn button button--primary button--disabled" type="button" disabled="disabled">Disabled<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
@@ -288,7 +229,7 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--secondary button--disabled" type="button">Disabled</button>
+                      <button class="btn button button--secondary button--disabled" type="button" disabled="disabled">Disabled<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
@@ -300,288 +241,24 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--success button--disabled" type="button">Disabled</button>
+                      <button class="btn button button--plight button--disabled" type="button" disabled="disabled">Disabled<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
   disabled: 'disabled',
-  type: 'success'
+  type: 'plight'
 })</code></pre>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--info button--disabled" type="button">Disabled</button>
+                      <button class="btn button button--slight button--disabled" type="button" disabled="disabled">Disabled<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
   disabled: 'disabled',
-  type: 'info'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--warning button--disabled" type="button">Disabled</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Disabled', 
-  disabled: 'disabled',
-  type: 'warning'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--danger button--disabled" type="button">Disabled</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Disabled', 
-  disabled: 'disabled',
-  type: 'danger'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--light button--disabled" type="button">Disabled</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Disabled', 
-  disabled: 'disabled',
-  type: 'light'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--dark button--disabled" type="button">Disabled</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Disabled', 
-  disabled: 'disabled',
-  type: 'dark'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--link button--disabled" type="button">Disabled</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Disabled', 
-  disabled: 'disabled',
-  type: 'link'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2>Button Outline</h2>
-              <div class="row">
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-primary" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'primary'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-secondary" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'secondary'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-success" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'success'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-info" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'info'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-warning" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'warning'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-danger" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'danger'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-light" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'light'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-dark" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'dark'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--outline-link" type="button">Outline</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Outline', 
-  type: 'link'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2>Button Subtle</h2>
-              <div class="row">
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-primary" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'primary'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-secondary" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'secondary'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-success" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'success'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-info" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'info'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-warning" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'warning'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-danger" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'danger'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-light" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'light'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-dark" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'dark'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--subtle-link" type="button">Subtle</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Subtle', 
-  type: 'link'
+  type: 'slight'
 })</code></pre>
                   </div>
                 </div>
@@ -591,334 +268,10 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--primary button--large" type="button">large</button>
+                      <button class="btn button button--primary button--xsmall" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'large',
-  type: 'primary',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--secondary button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'secondary',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--success button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'success',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--info button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'info',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--warning button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'warning',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--danger button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'danger',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--light button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'light',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--dark button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'dark',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--link button--large" type="button">large</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'large',
-  type: 'link',
-  size: 'large' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--primary button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'primary',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--secondary button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'secondary',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--success button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'success',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--info button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'info',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--warning button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'warning',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--danger button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'danger',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--light button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'light',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--dark button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'dark',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--link button--default" type="button">default</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'default',
-  type: 'link',
-  size: 'default' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--primary button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'primary',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--secondary button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'secondary',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--success button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'success',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--info button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'info',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--warning button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'warning',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--danger button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'danger',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--light button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'light',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--dark button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'dark',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--link button--small" type="button">small</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'small',
-  type: 'link',
-  size: 'small' 
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--primary button--xsmall" type="button">xsmall</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'xsmall',
+  text: 'Button',
   type: 'primary',
   size: 'xsmall' 
 })</code></pre>
@@ -927,10 +280,10 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--secondary button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--secondary button--xsmall" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
+  text: 'Button',
   type: 'secondary',
   size: 'xsmall' 
 })</code></pre>
@@ -939,11 +292,11 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--success button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--plight button--xsmall" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'success',
+  text: 'Button',
+  type: 'plight',
   size: 'xsmall' 
 })</code></pre>
                   </div>
@@ -951,11 +304,11 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--info button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--slight button--xsmall" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'info',
+  text: 'Button',
+  type: 'slight',
   size: 'xsmall' 
 })</code></pre>
                   </div>
@@ -963,60 +316,247 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--warning button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--primary button--small" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'warning',
-  size: 'xsmall' 
+  text: 'Button',
+  type: 'primary',
+  size: 'small' 
 })</code></pre>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--danger button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--secondary button--small" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'danger',
-  size: 'xsmall' 
+  text: 'Button',
+  type: 'secondary',
+  size: 'small' 
 })</code></pre>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--light button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--plight button--small" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'light',
-  size: 'xsmall' 
+  text: 'Button',
+  type: 'plight',
+  size: 'small' 
 })</code></pre>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--dark button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--slight button--small" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'dark',
-  size: 'xsmall' 
+  text: 'Button',
+  type: 'slight',
+  size: 'small' 
 })</code></pre>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--link button--xsmall" type="button">xsmall</button>
+                      <button class="btn button button--primary button--medium" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
-  text: 'xsmall',
-  type: 'link',
-  size: 'xsmall' 
+  text: 'Button',
+  type: 'primary',
+  size: 'medium' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--medium" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'secondary',
+  size: 'medium' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--plight button--medium" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'plight',
+  size: 'medium' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--slight button--medium" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'slight',
+  size: 'medium' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--large" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'primary',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--large" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'secondary',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--plight button--large" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'plight',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--slight button--large" type="button">Button<i></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'Button',
+  type: 'slight',
+  size: 'large' 
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Button Icon</h2>
+              <div class="row">
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'primary'
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'secondary'
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--plight" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'plight'
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--slight" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'slight'
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--primary button--small" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'primary',
+  size: 'small',
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--secondary button--small" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'secondary',
+  size: 'small',
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--plight button--small" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'plight',
+  size: 'small',
+  iconFont: 'fa fa-fw fa-caret-down'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="code-example">
+                    <div class="demo">
+                      <button class="btn button button--slight button--small" type="button">This Button<i class="fa fa-fw fa-caret-down"></i></button>
+                    </div>
+                    <pre><code>+button({
+  text: 'This Week', 
+  type: 'slight',
+  size: 'small',
+  iconFont: 'fa fa-fw fa-caret-down'
 })</code></pre>
                   </div>
                 </div>
@@ -1026,7 +566,7 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--primary button--large button--full" type="button">Button</button>
+                      <button class="btn button button--primary button--large button--full" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Button',
@@ -1039,7 +579,7 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--secondary button--large button--full" type="button">Button</button>
+                      <button class="btn button button--secondary button--large button--full" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Button',
@@ -1052,11 +592,11 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--success button--large button--full" type="button">Button</button>
+                      <button class="btn button button--plight button--large button--full" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Button',
-  type: 'success',
+  type: 'plight',
   size: 'large',
   isFull: true
 })</code></pre>
@@ -1065,76 +605,11 @@
                 <div class="col-3">
                   <div class="code-example">
                     <div class="demo">
-                      <button class="btn button button--info button--large button--full" type="button">Button</button>
+                      <button class="btn button button--slight button--large button--full" type="button">Button<i></i></button>
                     </div>
                     <pre><code>+button({
   text: 'Button',
-  type: 'info',
-  size: 'large',
-  isFull: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--warning button--large button--full" type="button">Button</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Button',
-  type: 'warning',
-  size: 'large',
-  isFull: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--danger button--large button--full" type="button">Button</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Button',
-  type: 'danger',
-  size: 'large',
-  isFull: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--light button--large button--full" type="button">Button</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Button',
-  type: 'light',
-  size: 'large',
-  isFull: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--dark button--large button--full" type="button">Button</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Button',
-  type: 'dark',
-  size: 'large',
-  isFull: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="code-example">
-                    <div class="demo">
-                      <button class="btn button button--link button--large button--full" type="button">Button</button>
-                    </div>
-                    <pre><code>+button({
-  text: 'Button',
-  type: 'link',
+  type: 'slight',
   size: 'large',
   isFull: true
 })</code></pre>
@@ -1666,8 +1141,320 @@
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-checkbox" aria-labelledby="v-pills-checkbox-tab">
+              <h2>Checkbox</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox1" checked="checked" />
+                          <label for="checkbox1">checkbox label 1</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox2" />
+                          <label for="checkbox2">checkbox label 2</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox3" disabled="disabled" />
+                          <label for="checkbox3">checkbox label 3</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox4" />
+                          <label for="checkbox4">checkbox label 4</label>
+                          <div class="input-desc">This is a help text to guide users</div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox1',
+   label: 'checkbox label 1',
+   checked: true
+ })
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox2',
+   label: 'checkbox label 2',
+ })
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox3',
+   label: 'checkbox label 3',
+   disabled: true
+ })
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox4',
+   label: 'checkbox label 4',
+   desc: 'This is a help text to guide users'
+ })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--line-through">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox5" checked="checked" />
+                          <label for="checkbox5">checkbox label 5</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--line-through">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox6" />
+                          <label for="checkbox6">checkbox label 6</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--line-through">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox7" disabled="disabled" />
+                          <label for="checkbox7">checkbox label 7</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--line-through">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox8" />
+                          <label for="checkbox8">checkbox label 8</label>
+                          <div class="input-desc">This is a help text to guide users</div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox5',
+   label: 'checkbox label 5',
+   checked: true
+ })(class= 'custom-checkbox--line-through')
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox6',
+   label: 'checkbox label 6',
+ })(class= 'custom-checkbox--line-through')
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox7',
+   label: 'checkbox label 7',
+   disabled: true
+ })(class= 'custom-checkbox--line-through')
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox8',
+   label: 'checkbox label 8',
+   desc: 'This is a help text to guide users'
+ })(class= 'custom-checkbox--line-through')</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox9" checked="checked" />
+                          <label for="checkbox9">checkbox label 9</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox input-checkbox--valid" type="checkbox" name="checkbox" id="checkbox10" />
+                          <label for="checkbox10">checkbox label 10</label>
+                        </div>
+                        <div class="form-group input-checkbox-custom">
+                          <input class="input-checkbox input-checkbox--invalid" type="checkbox" name="checkbox" id="checkbox11" />
+                          <label for="checkbox11">checkbox label 11</label>
+                          <div class="error-notice"><i class="fa fa-exclamation-circle fa-fw"></i>Can't update your setting, please try again.</div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox9',
+   label: 'checkbox label 9',
+   checked: true,
+ })
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox10',
+   label: 'checkbox label 10',
+   isValid: true,
+ })
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox11',
+   label: 'checkbox label 11',
+   isInValid: true,
+   noticeError: "Can't update your setting, please try again."
+ })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--no-label">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox12" checked="checked" />
+                          <label for="checkbox12"></label>
+                        </div>
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--no-label">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox13" />
+                          <label for="checkbox13"></label>
+                        </div>
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--no-label">
+                          <input class="input-checkbox input-checkbox--indeterminate js-checkbox-indeterminate" type="checkbox" name="checkbox" id="checkbox14" />
+                          <label for="checkbox14"></label>
+                        </div>
+                        <div class="form-group input-checkbox-custom input-checkbox-custom--no-label">
+                          <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox15" disabled="disabled" />
+                          <label for="checkbox15"></label>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+   name: 'checkbox',
+   id: 'checkbox12',
+   checked: true
+ })(class= 'input-checkbox-custom--no-label')
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox13',
+ })(class= 'input-checkbox-custom--no-label')
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox14',
+   isIndeterminate: true
+ })(class= 'input-checkbox-custom--no-label')
+ +group-input-checkbox({
+   name: 'checkbox',
+   id: 'checkbox15',
+   disabled: true
+ })(class= 'input-checkbox-custom--no-label')</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-radio" aria-labelledby="v-pills-radio-tab">
+              <h2>radio</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio" type="radio" name="radio" id="radio1" checked="checked" />
+                          <label for="radio1">radio label 1</label>
+                        </div>
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio" type="radio" name="radio" id="radio2" />
+                          <label for="radio2">radio label 2</label>
+                        </div>
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio" type="radio" name="radio" id="radio3" disabled="disabled" />
+                          <label for="radio3">radio label 3</label>
+                        </div>
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio" type="radio" name="radio" id="radio4" />
+                          <label for="radio4">radio label 4</label>
+                          <div class="input-desc">This is a help text to guide users</div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio1',
+   label: 'radio label 1',
+   checked: true
+ })
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio2',
+   label: 'radio label 2',
+ })
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio3',
+   label: 'radio label 3',
+   disabled: true
+ })
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio4',
+   label: 'radio label 4',
+   desc: 'This is a help text to guide users'
+ })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio" type="radio" name="radio" id="radio9" checked="checked" />
+                          <label for="radio9">radio label 9</label>
+                        </div>
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio input-radio--valid" type="radio" name="radio" id="radio10" />
+                          <label for="radio10">radio label 10</label>
+                        </div>
+                        <div class="form-group input-radio-custom">
+                          <input class="input-radio input-radio--invalid" type="radio" name="radio" id="radio11" />
+                          <label for="radio11">radio label 11</label>
+                          <div class="error-notice"><i class="fa fa-exclamation-circle fa-fw"></i>Can't update your setting, please try again.</div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio9',
+   label: 'radio label 9',
+   checked: true,
+ })
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio10',
+   label: 'radio label 10',
+   isValid: true,
+ })
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio11',
+   label: 'radio label 11',
+   isInValid: true,
+   noticeError: "Can't update your setting, please try again."
+ })</code></pre>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group input-radio-custom input-radio-custom--no-label">
+                          <input class="input-radio" type="radio" name="radio" id="radio12" checked="checked" />
+                          <label for="radio12"></label>
+                        </div>
+                        <div class="form-group input-radio-custom input-radio-custom--no-label">
+                          <input class="input-radio" type="radio" name="radio" id="radio13" />
+                          <label for="radio13"></label>
+                        </div>
+                        <div class="form-group input-radio-custom input-radio-custom--no-label">
+                          <input class="input-radio" type="radio" name="radio" id="radio14" disabled="disabled" />
+                          <label for="radio14"></label>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+   name: 'radio',
+   id: 'radio12',
+   checked: true
+ })(class= 'input-radio-custom--no-label')
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio13',
+ })(class= 'input-radio-custom--no-label')
+ +group-input-radio({
+   name: 'radio',
+   id: 'radio14',
+   disabled: true
+ })(class= 'input-radio-custom--no-label')</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-selectbox" aria-labelledby="v-pills-selectbox-tab">
               <h2>Selectbox</h2>
@@ -1961,36 +1748,302 @@
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-switch" aria-labelledby="v-pills-switch-tab">
-              <h2>Switch</h2>
+              <h2>Switcher Normal</h2>
               <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                   <div class="code-example">
                     <div class="demo">
-                      <div class="custom-control custom-switch">
-                        <input class="custom-control-input" type="checkbox" id="toggles-1" />
-                        <label for="toggles-1">Switch-1</label>
-                      </div>
+                      <form class="form-customize">
+                        <label class="custom-switcher">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
                     </div>
-                    <pre><code>+custom-switch({
- label: 'Switch-1',
- id: 'toggles-1'
-})</code></pre>
+                    <pre><code>form.form-customize
++switcher({ isOn: true})</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                   <div class="code-example">
                     <div class="demo">
-                      <form class="form-custom">
-                        <label class="switcher-control">
+                      <form class="form-customize">
+                        <label class="custom-switcher">
                           <input class="switcher-input" type="checkbox" /><span class="switcher-indicator"></span>
                         </label>
                       </form>
                     </div>
-                    <pre><code>form.form-custom
-  +group-input-field-readonly({
-    label: '発注日',
-    value: 'Kazuki Jin'
-   })(class='form-readonly')</code></pre>
+                    <pre><code>form.form-customize
++switcher()</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher">
+                          <input class="switcher-input" type="checkbox" checked="checked" disabled="disabled" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({ 
+ isOn: true,
+ disabled: 'disabled',
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Switcher Type</h2>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--success">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: success
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--danger">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: danger
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Switcher Size</h2>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--large">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ size: large
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Switcher Icon</h2>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--success">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on"><i class="fas fa-check"></i></span><span class="switcher-label--off"><i class="fas fa-times"></i></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: success
+ size: 'large'
+ onIcon: 'fas fa-check'
+ offIcon: 'fas fa-times'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--danger">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on"><i class="fas fa-check"></i></span><span class="switcher-label--off"><i class="fas fa-times"></i></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: danger
+ size: 'large'
+ onIcon: 'fas fa-check'
+ offIcon: 'fas fa-times'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--success custom-switcher--large">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on"><i class="fas fa-check"></i></span><span class="switcher-label--off"><i class="fas fa-times"></i></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: success
+ size: 'large'
+ onIcon: 'fas fa-check'
+ offIcon: 'fas fa-times'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--danger custom-switcher--large">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on"><i class="fas fa-check"></i></span><span class="switcher-label--off"><i class="fas fa-times"></i></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: danger
+ size: 'large'
+ onIcon: 'fas fa-check'
+ offIcon: 'fas fa-times'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Switcher Text</h2>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--success">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on">on</span><span class="switcher-label--off">off</span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: success
+ onText: 'on'
+ offText: 'off'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--danger">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on">on</span><span class="switcher-label--off">off</span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: danger
+ onText: 'on'
+ offText: 'off'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--success custom-switcher--large">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on">on</span><span class="switcher-label--off">off</span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: success
+ onText: 'on'
+ offText: 'off'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher custom-switcher--danger custom-switcher--large">
+                          <input class="switcher-input" type="checkbox" checked="checked" /><span class="switcher-indicator"></span><span class="switcher-label--on">on</span><span class="switcher-label--off">off</span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
++switcher({
+ isOn: true,
+ type: danger
+ onText: 'on'
+ offText: 'off'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2>Switcher Radio</h2>
+              <div class="row">
+                <div class="col-4">
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-customize">
+                        <label class="custom-switcher">
+                          <input class="switcher-input" type="radio" name="switchRadio" checked="checked" /><span class="switcher-indicator"></span>
+                        </label>
+                        <label class="custom-switcher">
+                          <input class="switcher-input" type="radio" name="switchRadio" /><span class="switcher-indicator"></span>
+                        </label>
+                      </form>
+                    </div>
+                    <pre><code>form.form-customize
+ +switcher({
+             isSwitcherRadio: true,
+             name: 'switchRadio',
+             isOn: true
+           })
+ +switcher({
+             isSwitcherRadio: true,
+             name: 'switchRadio'
+           })</code></pre>
                   </div>
                 </div>
               </div>

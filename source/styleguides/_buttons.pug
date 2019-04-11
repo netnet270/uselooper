@@ -1,11 +1,11 @@
 //-------------------------------------------------------
 //- Styleguides :: Buttons
 //-------------------------------------------------------
-
+-
+  var buttonType = ['primary', 'secondary', 'plight', 'slight'];
+-
+  var buttonSize = ['xsmall', 'small', 'medium', 'large'];
 h2 Buttons Type
-- var buttonType = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'link'];
-- var buttonSize = ['large', 'default', 'small', 'xsmall'];
-
 .row
   each val, index in buttonType
     .col-3
@@ -34,34 +34,6 @@ h2 Button Disable
             |   type: '#{val}'
             | })
 
-h2 Button Outline
-.row
-  each val, index in buttonType
-    .col-3
-      .code-example
-        .demo
-          +button-outline({ text: 'Outline', type: val})
-        pre
-          code
-            | +button({
-            |   text: 'Outline', 
-            |   type: '#{val}'
-            | })
-
-h2 Button Subtle
-.row
-  each val, index in buttonType
-    .col-3
-      .code-example
-        .demo
-          +button-subtle({ text: 'Subtle', type: val})
-        pre
-          code
-            | +button({
-            |   text: 'Subtle', 
-            |   type: '#{val}'
-            | })
-
 h2 Button Size
 .row
   each val, btnIndex in buttonSize
@@ -69,14 +41,42 @@ h2 Button Size
       .col-3
         .code-example
           .demo
-            +buttons({ text: val, type: item, size: val })
+            +buttons({ text: 'Button', type: item, size: val })
           pre
             code
               | +button({
-              |   text: '#{val}',
+              |   text: 'Button',
               |   type: '#{item}',
               |   size: '#{val}' 
               | })
+
+h2 Button Icon
+.row
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +buttons({ text: 'This Button', type: val, iconFont: 'fa fa-fw fa-caret-down'})
+        pre
+          code
+            | +button({
+            |   text: 'This Week', 
+            |   type: '#{val}'
+            |   iconFont: 'fa fa-fw fa-caret-down'
+            | })
+  each val, index in buttonType
+    .col-3
+      .code-example
+        .demo
+          +buttons({ text: 'This Button', type: val, size: 'small', iconFont: 'fa fa-fw fa-caret-down'})
+        pre
+          code
+            | +button({
+            |   text: 'This Week', 
+            |   type: '#{val}',
+            |   size: 'small',
+            |   iconFont: 'fa fa-fw fa-caret-down'
+            | })
 
 h2 Button Full size
 .row
@@ -93,5 +93,3 @@ h2 Button Full size
             |   size: 'large',
             |   isFull: true
             | })
-
-         
