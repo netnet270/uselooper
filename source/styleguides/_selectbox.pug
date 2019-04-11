@@ -114,86 +114,42 @@ h2 Selectbox
           |})
 
 h2 Select Size
+-
+  var SelectSizes = [
+    { size: 'small' },
+    { size: 'medium' },
+    { size: 'large' }
+  ];
+
 .row
-  .col-6
-    .code-example
-      .demo
-        form.form-custom
-        -
-          var options = [
-            { value: 'owner', display: 'Owner' },
-            { value: 'member', display: 'Member' },
-            { value: 'viewer', display: 'Viewer' },
-            { value: 'non-member', display: 'Non-member' }
-          ];
+  each val in SelectSizes
+    .col-4
+      .code-example
+        .demo
+          form.form-custom
+          -
+            var options = [
+              { value: 'owner', display: 'Owner' },
+              { value: 'member', display: 'Member' },
+              { value: 'viewer', display: 'Viewer' },
+              { value: 'non-member', display: 'Non-member' }
+            ];
 
-        +selectbox({
-          id: 'member',
-          label: 'Employee',
-          size: 'small',
-          options
-        })
-      pre
-        code
-          |+selectbox({
-          |  id: 'member',
-          |  label: 'Employee',
-          |  size: 'small',
-          |  options
-          |})
-  .col-6
-    .code-example
-      .demo
-        form.form-custom
-        -
-          var options = [
-            { value: 'owner', display: 'Owner' },
-            { value: 'member', display: 'Member' },
-            { value: 'viewer', display: 'Viewer' },
-            { value: 'non-member', display: 'Non-member' }
-          ];
-
-        +selectbox({
-          id: 'member',
-          label: 'Employee',
-          size: 'medium',
-          options
-        })
-      pre
-        code
-          |+selectbox({
-          |  id: 'member',
-          |  label: 'Employee',
-          |  size: 'medium',
-          |  options
-          |})
-  .col-6
-    .code-example
-      .demo
-        form.form-custom
-        -
-          var options = [
-            { value: 'owner', display: 'Owner' },
-            { value: 'member', display: 'Member' },
-            { value: 'viewer', display: 'Viewer' },
-            { value: 'non-member', display: 'Non-member' }
-          ];
-
-        +selectbox({
-          id: 'member',
-          label: 'Employee',
-          size: 'large',
-          options
-        })
-      pre
-        code
-          |+selectbox({
-          |  id: 'member',
-          |  label: 'Employee',
-          |  size: 'large',
-          |  options
-          |})
-
+          +selectbox({
+            id: 'member',
+            label: 'Employee',
+            size: val.size,
+            options
+          })
+        pre
+          code
+            |+selectbox({
+            |  id: 'member',
+            |  label: 'Employee',
+            |  size: '#{val.size}',
+            |  options
+            |})
+  
 h2 Select Float Label
 .row
   .col-6

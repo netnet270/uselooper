@@ -3,7 +3,7 @@
 @import 'variables';
 
 @font-face {
-  font-family: 'Font Awesome 5 Free';
+  font-family: $font-family-icons;
   font-style: normal;
   font-weight: 400;
   src: url('#{$fa-font-path}/fa-regular-400.eot');
@@ -16,6 +16,6 @@
 }
 
 .far {
-  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-family: $font-family-icons;
   font-weight: 400;
 }

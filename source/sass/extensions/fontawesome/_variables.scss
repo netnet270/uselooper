@@ -9,6 +9,9 @@ $fa-border-color:             #eee !default;
 $fa-inverse:                  #fff !default;
 $fa-li-width:                 2em !default;
 
+$font-family-icons: 'Font Awesome 5 Free';
+$font-family-icons-brands: 'Font Awesome 5 Brands';
+
 // Convenience function used to set content property
 @function fa-content($fa-var) {
   @return unquote('\'#{ $fa-var }\'');

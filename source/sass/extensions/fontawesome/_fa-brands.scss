@@ -3,7 +3,7 @@
 @import 'variables';
 
 @font-face {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: $font-family-icons-brands;
   font-style: normal;
   font-weight: 400;
   src: url('#{$fa-font-path}/fa-brands-400.eot');
@@ -16,5 +16,5 @@
 }
 
 .fab {
-  font-family: 'Font Awesome 5 Brands', sans-serif;
+  font-family: $font-family-icons-brands;
 }

@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 
 //- Textarea
-mixin textarea({ label, id, required, badge, textLabel, placeholder, row })
+mixin textarea({ label, id, required, badge, textLabel, placeholder, rows })
   .form-group.form-customize.form-textarea&attributes(attributes)
     label(
       for= id ? id : null
@@ -20,5 +20,5 @@ mixin textarea({ label, id, required, badge, textLabel, placeholder, row })
     textarea.form-control.form-control--textarea(
       placeholder= placeholder ? placeholder : null
       id= id ? id : null
-      row= row ? row : null
+      rows= rows ? rows : null
     )
