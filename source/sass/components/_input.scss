@@ -21,18 +21,22 @@
     .badge {
       margin-left: 6px;
     }
+  }
 
-    &__text {
-      color: $cl-dark-gray;
+  .count-text {
+    color: $cl-dark-gray;
+  }
+
+  .icon-show {
+    color: $cl-dark-blue;
+    cursor: pointer;
+
+    span {
+      margin-left: 3px;
     }
 
-    &__icon {
-      color: $cl-dark-blue;
-      cursor: pointer;
-
-      span {
-        margin-left: 3px;
-      }
+    &:hover {
+      color: #234875;
     }
   }
 
@@ -100,6 +104,31 @@
 
   .form-control {
     height: 36px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 15px;
+    color: #888c9b;
+    z-index: 4;
+    transform: translate3d(0, -50%, 0);
+
+    &--before {
+      left: 0;
+      i {
+        font-size: 14px;
+        color: #888c9b;
+      }
+    }
+  }
+
+  &--icon-before {
+    .form-control {
+      padding-left: 42px;
+    }
   }
 
   &--isValid {
@@ -181,10 +210,6 @@
         height: calc(50% - 1px);
         border-bottom-right-radius: 4px;
       }
-
-      img {
-        width: 6px;
-      }
     }
   }
 
@@ -196,6 +221,11 @@
       &:active {
         color: #2e609c;
         background-color: rgba(52, 108, 176, .08);
+      }
+
+      i {
+        font-size: 6px;
+        vertical-align: middle;
       }
     }
   }
@@ -225,6 +255,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
 
     &:after {
       content: 'Browse';

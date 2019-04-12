@@ -2,17 +2,16 @@
 //- Styleguides :: Inputs
 //-------------------------------------------------------
 
-h2 Input field
-
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Text
     .code-example
       .demo
         form.form-custom
           +group-input-field-base({
             label: 'Label',
             id: 'input-1',
-            placeholder: 'e.g. johndoe@looper.com'
+            placeholder: 'Placeholder'
           })
       pre
         code
@@ -20,10 +19,11 @@ h2 Input field
           |   +group-input-field-base({
           |     label: 'Label',
           |     id: 'input-1',
-          |     placeholder: 'e.g. johndoe@looper.com'
+          |     placeholder: 'Placeholder'
           |   })
 
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input NoteText
     .code-example
       .demo
         form.form-custom
@@ -45,7 +45,8 @@ h2 Input field
           |     noteText: "We'll never share your email with anyone else."
           |   })
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Readonly
     .code-example
       .demo
         form.form-custom
@@ -63,7 +64,8 @@ h2 Input field
           |     value: 'Value'
           | })
 
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Disabled
     .code-example
       .demo
         form.form-custom
@@ -82,8 +84,10 @@ h2 Input field
           |     placeholder: 'Placeholder',
           |     disabled: 'disabled'
           |   })
+
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Number
     .code-example
       .demo
         form.form-custom
@@ -94,6 +98,8 @@ h2 Input field
             min: '0',
             max: '10',
             value: '0',
+            iconUp: 'fas fa-plus',
+            iconDown: 'fas fa-minus',
             placeholder: 'Amount (to the nearest dollar)'
           })
       pre
@@ -106,9 +112,13 @@ h2 Input field
           |     min: '0',
           |     max: '10',
           |     value: '0',
+          |     iconUp: 'fas fa-plus'
+          |     iconDown: 'fas fa-minus'
           |     placeholder: 'Amount (to the nearest dollar)'
           |   })
-  .col-6
+
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Choose File
     .code-example
       .demo
         form.form-custom
@@ -129,14 +139,37 @@ h2 Input field
           |   })
 
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Icon
+    .code-example
+      .demo
+        form.form-custom
+          +group-input-field-base({
+            label: 'Label',
+            id: 'input-6',
+            iconBefore: 'oi oi-magnifying-glass',
+            placeholder: 'Input Icon'
+          })
+      pre
+        code
+          |form.form-custom
+          |   +group-input-field-base({
+          |     label: 'Label',
+          |     id: 'input-6',
+          |     iconBefore: 'oi oi-magnifying-glass',
+          |     placeholder: 'Input Icon'
+          |   })
+          
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Clearable
     .code-example
       .demo
         form.form-custom
           +group-input-field-base({
             label: 'Label',
             id: 'input-7',
-            clearable: true,
+            clearable: 'fa fa-times-circle',
             value: 'Moonlight',
             placeholder: 'Type something...'
           })
@@ -146,12 +179,13 @@ h2 Input field
           |   +group-input-field-base({
           |     label: 'Label',
           |     id: 'input-7',
-          |     clearable: true,
+          |     clearable: 'fa fa-times-circle',
           |     value: 'Moonlight',
           |     placeholder: 'Type something...'
           |   })
 
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Spinner
     .code-example
       .demo
         form.form-custom
@@ -173,10 +207,9 @@ h2 Input field
           |     placeholder: 'Type something...'
           |   })
 
-h2 Input field states
-
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Valid
     .code-example
       .demo
         form.form-custom
@@ -198,7 +231,8 @@ h2 Input field states
           |     placeholder: 'Type something...'
           |   })
 
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    h4 Input Invalid
     .code-example
       .demo
         form.form-custom
@@ -206,7 +240,8 @@ h2 Input field states
             label: 'Label',
             id: 'input-10',
             isInvalid: true,
-            noticeError: " Sorry, the image must be at least 300×300.",
+            noticeError: 'Sorry, the image must be at least 300×300.',
+            iconError: 'fa fa-exclamation-circle fa-fw',
             placeholder: 'Type something...'
           })
       pre
@@ -216,7 +251,8 @@ h2 Input field states
           |     label: 'Label',
           |     id: 'input-10',
           |     isInvalid: true,
-          |     noticeError: " Sorry, the image must be at least 300×300.",
+          |     noticeError: 'Sorry, the image must be at least 300×300.',
+          |     iconError: 'fa fa-exclamation-circle fa-fw',
           |     placeholder: 'Type something...'
           |   })
 
@@ -229,14 +265,14 @@ h2 Input size
   ];
 
 .row
-  each val in InputSizes
+  each val, index in InputSizes
     .col-4
       .code-example
         .demo
           form.form-custom
             +group-input-field-base({
               label: 'Label',
-              id: 'input-11',
+              id: `input${index}`,
               size: val.size,
               placeholder:'e.g. johndoe@looper.com'
             })
@@ -245,7 +281,7 @@ h2 Input size
             |form.form-custom
             |   +group-input-field-base({
             |     label: 'Label',
-            |     id: 'input-11',
+            |     id: 'input#{index}',
             |     size: '#{val.size}'
             |     placeholder: 'e.g. johndoe@looper.com'
             |   })
@@ -253,7 +289,7 @@ h2 Input size
 h2 Labels
 
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
@@ -272,15 +308,21 @@ h2 Labels
           |     required: true,
           |     placeholder: 'Required asterisks'
           |   })
-  .col-6
+
+  -
+    var badges = [
+      { text: 'Required', type: 'danger' }
+    ];
+
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
           +group-input-field-base({
             label: 'Label',
             id: 'input-13',
-            badge: 'Required',
-            placeholder:'Required label'
+            placeholder:'Required label',
+            badges
           })
       pre
         code
@@ -288,19 +330,19 @@ h2 Labels
           |   +group-input-field-base({
           |     label: 'Label',
           |     id: 'input-13',
-          |     badge: 'Required',
-          |     placeholder: 'Required label'
+          |     placeholder: 'Required label',
+          |     badges
           |   })
 
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
           +group-input-field-base({
             label: 'Label',
             id: 'input-14',
-            textLabel: '0 of 80 characters used',
+            countText: '0 of 80 characters used',
             placeholder:'Label with description'
           })
       pre
@@ -309,10 +351,11 @@ h2 Labels
           |   +group-input-field-base({
           |     label: 'Label',
           |     id: 'input-14',
-          |     textLabel: '0 of 80 characters used',
+          |     countText: '0 of 80 characters used',
           |     placeholder:'Label with description'
           |   })
-  .col-6
+
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
@@ -320,7 +363,7 @@ h2 Labels
             label: 'Label',
             id: 'input-15',
             type: 'password',
-            iconLabel: 'fa fa-eye fa-fw',
+            iconShow: 'fa fa-eye fa-fw',
             value:'label_with_action'
           })
       pre
@@ -330,13 +373,13 @@ h2 Labels
           |     label: 'Label',
           |     id: 'input-15',
           |     type: 'password',
-          |     iconLabel: 'fa fa-eye fa-fw',
+          |     iconShow: 'fa fa-eye fa-fw',
           |     value:'label_with_action'
           |   })
 
 h2 Floating label
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
@@ -357,7 +400,7 @@ h2 Floating label
           |     value: 'johndoe@looper.com',
           |     placeholder:'Email address'
           |   })
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
@@ -380,7 +423,7 @@ h2 Floating label
           |   })
 
 .row
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
@@ -401,7 +444,8 @@ h2 Floating label
           |     placeholder:'Email address',
           |     value: 'hasloading@looper.com'
           |   })
-  .col-6
+
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom
@@ -422,7 +466,7 @@ h2 Floating label
           |     placeholder:'Email address',
           |     value: 'hasloading@looper.com'
           |   })
-  .col-6
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
     .code-example
       .demo
         form.form-custom

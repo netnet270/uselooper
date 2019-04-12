@@ -22,6 +22,7 @@ mixin group-input-checkbox({name, id, label, disabled, isValid, isInValid, isInd
       .error-notice
         i.fa.fa-exclamation-circle.fa-fw
         | #{noticeError}
+        
 mixin group-input-checkboxss({name, id, label, disabled, isValid, isInValid, isIndeterminate, desc, noticeError, checked})
   .custom-control.custom-checkbox()&attributes(attributes)
     input.custom-control-input(

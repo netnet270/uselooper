@@ -31,7 +31,7 @@ mixin selectbox({ id, options, label, size, disabled, isValid, isInvalid, notice
 mixin select-float-label({ label, id, options, disabled })
   .form-group.form-customize&attributes(attributes)
     .select-label(
-      class= disabled ? "custom-select--disabled" : null
+      class= disabled ? "select-label--disabled" : null
     )&attributes(attributes)
       label(
         for= id ? id : null

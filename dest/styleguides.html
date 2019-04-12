@@ -618,17 +618,19 @@
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-inputs" aria-labelledby="v-pills-inputs-tab">
-              <h2>Input field</h2>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Text</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-1">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input-1">Label
+                            </label>
+                          </div>
                           <div class="input-field">
-                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-1" />
+                            <input class="form-control" type="text" placeholder="Placeholder" id="input-1" />
                           </div>
                         </div>
                       </form>
@@ -637,17 +639,20 @@
   +group-input-field-base({
     label: 'Label',
     id: 'input-1',
-    placeholder: 'e.g. johndoe@looper.com'
+    placeholder: 'Placeholder'
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input NoteText</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-2">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input-2">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--email">
                             <input class="form-control" type="email" placeholder="e.g. johndoe@looper.com" id="input-2" />
                           </div>
@@ -667,7 +672,8 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Readonly</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -685,7 +691,8 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Disabled</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -706,18 +713,21 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Number</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-5">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input-5">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--number js-input-number">
                             <input class="form-control" type="number" placeholder="Amount (to the nearest dollar)" value="0" id="input-5" min="0" max="10" />
                             <div class="custom-number">
-                              <div class="custom-number__btn custom-number__up js-btn-up"><img src="../images/plus.svg" alt="" /></div>
-                              <div class="custom-number__btn custom-number__down js-btn-down"><img src="../images/minus.svg" alt="" /></div>
+                              <div class="custom-number__btn custom-number__up js-btn-up"><i class="fas fa-plus"></i></div>
+                              <div class="custom-number__btn custom-number__down js-btn-down"><i class="fas fa-minus"></i></div>
                             </div>
                           </div>
                         </div>
@@ -731,17 +741,22 @@
     min: '0',
     max: '10',
     value: '0',
+    iconUp: 'fas fa-plus'
+    iconDown: 'fas fa-minus'
     placeholder: 'Amount (to the nearest dollar)'
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Choose File</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-6">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input-6">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--file">
                             <input class="form-control" type="file" id="input-6" multiple="multiple" />
                             <label class="input-field__file-label" for="input-6">Choose file</label>
@@ -760,13 +775,43 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Icon</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-7">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input-6">Label
+                            </label>
+                          </div>
+                          <div class="input-field input-field--icon-before"><span class="input-field__icon input-field__icon--before"><i class="oi oi-magnifying-glass"></i></span>
+                            <input class="form-control" type="text" placeholder="Input Icon" id="input-6" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <pre><code>form.form-custom
+  +group-input-field-base({
+    label: 'Label',
+    id: 'input-6',
+    iconBefore: 'oi oi-magnifying-glass',
+    placeholder: 'Input Icon'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Clearable</h4>
+                  <div class="code-example">
+                    <div class="demo">
+                      <form class="form-custom">
+                        <div class="form-group form-customize">
+                          <div>
+                            <label class="label" for="input-7">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--clearable js-input-clearable">
                             <button class="close show" type="button" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times-circle"></i></span></button>
                             <input class="form-control" type="text" placeholder="Type something..." value="Moonlight" id="input-7" />
@@ -778,19 +823,22 @@
   +group-input-field-base({
     label: 'Label',
     id: 'input-7',
-    clearable: true,
+    clearable: 'fa fa-times-circle',
     value: 'Moonlight',
     placeholder: 'Type something...'
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Spinner</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-8">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input-8">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--spinner js-input-spinner">
                             <div class="spinner-border spinner-border-sm" role="status"><span class="sr-only">Loading...</span></div>
                             <input class="form-control" type="text" placeholder="Type something..." value="Moon" id="input-8" />
@@ -809,9 +857,9 @@
                   </div>
                 </div>
               </div>
-              <h2>Input field states</h2>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Valid</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -834,7 +882,8 @@
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <h4>Input Invalid</h4>
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -843,7 +892,7 @@
                           <div class="input-field input-field--isInvalid">
                             <input class="form-control" type="text" placeholder="Type something..." id="input-10" />
                           </div>
-                          <p class="error-notice"><i class="error-notice__icon fa fa-exclamation-circle fa-fw"></i> Sorry, the image must be at least 300×300.</p>
+                          <p class="error-notice"><i class="error-notice__icon fa fa-exclamation-circle fa-fw"></i>Sorry, the image must be at least 300×300.</p>
                         </div>
                       </form>
                     </div>
@@ -852,7 +901,8 @@
     label: 'Label',
     id: 'input-10',
     isInvalid: true,
-    noticeError: " Sorry, the image must be at least 300×300.",
+    noticeError: 'Sorry, the image must be at least 300×300.',
+    iconError: 'fa fa-exclamation-circle fa-fw',
     placeholder: 'Type something...'
   })</code></pre>
                   </div>
@@ -865,10 +915,12 @@
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-11">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input0">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--small">
-                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-11" />
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input0" />
                           </div>
                         </div>
                       </form>
@@ -876,7 +928,7 @@
                     <pre><code>form.form-custom
   +group-input-field-base({
     label: 'Label',
-    id: 'input-11',
+    id: 'input0',
     size: 'small'
     placeholder: 'e.g. johndoe@looper.com'
   })</code></pre>
@@ -887,10 +939,12 @@
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-11">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input1">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--medium">
-                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-11" />
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input1" />
                           </div>
                         </div>
                       </form>
@@ -898,7 +952,7 @@
                     <pre><code>form.form-custom
   +group-input-field-base({
     label: 'Label',
-    id: 'input-11',
+    id: 'input1',
     size: 'medium'
     placeholder: 'e.g. johndoe@looper.com'
   })</code></pre>
@@ -909,10 +963,12 @@
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-11">Label
-                          </label>
+                          <div>
+                            <label class="label" for="input2">Label
+                            </label>
+                          </div>
                           <div class="input-field input-field--large">
-                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input-11" />
+                            <input class="form-control" type="text" placeholder="e.g. johndoe@looper.com" id="input2" />
                           </div>
                         </div>
                       </form>
@@ -920,7 +976,7 @@
                     <pre><code>form.form-custom
   +group-input-field-base({
     label: 'Label',
-    id: 'input-11',
+    id: 'input2',
     size: 'large'
     placeholder: 'e.g. johndoe@looper.com'
   })</code></pre>
@@ -929,13 +985,15 @@
               </div>
               <h2>Labels</h2>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-12">Label<abbr class="required" title="Required">*</abbr>
-                          </label>
+                          <div>
+                            <label class="label" for="input-12">Label<abbr class="required" title="Required">*</abbr>
+                            </label>
+                          </div>
                           <div class="input-field">
                             <input class="form-control" type="text" placeholder="Required asterisks" id="input-12" />
                           </div>
@@ -951,13 +1009,15 @@
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label" for="input-13">Label<span class="badge label__badge badge--danger">Required</span>
-                          </label>
+                          <div>
+                            <label class="label" for="input-13">Label<span class="badge badge--danger">Required</span>
+                            </label>
+                          </div>
                           <div class="input-field">
                             <input class="form-control" type="text" placeholder="Required label" id="input-13" />
                           </div>
@@ -968,20 +1028,22 @@
   +group-input-field-base({
     label: 'Label',
     id: 'input-13',
-    badge: 'Required',
-    placeholder: 'Required label'
+    placeholder: 'Required label',
+    badges
   })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label d-flex justify-content-between" for="input-14">Label<span class="label__text">0 of 80 characters used</span>
-                          </label>
+                          <div class="d-flex justify-content-between">
+                            <label class="label" for="input-14">Label
+                            </label><span class="count-text">0 of 80 characters used</span>
+                          </div>
                           <div class="input-field">
                             <input class="form-control" type="text" placeholder="Label with description" id="input-14" />
                           </div>
@@ -992,18 +1054,20 @@
   +group-input-field-base({
     label: 'Label',
     id: 'input-14',
-    textLabel: '0 of 80 characters used',
+    countText: '0 of 80 characters used',
     placeholder:'Label with description'
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
                         <div class="form-group form-customize">
-                          <label class="label d-flex justify-content-between" for="input-15">Label<span class="label__icon label__icon--after js-toggle-icon"><i class="fa fa-eye fa-fw"></i><span>Show</span></span>
-                          </label>
+                          <div class="d-flex justify-content-between">
+                            <label class="label" for="input-15">Label
+                            </label><span class="icon-show js-toggle-icon"><i class="fa fa-eye fa-fw"></i><span>Show</span></span>
+                          </div>
                           <div class="input-field input-field--password">
                             <input class="form-control" type="password" value="label_with_action" id="input-15" />
                           </div>
@@ -1015,7 +1079,7 @@
     label: 'Label',
     id: 'input-15',
     type: 'password',
-    iconLabel: 'fa fa-eye fa-fw',
+    iconShow: 'fa fa-eye fa-fw',
     value:'label_with_action'
   })</code></pre>
                   </div>
@@ -1023,7 +1087,7 @@
               </div>
               <h2>Floating label</h2>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -1045,7 +1109,7 @@
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -1069,7 +1133,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -1092,7 +1156,7 @@
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -1114,7 +1178,7 @@
   })</code></pre>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="code-example">
                     <div class="demo">
                       <form class="form-custom">
@@ -1123,7 +1187,7 @@
                             <label for="input-20">Label</label>
                             <input class="form-control" type="text" placeholder="Email address" value="hasloading@looper.com" id="input-20" />
                           </div>
-                          <p class="error-notice"><i class="error-notice__icon fa fa-exclamation-circle fa-fw"></i>Sorry, that password isn't right.</p>
+                          <p class="error-notice"><i class="error-notice__icon Sorry, that password isn't right."></i>Sorry, that password isn't right.</p>
                         </div>
                       </form>
                     </div>
@@ -1650,7 +1714,7 @@
                     <div class="demo">
                       <form class="form-custom"></form>
                       <div class="form-group form-customize">
-                        <div class="select-label custom-select--disabled">
+                        <div class="select-label select-label--disabled">
                           <label for="member">Employee</label>
                           <select class="custom-select" id="member" disabled="disabled">
                             <option value="owner">Owner</option>

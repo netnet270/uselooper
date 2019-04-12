@@ -11,49 +11,52 @@ mixin input-field({ type, placeholder, value })
   )&attributes(attributes)
 
 //- Input Field Base has label
-mixin group-input-field-base({ label, id, type, placeholder, required, badge, textLabel, iconLabel, size, clearable, spinner, min, max, value, noteText, labelInput})
+mixin group-input-field-base({ label, id, required, badges, countText, iconShow, iconBefore, placeholder, type, size, clearable, spinner, min, max, value, iconUp, iconDown, noteText, labelInput})
 
   .form-group.form-customize&attributes(attributes)
-    label.label(
-      for= id ? id : null
-      class= (textLabel || iconLabel) ? 'd-flex justify-content-between' : null
-    )= label
-      if required
-        abbr(title="Required" class= "required") *
-      if badge
-        span.badge.label__badge(
-          class= (badge == "Required") ? 'badge--danger' : 'badge--secondary'
-        )= badge
-      if textLabel
-        span.label__text= textLabel
-      if iconLabel
-        span.label__icon.label__icon--after.js-toggle-icon
-          i(class= iconLabel)
+    div(class= (countText || iconShow) ? 'd-flex justify-content-between' : null)
+      label.label(
+        for= id ? id : null
+      )= label
+        if required
+          abbr(title='Required' class= 'required') *
+        if badges
+          each val in badges
+            span.badge(class= val.type ? `badge--${val.type}` : null)
+              | #{val.text}
+
+      if countText
+        span.count-text= countText
+      if iconShow
+        span.icon-show.js-toggle-icon
+          i(class= iconShow)
           span Show
 
     .input-field(
       class= size ? `input-field--${size}`: null,
       class= type ? `input-field--${type}`: null,
       class= (type== 'number') ? 'js-input-number': null,
-      class= clearable ? 'input-field--clearable' : null
-      class= clearable ? 'js-input-clearable' : null,
-      class= spinner ? 'input-field--spinner' : null,
-      class= spinner ? 'js-input-spinner' : null,
+      class= iconBefore ? `input-field--icon-before`: null,
+      class= clearable ? 'input-field--clearable js-input-clearable' : null
+      class= spinner ? 'input-field--spinner js-input-spinner' : null
     )
       if clearable
         button.close.show( type= 'button' aria-label= 'Close' )
           span(aria-hidden= "true")
-            i(class= 'fa fa-times-circle')
+            i(class= clearable )
 
       if spinner
         .spinner-border.spinner-border-sm( role= "status" )
           span.sr-only Loading...
 
+      if iconBefore
+        span.input-field__icon.input-field__icon--before
+          i(class= iconBefore)
+
       +input-field({ type, placeholder, value })(
         id= id ? id : null
         min = min ? min : null
         max = max ? max : null
-        value = value ? value : null
         multiple= (type == 'file') ? 'multiple' : null
       )
       if (type == 'file')
@@ -62,15 +65,15 @@ mixin group-input-field-base({ label, id, type, placeholder, required, badge, te
       if (type == 'number')
         .custom-number
           .custom-number__btn.custom-number__up.js-btn-up
-            img(src="../images/plus.svg", alt="")
+            i(class= iconUp)
           .custom-number__btn.custom-number__down.js-btn-down
-            img(src="../images/minus.svg", alt="")
+            i(class= iconDown)
 
     if noteText
       p.note-text= noteText
 
 //- Input Field State has label
-mixin group-input-field-states({ label, id, required, badge, iconAfter, labelInput, type, placeholder, isValid, isInvalid, noticeSuccess, noticeError })
+mixin group-input-field-states({ label, id, required, badge, iconAfter, labelInput, type, placeholder, isValid, isInvalid, noticeSuccess, noticeError, iconError })
 
   .form-group.form-customize(
     class= noticeError ? `form-error` : null
@@ -95,8 +98,9 @@ mixin group-input-field-states({ label, id, required, badge, iconAfter, labelInp
 
     if noticeError
       p.error-notice
-        i.error-notice__icon(class= "fa fa-exclamation-circle fa-fw")
+        i.error-notice__icon(class= iconError)
         | #{noticeError}
+
 
 //- Input Field Readonly
 mixin group-input-field-readonly({ label, value })
@@ -142,5 +146,5 @@ mixin group-input-field-float-label({ label, id, value, placeholder, disabled, i
 
     if noticeError
       p.error-notice
-        i.error-notice__icon(class= "fa fa-exclamation-circle fa-fw")
+        i.error-notice__icon(class= noticeError )
         | #{noticeError}

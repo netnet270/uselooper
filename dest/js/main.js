@@ -38,17 +38,43 @@ $(document).ready(function() {
   inputNumber();
 
   function inputClearable() {
+
+    var toggleClear = function toggleClear(input) {
+      var isEmpty = !$(input).val();
+      var clearable = $(input).parent().children('.close');
+      clearable.toggleClass('show', !isEmpty);
+    };
+
     $('.js-input-clearable').each(function () {
-      $(this).children('button').on('click', function(){
-          console.log('hello')
-          $(this).removeClass('show');
-          var $input = $(this).parent().children('.form-control');
-          $input.val('').focus();
+      var $input = $(this).children('.form-control');
+      toggleClear($input);
+
+      $input.on('keyup', function(){
+        toggleClear(this);
+      })
+
+      $(this).children('.close').on('click', function(){
+        $input.val('').focus();
+        $input.trigger('keyup');
       })
     })
   }
 
   inputClearable();
 
+  function togglePassword(){
+    $('.js-toggle-icon').on('click', function(){
+      var $input = $(this).parents('.form-customize').find('input');
+      var isPassword = $input.is('[type="password"]');
+      var inputType = isPassword ? 'text' : 'password';
+      var triggerText = isPassword ? 'Hide' : 'Show';
+      var iconToggle = isPassword ? 'fa fa-fw fa-eye-slash' : 'fa fa-eye fa-fw';
+      $(this).children().first().attr('class', iconToggle);
+      $(this).children('span').text(triggerText); 
+      $input.attr('type', inputType);
+    })
+  }
+
+  togglePassword();
 });
 
