@@ -66,4 +66,13 @@ $(document).ready(function() {
   }
 
   togglePassword();
+
+  function placeholderShown(){
+    $('.input-label > input').on('focus blur keyup change', function(){
+      this.classList[this.value ? 'remove' : 'add']('placeholder-shown');
+    })
+    $('.input-label > input').trigger('change');
+  }
+
+  placeholderShown();
 });
