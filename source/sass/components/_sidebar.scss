@@ -1,3 +1,62 @@
 // ======================================================
 // Components :: Sidebar
 // ======================================================
+.aside-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  max-width: 264px;
+  transition: transform .2s ease-in-out;
+
+  .aside-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .aside-header {
+    position: relative;
+    display: block;
+    box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 1px 3px 0 rgba(20, 20, 31, .15);
+    z-index: 3;
+  }
+
+  .aside-menu {
+    position: relative;
+    flex: 1;
+  }
+
+  .aside-footer {
+    padding: 16px;
+    border-top: 1px solid rgba(34, 34, 48, .1);
+  }
+}
+
+.aside-sidebar-expand-md {
+  transform: translateZ(0);
+}
+
+.aside-sidebar-light {
+  color: inherit;
+  background-color: #f6f7f9;
+
+  .aside-header {
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  .aside-sidebar-expand-md {
+    top: 56px;
+    width: 253px;
+    z-index: 5;
+  }
+}
+
+@media (min-width: 768px) {
+  .aside-sidebar {
+    border-right: 1px solid rgba(20, 20, 31, .05);
+  }
+}

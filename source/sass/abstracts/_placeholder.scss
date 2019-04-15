@@ -1,0 +1,123 @@
+// ======================================================
+// Abstracts :: Mixins
+// ======================================================
+
+%user-avatar {
+  position: relative;
+  margin-bottom: 0;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  vertical-align: middle;
+  border-radius: 64px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 64px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+%dropdown {
+  &.show {
+    .dropdown-arrow {
+      display: block;
+      transform-origin: bottom;
+      animation: showArrow .3s ease-in-out;
+    }
+  }
+  .dropdown-arrow {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    overflow: hidden;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    pointer-events: none;
+    z-index: 1001;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -.375rem;
+      left: 50%;
+      transform: rotate(45deg);
+      display: block;
+      height: 12px;
+      width: 12px;
+      margin-left: -5px;
+      background-color: hsla(0, 0%, 100%, .98);
+      box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 2px 7px 1px rgba(20, 20, 31, .16);
+      pointer-events: none;
+    }
+  }
+
+  .dropdown-arrow-left {
+    left: 32px;
+  }
+
+  .dropdown-menu {
+    animation-duration: .2s;
+    margin-top: 10px;
+    border: 0;
+    font-weight: 400;
+    box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 2px 7px 1px rgba(20, 20, 31, .16);
+
+    &.show {
+      animation-name: showDropdown;
+    }
+
+    .dropdown-item {
+      padding: 8px 16px;
+      font-weight: 400;
+      color: #191927;
+      font-size: 14px;
+
+      &:hover {
+        color: #fff;
+        background-color: #346cb0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .dropdown-menu {
+        font-size: 14px;
+      }
+    }
+
+    @keyframes showDropdown {
+      from {
+        top: 100%;
+        opacity: 0;
+        transform: scale(.8);
+      }
+
+      100% {
+        top: 100%;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  @keyframes showArrow {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

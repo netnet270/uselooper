@@ -12,9 +12,9 @@
     &:focus {
       color: $cl-light-black;
       background-color: $bg-white;
-      border-color: $cl-dark-blue;
+      border-color: $cl-indigo;
       outline: 0;
-      box-shadow: 0 0 0 1px $cl-dark-blue;
+      box-shadow: 0 0 0 1px $cl-indigo;
     }
 
     &:-ms-input-placeholder {

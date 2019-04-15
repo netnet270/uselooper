@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+  // perfect scrollbar notifications
+  if ($(".js-list-scrollbar")[1]) {
+    new PerfectScrollbar(document.querySelector(".js-list-scrollbar"), {
+      wheelPropagation: false
+    });
+    $(".ps__rail-y").css('height', $(".ps__rail-y").parents(".dropdown-scroll").css("height"));
+    $(".ps__thumb-y").css('height', '142px')
+  }
+  // if (window.PerfectScrollbar && this.isExists('.js-list-scrollbar')) {
+  //   $('.js-list-scrollbar:not(".aside-menu")').each(function () {
+  //     new PerfectScrollbar(this, {
+  //       suppressScrollX: true
+  //     });
+  //   });
+  // }
   function inputNumber(){
     
     $('.js-input-number').each(function () {

@@ -28,7 +28,7 @@
   }
 
   .icon-show {
-    color: $cl-dark-blue;
+    color: $cl-indigo;
     cursor: pointer;
 
     span {
@@ -50,10 +50,10 @@
 
     &:focus {
       color: $cl-light-black;
-      border-color: $cl-dark-blue;
+      border-color: $cl-indigo;
       background-color: $bg-white;
       outline: 0;
-      box-shadow: 0 0 0 1px $cl-dark-blue;
+      box-shadow: 0 0 0 1px $cl-indigo;
     }
 
     &:-ms-input-placeholder {
@@ -384,7 +384,7 @@
       position: absolute;
       top: 15px;
       right: 12px;
-      color: $cl-dark-blue;
+      color: $cl-indigo;
     }
   }
 

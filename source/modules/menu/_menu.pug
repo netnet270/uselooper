@@ -1,0 +1,132 @@
+//-------------------------------------------------------
+//- Modules :: Menu
+//-------------------------------------------------------
+
+mixin main-menu()
+  ul.navbar-nav.js-navbar-nav
+    #accordion
+      each item in menus
+        li.nav-item.js-nav-item(
+          class=item.submenu ? 'nav-item--has-children' : '', 
+          class=item.active ? 'nav-item--active' : ''
+        )
+          a.nav-link.level1.js-nav-link(
+            href="#"+ item.href
+            data-toggle="collapse"
+            aria-expanded= item.expanded ? "true" : "false"
+            aria-controls=item.href
+            role="button"
+          )
+            i(class= item.icon)
+            span.nav-text= item.text
+            if item.badge
+              span.badge.ml-auto(class= `badge--${item.badge.type}`)= item.badge.text
+          if item.submenu
+            .collapse(
+              id= item.href, 
+              class= item.active ? "show" : "",
+              data-parent="#accordion"
+            )
+              ul.nav.flex-column.js-submenu
+                each sub in item.submenu
+                  li.nav-item.js-sub-item(
+                    class=sub.childmenu ? 'nav-item--has-children' : '',
+                    class= sub.active ? 'nav-item--active' : ''
+                  )
+                    if sub.childmenu
+                      a.nav-link.collapsed.level2(
+                        href="#"+ sub.href
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls=item.href
+                        role="button"
+                      )
+                        span.nav-text=sub.text
+                    else
+                      a.nav-link.collapsed.level2(href= sub.href)
+                        span.nav-text=sub.text
+
+                    if sub.childmenu
+                      .collapse(id= sub.href)
+                        ul.nav.js-childmenu.flex-column
+                          each child in sub.childmenu
+                            li.nav-item(
+                              class= child.active ? 'nav-item--active' : ''
+                            )
+                              a.nav-link.level3(
+                                href= child.href,
+                              )= child.title
+
+mixin sub-menu()
+  h3.navbar-heading Interfaces
+  ul.navbar-nav.js-navbar-nav
+    #submenu
+      each item in interfaces
+        li.nav-item.js-nav-item(
+          class=item.submenu ? 'nav-item--has-children' : '', 
+          class=item.active ? 'nav-item--active' : ''
+        )
+          a.nav-link.level1.js-nav-link(
+            href="#"+ item.href
+            data-toggle="collapse"
+            aria-expanded= item.expanded ? "true" : "false"
+            aria-controls=item.href
+            role="button"
+          )
+            i(class= item.icon)
+            span.nav-text= item.text
+           
+          if item.submenu
+            .collapse(
+              id= item.href, 
+              class= item.active ? "show" : "",
+              data-parent="#submenu"
+            )
+              ul.nav.flex-column.js-submenu
+                each sub in item.submenu
+                  li.nav-item.js-sub-item(
+                    class=sub.childmenu ? 'nav-item--has-children' : '',
+                    class= sub.active ? 'nav-item--active' : ''
+                  )
+                    if sub.childmenu
+                      a.nav-link.collapsed.level2(
+                        href="#"+ sub.href
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls=item.href
+                        role="button"
+                      )
+                        span.nav-text=sub.text
+                    else
+                      a.nav-link.collapsed.level2(href= sub.href)
+                        span.nav-text=sub.text
+
+                    if sub.childmenu
+                      .collapse(id= sub.href)
+                        ul.nav.js-childmenu.flex-column
+                          each child in sub.childmenu
+                            li.nav-item(
+                              class= child.active ? 'nav-item--active' : '',
+                              class= child.grand-child ? 'nav-item--has-children' : ''
+                            )
+                              if child.grand-child
+                                a.nav-link.collapsed.level3(
+                                  href="#"+ child.href
+                                  data-toggle="collapse"
+                                  aria-expanded="false"
+                                  aria-controls=item.href
+                                  role="button"
+                                )
+                                  span.nav-text=child.text
+                              else
+                                a.nav-link.collapsed.level3(href= child.href)
+                                  span.nav-text=child.text
+                              if child.grand-child
+                                .collapse(id= sub.href)
+                                  ul.nav.js-childmenu.flex-column
+                                    each grandchild in child.grand-child
+                                      li.nav-item(
+                                        class= grandchild.active ? 'nav-item--active' : '',
+                                      )
+                                        a.nav-link.level4(href= grandchild.href)
+                                          span.nav-text=grandchild.text

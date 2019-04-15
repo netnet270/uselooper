@@ -19,9 +19,9 @@
   }
 
   &:focus {
-    border-color: $border-dark-blue;
+    border-color: $border-indigo;
     outline: 0;
-    box-shadow: 0 0 0 1px $border-dark-blue;
+    box-shadow: 0 0 0 1px $border-indigo;
   }
 
   &--isValid {

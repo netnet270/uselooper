@@ -10,6 +10,16 @@ mixin input-field({ type, placeholder, value })
     value= value ? value : null
   )&attributes(attributes)
 
+mixin input-field-icon({ type, placeholder, value, iconBefore })
+  .form-group.form-customize&attributes(attributes)
+    .input-field(class= iconBefore ? `input-field--icon-before`: null)
+      if iconBefore
+        span.input-field__icon.input-field__icon--before
+          i(class= iconBefore)
+      +input-field({ type, placeholder, value })(
+        id= id ? id : null
+      )
+      
 //- Input Field Base has label
 mixin group-input-field-base({ label, id, required, badges, countText, iconShow, iconBefore, placeholder, type, size, clearable, spinner, min, max, value, iconUp, iconDown, noteText, labelInput})
 

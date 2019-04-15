@@ -130,13 +130,13 @@
 
   &:checked {
     & + .switcher-indicator {
-      background-color: $cl-dark-blue;
-      border-color: $cl-dark-blue;
+      background-color: $cl-indigo;
+      border-color: $cl-indigo;
     }
 
     & + .switcher-indicator:before {
       right: 0;
-      border-color: $cl-dark-blue;
+      border-color: $cl-indigo;
     }
 
     & ~ .switcher-label {

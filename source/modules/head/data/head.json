@@ -1,7 +1,28 @@
 {
   "head": {
     "home": {
-      "title": "Home page"
+      "title": "Dashboard | Looper - Bootstrap 4 Admin Theme"
+    },
+    "user-profile" : {
+      "title": "Profile | Looper - Bootstrap 4 Admin Theme"
+    },
+    "user-activities" : {
+      "title": "Profile | Looper - Bootstrap 4 Admin Theme"
+    },
+    "user-teams" : {
+      "title": "Profile | Looper - Bootstrap 4 Admin Theme"
+    },
+    "user-prọects" : {
+      "title": "Profile | Looper - Bootstrap 4 Admin Theme"
+    },
+    "user-tasks" : {
+      "title": "Profile | Looper - Bootstrap 4 Admin Theme"
+    },
+    "user-settings" : {
+      "title": "Profile Settings | Looper - Bootstrap 4 Admin Theme"
+    },
+    "form-basic" : {
+      "title": "Basic Form | Looper - Bootstrap 4 Admin Theme"
     },
     "styleguide": {
       "title": "Style Guide"

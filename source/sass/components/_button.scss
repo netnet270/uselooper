@@ -21,7 +21,7 @@
     margin-left: 4px;
   }
   &--primary {
-    background-color: $cl-dark-blue;
+    background-color: $cl-indigo;
     color: $cl-white;
     border-color: $cl-xdark-blue;
     &:hover {
@@ -31,10 +31,10 @@
     }
     &:focus {
       border-color: $cl-xdark-blue;
-      box-shadow: inset 0 1px 0 0 lighten($cl-dark-blue, 10%), 0 0 0 1px $cl-xdark-blue;
+      box-shadow: inset 0 1px 0 0 lighten($cl-indigo, 10%), 0 0 0 1px $cl-xdark-blue;
     }
     &#{$button}--disabled {
-      background-color: $cl-dark-blue;
+      background-color: $cl-indigo;
       color: $cl-white;
       border-color: $cl-xdark-blue;
     }
@@ -50,8 +50,8 @@
     }
     &:focus {
       background: linear-gradient(180deg, $cl-white, $cl-light-gray);
-      border-color: $cl-dark-blue;
-      box-shadow: 0 0 0 1px $cl-dark-blue;
+      border-color: $cl-indigo;
+      box-shadow: 0 0 0 1px $cl-indigo;
     }
     &#{$button}--disabled {
       color: $cl-dark-gray;
@@ -61,20 +61,20 @@
     }
   }
   &--plight {
-    color: $cl-dark-blue;
-    border-color: $cl-dark-blue;
+    color: $cl-indigo;
+    border-color: $cl-indigo;
     background-color: transparent;
     &:hover {
       color: $cl-white;
-      border-color: $cl-dark-blue;
-      background-color: $cl-dark-blue;
+      border-color: $cl-indigo;
+      background-color: $cl-indigo;
     }
     &:focus {
-      box-shadow: 0 0 0 1px rgba($cl-dark-blue, .5);
+      box-shadow: 0 0 0 1px rgba($cl-indigo, .5);
     }
     &#{$button}--disabled {
-      color: $cl-dark-blue;
-      border-color: $cl-dark-blue;
+      color: $cl-indigo;
+      border-color: $cl-indigo;
       background-color: transparent;
     }
   }
@@ -92,6 +92,18 @@
       color: $cl-gray;
       border-color: $cl-light-gray;
       background: transparent;
+    }
+  }
+  &--light {
+    color: #346cb0;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      color: #346cb0;
+      background-color: #e6e8ed;
+      border-color: #e6e8ed;
+      box-shadow: none;
     }
   }
   &--disabled {

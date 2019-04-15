@@ -3,4 +3,247 @@
 //-------------------------------------------------------
 
 mixin header()
-  .header Header
+  header.header.fixed-top
+    .main-header
+      .main-header__brand
+        a(href='home.html')
+          img(src='../images/brand-inverse.png')
+
+      .main-header__list
+        .main-header__btn-toggle.main-header-item.d-md-none
+          +buttons({
+            iconFont: 'fas fa-bars'
+          })(class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+
+        .main-header__form-search.main-header-item
+          form(action="#")
+            +input-field-icon({
+              placeholder: 'Search',
+              iconBefore: 'oi oi-magnifying-glass'
+            })
+        
+        nav.main-header__right.main-header-item.px-0.d-none.d-sm-flex
+          ul.nav.navbar.nav-icons
+            li.nav-item.dropdown.nav-icons__activities
+              a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
+                span(class= 'oi oi-pulse')
+                span.indicator
+              .dropdown-arrow
+              .dropdown-menu.dropdown-menu-right.dropdown-activities
+                .dropdown-header
+                  span Activities 
+                    span.badge (2)
+                .dropdown-scroll.js-list-scrollbar
+                  -
+                    var listActivities = [
+                      {
+                        avatar: '../images/uifaces15.jpg',
+                        nameActivity: 'Jeffrey Wells created a schedule',
+                        time: 'Just now',
+                        unread: true
+                      },
+                      {
+                        avatar: '../images/uifaces16.jpg',
+                        nameActivity: 'Anna Vargas logged a chat',
+                        time: '3 hours ago',
+                        unread: true
+                      },
+                      {
+                        avatar: '../images/uifaces17.jpg',
+                        nameActivity: 'Sara Carr invited to Stilearn Admin',
+                        time: '5 hours ago'
+                      },
+                      {
+                        avatar: '../images/uifaces18.jpg',
+                        nameActivity: 'Arthur Carroll updated a project',
+                        time: '1 hours ago'
+                      },
+                    ]
+                  each item in listActivities
+                    a.dropdown-item(
+                      href='#',
+                      class= unread ? 'dropdown-item--unread': null
+                    )
+                      .dropdown-item__avatar.user-avatar
+                        img(src= item.avatar, alt='user-avatar')
+                      .dropdown-item__body
+                        p.text= item.nameActivity
+                        p.time= item.time
+
+                .dropdown-footer
+                  a(href='#') All activities
+                    span(class= 'fas fa-fw fa-long-arrow-alt-right')
+
+            li.nav-item.dropdown.nav-icons__messages
+              a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
+                span(class= 'oi oi-envelope-open')
+                span.indicator
+              .dropdown-arrow
+              .dropdown-menu.dropdown-menu-right.dropdown-messages
+                .dropdown-header
+                  span Messages
+                  a(href="#") Mark all as read
+                .dropdown-scroll.ps.js-list-scrollbar
+                  -
+                    var listMess = [
+                      {
+                        avatar: '../images/team1.jpg',
+                        nameUser: 'Stilearning',
+                        mess: 'Invitation: Joe"s Dinner @ Fri Aug 22',
+                        time: '2 hours ago',
+                        unread: true
+                      },
+                      {
+                        avatar: '../images/team3.png',
+                        nameUser: 'Openlane',
+                        mess: 'Final reminder: Upgrade to Pro',
+                        time: '23 hours ago'
+                      },
+                      {
+                        avatar: {
+                          text: 'GZ',
+                          bgColor: 'green'
+                        },
+                        nameUser: 'Gogo Zoom',
+                        mess: 'Live healthy with this wireless sensor.',
+                        time: '1 day ago'
+                      },
+                      {
+                        avatar: {
+                          text: 'GD',
+                          bgColor: 'light-green'
+                        },
+                        nameUser: 'Gold Dex',
+                        mess: 'Invitation: Design Review @ Mon Jul 7',
+                        time: '1 day ago'
+                      },
+                      {
+                        avatar: '../images/team2.png',
+                        nameUser: 'Creative Division',
+                        mess: 'Need some feedback on this please',
+                        time: '2 days ago'
+                      },
+                      {
+                        avatar: {
+                          text: 'LD',
+                          bgColor: 'light-purple'
+                        },
+                        nameUser: 'Lab Drill',
+                        mess: 'Our UX exercise is ready',
+                        time: '6 days ago'
+                      }
+                    ]
+                  each item in listMess
+                    a.dropdown-item(
+                      href='#',
+                      class= unread ? 'dropdown-item--unread': null
+                    )
+                      if (item.avatar.text)
+                        .dropdown-item__avatar.avatar.avatar--circle(class= `bg--${item.avatar.bgColor}`)
+                          | #{item.avatar.text}
+                      else
+                        .dropdown-item__avatar.user-avatar
+                          img(src= item.avatar, alt="user-avatar")
+                      .dropdown-item__body
+                        p.subject= item.nameUser
+                        p.text= item.mess
+                        p.time= item.time
+                .dropdown-footer
+                  a(href='#') All messages
+                    span(class= 'fas fa-fw fa-long-arrow-alt-right')
+
+            li.nav-item.dropdown.nav-icons__sheets
+              a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
+                span(class= 'oi oi-grid-three-up')
+              .dropdown-arrow
+              .dropdown-menu.dropdown-menu-right.dropdown-sheets
+                .list-sheets
+                  -
+                    var listSheets = [
+                      {
+                        avatar: {
+                          icon: 'oi oi-people',
+                          bgColor: 'indigo'
+                        },
+                        text: 'Teams'
+                      },
+                      {
+                        avatar: {
+                          icon: 'oi oi-fork',
+                          bgColor: 'light-green'
+                        },
+                        text: 'Projects'
+                      },
+                      {
+                        avatar: {
+                          icon: 'fa fa-tasks',
+                          bgColor: 'light-purple'
+                        },
+                        text: 'Tasks'
+                      },
+                      {
+                        avatar: {
+                          icon: 'oi oi-fire',
+                          bgColor: 'yellow'
+                        },
+                        text: 'Feeds'
+                      },
+                      {
+                        avatar: {
+                          icon: 'oi oi-document',
+                          bgColor: 'cyan'
+                        },
+                        text: 'Files'
+                      }
+                    ]
+                  each item in listSheets
+                    .dropdown-sheet-item
+                      a.title-wrapper(href="#!")
+                        span.dropdown-sheet-item__avatar.avatar(class= `bg--${item.avatar.bgColor}`)
+                          i(class= item.avatar.icon)
+                        span.title-peek= item.text
+
+          .user-profile.dropdown.nav-user
+            a.d-none.d-md-flex(data-toggle="dropdown" role="button" aria-expanded="false")
+              span.user-profile__avatar
+                img(src='../images/profile.jpg' alt='user-avatar')
+              span.user-profile__info.pr-lg-4.d-none.d-lg-block
+                span.user-profile__name
+                  | Beni Arisandi
+                span.user-profile__position
+                  | Marketing Manager
+            .dropdown-arrow.dropdown-arrow-left
+            .user-profile__setting.dropdown-menu
+              -
+                var data = [
+                  {
+                    text: 'Profile',
+                    href: 'user-profile.html',
+                    icon: 'oi oi-person'
+                  },
+                  {
+                    text: 'Logout',
+                    icon: 'oi oi-account-logout'
+                  },
+                  {
+                    divider: true
+                  },
+                  {
+                    text: 'Help Center'
+                  },
+                  {
+                    text: 'Ask Forum'
+                  },
+                  {
+                    text: 'Keyboard Shortcuts'
+                  }
+                ]
+
+              each item in data
+                if item.divider
+                  .dropdown-divider
+                else
+                  a.dropdown-item(href= item.href ? item.href : '#!')
+                    if item.icon
+                      span.dropdown-item__icon(class= item.icon)
+                    | #{item.text}

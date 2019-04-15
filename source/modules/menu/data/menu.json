@@ -1,0 +1,439 @@
+{
+  "menus": {
+    "1": {
+      "text": "Dashboard",
+      "icon": "fas fa-home",
+      "href": "index.html",
+      "active": true
+    },
+    "2": {
+      "text": "App Pages",
+      "icon": "fas fa-file",
+      "href": "sidebarAppPages",
+      "badge": {
+        "type": "warning",
+        "text": "New"
+      },
+      "submenu": [
+        {
+          "text": "Clients",
+          "href": "#!"
+        },
+        {
+          "text": "Teams",
+          "href": "#!"
+        },
+        {
+          "text": "Team",
+          "href": "sidebarTeam",
+          "childMenu": [
+            {
+              "text": "Overview",
+              "href": "#!"
+            },
+            {
+              "text": "Feeds",
+              "href": "#!"
+            },
+            {
+              "text": "Projects",
+              "href": "#!"
+            },
+            {
+              "text": "Members",
+              "href": "#!"
+            }
+          ]
+        },
+        {
+          "text": "Project",
+          "href": "sidebarProject",
+          "childMenu": [
+            {
+              "text": "Overview",
+              "href": "#!"
+            },
+            {
+              "text": "Board",
+              "href": "#!"
+            },
+            {
+              "text": "Grantt View",
+              "href": "#!"
+            }
+          ]
+        },
+        {
+          "text": "Calendar",
+          "href": "#!"
+        },
+        {
+          "text": "Invoices",
+          "href": "sidebarInvoices",
+          "childMenu": [
+            {
+              "text": "List",
+              "href": "#!"
+            },
+            {
+              "text": "Details",
+              "href": "#!"
+            }
+          ]
+        },
+        {
+          "text": "Messages",
+          "href": "#!"
+        },
+        {
+          "text": "Conversations",
+          "href": "#!"
+        }
+      ]
+    },
+    "3": {
+      "text": "Auth",
+      "icon": "oi oi-wrench",
+      "href": "sidebarAuth",
+      "submenu": [
+        {
+          "text": "Comming soon v1",
+          "href": "#!"
+        },
+        {
+          "text": "Comming soon v2",
+          "href": "#!"
+        },
+        {
+          "text": "Cookie Consent",
+          "href": "#!"
+        },
+        {
+          "text": "Empty state",
+          "href": "#!"
+        },
+        {
+          "text": "Error Page v1",
+          "href": "#!"
+        },
+        {
+          "text": "Error Page v2",
+          "href": "#!"
+        },
+        {
+          "text": "Error Page v3",
+          "href": "#!"
+        },
+        {
+          "text": "Maintenance",
+          "href": "#!"
+        },
+        {
+          "text": "Page Message",
+          "href": "#!"
+        },
+        {
+          "text": "Session Timeout",
+          "href": "#!"
+        },
+        {
+          "text": "Sign In v1",
+          "href": "#!"
+        },
+        {
+          "text": "Sign In v2",
+          "href": "#!"
+        },
+        {
+          "text": "Sign Up",
+          "href": "#!"
+        },
+        {
+          "text": "Recovery Username",
+          "href": "#!"
+        },
+        {
+          "text": "Recovery Password",
+          "href": "#!"
+        },
+        {
+          "text": "Screen Locked",
+          "href": "#!"
+        }
+      ]
+    },
+    "4": {
+      "text": "User",
+      "icon": "oi oi-person",
+      "href": "sidebarUser",
+      "submenu": [
+        {
+          "text": "Profile",
+          "href": "user-profile.html"
+        },
+        {
+          "text": "Activities",
+          "href": "user-activities.html"
+        },
+        {
+          "text": "Teams",
+          "href": "user-teams.html"
+        },
+        {
+          "text": "Projects",
+          "href": "user-projects.html"
+        },
+        {
+          "text": "Tasks",
+          "href": "user-tasks.html"
+        },
+        {
+          "text": "Profile Settings",
+          "href": "user-profile-settings.html"
+        },
+        {
+          "text": "Account Settings",
+          "href": "user-account-settings.html"
+        },
+        {
+          "text": "Billing Settings",
+          "href": "user-billing-settings.html"
+        },
+        {
+          "text": "Notification Settings",
+          "href": "user-notification-settings.html"
+        }
+      ]
+    },
+    "5": {
+      "text": "Layout",
+      "icon": "oi oi-browser",
+      "href": "sidebarLayout",
+      "badge": {
+        "type": "success",
+        "text": "+4"
+      },
+      "submenu": [
+        {
+          "text": "Blank Page",
+          "href": "#!"
+        },
+        {
+          "text": "Header no Search",
+          "href": "#!"
+        },
+        {
+          "text": "Full Width",
+          "href": "#!"
+        },
+        {
+          "text": "Page Navs",
+          "href": "#!"
+        },
+        {
+          "text": "Page Cover",
+          "href": "#!"
+        },
+        {
+          "text": "Cover Image",
+          "href": "#!"
+        },
+        {
+          "text": "Page Sidebar",
+          "href": "#!"
+        },
+        {
+          "text": "Sidebar Fluid",
+          "href": "#!"
+        },
+        {
+          "text": "Sidebar Hidden",
+          "href": "#!"
+        },
+        {
+          "text": "Custom",
+          "href": "#!"
+        }
+      ]
+    }
+  },
+
+  "interfaces": {
+    "1": {
+      "text": "Components",
+      "icon": "oi oi-puzzle-piece",
+      "href": "sidebarComponents",
+      "submenu": [
+        {
+          "text": "General",
+          "href": "#!"
+        },
+        {
+          "text": "Icons",
+          "href": "#!"
+        },
+        {
+          "text": "Rich Media",
+          "href": "#!"
+        },
+        {
+          "text": "List Views",
+          "href": "#!"
+        },
+        {
+          "text": "Sortable & Nestable",
+          "href": "#!"
+        },
+        {
+          "text": "Activity",
+          "href": "#!"
+        },
+        {
+          "text": "Steps",
+          "href": "#!"
+        },
+        {
+          "text": "Tasks",
+          "href": "#!"
+        },
+        {
+          "text": "Metrics",
+          "href": "#!"
+        }
+      ]
+    },
+    "2": {
+      "text": "Forms",
+      "icon": "oi oi-pencil",
+      "href": "sidebarForm",
+      "submenu": [
+        {
+          "text": "Basic Elements",
+          "href": "form-basic.html"
+        },
+        {
+          "text": "Autocompletes",
+          "href": "#!"
+        },
+        {
+          "text": "Pickers",
+          "href": "#!"
+        },
+        {
+          "text": "Editors",
+          "href": "#!"
+        }
+      ]
+    },
+    "3": {
+      "text": "Tables",
+      "icon": "fas fa-table",
+      "href": "sidebarTables",
+      "submenu": [
+        {
+          "text": "Basic Tables",
+          "href": "#!"
+        },
+        {
+          "text": "Datatables",
+          "href": "#!"
+        },
+        {
+          "text": "Responsive Datatables",
+          "href": "#!"
+        },
+        {
+          "text": "Filter Columns",
+          "href": "#!"
+        }
+      ]
+    },
+    "4": {
+      "text": "Collections",
+      "icon": "oi oi-bar-chart",
+      "href": "sidebarCollections",
+      "submenu": [
+        {
+          "text": "Chart.js",
+          "href": "sidebarChart",
+          "childMenu": [
+            {
+              "text": "Line",
+              "href": "#!"
+            },
+            {
+              "text": "Bar",
+              "href": "#!"
+            },
+            {
+              "text": "Radar & Scatter",
+              "href": "#!"
+            },
+            {
+              "text": "Others",
+              "href": "#!"
+            }
+          ]
+        },
+        {
+          "text": "Flot",
+          "href": "#!"
+        },
+        {
+          "text": "Inline charts",
+          "href": "#!"
+        },
+        {
+          "text": "Vector Map",
+          "href": "#!"
+        }
+      ]
+    },
+    "5": {
+      "text": "Level Menu",
+      "icon": "oi oi-list-rich",
+      "href": "sidebarLevelMenu",
+      "submenu": [
+        {
+          "text": "Menu item"
+        },
+        {
+          "text": "Menu item",
+          "href": "sidebarMenuItem",
+          "childMenu": [
+            {
+              "text": "Child item"
+            },
+            {
+              "text": "Child item"
+            },
+            {
+              "text": "Child item",
+              "href": "sidebarChildItem",
+              "grand-child": [
+                {
+                  "text": "Grand Child item"
+                },
+                {
+                  "text": "Grand Child item"
+                },
+                {
+                  "text": "Grand Child item"
+                },
+                {
+                  "text": "Grand Child item"
+                }
+              ]
+            },
+            {
+              "text": "Child item"
+            }
+          ]
+        },
+        {
+          "text": "Menu item"
+        }
+      ]
+    }
+  }
+}

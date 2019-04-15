@@ -3,4 +3,59 @@
 //-------------------------------------------------------
 
 mixin sidebar()
-  
+  aside.aside-sidebar.aside-sidebar-expand-md.aside-sidebar-light
+    .aside-content
+      .aside-header.d-block.d-md-none
+        .user-profile.dropdown
+          a.dropdown-toggle(data-toggle="dropdown" role="button" aria-expanded="false")
+            span.user-profile__avatar
+              img(src='../images/profile.jpg' alt='user-avatar')
+            span.user-profile__info
+              span.user-profile__name
+                | Beni Arisandi
+              span.user-profile__position
+                | Marketing Manager
+              
+          .user-profile__setting.dropdown-menu
+            -
+              var data = [
+                {
+                  text: 'Help Center',
+                  href: 'user-profile.html',
+                  icon: 'oi oi-person'
+                },
+                {
+                  text: 'Logout',
+                  icon: 'oi oi-account-logout'
+                },
+                {
+                  divider: true
+                },
+                {
+                  text: 'Help Center'
+                },
+                {
+                  text: 'Ask Forum'
+                },
+                {
+                  text: 'Keyboard Shortcuts'
+                }
+              ]
+
+            each item in data
+              if item.divider
+                .dropdown-divider
+              else
+                a.dropdown-item(href= item.href ? item.href : '#!')
+                  span.dropdown-item__icon(class= item.icon)
+                  | #{item.text}
+      .aside-menu.overflow-hidden
+        +main-menu()
+        +sub-menu()
+      .aside-footer
+        +buttons({
+          text: 'Night mode',
+          iconFont: 'fas fa-moon',
+          type: 'light',
+          isFull: true
+        })

@@ -8,7 +8,7 @@ $path-fonts: '../fonts';
 
 // Fonts
 // >> Font-family
-$font-family-base : 'Fira Sans','sans-serif';
+$font-family-base : 'Fira Sans', sans-serif;
 
 // >> Font-size
 $font-size-small  : 12px;
@@ -37,11 +37,11 @@ $z-indexes: (
 //color
 $cl-white       : #fff;
 $cl-black       : #000;
-$cl-light-black   : #363642;
+$cl-light-black : #363642;
 
-$cl-dark-blue   : #346cb0;
 $cl-light-blue  : #015e82;
 $cl-blue        : #0179a8;
+$cl-indigo      : #346cb0;
 
 $cl-green       : #007c69;
 $cl-light-green : #00a28a;
@@ -57,18 +57,9 @@ $cl-dark-purple : #5f4b8b;
 $cl-gray        : #e6e8ed;
 $cl-light-gray  : #f6f7f9;
 $cl-dark-gray   : #888c9b;
-//
-$cl-white       : #fff;
-$cl-dark-blue   : #346cb0;
-$cl-xdark-blue   : #2b5a92;
-$cl-light-blue  : #0179a8;
+
+$cl-xdark-blue  : #2b5a92;
 $cl-xlight-blue : #5282bc;
-$cl-green       : #00a28a;
-$cl-red         : #f05151;
-$cl-orange      : #f7c46c;
-$cl-purple      : #b76ba3;
-$cl-light-gray  : #e6e8ed;
-$cl-gray        : #888c9b;
 
 //Background
 $bsh-primary : rgba(255, 107, 0, .2);
@@ -76,11 +67,13 @@ $bsh-secondary : rgba(0, 0, 0, .1);
 
 $bg-white       : #fff;
 $bg-black       : #000;
-$bg-dark-blue   : #346cb0;
+$bg-indigo      : #346cb0;
 $bg-light-blue  : #015e82;
 $bg-blue        : #0179a8;
 
-$bg-green       : #007c69;
+$bg-green       : #a7c796;
+$bg-light-green : #00a28a;
+$bg-cyan        : #3686a0;
 $bg-red         : #f05151;
 $bg-orange      : #f5b548;
 $bg-yellow      : #f7c46c;
@@ -96,7 +89,7 @@ $bg-dark-gray   : #363642;
 //border
 $border-white       : #fff;
 $border-black       : #000;
-$border-dark-blue   : #346cb0;
+$border-indigo      : #346cb0;
 $border-light-blue  : #015e82;
 $border-blue        : #0179a8;
 

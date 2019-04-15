@@ -15,8 +15,12 @@
     background: $bg-light-blue;
   }
 
-  &--dark-blue {
-    background: $bg-dark-blue;
+  &--yellow {
+    background: $bg-yellow;
+  }
+
+  &--indigo {
+    background: $bg-indigo;
   }
 
   &--black {
@@ -41,6 +45,14 @@
 
   &--green {
     background: $bg-green;
+  }
+
+  &--light-green {
+    background: $bg-light-green;
+  }
+
+  &--cyan {
+    background: $bg-cyan;
   }
 
   &--purple {

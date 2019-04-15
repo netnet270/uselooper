@@ -53,7 +53,7 @@
   .input-checkbox {
     &:indeterminate {
       & ~ label:before {
-        border-color: $cl-dark-blue;
+        border-color: $cl-indigo;
       }
       & ~ label:after {
         transform: scale(1);
@@ -71,7 +71,7 @@
   &:checked {
     & ~ label {
       &:before {
-        border-color: $cl-dark-blue;
+        border-color: $cl-indigo;
       }
       &:after {
         transform: scale(1);
@@ -81,13 +81,13 @@
   &:focus {
     & ~ label {
       &:before {
-        box-shadow: 0 0 0 1px $cl-dark-blue;
-        border-color: $cl-dark-blue;
+        box-shadow: 0 0 0 1px $cl-indigo;
+        border-color: $cl-indigo;
       }
     }
     &:not(:checked) {
       & ~ label:before {
-        border-color: $cl-dark-blue;
+        border-color: $cl-indigo;
       }
     }
   }

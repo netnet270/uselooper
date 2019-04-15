@@ -8,10 +8,70 @@
         "bg": "gray"
       },
       {
-        "title": "Owner Top page",
-        "url": "SO-0-01-Toppage",
-        "categories": "Owner Toppage",
+        "title": "Home",
+        "url": "home",
+        "categories": "Dashboard",
         "bg": "#1984c6"
+      },
+      {
+        "title": "User Profile",
+        "url": "user-profile",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "User Activities",
+        "url": "user-activities",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "User Teams",
+        "url": "user-teams",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "User Projects",
+        "url": "user-prọects",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "User Tasks",
+        "url": "user-tasks",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Profile Settings",
+        "url": "user-profile-settings",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Account Settings",
+        "url": "user-account-settings",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Billing Settings",
+        "url": "user-billing-settings",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Notification Settings",
+        "url": "user-notification-settings",
+        "categories": "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Form Basic",
+        "url": "form-basic",
+        "categories": "Pages",
+        "bg": "#dea604"
       }
     ]
   }
