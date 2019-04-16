@@ -61,6 +61,15 @@
 
       .form-group {
         margin-bottom: 0;
+
+        input {
+          border-color: transparent;
+          background-color: hsla(0, 0%, 100%, .12);
+        }
+
+        &::placeholder {
+          color: hsla(0, 0%, 100%, .6);
+        }
       }
     }
   }

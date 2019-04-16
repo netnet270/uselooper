@@ -1,12 +1,14 @@
 extends modules/layout/_core
-
+      
 block head
   +head(head.home.title)
-
-block body
+     
+block body 
   #main-wapper
     +header()
     +sidebar()
-
+ 
     main#js-main-body.main-body
       .main-content
+
+      +footer()

@@ -8,7 +8,7 @@
     },
     "2": {
       "text": "App Pages",
-      "icon": "fas fa-file",
+      "icon": "far fa-file",
       "href": "sidebarAppPages",
       "badge": {
         "type": "warning",
@@ -26,7 +26,7 @@
         {
           "text": "Team",
           "href": "sidebarTeam",
-          "childMenu": [
+          "childmenu": [
             {
               "text": "Overview",
               "href": "#!"
@@ -48,7 +48,7 @@
         {
           "text": "Project",
           "href": "sidebarProject",
-          "childMenu": [
+          "childmenu": [
             {
               "text": "Overview",
               "href": "#!"
@@ -70,7 +70,7 @@
         {
           "text": "Invoices",
           "href": "sidebarInvoices",
-          "childMenu": [
+          "childmenu": [
             {
               "text": "List",
               "href": "#!"
@@ -206,7 +206,7 @@
       ]
     },
     "5": {
-      "text": "Layout",
+      "text": "Layouts",
       "icon": "oi oi-browser",
       "href": "sidebarLayout",
       "badge": {
@@ -356,7 +356,7 @@
         {
           "text": "Chart.js",
           "href": "sidebarChart",
-          "childMenu": [
+          "childmenu": [
             {
               "text": "Line",
               "href": "#!"
@@ -400,7 +400,7 @@
         {
           "text": "Menu item",
           "href": "sidebarMenuItem",
-          "childMenu": [
+          "childmenu": [
             {
               "text": "Child item"
             },
@@ -410,7 +410,7 @@
             {
               "text": "Child item",
               "href": "sidebarChildItem",
-              "grand-child": [
+              "grandchild": [
                 {
                   "text": "Grand Child item"
                 },

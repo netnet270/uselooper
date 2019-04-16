@@ -1,8 +1,15 @@
 // ======================================================
 // Layout :: Footer
 // ======================================================
-// Start classname with prefix `l-`
+.footer {
+  margin: 24px 0;
+  padding: 0 16px;
+  text-align: center;
+}
 
-.l-footer {
-  color: green;
+@media (min-width: 992px) {
+  .footer {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 }

@@ -33,7 +33,7 @@ mixin header()
                 .dropdown-header
                   span Activities 
                     span.badge (2)
-                .dropdown-scroll.js-list-scrollbar
+                .dropdown-scroll.js-scrollbar-1
                   -
                     var listActivities = [
                       {
@@ -56,13 +56,28 @@ mixin header()
                       {
                         avatar: '../images/uifaces18.jpg',
                         nameActivity: 'Arthur Carroll updated a project',
-                        time: '1 hours ago'
+                        time: '6 hours ago'
+                      },
+                      {
+                        avatar: '../images/uifaces19.jpg',
+                        nameActivity: 'Hannah Romero created a task',
+                        time: '1 day ago',
+                      },
+                      {
+                        avatar: '../images/uifaces20.jpg',
+                        nameActivity: 'Angela Peterson assign a task to you',
+                        time: '1 day ago'
+                      },
+                      {
+                        avatar: '../images/uifaces21.jpg',
+                        nameActivity: 'Shirley Mason and 3 others followed you',
+                        time: '1 day ago'
                       },
                     ]
                   each item in listActivities
                     a.dropdown-item(
-                      href='#',
-                      class= unread ? 'dropdown-item--unread': null
+                      class= item.unread ? 'dropdown-item--unread': null,
+                      href = '#!'
                     )
                       .dropdown-item__avatar.user-avatar
                         img(src= item.avatar, alt='user-avatar')
@@ -83,7 +98,7 @@ mixin header()
                 .dropdown-header
                   span Messages
                   a(href="#") Mark all as read
-                .dropdown-scroll.ps.js-list-scrollbar
+                .dropdown-scroll.js-scrollbar-2
                   -
                     var listMess = [
                       {
@@ -136,7 +151,7 @@ mixin header()
                   each item in listMess
                     a.dropdown-item(
                       href='#',
-                      class= unread ? 'dropdown-item--unread': null
+                      class= item.unread ? 'dropdown-item--unread': null
                     )
                       if (item.avatar.text)
                         .dropdown-item__avatar.avatar.avatar--circle(class= `bg--${item.avatar.bgColor}`)

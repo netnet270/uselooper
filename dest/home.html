@@ -33,29 +33,47 @@
                   <div class="dropdown-arrow"></div>
                   <div class="dropdown-menu dropdown-menu-right dropdown-activities">
                     <div class="dropdown-header"><span>Activities <span class="badge">(2)</span></span></div>
-                    <div class="dropdown-scroll js-list-scrollbar"><a class="dropdown-item" href="#">
+                    <div class="dropdown-scroll js-scrollbar-1"><a class="dropdown-item dropdown-item--unread" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces15.jpg" alt="user-avatar" /></div>
                         <div class="dropdown-item__body">
                           <p class="text">Jeffrey Wells created a schedule</p>
                           <p class="time">Just now</p>
                         </div>
-                      </a><a class="dropdown-item" href="#">
+                      </a><a class="dropdown-item dropdown-item--unread" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces16.jpg" alt="user-avatar" /></div>
                         <div class="dropdown-item__body">
                           <p class="text">Anna Vargas logged a chat</p>
                           <p class="time">3 hours ago</p>
                         </div>
-                      </a><a class="dropdown-item" href="#">
+                      </a><a class="dropdown-item" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces17.jpg" alt="user-avatar" /></div>
                         <div class="dropdown-item__body">
                           <p class="text">Sara Carr invited to Stilearn Admin</p>
                           <p class="time">5 hours ago</p>
                         </div>
-                      </a><a class="dropdown-item" href="#">
+                      </a><a class="dropdown-item" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces18.jpg" alt="user-avatar" /></div>
                         <div class="dropdown-item__body">
                           <p class="text">Arthur Carroll updated a project</p>
-                          <p class="time">1 hours ago</p>
+                          <p class="time">6 hours ago</p>
+                        </div>
+                      </a><a class="dropdown-item" href="#!">
+                        <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces19.jpg" alt="user-avatar" /></div>
+                        <div class="dropdown-item__body">
+                          <p class="text">Hannah Romero created a task</p>
+                          <p class="time">1 day ago</p>
+                        </div>
+                      </a><a class="dropdown-item" href="#!">
+                        <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces20.jpg" alt="user-avatar" /></div>
+                        <div class="dropdown-item__body">
+                          <p class="text">Angela Peterson assign a task to you</p>
+                          <p class="time">1 day ago</p>
+                        </div>
+                      </a><a class="dropdown-item" href="#!">
+                        <div class="dropdown-item__avatar user-avatar"><img src="../images/uifaces21.jpg" alt="user-avatar" /></div>
+                        <div class="dropdown-item__body">
+                          <p class="text">Shirley Mason and 3 others followed you</p>
+                          <p class="time">1 day ago</p>
                         </div>
                       </a>
                     </div>
@@ -66,7 +84,7 @@
                   <div class="dropdown-arrow"></div>
                   <div class="dropdown-menu dropdown-menu-right dropdown-messages">
                     <div class="dropdown-header"><span>Messages</span><a href="#">Mark all as read</a></div>
-                    <div class="dropdown-scroll ps js-list-scrollbar"><a class="dropdown-item" href="#">
+                    <div class="dropdown-scroll js-scrollbar-2"><a class="dropdown-item dropdown-item--unread" href="#">
                         <div class="dropdown-item__avatar user-avatar"><img src="../images/team1.jpg" alt="user-avatar" /></div>
                         <div class="dropdown-item__body">
                           <p class="subject">Stilearning</p>
@@ -145,117 +163,138 @@
               </div>
             </div>
           </div>
-          <div class="aside-menu">
+          <div class="aside-menu overflow-hidden js-scrollbar-menu">
             <ul class="navbar-nav js-navbar-nav">
               <div id="accordion">
-                <li class="nav-item js-nav-item nav-item--active"><a class="nav-link level1 js-nav-link" href="#index.html" data-toggle="collapse" aria-expanded="false" aria-controls="index.html" role="button"><i class="fas fa-home"></i><span class="nav-text">Dashboard</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--active"><a class="nav-link js-nav-link" href="#index.html" data-toggle="collapse" aria-expanded="false" aria-controls="index.html" role="button"><i class="nav-icon fas fa-home"></i><span class="nav-text">Dashboard</span></a>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarAppPages" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAppPages" role="button"><i class="fas fa-file"></i><span class="nav-text">App Pages</span><span class="badge ml-auto badge--warning">New</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarAppPages" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAppPages" role="button"><i class="nav-icon far fa-file"></i><span class="nav-text">App Pages</span><span class="badge ml-auto badge--warning">New</span></a>
                   <div class="collapse" id="sidebarAppPages" data-parent="#accordion">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Clients</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Clients</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Teams</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Teams</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="sidebarTeam"><span class="nav-text">Team</span></a>
+                      <li class="nav-item level2 js-sub-item nav-item--has-children"><a class="nav-link" href="#sidebarTeam" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarTeam" role="button"><span class="nav-text">Team</span></a>
+                        <div class="collapse" id="sidebarTeam">
+                          <ul class="nav js-childmenu flex-column">
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Overview</a></li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Feeds</a></li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Projects</a></li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Members</a></li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="sidebarProject"><span class="nav-text">Project</span></a>
+                      <li class="nav-item level2 js-sub-item nav-item--has-children"><a class="nav-link" href="#sidebarProject" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarProject" role="button"><span class="nav-text">Project</span></a>
+                        <div class="collapse" id="sidebarProject">
+                          <ul class="nav js-childmenu flex-column">
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Overview</a></li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Board</a></li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Grantt View</a></li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Calendar</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Calendar</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="sidebarInvoices"><span class="nav-text">Invoices</span></a>
+                      <li class="nav-item level2 js-sub-item nav-item--has-children"><a class="nav-link" href="#sidebarInvoices" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarInvoices" role="button"><span class="nav-text">Invoices</span></a>
+                        <div class="collapse" id="sidebarInvoices">
+                          <ul class="nav js-childmenu flex-column">
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">List</a></li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Details</a></li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Messages</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Messages</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Conversations</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Conversations</span></a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarAuth" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><i class="oi oi-wrench"></i><span class="nav-text">Auth</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarAuth" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><i class="nav-icon oi oi-wrench"></i><span class="nav-text">Auth</span></a>
                   <div class="collapse" id="sidebarAuth" data-parent="#accordion">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Comming soon v1</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Comming soon v1</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Comming soon v2</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Comming soon v2</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Cookie Consent</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Cookie Consent</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Empty state</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Empty state</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Error Page v1</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Error Page v1</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Error Page v2</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Error Page v2</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Error Page v3</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Error Page v3</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Maintenance</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Maintenance</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Page Message</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Page Message</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Session Timeout</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Session Timeout</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Sign In v1</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Sign In v1</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Sign In v2</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Sign In v2</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Sign Up</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Sign Up</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Recovery Username</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Recovery Username</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Recovery Password</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Recovery Password</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Screen Locked</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Screen Locked</span></a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarUser" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarUser" role="button"><i class="oi oi-person"></i><span class="nav-text">User</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarUser" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarUser" role="button"><i class="nav-icon oi oi-person"></i><span class="nav-text">User</span></a>
                   <div class="collapse" id="sidebarUser" data-parent="#accordion">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-profile.html"><span class="nav-text">Profile</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-profile.html"><span class="nav-text">Profile</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-activities.html"><span class="nav-text">Activities</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-activities.html"><span class="nav-text">Activities</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-teams.html"><span class="nav-text">Teams</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-teams.html"><span class="nav-text">Teams</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-projects.html"><span class="nav-text">Projects</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-projects.html"><span class="nav-text">Projects</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-tasks.html"><span class="nav-text">Tasks</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-tasks.html"><span class="nav-text">Tasks</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-profile-settings.html"><span class="nav-text">Profile Settings</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-profile-settings.html"><span class="nav-text">Profile Settings</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-account-settings.html"><span class="nav-text">Account Settings</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-account-settings.html"><span class="nav-text">Account Settings</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-billing-settings.html"><span class="nav-text">Billing Settings</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-billing-settings.html"><span class="nav-text">Billing Settings</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="user-notification-settings.html"><span class="nav-text">Notification Settings</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="user-notification-settings.html"><span class="nav-text">Notification Settings</span></a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarLayout" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarLayout" role="button"><i class="oi oi-browser"></i><span class="nav-text">Layout</span><span class="badge ml-auto badge--success">+4</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarLayout" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarLayout" role="button"><i class="nav-icon oi oi-browser"></i><span class="nav-text">Layouts</span><span class="badge ml-auto badge--success">+4</span></a>
                   <div class="collapse" id="sidebarLayout" data-parent="#accordion">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Blank Page</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Blank Page</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Header no Search</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Header no Search</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Full Width</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Full Width</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Page Navs</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Page Navs</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Page Cover</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Page Cover</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Cover Image</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Cover Image</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Page Sidebar</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Page Sidebar</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Sidebar Fluid</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Sidebar Fluid</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Sidebar Hidden</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Sidebar Hidden</span></a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Custom</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!"><span class="nav-text">Custom</span></a>
                       </li>
                     </ul>
                   </div>
@@ -265,80 +304,112 @@
             <h3 class="navbar-heading">Interfaces</h3>
             <ul class="navbar-nav js-navbar-nav">
               <div id="submenu">
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarComponents" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarComponents" role="button"><i class="oi oi-puzzle-piece"></i><span class="nav-text">Components</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarComponents" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarComponents" role="button"><i class="nav-icon oi oi-puzzle-piece"></i><span class="nav-text">Components</span></a>
                   <div class="collapse" id="sidebarComponents" data-parent="#submenu">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">General</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">General</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Icons</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Icons</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Rich Media</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Rich Media</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">List Views</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">List Views</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Sortable &amp; Nestable</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Sortable &amp; Nestable</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Activity</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Activity</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Steps</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Steps</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Tasks</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Tasks</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Metrics</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Metrics</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarForm" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarForm" role="button"><i class="oi oi-pencil"></i><span class="nav-text">Forms</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarForm" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarForm" role="button"><i class="nav-icon oi oi-pencil"></i><span class="nav-text">Forms</span></a>
                   <div class="collapse" id="sidebarForm" data-parent="#submenu">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="form-basic.html"><span class="nav-text">Basic Elements</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="form-basic.html">Basic Elements</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Autocompletes</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Autocompletes</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Pickers</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Pickers</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Editors</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Editors</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarTables" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarTables" role="button"><i class="fas fa-table"></i><span class="nav-text">Tables</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarTables" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarTables" role="button"><i class="nav-icon fas fa-table"></i><span class="nav-text">Tables</span></a>
                   <div class="collapse" id="sidebarTables" data-parent="#submenu">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Basic Tables</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Basic Tables</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Datatables</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Datatables</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Responsive Datatables</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Responsive Datatables</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Filter Columns</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Filter Columns</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarCollections" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarCollections" role="button"><i class="oi oi-bar-chart"></i><span class="nav-text">Collections</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarCollections" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarCollections" role="button"><i class="nav-icon oi oi-bar-chart"></i><span class="nav-text">Collections</span></a>
                   <div class="collapse" id="sidebarCollections" data-parent="#submenu">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="sidebarChart"><span class="nav-text">Chart.js</span></a>
+                      <li class="nav-item level2 js-sub-item nav-item--has-children"><a class="nav-link" href="#sidebarChart" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarChart" role="button">Chart.js</a>
+                        <div class="collapse" id="sidebarChart">
+                          <ul class="nav js-childmenu flex-column">
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Line</a>
+                            </li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Bar</a>
+                            </li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Radar &amp; Scatter</a>
+                            </li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Others</a>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Flot</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Flot</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Inline charts</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Inline charts</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="#!"><span class="nav-text">Vector Map</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Vector Map</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item js-nav-item nav-item--has-children"><a class="nav-link level1 js-nav-link" href="#sidebarLevelMenu" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarLevelMenu" role="button"><i class="oi oi-list-rich"></i><span class="nav-text">Level Menu</span></a>
+                <li class="nav-item level1 js-nav-item nav-item--has-children"><a class="nav-link js-nav-link" href="#sidebarLevelMenu" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarLevelMenu" role="button"><i class="nav-icon oi oi-list-rich"></i><span class="nav-text">Level Menu</span></a>
                   <div class="collapse" id="sidebarLevelMenu" data-parent="#submenu">
                     <ul class="nav flex-column js-submenu">
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2"><span class="nav-text">Menu item</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Menu item</a>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2" href="sidebarMenuItem"><span class="nav-text">Menu item</span></a>
+                      <li class="nav-item level2 js-sub-item nav-item--has-children"><a class="nav-link" href="#sidebarMenuItem" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarMenuItem" role="button">Menu item</a>
+                        <div class="collapse" id="sidebarMenuItem">
+                          <ul class="nav js-childmenu flex-column">
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Child item</a>
+                            </li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Child item</a>
+                            </li>
+                            <li class="level3 nav-item nav-item--has-children"><a class="nav-link" href="#sidebarChildItem" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarChildItem" role="button">Child item</a>
+                              <div class="collapse" id="sidebarChildItem">
+                                <ul class="nav js-childmenu flex-column">
+                                  <li class="level4 nav-item"><a class="nav-link" href="#">Grand Child item</a></li>
+                                  <li class="level4 nav-item"><a class="nav-link" href="#">Grand Child item</a></li>
+                                  <li class="level4 nav-item"><a class="nav-link" href="#">Grand Child item</a></li>
+                                  <li class="level4 nav-item"><a class="nav-link" href="#">Grand Child item</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="level3 nav-item"><a class="nav-link" href="#!">Child item</a>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="nav-item js-sub-item"><a class="nav-link collapsed level2"><span class="nav-text">Menu item</span></a>
+                      <li class="nav-item level2 js-sub-item"><a class="nav-link" href="#!">Menu item</a>
                       </li>
                     </ul>
                   </div>
@@ -353,9 +424,17 @@
       </aside>
       <main class="main-body" id="js-main-body">
         <div class="main-content"></div>
+        <footer class="footer">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="footer-link" href="#!">Support</a></li>
+            <li class="list-inline-item"><a class="footer-link" href="#!">Help Center</a></li>
+            <li class="list-inline-item"><a class="footer-link" href="#!">Privacy</a></li>
+            <li class="list-inline-item"><a class="footer-link" href="#!">Terms of Service</a></li>
+          </ul>
+          <div class="copy-right">Copyright © 2018. All right reserved. </div>
+        </footer>
       </main>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

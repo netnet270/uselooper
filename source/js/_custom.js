@@ -1,22 +1,26 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  //PerfectScrollbar
+  new PerfectScrollbar(".js-scrollbar-1", {
+    wheelPropagation: true
+  });
+  new PerfectScrollbar(".js-scrollbar-2", {
+    wheelPropagation: true
+  });
+  new PerfectScrollbar(".js-scrollbar-menu", {
+    wheelPropagation: true
+  });
 
-  // perfect scrollbar notifications
-  if ($(".js-list-scrollbar")[1]) {
-    new PerfectScrollbar(document.querySelector(".js-list-scrollbar"), {
-      wheelPropagation: false
-    });
-    $(".ps__rail-y").css('height', $(".ps__rail-y").parents(".dropdown-scroll").css("height"));
-    $(".ps__thumb-y").css('height', '142px')
-  }
-  // if (window.PerfectScrollbar && this.isExists('.js-list-scrollbar')) {
-  //   $('.js-list-scrollbar:not(".aside-menu")').each(function () {
-  //     new PerfectScrollbar(this, {
-  //       suppressScrollX: true
-  //     });
-  //   });
-  // }
-  function inputNumber(){
+  //main-menu
+  $('.js-nav-item').on('click', function(){
+    var isExpand = $(this).find(' > .nav-link').attr('aria-expanded');
+    // var isExpand = $(this).children('.nav-link').attr('aria-expanded');
+    console.log(isExpand);
     
+    $(this).toggleClass('nav-item--has-open', isExpand);
+  })
+  // [aria-expanded=true]
+  function inputNumber() {
+
     $('.js-input-number').each(function () {
       var spinner = $(this);
       var input = spinner.children('.form-control[type="number"]');
@@ -24,14 +28,14 @@ $(document).ready(function() {
       var max = parseFloat(input.attr('max'));
       var btnUp = $('.js-btn-up');
       var btnDown = $('.js-btn-down');
-      var newVal= 0;
+      var newVal = 0;
 
       btnUp.on('click', function () {
         var oldValue = parseFloat(input.val()) || 0;
         newVal = oldValue >= max ? oldValue : oldValue + 1;
         input.val(newVal).trigger('change');
       });
-      
+
       btnDown.on('click', function () {
         var oldValue = parseFloat(input.val()) || 0;
         newVal = oldValue <= min ? oldValue : oldValue - 1;
@@ -54,11 +58,11 @@ $(document).ready(function() {
       var $input = $(this).children('.form-control');
       toggleClear($input);
 
-      $input.on('keyup', function(){
+      $input.on('keyup', function () {
         toggleClear(this);
       })
 
-      $(this).children('.close').on('click', function(){
+      $(this).children('.close').on('click', function () {
         $input.val('').focus();
         $input.trigger('keyup');
       })
@@ -67,23 +71,23 @@ $(document).ready(function() {
 
   inputClearable();
 
-  function togglePassword(){
-    $('.js-toggle-icon').on('click', function(){
+  function togglePassword() {
+    $('.js-toggle-icon').on('click', function () {
       var $input = $(this).parents('.form-customize').find('input');
       var isPassword = $input.is('[type="password"]');
       var inputType = isPassword ? 'text' : 'password';
       var triggerText = isPassword ? 'Hide' : 'Show';
       var iconToggle = isPassword ? 'fa fa-fw fa-eye-slash' : 'fa fa-eye fa-fw';
       $(this).children().first().attr('class', iconToggle);
-      $(this).children('span').text(triggerText); 
+      $(this).children('span').text(triggerText);
       $input.attr('type', inputType);
     })
   }
 
   togglePassword();
 
-  function placeholderShown(){
-    $('.input-label > input').on('focus blur keyup change', function(){
+  function placeholderShown() {
+    $('.input-label > input').on('focus blur keyup change', function () {
       this.classList[this.value ? 'remove' : 'add']('placeholder-shown');
     })
     $('.input-label > input').trigger('change');

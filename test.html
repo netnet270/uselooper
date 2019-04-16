@@ -1097,6 +1097,27 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="node_modules/stacked-menu/dist/js/stacked-menu.min.js"></script>
+  <script>
+    if (window.StackedMenu && this.isExists('#stacked-menu')) {
+        this.asideMenu = new StackedMenu(); // update perfect scrollbar
+
+        $(this.asideMenu.selector).on('menu:open menu:close', function () {
+          // wait until translation done
+          setTimeout(function () {
+            if (window.PerfectScrollbar) {
+              ps.update();
+            }
+          }, 300);
+        }); // perfect scrollbar for aside menu
+
+        if (window.PerfectScrollbar) {
+          ps = new PerfectScrollbar('.aside-menu', {
+            suppressScrollX: true
+          });
+        }
+      }
+  
+  </script>
 </body>
 
 </html>

@@ -6,18 +6,18 @@ mixin main-menu()
   ul.navbar-nav.js-navbar-nav
     #accordion
       each item in menus
-        li.nav-item.js-nav-item(
+        li.nav-item.level1.js-nav-item(
           class=item.submenu ? 'nav-item--has-children' : '', 
-          class=item.active ? 'nav-item--active' : ''
+          class=item.active ? 'nav-item--active' : '',
         )
-          a.nav-link.level1.js-nav-link(
+          a.nav-link.js-nav-link(
             href="#"+ item.href
             data-toggle="collapse"
             aria-expanded= item.expanded ? "true" : "false"
             aria-controls=item.href
             role="button"
           )
-            i(class= item.icon)
+            i.nav-icon(class= item.icon)
             span.nav-text= item.text
             if item.badge
               span.badge.ml-auto(class= `badge--${item.badge.type}`)= item.badge.text
@@ -29,53 +29,53 @@ mixin main-menu()
             )
               ul.nav.flex-column.js-submenu
                 each sub in item.submenu
-                  li.nav-item.js-sub-item(
+                  li.nav-item.level2.js-sub-item(
                     class=sub.childmenu ? 'nav-item--has-children' : '',
                     class= sub.active ? 'nav-item--active' : ''
                   )
                     if sub.childmenu
-                      a.nav-link.collapsed.level2(
+                      a.nav-link(
                         href="#"+ sub.href
                         data-toggle="collapse"
                         aria-expanded="false"
-                        aria-controls=item.href
+                        aria-controls=sub.href
                         role="button"
                       )
                         span.nav-text=sub.text
                     else
-                      a.nav-link.collapsed.level2(href= sub.href)
+                      a.nav-link(href= sub.href)
                         span.nav-text=sub.text
 
                     if sub.childmenu
                       .collapse(id= sub.href)
                         ul.nav.js-childmenu.flex-column
                           each child in sub.childmenu
-                            li.nav-item(
+                            li.level3.nav-item(
                               class= child.active ? 'nav-item--active' : ''
                             )
-                              a.nav-link.level3(
-                                href= child.href,
-                              )= child.title
-
+                              a.nav-link(
+                                href= child.href ? child.href : '#!'
+                              )= child.text
+ 
 mixin sub-menu()
   h3.navbar-heading Interfaces
   ul.navbar-nav.js-navbar-nav
     #submenu
       each item in interfaces
-        li.nav-item.js-nav-item(
+        li.nav-item.level1.js-nav-item(
           class=item.submenu ? 'nav-item--has-children' : '', 
           class=item.active ? 'nav-item--active' : ''
         )
-          a.nav-link.level1.js-nav-link(
+          a.nav-link.js-nav-link(
             href="#"+ item.href
             data-toggle="collapse"
             aria-expanded= item.expanded ? "true" : "false"
             aria-controls=item.href
             role="button"
           )
-            i(class= item.icon)
+            i.nav-icon(class= item.icon)
             span.nav-text= item.text
-           
+
           if item.submenu
             .collapse(
               id= item.href, 
@@ -84,49 +84,44 @@ mixin sub-menu()
             )
               ul.nav.flex-column.js-submenu
                 each sub in item.submenu
-                  li.nav-item.js-sub-item(
+                  li.nav-item.level2.js-sub-item(
                     class=sub.childmenu ? 'nav-item--has-children' : '',
                     class= sub.active ? 'nav-item--active' : ''
                   )
                     if sub.childmenu
-                      a.nav-link.collapsed.level2(
+                      a.nav-link(
                         href="#"+ sub.href
                         data-toggle="collapse"
                         aria-expanded="false"
-                        aria-controls=item.href
+                        aria-controls=sub.href
                         role="button"
-                      )
-                        span.nav-text=sub.text
+                      )=sub.text
                     else
-                      a.nav-link.collapsed.level2(href= sub.href)
-                        span.nav-text=sub.text
+                      a.nav-link(href= sub.href ? sub.href : '#!')=sub.text
 
                     if sub.childmenu
                       .collapse(id= sub.href)
                         ul.nav.js-childmenu.flex-column
                           each child in sub.childmenu
-                            li.nav-item(
+                            li.level3.nav-item(
                               class= child.active ? 'nav-item--active' : '',
-                              class= child.grand-child ? 'nav-item--has-children' : ''
+                              class= child.grandchild ? 'nav-item--has-children' : ''
                             )
-                              if child.grand-child
-                                a.nav-link.collapsed.level3(
+                              if child.grandchild
+                                a.nav-link(
                                   href="#"+ child.href
                                   data-toggle="collapse"
                                   aria-expanded="false"
-                                  aria-controls=item.href
+                                  aria-controls=child.href
                                   role="button"
-                                )
-                                  span.nav-text=child.text
+                                )=child.text
                               else
-                                a.nav-link.collapsed.level3(href= child.href)
-                                  span.nav-text=child.text
-                              if child.grand-child
-                                .collapse(id= sub.href)
+                                a.nav-link(href= child.href ? child.href: '#!')=child.text
+                              if child.grandchild
+                                .collapse(id= child.href)
                                   ul.nav.js-childmenu.flex-column
-                                    each grandchild in child.grand-child
-                                      li.nav-item(
+                                    each grandchild in child.grandchild
+                                      li.level4.nav-item(
                                         class= grandchild.active ? 'nav-item--active' : '',
                                       )
-                                        a.nav-link.level4(href= grandchild.href)
-                                          span.nav-text=grandchild.text
+                                        a.nav-link(href= grandchild.href ? grandchild.href : '#')=grandchild.text

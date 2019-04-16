@@ -127,7 +127,7 @@
 
   &--icon-before {
     .form-control {
-      padding-left: 42px;
+      padding-left: 37px;
     }
   }
 
@@ -422,9 +422,12 @@
 }
 
 .badge {
+  font-size: 11.2px;
+  padding: 4px 6px;
+
   &--success {
-    background-color: $bg-green;
-    color: $cl-white;
+    color: $cl-dark-green;
+    background-color: rgba($bg-success, .08);
   }
 
   &--warning {
