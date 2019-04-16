@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div id="main-wapper">
+    <div class="main-wapper">
       <header class="header fixed-top">
         <div class="main-header">
           <div class="main-header__brand"><a href="home.html"><img src="../images/brand-inverse.png" /></a></div>
@@ -422,8 +422,48 @@
           </div>
         </div>
       </aside>
-      <main class="main-body" id="js-main-body">
-        <div class="main-content"></div>
+      <main class="main-content">
+        <div class="wrapper-inner">
+          <header class="header">
+            <div class="row">
+              <div class="col header__lead">
+                <p class="header__pretitle">Hi, Beni.</p>
+                <p class="header__text">Here’s what’s happening with your business today.</p>
+              </div>
+              <div class="col-auto">
+                <div class="dropdown">
+                  <button class="btn button button--secondary" type="button">This Week<i class="fa fa-fw fa-caret-down"></i></button>
+                  <div class="dropdown-arrow dropdown-arrow-right"></div>
+                  <div class="dropdown-menu"></div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <section class="section-metric">
+            <div class="row">
+              <div class="col-lg-9">
+                <div class="row">
+                  <div class="col-md-4 card-metric"><a href="user-teams.html">
+                      <div class="card-metric__title">Team</div>
+                      <p class="card-metric__value"><span class="card-metric__icon"><i class="oi oi-people"></i></span><span class="card-metric__count">8</span></p>
+                    </a></div>
+                  <div class="col-md-4 card-metric"><a href="user-projects.html">
+                      <div class="card-metric__title">Projects </div>
+                      <p class="card-metric__value"><span class="card-metric__icon"><i class="oi oi-fork"></i></span><span class="card-metric__count">12</span></p>
+                    </a></div>
+                  <div class="col-md-4 card-metric"><a href="user-tasks.html">
+                      <div class="card-metric__title">Active Tasks</div>
+                      <p class="card-metric__value"><span class="card-metric__icon"><i class="fa fa-tasks"></i></span><span class="card-metric__count">64</span></p>
+                    </a></div>
+                </div>
+              </div>
+              <div class="col-lg-3 card-metric"><a href="user-tasks.html">
+                  <div class="card-metric__badge"><span class="badge badge--lg badge--success"><i class="pulse mr-1 oi oi-media-record"></i> ONGOING TASKS</span></div>
+                  <p class="card-metric__value"><span class="card-metric__icon"><i class="oi oi-timer"></i></span><span class="card-metric__count">8</span></p>
+                </a></div>
+            </div>
+          </section>
+        </div>
         <footer class="footer">
           <ul class="list-inline">
             <li class="list-inline-item"><a class="footer-link" href="#!">Support</a></li>

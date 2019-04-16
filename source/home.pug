@@ -3,12 +3,66 @@ extends modules/layout/_core
 block head
   +head(head.home.title)
      
-block body 
-  #main-wapper
+block body
+  .main-wapper
     +header()
     +sidebar()
- 
-    main#js-main-body.main-body
-      .main-content
 
+    main.main-content
+      .wrapper-inner
+        //- header main-content
+        header.header
+          .row
+            .col.header__lead
+              p.header__pretitle Hi, Beni.
+              p.header__text Here’s what’s happening with your business today.
+            .col-auto
+              .dropdown
+                +buttons({
+                  text: 'This Week',
+                  iconFont: 'fa fa-fw fa-caret-down',
+                  type: 'secondary'
+                })
+                .dropdown-arrow.dropdown-arrow-right
+                .dropdown-menu
+
+        //- section metric
+        section.section-metric
+          .row
+            .col-lg-9
+              .row
+                .col-md-4.card-metric
+                  a(href="user-teams.html")
+                    .card-metric__title Team
+                    p.card-metric__value
+                      span.card-metric__icon
+                        i(class= 'oi oi-people')
+                      span.card-metric__count 8
+
+                .col-md-4.card-metric
+                  a(href="user-projects.html")
+                    .card-metric__title Projects 
+                    p.card-metric__value
+                      span.card-metric__icon
+                        i(class= 'oi oi-fork')
+                      span.card-metric__count 12
+
+                .col-md-4.card-metric
+                  a(href="user-tasks.html")
+                    .card-metric__title Active Tasks
+                    p.card-metric__value
+                      span.card-metric__icon
+                        i(class= 'fa fa-tasks')
+                      span.card-metric__count 64
+
+            .col-lg-3.card-metric
+              a(href="user-tasks.html")
+                .card-metric__badge
+                  span.badge.badge--lg.badge--success
+                    i.pulse.mr-1(class= 'oi oi-media-record')
+                    |  ONGOING TASKS
+                p.card-metric__value
+                      span.card-metric__icon
+                        i(class= 'oi oi-timer')
+                      span.card-metric__count 8
       +footer()

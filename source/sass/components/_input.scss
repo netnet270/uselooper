@@ -425,11 +425,15 @@
   font-size: 11.2px;
   padding: 4px 6px;
 
-  &--success {
+  &--subtle {
     color: $cl-dark-green;
-    background-color: rgba($bg-success, .08);
+    background-color: rgba($bg-subtle, .08);
   }
 
+  &--success {
+    background: $bg-light-green;
+    color: $cl-white;
+  }
   &--warning {
     color: $cl-light-black;
     background-color: $bg-yellow;

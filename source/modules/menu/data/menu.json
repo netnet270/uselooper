@@ -210,7 +210,7 @@
       "icon": "oi oi-browser",
       "href": "sidebarLayout",
       "badge": {
-        "type": "success",
+        "type": "subtle",
         "text": "+4"
       },
       "submenu": [

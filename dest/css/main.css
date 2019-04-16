@@ -23332,9 +23332,12 @@ a.avatar.bg-yellow:hover {
 .badge {
   font-size: 11.2px;
   padding: 4px 6px; }
-  .badge--success {
+  .badge--subtle {
     color: #008974;
     background-color: rgba(0, 162, 223, 0.08); }
+  .badge--success {
+    background: #00a28a;
+    color: #fff; }
   .badge--warning {
     color: #363642;
     background-color: #f7c46c; }
@@ -23858,6 +23861,79 @@ a.avatar.bg-yellow:hover {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase; }
+
+.main-content {
+  padding-top: 56px;
+  padding-right: 0;
+  overflow: hidden;
+  padding-left: 239px;
+  background-color: #f6f7f9; }
+  .main-content .header {
+    margin-bottom: 24px; }
+    .main-content .header__lead {
+      margin-bottom: 16px;
+      font-size: 20px;
+      line-height: 30px; }
+    .main-content .header__pretitle {
+      margin-bottom: 0;
+      font-weight: 700; }
+    .main-content .header__text {
+      margin-bottom: 0;
+      color: #888c9b; }
+  .main-content .section-metric {
+    margin-top: 24px;
+    margin-bottom: 24px; }
+    .main-content .section-metric .card-metric {
+      padding: 16px;
+      border: 1px solid #d6d8e1;
+      text-align: center;
+      min-height: 8.5rem;
+      vertical-align: middle; }
+      .main-content .section-metric .card-metric__title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #888c9b;
+        white-space: nowrap;
+        margin-bottom: 8px; }
+      .main-content .section-metric .card-metric__value {
+        margin-bottom: 0;
+        white-space: nowrap; }
+      .main-content .section-metric .card-metric__icon {
+        color: #a6abbd;
+        font-size: 14px;
+        margin-right: 5px;
+        vertical-align: text-bottom; }
+      .main-content .section-metric .card-metric__count {
+        font-size: 28px;
+        font-weight: 600;
+        color: #363642; }
+      .main-content .section-metric .card-metric__badge {
+        margin-bottom: 8px;
+        font-size: 14px; }
+      .main-content .section-metric .card-metric:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px; }
+      .main-content .section-metric .card-metric:nth-child(3) {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px; }
+      .main-content .section-metric .card-metric:last-child {
+        text-align: left; }
+      .main-content .section-metric .card-metric .pulse {
+        animation: pulse 2.5s ease infinite; }
+
+@keyframes pulse {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.wrapper-inner {
+  padding: 24px 32px;
+  min-height: calc(100vh - 3.5rem); }
 
 .page-list__title {
   font-weight: 500;
