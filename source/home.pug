@@ -239,7 +239,7 @@ block body
                         {
                           avatarText: 'SB',
                           img: '../images/sketch.svg',
-                          bgAvatar: 'green',
+                          bgAvatar: 'light-green',
                           title: 'SVG Icon Bundle',
                           text: 'Progress in 32% - Last update 1d',
                           progress: '32%'
@@ -247,7 +247,7 @@ block body
                         { 
                           avatarText: 'SP',
                           img: '../images/team4.jpg',
-                          bgAvatar: 'pink',
+                          bgAvatar: 'light-purple',
                           title: 'Syrena Project',
                           text: 'Progress in 93% - Last update 8h',
                           progress: '93%'
@@ -264,7 +264,7 @@ block body
                           .card-title 
                             a(href="#")= val.title
                           p.card-subtitle= val.text
-                          .progress.progress-xs.bg--transparent
+                          .progress
                             .progress-bar(class= `bg--${val.bgAvatar}` role="progressbar" aria-valuenow="2181" aria-valuemin="0" aria-valuemax="100" style=`width: ${val.progress}`)
  
       +footer()

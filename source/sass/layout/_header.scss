@@ -153,7 +153,7 @@
         height: 263px;
         position: relative;
       }
-    
+
       .dropdown-footer a{
         margin: 0;
         display: block;
@@ -163,7 +163,7 @@
         border-top: 1px solid rgba(34, 34, 48,.1);
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
-        
+
         &:hover {
           background-color: #f6f7f9;
         }
@@ -174,7 +174,7 @@
         display: flex;
         align-items: flex-start;
         transition: all .3s;
-        
+
         &--unread {
           .text,
           .subject {
@@ -275,15 +275,15 @@
           color: #363642;
         }
       }
-    }    
+    }
   }
 }
 
 .user-avatar {
   @extend %user-avatar;
   &--xs {
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     font-size: 20px;
   }
 }
@@ -397,35 +397,41 @@
     border-radius: 64px;
   } 
 }
-.avatar.bg-blue,
-.avatar.bg-indigo,
-.avatar.bg-pink,
-.avatar.bg-purple,
-.avatar.bg-red,
-a.avatar.bg-blue:focus,
-a.avatar.bg-blue:hover,
-a.avatar.bg-dark:focus,
-a.avatar.bg-dark:hover,
-a.avatar.bg-indigo:focus,
-a.avatar.bg-indigo:hover,
-a.avatar.bg-pink:focus,
-a.avatar.bg-pink:hover,
-a.avatar.bg-purple:focus,
-a.avatar.bg-purple:hover,
-a.avatar.bg-red:focus,
-a.avatar.bg-red:hover {
+.avatar.bg--blue,
+.avatar.bg--indigo,
+.avatar.bg--light-purple,
+.avatar.bg--dark-purple,
+.avatar.bg--light-purple
+.avatar.bg--red,
+.avatar.bg--light-green,
+a.avatar.bg--blue:focus,
+a.avatar.bg--blue:hover,
+a.avatar.bg--dark:focus,
+a.avatar.bg--dark:hover,
+a.avatar.bg--indigo:focus,
+a.avatar.bg--indigo:hover,
+a.avatar.bg--light-purple:focus,
+a.avatar.bg--light-purple:hover,
+a.avatar.bg--dark-purple:focus,
+a.avatar.bg--dark-purple:hover,
+a.avatar.bg--red:focus,
+a.avatar.bg--red:hover,
+a.avatar.bg--light-green:focus,
+a.avatar.bg--light-green:hover, 
+a.avatar.bg--light-purple:focus,
+a.avatar.bg--light-purple:hover{
   color: #fff;
 }
 
-.avatar.bg-green,
-.avatar.bg-orange,
-.avatar.bg-yellow,
-a.avatar.bg-green:focus,
-a.avatar.bg-green:hover,
-a.avatar.bg-orange:focus,
-a.avatar.bg-orange:hover,
-a.avatar.bg-yellow:focus,
-a.avatar.bg-yellow:hover {
+.avatar.bg--green,
+.avatar.bg--orange,
+.avatar.bg--yellow,
+a.avatar.bg--green:focus,
+a.avatar.bg--green:hover,
+a.avatar.bg--orange:focus,
+a.avatar.bg--orange:hover,
+a.avatar.bg--yellow:focus,
+a.avatar.bg--yellow:hover {
   color: #363642;
 }
 

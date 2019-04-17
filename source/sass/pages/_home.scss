@@ -200,44 +200,81 @@
         background: none;
         border-radius: 0;
       }
-    }
-  }
 
-  .active-projects {
-    .card-header {
-      padding: 16px;
-      color: #363642;
-      font-size: 14px;
-      font-weight: 600;
-      background-color: transparent;
-    }
-  
-    .list-group-item {
-      border: 0;
-      display: flex;
-      padding-left: 0;
-      padding-right: 0;
-      align-items: stretch;
-      
-      &__figure {
-        padding-right: 16px;
-        
-        .has-badge {
-          position: relative;
-          display: inline-block;
-  
-          .user-avatar {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            line-height: 40;
-            border: 3px solid #fff;
-            transform: translate3d(-50%, 0, 0);
-          }     
-        }
+      .progress-animated {
+        animation: progressAnimated 1s;
       }
     }
-  }  
+  }
+}
+
+.active-projects {
+  .card-header {
+    padding: 16px;
+    color: #363642;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+
+  .list-group-item {
+    border: 0;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+
+    &__figure {
+      display: flex;
+      padding-right: 16px;
+      align-items: center;
+    }
+
+    .has-badge {
+      position: relative;
+      display: inline-block;
+    }
+
+    .user-avatar {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      line-height: 40;
+      border: 3px solid #fff;
+      transform: translate3d(-50%, 0, 0);
+    }
+
+    &__body {
+      flex: 1;
+      min-width: 0;
+      align-self: center;
+      font-size: 14px;
+
+      .card-title a {
+        color: #363642;
+        font-size: 16px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .card-subtitle {
+        font-weight: 400;
+        color: #888c9b;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .progress {
+        height: 3px;
+        font-weight: 600;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 @keyframes pulse {
@@ -254,3 +291,11 @@
   }
 }
 
+@keyframes progressAnimated {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

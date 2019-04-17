@@ -5,6 +5,13 @@
   margin: 24px 0;
   padding: 0 16px;
   text-align: center;
+
+  .footer-link {
+    color: #888c9b;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media (min-width: 992px) {
