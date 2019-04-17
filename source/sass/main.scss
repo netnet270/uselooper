@@ -1,5 +1,3 @@
-// 1. Vendors          
-
 @import 'bootstrap/scss/bootstrap-grid';
 @import 'bootstrap/scss/bootstrap-reboot';
 @import 'bootstrap/scss/bootstrap';
@@ -7,30 +5,22 @@
 @import 'extensions/bootstrap-override/custom';
 @import 'extensions/iconic';
 @import 'vendor/perfect-scrollbar';
-@import 'vendor/stacked-menu';
+@import 'vendor/bootstrap-override';
 
-// 2. Abstracts 
-// ------------
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
 @import 'abstracts/placeholder';
 
-// 3. Base
-// -------
 @import 'base/global';
 @import 'base/typography';
 @import 'base/colors';
 @import 'base/background';
 @import 'base/fonts';
 
-// 4. Layout
-// ---------
 @import 'layout/header';
 @import 'layout/footer';
 
-// 5. Components
-// -------------
 @import 'components/button';
 @import 'components/input';
 @import 'components/checkbox';
@@ -41,10 +31,5 @@
 @import 'components/sidebar';
 @import 'components/menu';
 
-// 6. Pages
-// --------
 @import 'pages/home';
 @import 'pages/page-list';
-// 7. Themes
-// ---------
-// We just have only 1 theme in this project

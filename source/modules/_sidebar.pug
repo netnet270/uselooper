@@ -49,7 +49,7 @@ mixin sidebar()
                 a.dropdown-item(href= item.href ? item.href : '#!')
                   span.dropdown-item__icon(class= item.icon)
                   | #{item.text}
-      .aside-menu.overflow-hidden.js-scrollbar-menu
+      .aside-menu#menu-sidebar.js-scrollbar-menu
         +main-menu()
         +sub-menu()
       .aside-footer

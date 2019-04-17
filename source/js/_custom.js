@@ -1,24 +1,93 @@
 $(document).ready(function () {
+  
   //PerfectScrollbar
-  new PerfectScrollbar(".js-scrollbar-1", {
-    wheelPropagation: true
-  });
-  new PerfectScrollbar(".js-scrollbar-2", {
-    wheelPropagation: true
-  });
-  new PerfectScrollbar(".js-scrollbar-menu", {
-    wheelPropagation: true
+
+  function perfectScrollbar(element){
+    new PerfectScrollbar(element, {
+      wheelPropagation: true
+    });
+  }
+
+  perfectScrollbar(".js-scrollbar-1");
+  perfectScrollbar(".js-scrollbar-2");
+  perfectScrollbar(".js-scrollbar-menu");
+
+  //tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  //chart chartCompletionTask
+  (function chartCompletionTask() {
+
+    function drawCompletionTask(_data) {
+      var _chart1 = new Chart(document.getElementById('completionTask'), {
+        type: "bar",
+        data: _data,
+        options: {
+          responsive: true,
+          hover: {
+            mode: 'nearest',
+            intersect: true
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                fontColor: '#888c9b',
+                maxRotation: 0,
+                maxTicksLimit: 4
+              },
+              gridLines: {
+                display: true,
+                drawBorder: false,
+                drawOnChartArea: false
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                stepSize: 100,
+                fontColor: '#888c9b',
+                beginAtZero: true
+              },
+              gridLines: {
+                display: true,
+                drawBorder: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      })
+    }
+
+    var dataCompletionTasks = {
+      labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
+      datasets: [{
+        data: [155, 65, 465, 265, 225, 325, 80],
+        backgroundColor: "#346cb0",
+        borderColor: "#346cb0"
+      }]
+    }
+    drawCompletionTask(dataCompletionTasks);
+})();
+
+//chart Tasks Performance
+  $('[data-toggle="easypiechart"]').each(function () {
+    var selector = this;
+    var options = $(selector).data();
+
+    options.barColor = options.barColor;
+    options.trackColor = options.trackColor;
+    options.scaleColor = options.scaleColor || 'transparent';
+    options.lineWidth = options.lineWidth ? parseInt(options.lineWidth) : 8;
+    options.size = options.size ? parseInt(options.size) : 120;
+    options.rotate = options.rotate ? parseInt(options.rotate) : 0;
+    options.trackColor = options.trackColor == 'false' || options.trackColor == '' ? false : options.trackColor;
+    options.scaleColor = options.scaleColor == 'false' || options.scaleColor == '' ? false : options.scaleColor;
+    $(selector).easyPieChart(options);
   });
 
-  //main-menu
-  $('.js-nav-item').on('click', function(){
-    var isExpand = $(this).find(' > .nav-link').attr('aria-expanded');
-    // var isExpand = $(this).children('.nav-link').attr('aria-expanded');
-    console.log(isExpand);
-    
-    $(this).toggleClass('nav-item--has-open', isExpand);
-  })
-  // [aria-expanded=true]
+  //input Number
   function inputNumber() {
 
     $('.js-input-number').each(function () {

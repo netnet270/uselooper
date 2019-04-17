@@ -5,16 +5,19 @@
   padding: 16px 0 4px;
   margin-bottom: 16px;
   width: 100%;
+  overflow: hidden;
 }
 
 .navbar-nav {
   .nav-item {
     &--active {
-      .nav-link {
+      .nav-link,
+      .nav-link:hover {
         background-color: transparent;
         color: #346cb0;
       }
-      .nav-link .nav-icon {
+      .nav-link .nav-icon,
+      .nav-link:hover .nav-icon {
         color: #346cb0;
       }
       &:not(.nav-item--has-children) .nav-link {

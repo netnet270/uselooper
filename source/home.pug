@@ -1,5 +1,5 @@
 extends modules/layout/_core
-      
+         
 block head
   +head(head.home.title)
      
@@ -12,11 +12,11 @@ block body
       .wrapper-inner
         //- header main-content
         header.header
-          .row
-            .col.header__lead
+          .d-flex.flex-column.flex-md-row
+            .header__lead
               p.header__pretitle Hi, Beni.
               p.header__text Here’s what’s happening with your business today.
-            .col-auto
+            .ml-auto
               .dropdown
                 +buttons({
                   text: 'This Week',
@@ -28,18 +28,18 @@ block body
 
         //- section metric
         section.section-metric
-          .row
+          .row.m-0
             .col-lg-9
-              .row
-                .col-md-4.card-metric
+              .row.mr-0.metric-flush
+                .col.card-metric
                   a(href="user-teams.html")
-                    .card-metric__title Team
+                    .card-metric__title Teams
                     p.card-metric__value
                       span.card-metric__icon
                         i(class= 'oi oi-people')
                       span.card-metric__count 8
 
-                .col-md-4.card-metric
+                .col.card-metric
                   a(href="user-projects.html")
                     .card-metric__title Projects 
                     p.card-metric__value
@@ -47,7 +47,7 @@ block body
                         i(class= 'oi oi-fork')
                       span.card-metric__count 12
 
-                .col-md-4.card-metric
+                .col.card-metric
                   a(href="user-tasks.html")
                     .card-metric__title Active Tasks
                     p.card-metric__value
@@ -55,7 +55,7 @@ block body
                         i(class= 'fa fa-tasks')
                       span.card-metric__count 64
 
-            .col-lg-3.card-metric
+            .col-lg-3.card-metric.justify-content-start
               a(href="user-tasks.html")
                 .card-metric__badge
                   span.badge.badge--lg.badge--success
@@ -65,4 +65,206 @@ block body
                       span.card-metric__icon
                         i(class= 'oi oi-timer')
                       span.card-metric__count 8
+        .row
+          .col-12.col-lg-12.col-xl-4
+            .card.completion-tasks
+              .card-body
+                .card-title Completion Tasks
+                .card-chart
+                  canvas(id="completionTask" width= "282px" height= "292px")
+
+          .col-12.col-lg-12.col-xl-4
+            .card.tasks-performance
+              .card-body
+                .card-title Tasks Performance
+                .card-chart
+                  .chart-inline-group
+                    -
+                      var data = [
+                        { percent: '60', size: '214', color : '#346cb0'},
+                        { percent: '50', size: '174', color : '#00a28a'},
+                        { percent: '75', size: '134', color : '#5f4b8b'}
+                      ]
+                    each val in data
+                      .easypiechart(
+                        data-toggle= "easypiechart" 
+                        data-percent= val.percent
+                        data-size= val.size
+                        data-bar-color= val.color
+                        data-track-color= "false"
+                        data-scale-color= "false" 
+                        data-rotate= "225"
+                      )
+
+              .card-footer
+                .card-footer__item
+                  .card-footer__icon
+                    i.color--indigo(class= "fa fa-fw fa-circle")
+                    | 100%
+                  .card-footer__text Assigned
+                .card-footer__item
+                  .card-footer__icon
+                    i.color--dark-purple(class= "fa fa-fw fa-circle")
+                    | 75%
+                  .card-footer__text Completed
+                .card-footer__item
+                  .card-footer__icon
+                    i.color--light-green(class= "fa fa-fw fa-circle")
+                    | 60%
+                  .card-footer__text Active
+
+          .col-12.col-lg-12.col-xl-4
+            .card.leaderboard
+              .card-body
+                .card-title Leaderboard
+                ul.card-legend
+                  li.card-legend__item
+                    i.color--gray(class= "fa fa-fw fa-circle")
+                    | Tasks
+                  li.card-legend__item
+                    i.color--dark-purple(class= "fa fa-fw fa-circle")
+                    | Completed
+                  li.card-legend__item
+                    i.color--light-green(class= "fa fa-fw fa-circle")
+                    | Active
+                  li.card-legend__item
+                    i.color--red(class= "fa fa-fw fa-circle")
+                    | Overdue
+                .card-list-group
+                  -
+                    var leaderboards = [
+                      {
+                        avatar: '../images/uifaces16.jpg',
+                        name: 'Martha Myers',
+                        progress : [
+                          { bg: 'dark-purple', width: '74%' },
+                          { bg: 'light-green', width: '8.2%' },
+                          { bg: 'red', width: '1.92%'}
+                        ],
+                        tooltip: "<div class='text-left small'><i class='fa fa-fw fa-circle color--dark-purple'></i> 2065<br><i class='fa fa-fw fa-circle color--light-green'></i> 231<br><i class='fa fa-fw fa-circle color--red'></i> 54</div>"
+                      },
+                      {
+                        avatar: '../images/uifaces15.jpg',
+                        name: 'Tammy Beck',
+                        progress : [
+                          { bg: 'dark-purple', width: '54.2%' },
+                          { bg: 'light-green', width: '15.36%' },
+                          { bg: 'red', width: '1.85%'}
+                        ],
+                        tooltip: "<div class='text-left small'><i class='fa fa-fw fa-circle color--dark-purple'></i> 1432<br><i class='fa fa-fw fa-circle color--light-green'></i> 406<br><i class='fa fa-fw fa-circle color--red'></i> 49</div>"
+                      },
+                      {
+                        avatar: '../images/uifaces17.jpg',
+                        name: 'Susan Kelley',
+                        progress : [
+                          { bg: 'dark-purple', width: '52.1%' },
+                          { bg: 'light-green', width: '3.6%' },
+                          { bg: 'red', width: '3.4%'}
+                        ],
+                        tooltip: "<div class='text-left small'><i class='fa fa-fw fa-circle color--dark-purple'></i> 2065<br><i class='fa fa-fw fa-circle color--light-green'></i> 231<br><i class='fa fa-fw fa-circle color--red'></i> 54</div>"
+                      },
+                      {
+                        avatar: '../images/uifaces18.jpg',
+                        name: 'Albert Newman',
+                        progress : [
+                          { bg: 'dark-purple', width: '75.2%' },
+                          { bg: 'light-green', width: '10.1%' },
+                          { bg: 'red', width: '7.43%'}
+                        ],
+                        tooltip: "<div class='text-left small'><i class='fa fa-fw fa-circle color--dark-purple'></i> 1271<br><i class='fa fa-fw fa-circle color--light-green'></i> 81<br><i class='fa fa-fw fa-circle color--red'></i> 78</div>"
+                      },
+                      {
+                        avatar: '../images/uifaces19.jpg',
+                        name: 'Kyle Grant',
+                        progress : [
+                          { bg: 'dark-purple', width: '36.7%' },
+                          { bg: 'light-green', width: '15.20%' },
+                          { bg: 'red', width: '7.3%'}
+                        ],
+                        tooltip: "<div class='text-left small'><i class='fa fa-fw fa-circle color--dark-purple'></i> 1527<br><i class='fa fa-fw fa-circle color--light-green'></i> 205<br><i class='fa fa-fw fa-circle color--red'></i> 151</div>"
+                      }
+                    ]
+                  each val in leaderboards
+                    .card-list-group__item
+                      .card-list-group__figure
+                        a.user-avatar(href="user-profile.html" data-toggle= "tooltip" title= val.name)
+                          img(src= val.avatar, alt="user-avatar")
+                      .card-list-group__progress.col
+                        .progress.progress-animated(data-toggle = "tooltip" data-html="true" title= val.tooltip)
+                          each item in val.progress
+                            .progress-bar(class= `bg--${item.bg}` role="progressbar" style=`width: ${item.width}` aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
+
+        //- section-deck
+        section.section-deck
+          .row
+            .col-lg-6.col-12
+              .card.active-projects
+                .card-header  Active Projects
+                .card-body
+                  .list-group
+                    -
+                      var listProjects = [
+                        { 
+                          avatarText: 'LT',
+                          img: '../images/team4.jpg',
+                          bgAvatar: 'dark-purple',
+                          title: 'Looper Admin Theme',
+                          text: 'Progress in 74% - Last update 1d',
+                          progress: '74%'
+                        },
+                        { 
+                          avatarText: 'SP',
+                          img: '../images/team1.jpg',
+                          bgAvatar: 'indigo',
+                          title: 'Smart Paper',
+                          text: 'Progress in 22% - Last update 2h',
+                          progress: '22%'
+                        },
+                        { 
+                          avatarText: 'OS',
+                          img: '../images/team2.png',
+                          bgAvatar: 'yellow',
+                          title: 'Online Store',
+                          text: 'Progress in 99% - Last update 2d',
+                          progress: '99%'
+                        },
+                        { 
+                          avatarText: 'BA',
+                          img: '../images/bootstrap.svg',
+                          bgAvatar: 'blue',
+                          title: 'Booking App',
+                          text: 'Progress in 35% - Last update 4h',
+                          progress: '35%'
+                        },
+                        {
+                          avatarText: 'SB',
+                          img: '../images/sketch.svg',
+                          bgAvatar: 'green',
+                          title: 'SVG Icon Bundle',
+                          text: 'Progress in 32% - Last update 1d',
+                          progress: '32%'
+                        },
+                        { 
+                          avatarText: 'SP',
+                          img: '../images/team4.jpg',
+                          bgAvatar: 'pink',
+                          title: 'Syrena Project',
+                          text: 'Progress in 93% - Last update 8h',
+                          progress: '93%'
+                        }
+                      ]
+                    each val in listProjects
+                      .list-group-item
+                        .list-group-item__figure
+                          .has-badge
+                            a.avatar.avatar--md(class= `bg--${val.bgAvatar}` href="#!")= val.avatarText
+                            a(href="#!").user-avatar.user-avatar--xs
+                              img(src= val.img, alt="avatar")
+                        .list-group-item__body
+                          .card-title 
+                            a(href="#")= val.title
+                          p.card-subtitle= val.text
+                          .progress.progress-xs.bg--transparent
+                            .progress-bar(class= `bg--${val.bgAvatar}` role="progressbar" aria-valuenow="2181" aria-valuemin="0" aria-valuemax="100" style=`width: ${val.progress}`)
+ 
       +footer()

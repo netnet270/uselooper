@@ -40,13 +40,14 @@
     }
   }
   &--secondary {
-    color: $cl-dark-gray;
-    background: linear-gradient(180deg, $cl-white, lighten($cl-light-gray, 6%));
-    border-color: $cl-light-gray;
+    color: $cl-light-black;
+    background: linear-gradient(180deg, $cl-white, $bg-light-gray);
+    border-color: $border-secondary;
     box-shadow: 0 1px 0 0 rgba(20, 20, 31, .05);
     &:hover {
-      background: linear-gradient(180deg, lighten($cl-light-gray, 5%), lighten($cl-light-gray, 5%));
-      border-color: $cl-light-gray;
+      background: linear-gradient(180deg, $bg-light-gray, $bg-light-gray);
+      border-color: $border-secondary;
+      box-shadow: none;
     }
     &:focus {
       background: linear-gradient(180deg, $cl-white, $cl-light-gray);
@@ -54,7 +55,7 @@
       box-shadow: 0 0 0 1px $cl-indigo;
     }
     &#{$button}--disabled {
-      color: $cl-dark-gray;
+      color: $cl-light-black;
       background: linear-gradient(180deg, $cl-white, lighten($cl-light-gray, 6%));
       border-color: $cl-light-gray;
       box-shadow: 0 1px 0 0 rgba(20, 20, 31, .05);

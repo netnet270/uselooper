@@ -43,11 +43,23 @@
     color: $cl-green;
   }
 
+  &--light-green {
+    color: $cl-light-green;
+  }
+
   &--purple {
     color: $cl-purple;
   }
 
+  &--dark-purple {
+    color: $cl-dark-purple;
+  }
+
   &--light-purple {
     color: $cl-light-purple;
+  }
+
+  &--indigo {
+    color: $cl-indigo;
   }
 }
