@@ -1,0 +1,13 @@
+extends modules/layout/_core
+         
+block head
+  +head(head.userProfile.title)
+     
+block body
+  .main-wapper
+    +header()
+    +sidebar('User','ue-02-user-profile.html')
+
+    main.main-content
+      .wrapper-inner
+        header.header

@@ -7,6 +7,7 @@ body {
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   line-height: 21px;
+  color: $cl-light-black;
 }
 
 img {
@@ -14,7 +15,7 @@ img {
 }
 
 a {
-  color: $blue;
+  color: $cl-indigo;
 
   &:hover,
   &:focus,
@@ -22,6 +23,7 @@ a {
     outline: 0;
     box-shadow: none;
     text-decoration: none;
+    color: $cl-dark-blue;
   }
 }
 

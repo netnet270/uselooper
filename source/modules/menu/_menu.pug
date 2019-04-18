@@ -2,18 +2,18 @@
 //- Modules :: Menu
 //-------------------------------------------------------
 
-mixin main-menu()
+mixin main-menu(cat,href)
   ul.navbar-nav.js-navbar-nav
     each item in menus
-      li.nav-item.level1.js-nav-item(
+      li.nav-item.level1(
         class=item.submenu ? 'nav-item--has-children' : '', 
-        class=item.active ? 'nav-item--active' : '',
+        class=(item.text == cat) ? 'nav-item--active' : '',
       )
-        a.nav-link.js-nav-link(
-          href="#"+ item.href
+        a.nav-link(
+          href= (item.submenu === false) ? (item.href ? item.href : "javascript:void(0)") : (item.href ? `#${item.href}` : "javascript:void(0)")
           data-toggle="collapse"
           aria-expanded= item.expanded ? "true" : "false"
-          aria-controls=item.href
+          aria-controls= item.href
           role="button"
         )
           i.nav-icon(class= item.icon)
@@ -22,21 +22,21 @@ mixin main-menu()
             span.badge.ml-auto(class= `badge--${item.badge.type}`)= item.badge.text
         if item.submenu
           .collapse(
-            id= item.href, 
-            class= item.active ? "show" : "",
+            id= item.href,
+            class=(item.text == cat) ? "show" : "",
             data-parent="#menu-sidebar"
           )
-            ul.nav.flex-column.js-submenu
+            ul.nav.flex-column
               each sub in item.submenu
-                li.nav-item.level2.js-sub-item(
+                li.nav-item.level2(
                   class=sub.childmenu ? 'nav-item--has-children' : '',
-                  class= sub.active ? 'nav-item--active' : ''
+                  class= (sub.href== href) ? 'nav-item--active' : ''
                 )
                   if sub.childmenu
                     a.nav-link(
                       href="#"+ sub.href
                       data-toggle="collapse"
-                      aria-expanded="false"
+                      aria-expanded=(item.href == href) ? "true" : "false"
                       aria-controls=sub.href
                       role="button"
                     )
@@ -47,7 +47,7 @@ mixin main-menu()
 
                   if sub.childmenu
                     .collapse(id= sub.href)
-                      ul.nav.js-childmenu.flex-column
+                      ul.nav.flex-column
                         each child in sub.childmenu
                           li.level3.nav-item(
                             class= child.active ? 'nav-item--active' : ''
@@ -60,11 +60,11 @@ mixin sub-menu()
   h3.navbar-heading Interfaces
   ul.navbar-nav.js-navbar-nav
     each item in interfaces
-      li.nav-item.level1.js-nav-item(
+      li.nav-item.level1(
         class=item.submenu ? 'nav-item--has-children' : '', 
         class=item.active ? 'nav-item--active' : ''
       )
-        a.nav-link.js-nav-link(
+        a.nav-link(
           href="#"+ item.href
           data-toggle="collapse"
           aria-expanded= item.expanded ? "true" : "false"
@@ -80,9 +80,9 @@ mixin sub-menu()
             class= item.active ? "show" : "",
             data-parent="#menu-sidebar"
           )
-            ul.nav.flex-column.js-submenu
+            ul.nav.flex-column
               each sub in item.submenu
-                li.nav-item.level2.js-sub-item(
+                li.nav-item.level2(
                   class=sub.childmenu ? 'nav-item--has-children' : '',
                   class= sub.active ? 'nav-item--active' : ''
                 )
@@ -99,7 +99,7 @@ mixin sub-menu()
 
                   if sub.childmenu
                     .collapse(id= sub.href)
-                      ul.nav.js-childmenu.flex-column
+                      ul.nav.flex-column
                         each child in sub.childmenu
                           li.level3.nav-item(
                             class= child.active ? 'nav-item--active' : '',
@@ -117,7 +117,7 @@ mixin sub-menu()
                               a.nav-link(href= child.href ? child.href: '#!')=child.text
                             if child.grandchild
                               .collapse(id= child.href)
-                                ul.nav.js-childmenu.flex-column
+                                ul.navflex-column
                                   each grandchild in child.grandchild
                                     li.level4.nav-item(
                                       class= grandchild.active ? 'nav-item--active' : '',

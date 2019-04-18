@@ -3,8 +3,7 @@
     "1": {
       "text": "Dashboard",
       "icon": "fas fa-home",
-      "href": "index.html",
-      "active": true
+      "href": "ue-01-home.html"
     },
     "2": {
       "text": "App Pages",
@@ -169,39 +168,39 @@
       "submenu": [
         {
           "text": "Profile",
-          "href": "user-profile.html"
+          "href": "ue-02-user-profile.html"
         },
         {
           "text": "Activities",
-          "href": "user-activities.html"
+          "href": "ue-03-user-activities.html"
         },
         {
           "text": "Teams",
-          "href": "user-teams.html"
+          "href": "ue-04-user-teams.html"
         },
         {
           "text": "Projects",
-          "href": "user-projects.html"
+          "href": "ue-05-user-projects.html"
         },
         {
           "text": "Tasks",
-          "href": "user-tasks.html"
+          "href": "ue-06-user-tasks.html"
         },
         {
           "text": "Profile Settings",
-          "href": "user-profile-settings.html"
+          "href": "ue-07-user-profile-settings.html"
         },
         {
           "text": "Account Settings",
-          "href": "user-account-settings.html"
+          "href": "ue-08-user-account-settings.html"
         },
         {
           "text": "Billing Settings",
-          "href": "user-billing-settings.html"
+          "href": "ue-09-user-billing-settings.html"
         },
         {
           "text": "Notification Settings",
-          "href": "user-notification-settings.html"
+          "href": "ue-10-user-notification-settings.html"
         }
       ]
     },

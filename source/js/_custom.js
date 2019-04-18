@@ -155,12 +155,38 @@ $(document).ready(function () {
 
   togglePassword();
 
-  function placeholderShown() {
-    $('.input-label > input').on('focus blur keyup change', function () {
-      this.classList[this.value ? 'remove' : 'add']('placeholder-shown');
-    })
-    $('.input-label > input').trigger('change');
-  }
+  // input file : update input show value
+  $('.input-field--file .form-control').on('change', function (e) {
+    var files = this.files;
+    var fileLabel = $(this).next('.input-field__file-label');
+    var labelText = fileLabel.text();
 
-  placeholderShown();
+    // print count file if upload more than one
+    fileLabel.text(files.length + ' files selected');
+    
+    // print name file if upload one file
+    if (files.length <= 2) {
+      var fileNames = [];
+      for (var i = 0; i < files.length; i++) {
+        fileNames.push(files[i].name);
+      }
+      fileLabel.text(fileNames.join(', '));
+    }
+
+    // no file select
+    if (!files.length) {
+      fileLabel.text('Choose file');
+    }
+  });
+  // input floating label
+  $('.js-custom-input-floating-label').on('focus blur keyup change', function(){
+    var oldDataValue = $(this).val();own
+    if(!oldDataValue){
+      $(this).addClass('show-placeholder');
+    }
+    else {
+      $(this).removeClass('show-placeholder');
+    }
+  });
+
 });

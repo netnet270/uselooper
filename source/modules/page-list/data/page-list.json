@@ -9,61 +9,61 @@
       },
       {
         "title": "Home",
-        "url": "home",
+        "url": "ue-01-home",
         "categories": "Dashboard",
         "bg": "#1984c6"
       },
       {
         "title": "User Profile",
-        "url": "user-profile",
+        "url": "ue-02-user-profile",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "User Activities",
-        "url": "user-activities",
+        "url": "ue-03-user-activities",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "User Teams",
-        "url": "user-teams",
+        "url": "ue-04-user-teams",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "User Projects",
-        "url": "user-prọects",
+        "url": "ue-05-user-prọects",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "User Tasks",
-        "url": "user-tasks",
+        "url": "ue-06-user-tasks",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "Profile Settings",
-        "url": "user-profile-settings",
+        "url": "ue-07-user-profile-settings",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "Account Settings",
-        "url": "user-account-settings",
+        "url": "ue-08-user-account-settings",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "Billing Settings",
-        "url": "user-billing-settings",
+        "url": "ue-09-user-billing-settings",
         "categories": "Pages",
         "bg": "#dea604"
       },
       {
         "title": "Notification Settings",
-        "url": "user-notification-settings",
+        "url": "ue-10-user-notification-settings",
         "categories": "Pages",
         "bg": "#dea604"
       },

@@ -2,7 +2,7 @@
 //- Modules :: Sidebar
 //-------------------------------------------------------
             
-mixin sidebar()
+mixin sidebar(cat,href)
   aside.aside-sidebar.aside-sidebar-expand-md.aside-sidebar-light
     .aside-content
       .aside-header.d-block.d-md-none
@@ -50,7 +50,7 @@ mixin sidebar()
                   span.dropdown-item__icon(class= item.icon)
                   | #{item.text}
       .aside-menu#menu-sidebar.js-scrollbar-menu
-        +main-menu()
+        +main-menu(cat,href)
         +sub-menu()
       .aside-footer
         +buttons({

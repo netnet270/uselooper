@@ -2,15 +2,14 @@ extends modules/layout/_core
          
 block head
   +head(head.home.title)
-     
+      
 block body
   .main-wapper
     +header()
-    +sidebar()
+    +sidebar('Dashboard','ue-01-home.html')
 
     main.main-content
       .wrapper-inner
-        //- header main-content
         header.header
           .d-flex.flex-column.flex-md-row
             .header__lead
@@ -26,11 +25,10 @@ block body
                 .dropdown-arrow.dropdown-arrow-right
                 .dropdown-menu
 
-        //- section metric
         section.section-metric
-          .row.m-0
+          .row
             .col-lg-9
-              .row.mr-0.metric-flush
+              .row.m-0.metric-flush
                 .col.card-metric
                   a(href="user-teams.html")
                     .card-metric__title Teams
@@ -55,16 +53,18 @@ block body
                         i(class= 'fa fa-tasks')
                       span.card-metric__count 64
 
-            .col-lg-3.card-metric.justify-content-start
-              a(href="user-tasks.html")
-                .card-metric__badge
-                  span.badge.badge--lg.badge--success
-                    i.pulse.mr-1(class= 'oi oi-media-record')
-                    |  ONGOING TASKS
-                p.card-metric__value
-                      span.card-metric__icon
-                        i(class= 'oi oi-timer')
-                      span.card-metric__count 8
+            .col-lg-3
+              .card-metric.justify-content-start
+                a(href="user-tasks.html")
+                  .card-metric__badge
+                    span.badge.badge--lg.badge--success
+                      i.pulse.mr-1(class= 'oi oi-media-record')
+                      |  ONGOING TASKS
+                  p.card-metric__value
+                        span.card-metric__icon
+                          i(class= 'oi oi-timer')
+                        span.card-metric__count 8
+
         .row
           .col-12.col-lg-12.col-xl-4
             .card.completion-tasks
@@ -73,7 +73,7 @@ block body
                 .card-chart
                   canvas(id="completionTask" width= "282px" height= "292px")
 
-          .col-12.col-lg-12.col-xl-4
+          .col-12.col-lg-6.col-xl-4
             .card.tasks-performance
               .card-body
                 .card-title Tasks Performance
@@ -113,7 +113,7 @@ block body
                     | 60%
                   .card-footer__text Active
 
-          .col-12.col-lg-12.col-xl-4
+          .col-12.col-lg-6.col-xl-4
             .card.leaderboard
               .card-body
                 .card-title Leaderboard
@@ -194,12 +194,11 @@ block body
                           each item in val.progress
                             .progress-bar(class= `bg--${item.bg}` role="progressbar" style=`width: ${item.width}` aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
 
-        //- section-deck
         section.section-deck
           .row
-            .col-lg-6.col-12
+            .col-xl-6.col-lg-12.col-12
               .card.active-projects
-                .card-header  Active Projects
+                h3.card-header  Active Projects
                 .card-body
                   .list-group
                     -
@@ -266,5 +265,65 @@ block body
                           p.card-subtitle= val.text
                           .progress
                             .progress-bar(class= `bg--${val.bgAvatar}` role="progressbar" aria-valuenow="2181" aria-valuemin="0" aria-valuemax="100" style=`width: ${val.progress}`)
- 
+
+            .col-xl-6.col-lg-12.col-12
+              .card.active-tasks
+                h3.card-header Active Tasks: To-Dos
+                .card-body
+                  .todo-list
+                    .todo-list__header Looper Admin Theme (1/3)
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo1',
+                        label: 'Eat corn on the cob',
+                      })(class= 'input-checkbox-custom--line-through')
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo2',
+                        label: 'Mix up a pitcher of sangria',
+                      })(class= 'input-checkbox-custom--line-through')
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo3',
+                        label: 'Have a barbecue',
+                      })(class= 'input-checkbox-custom--line-through')
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo4',
+                        label: 'Ride a roller coaster — ',
+                        textSmall: 'Overdue in 3 days'
+                      })(class= 'input-checkbox-custom--line-through')
+
+                    .todo-list__header Smart Paper (0/2)
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo5',
+                        label: 'Bring a blanket and lie on the grass at an outdoor concert',
+                      })(class= 'input-checkbox-custom--line-through')
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo6',
+                        label: 'Collect seashells at the beach',
+                      })(class= 'input-checkbox-custom--line-through')
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo7',
+                        label: 'Swim in a lake',
+                      })(class= 'input-checkbox-custom--line-through')
+                    .todo-list__item
+                      +group-input-checkbox({
+                        name: 'checkbox',
+                        id: 'todo8',
+                        label: 'Get enough sleep!',
+                      })(class= 'input-checkbox-custom--line-through')
+                .card-footer
+                  a(href="#!") View all
+                   i(class= 'fa fa-fw fa-angle-right')
       +footer()

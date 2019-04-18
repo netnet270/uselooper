@@ -3,22 +3,22 @@
     "home": {
       "title": "Dashboard | Looper - Bootstrap 4 Admin Theme"
     },
-    "user-profile" : {
+    "userProfile" : {
       "title": "Profile | Looper - Bootstrap 4 Admin Theme"
     },
-    "user-activities" : {
+    "userActivities" : {
       "title": "Profile | Looper - Bootstrap 4 Admin Theme"
     },
-    "user-teams" : {
+    "userTeams" : {
       "title": "Profile | Looper - Bootstrap 4 Admin Theme"
     },
-    "user-prọects" : {
+    "userPrọects" : {
       "title": "Profile | Looper - Bootstrap 4 Admin Theme"
     },
-    "user-tasks" : {
+    "userTasks" : {
       "title": "Profile | Looper - Bootstrap 4 Admin Theme"
     },
-    "user-settings" : {
+    "userSettings" : {
       "title": "Profile Settings | Looper - Bootstrap 4 Admin Theme"
     },
     "form-basic" : {

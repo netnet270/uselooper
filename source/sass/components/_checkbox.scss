@@ -42,7 +42,7 @@
   &--line-through {
     .input-checkbox:checked {
       & + label {
-        color: $cl-gray;
+        color: $cl-dark-gray;
         text-decoration: line-through;
       }
     }
@@ -147,5 +147,5 @@
   }
 }
 .input-desc {
-  color: $cl-gray;
+  color: $cl-dark-gray;
 }

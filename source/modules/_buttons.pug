@@ -12,6 +12,5 @@ mixin buttons({ text, type, iconFont, disabled, size, isFull })
     disabled= disabled ? 'disabled' : null
   )&attributes(attributes)
     | #{text}
-    i(class= iconFont)
-
-//- mixin group-button-radio({ text, type, iconFont, size, isFull})
+    if iconFont
+      i(class= iconFont)
