@@ -106,67 +106,67 @@
       }
     }
   }
+}
+.card-overview {
+  .card-header {
+    font-weight: 600;
+    padding: 16px;
+    font-size: 14px;
+    background-color: transparent;
+  }
 
-  .card-overview {
-    .card-header {
-      font-weight: 600;
-      padding: 16px;
-      font-size: 14px;
-      background-color: transparent;
+  .card-body {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+
+      &:nth-child(1) {
+        margin-bottom: 16px;
+      }
+
+      &--summary {
+        display: block;
+      }
     }
 
-    .card-body {
-      &__item {
-        display: flex;
-        justify-content: space-between;
-
-        &:nth-child(1) {
-          margin-bottom: 16px;
-        }
-
-        &--summary {
-          display: block;
-        }
+    &__left {
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 8px;
       }
 
-      &__left {
-        .title {
-          font-size: 14px;
-          font-weight: 600;
-          margin-right: 8px;
-        }
-
-        .percent {
-          font-size: 11.2px;
-          line-height: 1.5;
-          i {
-            margin-right: 4px;
-          }
-        }
+      .percent {
+        font-size: 11.2px;
+        line-height: 1.5;
       }
 
-      &__right,
-      &__center {
-        .number {
-          font-weight: 600;
-          margin-right: 4px;
-        }
-        .unit {
-          color: #888c9b;
-        }
+      .percent i {
+        margin-right: 4px;
       }
+    }
 
-      &__center {
-        margin-top: 16px;
-        text-align: center;
-        .number {
-          font-size: 28px;
-        }
+    &__right,
+    &__center {
+      .number {
+        font-weight: 600;
+        margin-right: 4px;
       }
+      .unit {
+        color: #888c9b;
+      }
+    }
 
-      &:nth-child(n+3) {
-        border-top: 1px solid rgba(34, 34, 48, .1);
+    &__center {
+      margin-top: 16px;
+      text-align: center;
+      .number {
+        font-size: 28px;
       }
+    }
+
+    &:nth-child(n+3) {
+      border-top: 1px solid rgba(34, 34, 48, .1);
     }
   }
 }

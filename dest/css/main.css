@@ -23973,47 +23973,48 @@ button.bg--light-purple:hover {
   .achievement .card-legend__item i {
     margin-right: 4px; }
 
-.achievement .card-overview .card-header {
+.card-overview .card-header {
   font-weight: 600;
   padding: 16px;
   font-size: 14px;
   background-color: transparent; }
 
-.achievement .card-overview .card-body__item {
+.card-overview .card-body__item {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-  .achievement .card-overview .card-body__item:nth-child(1) {
+  .card-overview .card-body__item:nth-child(1) {
     margin-bottom: 16px; }
-  .achievement .card-overview .card-body__item--summary {
+  .card-overview .card-body__item--summary {
     display: block; }
 
-.achievement .card-overview .card-body__left .title {
+.card-overview .card-body__left .title {
   font-size: 14px;
   font-weight: 600;
   margin-right: 8px; }
 
-.achievement .card-overview .card-body__left .percent {
+.card-overview .card-body__left .percent {
   font-size: 11.2px;
   line-height: 1.5; }
-  .achievement .card-overview .card-body__left .percent i {
-    margin-right: 4px; }
 
-.achievement .card-overview .card-body__right .number, .achievement .card-overview .card-body__center .number {
+.card-overview .card-body__left .percent i {
+  margin-right: 4px; }
+
+.card-overview .card-body__right .number, .card-overview .card-body__center .number {
   font-weight: 600;
   margin-right: 4px; }
 
-.achievement .card-overview .card-body__right .unit, .achievement .card-overview .card-body__center .unit {
+.card-overview .card-body__right .unit, .card-overview .card-body__center .unit {
   color: #888c9b; }
 
-.achievement .card-overview .card-body__center {
+.card-overview .card-body__center {
   margin-top: 16px;
   text-align: center; }
-  .achievement .card-overview .card-body__center .number {
+  .card-overview .card-body__center .number {
     font-size: 28px; }
 
-.achievement .card-overview .card-body:nth-child(n+3) {
+.card-overview .card-body:nth-child(n+3) {
   border-top: 1px solid rgba(34, 34, 48, 0.1); }
 
 @media (min-width: 576px) {
