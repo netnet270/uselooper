@@ -1,0 +1,190 @@
+// ======================================================
+// Pages :: Home
+// ======================================================
+
+.site-header-cover {
+  &__inner {
+    position: relative;
+    padding: 32px 16px 16px;
+    display: flex;
+    min-height: 16rem;
+    flex-direction: column;
+    background-color: #e6e8ed;
+    box-shadow: 0 1px 0 rgba(34, 34, 48, .1);
+  }
+
+  .site-profile {
+    text-align: center;
+    &__name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 8px;
+      line-height: 29px;
+    }
+
+    &__rank {
+      margin: 4px 0;
+      i {
+        margin-right: 3px;
+      }
+    }
+    &__position {
+      color: #888c9b;
+    }
+  }
+  .site-controls {
+    text-align: right;
+    position: absolute;
+    top: auto;
+    bottom: 8px;
+    right: 16px;
+  }
+}
+
+.section-metric {
+  &__item {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    min-height: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 1px 3px 0 rgba(20, 20, 31, .15);
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: $cl-dark-gray;
+    margin-bottom: 10px;
+  }
+
+  &__value {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    color: $cl-gray-2;
+    font-size: 14px;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+  }
+
+  &__count {
+    font-size: 28px;
+    font-weight: 600;
+    color: $cl-light-black;
+  }
+}
+
+.achievement {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 16px 0;
+    margin-bottom: 0;
+  }
+
+  .card-legend {
+    &__item {
+      display: inline-block;
+      margin-right: 8px;
+      font-size: 11.2px;
+      line-height: 1.5;
+      i {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .card-overview {
+    .card-header {
+      font-weight: 600;
+      padding: 16px;
+      font-size: 14px;
+      background-color: transparent;
+    }
+
+    .card-body {
+      &__item {
+        display: flex;
+        justify-content: space-between;
+
+        &:nth-child(1) {
+          margin-bottom: 16px;
+        }
+
+        &--summary {
+          display: block;
+        }
+      }
+
+      &__left {
+        .title {
+          font-size: 14px;
+          font-weight: 600;
+          margin-right: 8px;
+        }
+
+        .percent {
+          font-size: 11.2px;
+          line-height: 1.5;
+          i {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      &__right,
+      &__center {
+        .number {
+          font-weight: 600;
+          margin-right: 4px;
+        }
+        .unit {
+          color: #888c9b;
+        }
+      }
+
+      &__center {
+        margin-top: 16px;
+        text-align: center;
+        .number {
+          font-size: 28px;
+        }
+      }
+
+      &:nth-child(n+3) {
+        border-top: 1px solid rgba(34, 34, 48, .1);
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .site-header-cover {
+    &__inner {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header-cover {
+    &__inner {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+}

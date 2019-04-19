@@ -123,3 +123,15 @@ mixin sub-menu()
                                       class= grandchild.active ? 'nav-item--active' : '',
                                     )
                                       a.nav-link(href= grandchild.href ? grandchild.href : '#')=grandchild.text
+
+mixin menuPage(page, href)
+  nav.site-page-nav
+    .site-page-nav__scroller
+      .nav.nav-tabs
+        each item in userProfile
+          a.nav__link(
+            href= (item.href == href) ? item.href : '#!'
+            class= (item.text == page) ? 'active' : null
+          )= item.text
+            if item.badge
+              span.badge= item.badge

@@ -1,6 +1,6 @@
-// // ======================================================
-// // Components :: Input
-// // ======================================================
+// ======================================================
+// Components :: Menu
+// ======================================================
 .aside-menu {
   padding: 16px 0 4px;
   margin-bottom: 16px;
@@ -115,6 +115,7 @@
     }
   }
 }
+
 .navbar-heading {
   margin-top: 16px;
   margin-bottom: 0;
@@ -124,4 +125,45 @@
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.site-page-nav {
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 56px;
+  background-color: $bg-white;
+  border-bottom: 1px solid #e0e1e5;
+  .nav {
+    display: flex;
+    justify-content: center;
+
+    &__link {
+      padding: 16px;
+      border-bottom: 3px solid transparent;
+      color: #888c9b;
+      transition: all .3s;
+
+      &.active {
+        color: #222230;
+        background-color: transparent;
+        border-color: #346cb0;
+        display: inline-block;
+      }
+
+      &:hover:not(.active),
+      &:focus {
+        color: #222230;
+        border-color: #e6e8ed #e6e8ed rgba(34, 34, 48, .1);
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .site-header-cover {
+    &__inner {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
 }

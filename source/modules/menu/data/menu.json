@@ -434,5 +434,33 @@
         }
       ]
     }
+  },
+
+  "userProfile" : {
+    "1" : {
+      "text": "Overview",
+      "href": "ue-02-user-profile.html"
+    },
+    "2" : {
+      "text": "Activities",
+      "href": "ue-03-user-activities.html",
+      "badge": "16"
+    },
+    "3" : {
+      "text": "Teams",
+      "href": "ue-04-user-teams.html"
+    },
+    "4" : {
+      "text": "Projects",
+      "href": "ue-05-user-projects.html"
+    },
+    "5" : {
+      "text": "Tasks",
+      "href": "ue-06-user-tasks.html"
+    },
+    "6" : {
+      "text": "Settings",
+      "href": "ue-07-user-profile-settings.html"
+    }
   }
 }

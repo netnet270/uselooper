@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  
+
   //PerfectScrollbar
 
-  function perfectScrollbar(element){
+  function perfectScrollbar(element) {
     new PerfectScrollbar(element, {
       wheelPropagation: true
     });
@@ -15,10 +15,27 @@ $(document).ready(function () {
   //tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
-  //chart chartCompletionTask
-  (function chartCompletionTask() {
+  // modal
+  (function modalScrollable() {
+    $('.modal').on('shown.bs.modal', function () {
+      $(this).addClass('has-shown').find('.modal-body').trigger('scroll');
+    });
+    $('.modal-dialog-scrollable .modal-body').on('scroll', function () {
+      var $elem = $(this);
+      var elem = $elem[0];
+      var isTop = $elem.scrollTop() === 0;
+      var isBottom = elem.scrollHeight - $elem.scrollTop() === $elem.outerHeight();
+      $elem.prev().toggleClass('modal-body--scrolled', isTop);
+      $elem.next().toggleClass('modal-body--scrolled', isBottom);
+    });
+  })();
 
-    function drawCompletionTask(_data) {
+  //chart chartCompletionTask
+
+
+  function drawCompletionTask(_data) {
+    if ($('#completionTask').length > 0) {
+
       var _chart1 = new Chart(document.getElementById('completionTask'), {
         type: "bar",
         data: _data,
@@ -59,19 +76,19 @@ $(document).ready(function () {
         }
       })
     }
+  }
 
-    var dataCompletionTasks = {
-      labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
-      datasets: [{
-        data: [155, 65, 465, 265, 225, 325, 80],
-        backgroundColor: "#346cb0",
-        borderColor: "#346cb0"
-      }]
-    }
-    drawCompletionTask(dataCompletionTasks);
-})();
+  var dataCompletionTasks = {
+    labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
+    datasets: [{
+      data: [155, 65, 465, 265, 225, 325, 80],
+      backgroundColor: "#346cb0",
+      borderColor: "#346cb0"
+    }]
+  }
+  drawCompletionTask(dataCompletionTasks);
 
-//chart Tasks Performance
+  //chart Tasks Performance
   $('[data-toggle="easypiechart"]').each(function () {
     var selector = this;
     var options = $(selector).data();
@@ -87,9 +104,79 @@ $(document).ready(function () {
     $(selector).easyPieChart(options);
   });
 
+  function drawAchievement(_data) {
+    var achievement = new Chart(document.getElementById('achievement'), {
+      type: "bar",
+      data: _data,
+      options: {
+        responsive: true,
+        tooltips: {
+          enabled: true,
+          mode: 'index',
+          intersect: true,
+          callbacks: {
+            label: function (a, e) {
+              var t = e.datasets[a.datasetIndex].label || "",
+                o = a.yLabel,
+                r = "";
+              return r += t + ': ' + o
+            }
+          }
+        },
+        scales: {
+          xAxes: [{
+            ticks: {
+              fontColor: '#888c9b',
+              maxRotation: 0
+            },
+            gridLines: {
+              display: true,
+              drawBorder: false,
+              drawOnChartArea: false
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              stepSize: 20,
+              fontColor: '#888c9b',
+              beginAtZero: true
+            },
+            gridLines: {
+              display: true,
+              drawBorder: true,
+              borderDash: [8, 2],
+              color: "#e6edf7"
+            }
+          }]
+        },
+        legend: {
+          display: false
+        }
+      }
+    })
+  }
+
+  var dataAchievement = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [
+      {
+        label: "Assigned tasks",
+        data: [41, 20, 68, 17, 100, 83, 53],
+        backgroundColor: "#00a28a",
+        borderColor: "#00a28a"
+      },
+      {
+        label: "Completed tasks",
+        data: [51, 14, 51, 63, 59, 83, 34],
+        backgroundColor: "#5f4b8b",
+        borderColor: "#5f4b8b"
+      }
+    ]
+  }
+  drawAchievement(dataAchievement);
+
   //input Number
   function inputNumber() {
-
     $('.js-input-number').each(function () {
       var spinner = $(this);
       var input = spinner.children('.form-control[type="number"]');
@@ -116,7 +203,6 @@ $(document).ready(function () {
   inputNumber();
 
   function inputClearable() {
-
     var toggleClear = function toggleClear(input) {
       var isEmpty = !$(input).val();
       var clearable = $(input).parent().children('.close');
@@ -163,7 +249,7 @@ $(document).ready(function () {
 
     // print count file if upload more than one
     fileLabel.text(files.length + ' files selected');
-    
+
     // print name file if upload one file
     if (files.length <= 2) {
       var fileNames = [];
@@ -172,16 +258,15 @@ $(document).ready(function () {
       }
       fileLabel.text(fileNames.join(', '));
     }
-
-    // no file select
     if (!files.length) {
       fileLabel.text('Choose file');
     }
   });
+
   // input floating label
-  $('.js-custom-input-floating-label').on('focus blur keyup change', function(){
-    var oldDataValue = $(this).val();own
-    if(!oldDataValue){
+  $('.js-custom-input-floating-label').on('focus blur keyup change', function () {
+    var oldDataValue = $(this).val(); own
+    if (!oldDataValue) {
       $(this).addClass('show-placeholder');
     }
     else {

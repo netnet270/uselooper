@@ -283,7 +283,10 @@
   &--xs {
     width: 20px;
     height: 20px;
-    font-size: 20px;
+  }
+  &--xl {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -462,15 +465,14 @@ a.bg--light-green:focus,
 a.bg--light-green:hover,
 button.bg--light-green:focus,
 button.bg--light-green:hover {
-  background-color: #006f5f;
+  background-color: $cl-green-2 ;
 }
 a.bg--light-purple:focus,
 a.bg--light-purple:hover,
 button.bg--light-purple:focus,
 button.bg--light-purple:hover {
-  background-color: #a14e8b;
+  background-color: $cl-purple-3;
 }
-
 
 @media (min-width: 768px) {
   .main-header {

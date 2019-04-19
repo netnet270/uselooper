@@ -1,0 +1,161 @@
+//-------------------------------------------------------
+//- Modules :: Modal
+//-------------------------------------------------------
+mixin modal()
+  //- followers modal
+  .modal.fade.has-shown#followersModal(tabindex='-1', role='dialog', aria-labelledby='followersModalLabel', aria-modal='true')
+    .modal-dialog.modal-dialog-scrollable(role='document')
+      .modal-content
+        .modal-header.modal-body--scrolled
+          h5.modal-title Followers
+        .modal-body
+          .list-group.list-group--flush.list-group--divider
+            -
+              var listFollower = [
+                {
+                  img: 'images/uifaces2.jpg',
+                  name: 'Johnny Day',
+                  position: 'Computer Hardware Engineer',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces3.jpg',
+                  name: 'Sarah Bishop',
+                  position: 'Designer',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces4.jpg',
+                  name: 'Craig Hansen',
+                  position: 'Software Developer',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces5.jpg',
+                  name: 'Jane Barnes',
+                  position: 'Social Worker',
+                  status : 'Following'
+                },
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Nicole Barnett',
+                  position: 'Marketing Manager',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Juan Fuller',
+                  position: 'Lawyer',
+                  status : 'Following'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Johnny Day',
+                  position: 'Budget analyst',
+                  status : 'Following'
+                },
+                {
+                  img: 'images/uifaces2.jpg',
+                  name: 'Joe Hanson',
+                  position: 'Logistician',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Julia Silva',
+                  position: 'Photographer',
+                  status : 'Following'
+                },
+                {
+                  img: 'images/uifaces11.jpg',
+                  name: 'Brenda Griffin',
+                  position: 'Medical Assistant',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces12.jpg',
+                  name: 'Ryan Jimenez',
+                  position: 'Photographer',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces13.jpg',
+                  name: 'Bryan Hayes',
+                  position: 'Computer Systems Analyst',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces14.jpg',
+                  name: 'Cynthia Clark',
+                  position: 'Web Developer',
+                  status : 'Follow'
+                },
+                {
+                  img: 'images/uifaces15.jpg',
+                  name: 'Martha Myers',
+                  position: 'Writer',
+                  status : 'Follow'
+                }
+              ]
+            each val in listFollower
+              .list-group-item
+                .list-group-item__figure
+                  a.user-avatar(href='#')
+                    img(src= val.img, alt='avatar user')
+                .list-group-item__body
+                  .list-group-item__title
+                    a(href='#')= val.name
+                  p.list-group-item__text= val.position
+                .list-group-item__figure
+                  if (val.status == 'Follow')
+                    +buttons({
+                      text: `${val.status}`,
+                      type: 'primary',
+                      size: 'small' 
+                    })
+                  else 
+                    +buttons({
+                      text: `${val.status}`,
+                      type: 'secondary',
+                      size: 'small' 
+                    })
+          .text-center.p-3
+            .spinner-border.spinner-border-sm.text-primary(role='status')
+              span.sr-only Loading...
+        .modal-footer
+          +buttons({
+            text: 'Close', 
+            type: 'light'
+          })(data-dismiss='modal')
+
+  //- modal following
+  .modal.fade.has-shown#followingModal(tabindex='-1', role='dialog', aria-labelledby='followingModalLabel', aria-modal='true')
+    .modal-dialog.modal-dialog-scrollable(role='document')
+      .modal-content
+        .modal-header.modal-body--scrolled
+          h5.modal-title Following 
+        .modal-body
+          .list-group.list-group--flush.list-group--divider
+            each val in listFollower
+              .list-group-item
+                .list-group-item__figure
+                  a.user-avatar(href='#')
+                    img(src= val.img, alt='avatar user')
+                .list-group-item__body
+                  .list-group-item__title
+                    a(href='#')= val.name
+                  p.list-group-item__text= val.position
+                .list-group-item__figure
+                  +buttons({
+                    text: 'Following',
+                    type: 'secondary',
+                    size: 'small' 
+                })
+          .text-center.p-3
+            .spinner-border.spinner-border-sm.text-primary(role='status')
+              span.sr-only Loading...
+        .modal-footer
+          +buttons({
+            text: 'Close', 
+            type: 'light'
+          })(data-dismiss='modal')

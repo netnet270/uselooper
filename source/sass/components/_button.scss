@@ -9,6 +9,8 @@
   height: 36px;
   border-radius: $border-radius-base;
   white-space: nowrap;
+  transition: all .3s;
+
   &:hover {
     outline: none;
     box-shadow: none;
@@ -96,15 +98,23 @@
     }
   }
   &--light {
-    color: #346cb0;
+    color: #888c9b;
     background-color: transparent;
     border-color: transparent;
 
-    &:hover {
-      color: #346cb0;
+    &:hover,
+    &:focus {
       background-color: #e6e8ed;
+      color: #363642;
       border-color: #e6e8ed;
       box-shadow: none;
+    }
+
+    &:active {
+      color: #2e609c;
+      border-color: transparent;
+      background-color: rgba(52, 108, 176, .08);
+      box-shadow: 0 0 0 1px hsla(228, 7%, 86%, .5);
     }
   }
   &--disabled {

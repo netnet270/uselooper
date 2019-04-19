@@ -8,6 +8,203 @@ block body
     +header()
     +sidebar('User','ue-02-user-profile.html')
 
-    main.main-content
-      .wrapper-inner
-        header.header
+    main.site-content
+      header.site-header-cover
+        .site-header-cover__inner
+          .site-profile
+            a.user-avatar.user-avatar--xl(href="user-profile.html")
+              img(src="images/profile.jpg", alt="user-avatar")
+            .site-profile__name  Beni Arisandi 
+            .site-profile__rank
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="far fa-star")
+            p.site-profile__position  Project Manager @CreativeDivision
+            p Huge fan of HTML, CSS and Javascript. Web design and open source lover.
+
+          .site-controls
+            +buttons-link({
+              text: '2,159 Followers', 
+              type: 'light'
+            })(
+              data-toggle="modal" 
+              data-target="#followersModal"
+            )
+            +buttons-link({
+              text: '136 Following', 
+              type: 'light'
+            })(
+              data-toggle="modal" 
+              data-target="#followingModal"
+            )
+
+        +modal()
+
+        block menupage
+          +menuPage("Overview", "ue-02-user-profile.html")
+
+      block content
+        .site-content__inner
+          section.section-metric
+            .row
+              .col-lg-3.col-md-6.col-12
+                .section-metric__item
+                  p.section-metric__value
+                    span.section-metric__icon
+                      i(class= 'oi oi-people')
+                    span.section-metric__count 12
+                  .section-metric__title Teams
+
+              .col-lg-3.col-md-6.col-12
+                .section-metric__item
+                  p.section-metric__value
+                    span.section-metric__icon
+                      i(class= 'oi oi-fork')
+                    span.section-metric__count 47
+                  .section-metric__title Projects 
+
+              .col-lg-3.col-md-6.col-12
+                .section-metric__item
+                  p.section-metric__value
+                    span.section-metric__icon
+                      i(class= 'fa fa-tasks')
+                    span.section-metric__count 64
+                  .section-metric__title Active Tasks
+
+              .col-lg-3.col-md-6.col-12
+                .section-metric__item
+                  p.section-metric__value
+                    span.section-metric__icon
+                      i(class= 'oi oi-timer')
+                    span.section-metric__count 8
+                  .section-metric__title Ongoing Tasks
+
+          section.achievement
+            .achievement__header
+              h3.achievement__title Achievement
+              .achievement__dropdown.dropdown
+                +buttons({
+                  text: 'This Week',
+                  iconFont: 'fa fa-fw fa-caret-down',
+                  type: 'secondary'
+                })
+            .achievement__content
+              .row
+                .col-xl-8.col-12
+                  .card
+                    .card-body
+                      ul.card-legend
+                        li.card-legend__item
+                          i.color--light-green(class= "fa fa-fw fa-circle")
+                          | Assigned tasks
+                        li.card-legend__item
+                          i.color--dark-purple(class= "fa fa-fw fa-circle")
+                          | Completed tasks
+                      .card-chart
+                        canvas(id="achievement" width="1200px" height= "253px")
+
+                .col-xl-4.col-12
+                  .card.card-overview
+                    h4.card-header Overview                                   
+                    .card-body
+                      .card-body__item
+                        .card-body__left
+                          span.title Revenue
+                          span.percent.color--light-green
+                            i(class= "fa fa-caret-up")
+                            | 87%
+                        .card-body__right
+                          span.number 17,400
+                          span.unit.text-small USD
+                      .card-body__item
+                        .card-body__left
+                          span.title Projects
+                          span.percent.color--light-green
+                            i(class= "fa fa-caret-up")
+                            | 24%
+                        .card-body__right
+                          span.number 5
+                    .card-body
+                      .card-body__item.mb-0
+                        .card-body__left
+                          span.title Expenses
+                          span.percent.color--light-purple
+                            i(class= "fa fa-caret-down")
+                            | 12%
+                        .card-body__right
+                          span.number 1,600
+                          span.unit.text-small USD
+                    .card-body
+                      .card-body__item.card-body__item--summary
+                        .card-body__left
+                          span.title Earnings
+                          span.percent.color--light-green
+                            i(class= "fa fa-caret-up")
+                            | 24%
+                        .card-body__center
+                          span.number 15,800
+                          span.unit USD
+
+              .row
+                .col-xl-6.col-12
+                  .card.card-time-projects
+                    .card-header
+                      .card-header__title Time Spent: Projects
+                      .card-header__dropdown.dropdown
+                        +buttons({
+                          type: 'light'
+                        })(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                          i.color--light-dark(class= "fa fa-fw fa-ellipsis-v")
+                        .dropdown-arrow
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href="#!") Actions
+                          a.dropdown-item(href="#!") Goes here
+                          a.dropdown-item(href="#!") Remove
+                    .table-responsive
+                      table.table
+                        thead
+                          tr
+                            th Project
+                            th Progress
+                            th Hours Spent
+                        tbody
+                          tr
+                            td
+                              a.avatar.bg--blue BA
+                              a(href="#!") Booking App
+                            td
+                              span.badge.bg--blue 35%
+                            td 35:28
+                          tr
+                            td
+                              a.avatar.bg--light-green SB
+                              a(href="#!") SVG Icon Bundle
+                            td
+                              span.badge.bg--light-green 35%
+                            td 20:39
+                          tr
+                            td
+                              a.avatar.bg--light-purple SP
+                              a(href="#!") Syrena Project
+                            td
+                              span.badge.bg--light-purple 93%
+                            td 35:28
+                          tr
+                            td
+                              a.avatar.bg--green MG
+                              a(href="#!") Mobile App Gex
+                            td
+                              span.badge.bg--green 100%
+                            td 35:10
+                          tr
+                            td
+                              a.avatar.bg--red LB
+                              a(href="#!") Landing Page Booster
+                            td
+                              span.badge.bg--red 100%
+                            td 21:21
+                    .card-footer
+                      a(href="#!") View all
+                        i(class= 'fa fa-fw fa-angle-right')

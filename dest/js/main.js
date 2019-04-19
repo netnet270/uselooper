@@ -39,10 +39,10 @@
 !function(a,b){"object"==typeof exports?module.exports=b(require("jquery")):"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(this,function(a){var b=function(a,b){var c,d=document.createElement("canvas");a.appendChild(d),"undefined"!=typeof G_vmlCanvasManager&&G_vmlCanvasManager.initElement(d);var e=d.getContext("2d");d.width=d.height=b.size;var f=1;window.devicePixelRatio>1&&(f=window.devicePixelRatio,d.style.width=d.style.height=[b.size,"px"].join(""),d.width=d.height=b.size*f,e.scale(f,f)),e.translate(b.size/2,b.size/2),e.rotate((-0.5+b.rotate/180)*Math.PI);var g=(b.size-b.lineWidth)/2;b.scaleColor&&b.scaleLength&&(g-=b.scaleLength+2),Date.now=Date.now||function(){return+new Date};var h=function(a,b,c){c=Math.min(Math.max(-1,c||0),1);var d=0>=c?!0:!1;e.beginPath(),e.arc(0,0,g,0,2*Math.PI*c,d),e.strokeStyle=a,e.lineWidth=b,e.stroke()},i=function(){var a,c;e.lineWidth=1,e.fillStyle=b.scaleColor,e.save();for(var d=24;d>0;--d)d%6===0?(c=b.scaleLength,a=0):(c=.6*b.scaleLength,a=b.scaleLength-c),e.fillRect(-b.size/2+a,0,c,1),e.rotate(Math.PI/12);e.restore()},j=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(a){window.setTimeout(a,1e3/60)}}(),k=function(){b.scaleColor&&i(),b.trackColor&&h(b.trackColor,b.trackWidth||b.lineWidth,1)};this.getCanvas=function(){return d},this.getCtx=function(){return e},this.clear=function(){e.clearRect(b.size/-2,b.size/-2,b.size,b.size)},this.draw=function(a){b.scaleColor||b.trackColor?e.getImageData&&e.putImageData?c?e.putImageData(c,0,0):(k(),c=e.getImageData(0,0,b.size*f,b.size*f)):(this.clear(),k()):this.clear(),e.lineCap=b.lineCap;var d;d="function"==typeof b.barColor?b.barColor(a):b.barColor,h(d,b.lineWidth,a/100)}.bind(this),this.animate=function(a,c){var d=Date.now();b.onStart(a,c);var e=function(){var f=Math.min(Date.now()-d,b.animate.duration),g=b.easing(this,f,a,c-a,b.animate.duration);this.draw(g),b.onStep(a,c,g),f>=b.animate.duration?b.onStop(a,c):j(e)}.bind(this);j(e)}.bind(this)},c=function(a,c){var d={barColor:"#ef1e25",trackColor:"#f9f9f9",scaleColor:"#dfe0e0",scaleLength:5,lineCap:"round",lineWidth:3,trackWidth:void 0,size:110,rotate:0,animate:{duration:1e3,enabled:!0},easing:function(a,b,c,d,e){return b/=e/2,1>b?d/2*b*b+c:-d/2*(--b*(b-2)-1)+c},onStart:function(){},onStep:function(){},onStop:function(){}};if("undefined"!=typeof b)d.renderer=b;else{if("undefined"==typeof SVGRenderer)throw new Error("Please load either the SVG- or the CanvasRenderer");d.renderer=SVGRenderer}var e={},f=0,g=function(){this.el=a,this.options=e;for(var b in d)d.hasOwnProperty(b)&&(e[b]=c&&"undefined"!=typeof c[b]?c[b]:d[b],"function"==typeof e[b]&&(e[b]=e[b].bind(this)));e.easing="string"==typeof e.easing&&"undefined"!=typeof jQuery&&jQuery.isFunction(jQuery.easing[e.easing])?jQuery.easing[e.easing]:d.easing,"number"==typeof e.animate&&(e.animate={duration:e.animate,enabled:!0}),"boolean"!=typeof e.animate||e.animate||(e.animate={duration:1e3,enabled:e.animate}),this.renderer=new e.renderer(a,e),this.renderer.draw(f),a.dataset&&a.dataset.percent?this.update(parseFloat(a.dataset.percent)):a.getAttribute&&a.getAttribute("data-percent")&&this.update(parseFloat(a.getAttribute("data-percent")))}.bind(this);this.update=function(a){return a=parseFloat(a),e.animate.enabled?this.renderer.animate(f,a):this.renderer.draw(a),f=a,this}.bind(this),this.disableAnimation=function(){return e.animate.enabled=!1,this},this.enableAnimation=function(){return e.animate.enabled=!0,this},g()};a.fn.easyPieChart=function(b){return this.each(function(){var d;a.data(this,"easyPieChart")||(d=a.extend({},b,a(this).data()),a.data(this,"easyPieChart",new c(this,d)))})}});
 
 $(document).ready(function () {
-  
+
   //PerfectScrollbar
 
-  function perfectScrollbar(element){
+  function perfectScrollbar(element) {
     new PerfectScrollbar(element, {
       wheelPropagation: true
     });
@@ -55,10 +55,27 @@ $(document).ready(function () {
   //tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
-  //chart chartCompletionTask
-  (function chartCompletionTask() {
+  // modal
+  (function modalScrollable() {
+    $('.modal').on('shown.bs.modal', function () {
+      $(this).addClass('has-shown').find('.modal-body').trigger('scroll');
+    });
+    $('.modal-dialog-scrollable .modal-body').on('scroll', function () {
+      var $elem = $(this);
+      var elem = $elem[0];
+      var isTop = $elem.scrollTop() === 0;
+      var isBottom = elem.scrollHeight - $elem.scrollTop() === $elem.outerHeight();
+      $elem.prev().toggleClass('modal-body--scrolled', isTop);
+      $elem.next().toggleClass('modal-body--scrolled', isBottom);
+    });
+  })();
 
-    function drawCompletionTask(_data) {
+  //chart chartCompletionTask
+
+
+  function drawCompletionTask(_data) {
+    if ($('#completionTask').length > 0) {
+
       var _chart1 = new Chart(document.getElementById('completionTask'), {
         type: "bar",
         data: _data,
@@ -99,19 +116,19 @@ $(document).ready(function () {
         }
       })
     }
+  }
 
-    var dataCompletionTasks = {
-      labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
-      datasets: [{
-        data: [155, 65, 465, 265, 225, 325, 80],
-        backgroundColor: "#346cb0",
-        borderColor: "#346cb0"
-      }]
-    }
-    drawCompletionTask(dataCompletionTasks);
-})();
+  var dataCompletionTasks = {
+    labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
+    datasets: [{
+      data: [155, 65, 465, 265, 225, 325, 80],
+      backgroundColor: "#346cb0",
+      borderColor: "#346cb0"
+    }]
+  }
+  drawCompletionTask(dataCompletionTasks);
 
-//chart Tasks Performance
+  //chart Tasks Performance
   $('[data-toggle="easypiechart"]').each(function () {
     var selector = this;
     var options = $(selector).data();
@@ -127,9 +144,79 @@ $(document).ready(function () {
     $(selector).easyPieChart(options);
   });
 
+  function drawAchievement(_data) {
+    var achievement = new Chart(document.getElementById('achievement'), {
+      type: "bar",
+      data: _data,
+      options: {
+        responsive: true,
+        tooltips: {
+          enabled: true,
+          mode: 'index',
+          intersect: true,
+          callbacks: {
+            label: function (a, e) {
+              var t = e.datasets[a.datasetIndex].label || "",
+                o = a.yLabel,
+                r = "";
+              return r += t + ': ' + o
+            }
+          }
+        },
+        scales: {
+          xAxes: [{
+            ticks: {
+              fontColor: '#888c9b',
+              maxRotation: 0
+            },
+            gridLines: {
+              display: true,
+              drawBorder: false,
+              drawOnChartArea: false
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              stepSize: 20,
+              fontColor: '#888c9b',
+              beginAtZero: true
+            },
+            gridLines: {
+              display: true,
+              drawBorder: true,
+              borderDash: [8, 2],
+              color: "#e6edf7"
+            }
+          }]
+        },
+        legend: {
+          display: false
+        }
+      }
+    })
+  }
+
+  var dataAchievement = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [
+      {
+        label: "Assigned tasks",
+        data: [41, 20, 68, 17, 100, 83, 53],
+        backgroundColor: "#00a28a",
+        borderColor: "#00a28a"
+      },
+      {
+        label: "Completed tasks",
+        data: [51, 14, 51, 63, 59, 83, 34],
+        backgroundColor: "#5f4b8b",
+        borderColor: "#5f4b8b"
+      }
+    ]
+  }
+  drawAchievement(dataAchievement);
+
   //input Number
   function inputNumber() {
-
     $('.js-input-number').each(function () {
       var spinner = $(this);
       var input = spinner.children('.form-control[type="number"]');
@@ -156,7 +243,6 @@ $(document).ready(function () {
   inputNumber();
 
   function inputClearable() {
-
     var toggleClear = function toggleClear(input) {
       var isEmpty = !$(input).val();
       var clearable = $(input).parent().children('.close');
@@ -203,7 +289,7 @@ $(document).ready(function () {
 
     // print count file if upload more than one
     fileLabel.text(files.length + ' files selected');
-    
+
     // print name file if upload one file
     if (files.length <= 2) {
       var fileNames = [];
@@ -212,16 +298,15 @@ $(document).ready(function () {
       }
       fileLabel.text(fileNames.join(', '));
     }
-
-    // no file select
     if (!files.length) {
       fileLabel.text('Choose file');
     }
   });
+
   // input floating label
-  $('.js-custom-input-floating-label').on('focus blur keyup change', function(){
-    var oldDataValue = $(this).val();own
-    if(!oldDataValue){
+  $('.js-custom-input-floating-label').on('focus blur keyup change', function () {
+    var oldDataValue = $(this).val(); own
+    if (!oldDataValue) {
       $(this).addClass('show-placeholder');
     }
     else {
