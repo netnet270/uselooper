@@ -97,6 +97,18 @@
       background: transparent;
     }
   }
+  &--infor {
+    color: #346cb0;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      color: #346cb0;
+      background-color: #e6e8ed;
+      border-color: #e6e8ed;
+      box-shadow: none;
+    }
+  }
   &--light {
     color: #888c9b;
     background-color: transparent;

@@ -1,8 +1,11 @@
 extends ue-02-user-profile
 
+block sidebar
+  +sidebar('User','ue-05-user-projects.html')
+
 block menupage
   +menuPage("Projects", "ue-05-user-projects.html")
-      
+
 block content
   .site-content__inner
     header.site-header-bar
@@ -14,29 +17,392 @@ block content
               | Overview
       h2.site-header-bar__title Projects
         span.badge.text-small 42 Totals
-    
+
     section.page-projects
       .page-projects__inner
+        -
+          var listProjects = [
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775',
+              progress: '74%'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                  textAvatar: 'LT',
+                  bgAvatar: 'dark-purple',
+                  badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775',
+              progress: '22%'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775',
+              progress: '99%'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775',
+              progress: '35%'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775',
+              progress: '32%'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775',
+              progress: '93%'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775'
+            },
+            {
+              deadline:'07 Aug 2018',
+              avatar: {
+                textAvatar: 'LT',
+                bgAvatar: 'dark-purple',
+                badgeImg: 'images/uifaces6.jpg'
+              },
+              title: 'Looper Admin Theme',
+              text: 'Progress in 74% - Last update 1d',
+              avatarGroup: [
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Andrew Kim'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Bryan Morgan'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Larry Robinson'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Beverly Simpson'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Robinson'
+                },
+                {
+                  imgOther: '+21'
+                }
+              ],
+              budget : '40,000$',
+              tasks : '775'
+            }
+          ]
         .row
-          .col-lg-6.col-12
-            .card.card-project
-              .card-header
-                .card-header__badge.badge(data-toggle="tooltip" data-placement="bottom" title="Deadline" )
-                  i(class= "fa fa-calendar-alt")
-                  |  07 Aug 2018
-                .card-header__dropdown.dropdown
-                  +buttons({
-                    type: 'light',
-                    iconFont: 'fa fa-fw fa-ellipsis-v'
-                  })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
-                  .dropdown-arrow
-                    .dropdown-menu.dropdown-menu-right
-                      a.dropdown-item(href="#!") View Project
-                      a.dropdown-item(href="#!") Add Member
-                      a.dropdown-item(href="#!") Edit
-                      a.dropdown-item(href="#!") Remove
-              .card-body
-                .card-avatar.has-badge
-                  a.avatar.bg--dark-purple(href="#!") LT
-                  .user-avatar.user-avatar--xs
-
+          each val in listProjects
+            .col-lg-4.col-md-6.col-12
+              .card.card-project
+                .card-header
+                  .card-header__badge.badge(data-toggle="tooltip" data-placement="bottom" title="Deadline" )
+                    i(class= "fa fa-calendar-alt")
+                    | #{val.deadline}
+                  .card-header__dropdown.dropdown
+                    +buttons({
+                      type: 'light',
+                      iconFont: 'fa fa-fw fa-ellipsis-v'
+                    })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                    .dropdown-arrow
+                      .dropdown-menu.dropdown-menu-right
+                        a.dropdown-item(href="#!") View Project
+                        a.dropdown-item(href="#!") Add Member
+                        a.dropdown-item(href="#!") Edit
+                        a.dropdown-item(href="#!") Remove
+                .card-body
+                  .card-avatar.has-badge
+                    a.avatar(href="#!" class= `bg--${val.avatar.bgAvatar}`)= val.avatar.textAvatar
+                    .user-avatar.user-avatar--xs
+                      img(src= val.avatar.badgeImg, alt="user-avatar")
+                  h4.card-title
+                    a(href="#!")= val.title
+                  p.card-subtitle= val.text
+                  .card-group-avatar
+                    each item in val.avatarGroup
+                      if item.imgOther
+                        a(href="#!" class= "avatar avatar--circle" data-toggle="modal" data-target= "#membersModal") +21
+                      else
+                        a(href="#" class="user-avatar" data-toggle="tooltip" title= item.name)
+                          img(src= item.img alt="user-avatar")
+                .card-footer
+                  .card-footer__item
+                    .card-footer__title Budget
+                    .card-footer__count= val.budget
+                  .card-footer__item
+                    .card-footer__title Tasks
+                    .card-footer__count= val.tasks
+                if val.progress
+                  .progress.progress-xs(data-toggle="tooltip" title= val.progress )
+                    .progress-bar(class= `bg--${val.bgAvatar}` ole="progressbar" aria-valuenow="2181" aria-valuemin="0" aria-valuemax="100" style= `width: ${val.progress}`)

@@ -6,7 +6,8 @@ block head
 block body
   .main-wapper
     +header()
-    +sidebar('User','ue-02-user-profile.html')
+    block sidebar
+      +sidebar('User','ue-02-user-profile.html')
 
     main.site-content
       header.site-header-cover

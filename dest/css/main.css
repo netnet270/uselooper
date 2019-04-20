@@ -22722,6 +22722,15 @@ button.bg--light-purple:hover {
       color: #e6e8ed;
       border-color: #f6f7f9;
       background: transparent; }
+  .button--infor {
+    color: #346cb0;
+    background-color: transparent;
+    border-color: transparent; }
+    .button--infor:hover {
+      color: #346cb0;
+      background-color: #e6e8ed;
+      border-color: #e6e8ed;
+      box-shadow: none; }
   .button--light {
     color: #888c9b;
     background-color: transparent;
@@ -23452,6 +23461,15 @@ button.bg--light-purple:hover {
 .navbar-nav .nav-item--active:not(.nav-item--has-children) .nav-link {
   font-weight: 600; }
 
+.navbar-nav .nav-item--active.nav-item--has-children .nav-link {
+  color: #888c9b; }
+
+.navbar-nav .nav-item--active.nav-item--has-children .nav-link[aria-expanded='true'] {
+  color: #363642; }
+
+.navbar-nav .nav-item--active.level2 .nav-link {
+  color: #346cb0; }
+
 .navbar-nav .nav-item + .nav-item {
   margin-top: 0; }
 
@@ -23470,16 +23488,14 @@ button.bg--light-purple:hover {
     transition: transform .2s ease-in-out;
     background: url("../images/arrow-right.svg") 50% no-repeat; }
 
-.navbar-nav .nav-item.level1 [aria-expanded='true'] .nav-icon {
+.navbar-nav .nav-item.level1:not(.nav-item--active) [aria-expanded='true'] .nav-icon {
   color: #888c9b; }
 
 .navbar-nav .nav-item.level2 .nav-link {
-  color: #888c9b;
   padding-left: 52px; }
 
-.navbar-nav .nav-item.level2 .nav-link[aria-expanded='true'] {
-  background-color: transparent;
-  color: #346cb0; }
+.navbar-nav .nav-item.level2:not(.nav-item--active) .nav-link {
+  color: #888c9b; }
 
 .navbar-nav .nav-item.level2 .nav-link:hover {
   color: #346cb0;
@@ -23537,24 +23553,36 @@ button.bg--light-purple:hover {
   height: 56px;
   background-color: #fff;
   border-bottom: 1px solid #e0e1e5; }
-  .site-page-nav .nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center; }
-    .site-page-nav .nav__link {
-      padding: 16px;
-      border-bottom: 3px solid transparent;
-      color: #888c9b;
-      transition: all .3s; }
-      .site-page-nav .nav__link.active {
-        color: #222230;
-        background-color: transparent;
-        border-color: #346cb0;
-        display: inline-block; }
-      .site-page-nav .nav__link:hover:not(.active), .site-page-nav .nav__link:focus {
-        color: #222230;
-        border-color: #e6e8ed #e6e8ed rgba(34, 34, 48, 0.1); }
+  .site-page-nav .nav .nav-tabs {
+    border-bottom: 0; }
+  .site-page-nav .nav__link {
+    display: inline-block;
+    padding: 16px;
+    border-bottom: 3px solid transparent;
+    color: #888c9b;
+    transition: all .3s; }
+    .site-page-nav .nav__link.active {
+      color: #222230;
+      background-color: transparent;
+      border-color: #346cb0;
+      display: inline-block; }
+    .site-page-nav .nav__link:hover:not(.active), .site-page-nav .nav__link:focus {
+      color: #222230;
+      border-color: #e6e8ed #e6e8ed rgba(34, 34, 48, 0.1); }
+  .site-page-nav__scroller {
+    position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+    height: 58px; }
+    .site-page-nav__scroller .nav {
+      display: block;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      padding-bottom: 16px;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap; }
 
 @media (min-width: 576px) {
   .site-header-cover__inner {
@@ -24125,6 +24153,101 @@ button.bg--light-purple:hover {
   .site-header-cover__inner {
     padding-right: 16px;
     padding-left: 16px; } }
+
+.site-header-bar {
+  margin-bottom: 24px; }
+  .site-header-bar .breadcrumb {
+    margin-bottom: 8px;
+    padding: 0;
+    background-color: transparent; }
+  .site-header-bar .breadcrumb-item > a {
+    color: inherit;
+    border-radius: 1px; }
+    .site-header-bar .breadcrumb-item > a:focus, .site-header-bar .breadcrumb-item > a:active {
+      color: #2e609c;
+      background-color: rgba(52, 108, 176, 0.08);
+      box-shadow: 0 0 0 4px rgba(52, 108, 176, 0.08), 0 0 0 5px rgba(246, 247, 249, 0.5);
+      outline: 0; }
+  .site-header-bar .breadcrumb-item.active {
+    color: #888c9b; }
+  .site-header-bar__title {
+    font-size: 28px;
+    font-weight: 600; }
+
+.page-timeline__inner {
+  margin: 16px 0; }
+
+.page-timeline__title {
+  margin-top: 0;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 8px; }
+
+.page-timeline .timeline {
+  padding-right: 16px;
+  padding-left: 16px; }
+  .page-timeline .timeline__item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex; }
+    .page-timeline .timeline__item:first-child .timeline__figure,
+    .page-timeline .timeline__item:first-child .timeline__body {
+      padding-top: 0; }
+  .page-timeline .timeline__figure {
+    position: relative;
+    padding: 8px 0; }
+    .page-timeline .timeline__figure:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      top: 16px;
+      left: 50%;
+      margin-left: -1px;
+      border-left: 2px solid rgba(34, 34, 48, 0.1); }
+    .page-timeline .timeline__figure .avatar {
+      position: relative;
+      box-shadow: 0 0 0 2px #f6f7f9;
+      z-index: 2; }
+    .page-timeline .timeline__figure .avatar i {
+      font-size: 16px; }
+  .page-timeline .timeline__body {
+    margin-left: 20px;
+    padding: 8px 0; }
+    .page-timeline .timeline__body .media {
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .page-timeline .timeline__heading {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2; }
+    .page-timeline .timeline__heading a:hover {
+      text-decoration: underline; }
+  .page-timeline .timeline__text {
+    margin-bottom: 0; }
+    .page-timeline .timeline__text a:hover {
+      text-decoration: underline; }
+  .page-timeline .timeline__date {
+    font-size: 12px;
+    color: #888c9b; }
+
+.avatar {
+  color: #888c9b;
+  background-color: #e6e8ed; }
+
+.avatar--sm {
+  width: 24px;
+  height: 24px;
+  line-height: 24px; }
+
+@media (max-width: 767px) {
+  margin: 0;
+  padding: 0;
+  display: block; }
 
 .page-list__title {
   font-weight: 500;

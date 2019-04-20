@@ -23,6 +23,15 @@
       &:not(.nav-item--has-children) .nav-link {
         font-weight: 600;
       }
+      &.nav-item--has-children .nav-link {
+        color: #888c9b;
+      }
+      &.nav-item--has-children .nav-link[aria-expanded='true'] {
+        color: #363642;
+      }
+      &.level2 .nav-link {
+        color: #346cb0;
+      }
     }
     & + .nav-item {
       margin-top: 0;
@@ -44,20 +53,17 @@
         background: url('../images/arrow-right.svg') 50% no-repeat;
       }
     }
-
     &.level1 {
-      [aria-expanded='true'] .nav-icon {
+      &:not(.nav-item--active) [aria-expanded='true'] .nav-icon {
         color: #888c9b;
       }
     }
     &.level2 {
       .nav-link {
-        color: #888c9b;
         padding-left: 52px;
       }
-      .nav-link[aria-expanded='true'] {
-        background-color: transparent;
-        color: #346cb0;
+      &:not(.nav-item--active) .nav-link {
+        color: #888c9b;
       }
       .nav-link:hover {
         color: #346cb0;
@@ -133,11 +139,13 @@
   height: 56px;
   background-color: $bg-white;
   border-bottom: 1px solid #e0e1e5;
-  .nav {
-    display: flex;
-    justify-content: center;
 
+  .nav {
+    .nav-tabs {
+      border-bottom: 0;
+    }
     &__link {
+      display: inline-block;
       padding: 16px;
       border-bottom: 3px solid transparent;
       color: #888c9b;
@@ -155,6 +163,21 @@
         color: #222230;
         border-color: #e6e8ed #e6e8ed rgba(34, 34, 48, .1);
       }
+    }
+  }
+  &__scroller {
+    position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+    height: 58px;
+    .nav {
+      display: block;
+      flex-wrap: nowrap;
+      padding-bottom: 16px;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
     }
   }
 }

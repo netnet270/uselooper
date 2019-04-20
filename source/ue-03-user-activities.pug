@@ -1,5 +1,8 @@
 extends ue-02-user-profile
 
+block sidebar
+  +sidebar('User','ue-03-user-activities.html')
+
 block menupage
   +menuPage("Activities", "ue-03-user-activities.html")
       
@@ -18,7 +21,7 @@ block content
       .page-timeline__inner
         .page-timeline__title Today
         ul.timeline
-          li.timline__item
+          li.timeline__item
             .timeline__figure
               span.avatar.avatar--circle.avatar--sm
                 i(class= "far fa-calendar-alt fa-lg")
@@ -30,9 +33,9 @@ block content
                   p.timeline__text
                     a(href="#!") Jeffrey Wells 
                     | created a schedule
-                  p.timline__date.d-sm-none About a minute ago
+                  p.timeline__date.d-sm-none About a minute ago
                 .timeline__date.d-none.d-sm-block About a minute ago
-          li.timline__item
+          li.timeline__item
             .timeline__figure
               span.avatar.avatar--circle.avatar--sm
                 i(class= "oi oi-chat fa-lg")
@@ -44,11 +47,11 @@ block content
                   p.timeline__text
                     a(href="#!") Anna Vargas
                     | logged a chat with team
-                  p.timline__date.d-sm-none 3 hours ago
+                  p.timeline__date.d-sm-none 3 hours ago
                 .timeline__date.d-none.d-sm-block 3 hours ago
         .page-timeline__title Yesterday
         ul.timeline
-          li.timline__item
+          li.timeline__item
             .timeline__figure
               span.avatar.avatar--circle.avatar--sm
                 i(class= "fa fa-tasks fa-lg")
@@ -61,11 +64,11 @@ block content
                   p.timeline__text      
                     a(href="#!") Arthur Carroll 
                     | created a todo on task
-                  p.timline__date.d-sm-none 8:14pm
+                  p.timeline__date.d-sm-none 8:14pm
                 .timeline__date.d-none.d-sm-block 8:14pm
         .page-timeline__title January 25, 2018
         ul.timeline
-          li.timline__item
+          li.timeline__item
             .timeline__figure
               span.avatar.avatar--circle.avatar--sm
                 i(class= "fa fa-cube fa-lg")
@@ -80,9 +83,9 @@ block content
                     strong Online Store App 
                     | to 
                     a(href="#!") Online Store
-                  p.timline__date.d-sm-none 3:21am
+                  p.timeline__date.d-sm-none 3:21am
                 .timeline__date.d-none.d-sm-block 3:21am
-          li.timline__item
+          li.timeline__item
             .timeline__figure
               span.avatar.avatar--circle.avatar--sm
                 i(class= "fa fa-tasks fa-lg")
@@ -96,9 +99,9 @@ block content
                     | assign
                     a(href="#!") Make lemonade from scratch 
                     | to you 
-                  p.timline__date.d-sm-none 5:21pm
+                  p.timeline__date.d-sm-none 5:21pm
                 .timeline__date.d-none.d-sm-block 5:21pm
-          li.timline__item
+          li.timeline__item
             .timeline__figure
               span.avatar.avatar--circle.avatar--sm
                 i(class= "oi oi-person fa-lg")
@@ -119,7 +122,7 @@ block content
                   p.timeline__text
                     a(href="#!") Willie Dixon 
                     | and 3 others followed you 
-                  p.timline__date.d-sm-none 10:32pm
+                  p.timeline__date.d-sm-none 10:32pm
                 .timeline__date.d-none.d-sm-block 10:32pm
 
         .page-timeline__loading

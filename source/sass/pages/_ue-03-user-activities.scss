@@ -1,0 +1,125 @@
+// ======================================================
+// Pages :: User Activities
+// ======================================================
+.site-header-bar {
+  margin-bottom: 24px;
+  .breadcrumb {
+    margin-bottom: 8px;
+    padding: 0;
+    background-color: transparent;
+  }
+  .breadcrumb-item {
+    > a {
+      color: inherit;
+      border-radius: 1px;
+      &:focus,
+      &:active {
+        color: #2e609c;
+        background-color: rgba(52, 108, 176, .08);
+        box-shadow: 0 0 0 4px rgba(52, 108, 176, .08), 0 0 0 5px rgba(246, 247, 249, .5);
+        outline: 0;
+      }
+    }
+    &.active {
+      color: #888c9b;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+.page-timeline {
+  &__inner {
+    margin: 16px 0;
+  }
+  &__title {
+    margin-top: 0;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .timeline {
+    padding-right: 16px;
+    padding-left: 16px;
+
+    &__item {
+      position: relative;
+      display: flex;
+      &:first-child .timeline__figure,
+      &:first-child .timeline__body {
+        padding-top: 0;
+      }
+    }
+    &__figure {
+      position: relative;
+      padding: 8px 0;
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 16px;
+        left: 50%;
+        margin-left: -1px;
+        border-left: 2px solid rgba(34, 34, 48, .1);
+      }
+      .avatar {
+        position: relative;
+        box-shadow: 0 0 0 2px #f6f7f9;
+        z-index: 2;
+      }
+      .avatar i {
+        font-size: 16px;
+      }
+    }
+    &__body {
+      margin-left: 20px;
+      padding: 8px 0;
+
+      .media {
+        justify-content: space-between;
+      }
+    }
+
+    &__heading {
+      margin-top: 4px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.2;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    &__text {
+      margin-bottom: 0;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    &__date {
+      font-size: 12px;
+      color: #888c9b;
+    }
+  }
+}
+.avatar {
+  color: #888c9b;
+  background-color: #e6e8ed;
+}
+.avatar--sm {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+@media (max-width: 767px) {
+  margin: 0;
+  padding: 0;
+  display: block;
+}

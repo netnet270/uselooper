@@ -7,13 +7,13 @@ mixin main-menu(cat,href)
     each item in menus
       li.nav-item.level1(
         class=item.submenu ? 'nav-item--has-children' : '', 
-        class=(item.text == cat) ? 'nav-item--active' : '',
+        class=(item.text == cat) ? 'nav-item--active' : ''
       )
         a.nav-link(
-          href= (item.submenu === false) ? (item.href ? item.href : "javascript:void(0)") : (item.href ? `#${item.href}` : "javascript:void(0)")
-          data-toggle="collapse"
-          aria-expanded= item.expanded ? "true" : "false"
-          aria-controls= item.href
+          href = (item.submenu === undefined) ? (item.href !== undefined ? item.href : "javascript:void(0)") : (item.href ? `#${item.href}` : "javascript:void(0)")
+          data-toggle = (item.submenu !== undefined) ? "collapse" : null
+          aria-expanded = (item.submenu !== undefined && item.text == cat) ? "true" : "false"
+          aria-controls = (item.submenu !== undefined) ? item.href : null
           role="button"
         )
           i.nav-icon(class= item.icon)
@@ -30,31 +30,10 @@ mixin main-menu(cat,href)
               each sub in item.submenu
                 li.nav-item.level2(
                   class=sub.childmenu ? 'nav-item--has-children' : '',
-                  class= (sub.href== href) ? 'nav-item--active' : ''
+                  class= (sub.href === href) ? 'nav-item--active' : ''
                 )
-                  if sub.childmenu
-                    a.nav-link(
-                      href="#"+ sub.href
-                      data-toggle="collapse"
-                      aria-expanded=(item.href == href) ? "true" : "false"
-                      aria-controls=sub.href
-                      role="button"
-                    )
-                      span.nav-text=sub.text
-                  else
-                    a.nav-link(href= sub.href)
-                      span.nav-text=sub.text
-
-                  if sub.childmenu
-                    .collapse(id= sub.href)
-                      ul.nav.flex-column
-                        each child in sub.childmenu
-                          li.level3.nav-item(
-                            class= child.active ? 'nav-item--active' : ''
-                          )
-                            a.nav-link(
-                              href= child.href ? child.href : '#!'
-                            )= child.text
+                  a.nav-link(href= sub.href)
+                    span.nav-text=sub.text
 
 mixin sub-menu()
   h3.navbar-heading Interfaces
@@ -130,8 +109,8 @@ mixin menuPage(page, href)
       .nav.nav-tabs
         each item in userProfile
           a.nav__link(
-            href= (item.href == href) ? item.href : '#!'
+            href= item.href
             class= (item.text == page) ? 'active' : null
           )= item.text
-            if item.badge
+            if (item.badge && page !== 'Activities')
               span.badge= item.badge
