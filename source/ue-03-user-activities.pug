@@ -4,4 +4,127 @@ block menupage
   +menuPage("Activities", "ue-03-user-activities.html")
       
 block content
-  .site-content__inner 
+  .site-content__inner
+    header.site-header-bar
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item.active
+            a(href="ue-02-user-profile.html")
+              i.breadcrumb-icon.mr-2(class= "fa fa-angle-left")
+              | Overview
+      h2.site-header-bar__title Activities
+
+    section.page-timeline
+      .page-timeline__inner
+        .page-timeline__title Today
+        ul.timeline
+          li.timline__item
+            .timeline__figure
+              span.avatar.avatar--circle.avatar--sm
+                i(class= "far fa-calendar-alt fa-lg")
+            .timeline__body
+              .media
+                .media-body
+                  p.timeline__heading
+                    a(href="#!") Management Meeting - W3 evaluation
+                  p.timeline__text
+                    a(href="#!") Jeffrey Wells 
+                    | created a schedule
+                  p.timline__date.d-sm-none About a minute ago
+                .timeline__date.d-none.d-sm-block About a minute ago
+          li.timline__item
+            .timeline__figure
+              span.avatar.avatar--circle.avatar--sm
+                i(class= "oi oi-chat fa-lg")
+            .timeline__body
+              .media
+                .media-body
+                  p.timeline__heading
+                    a(href="#!") Support Convertation
+                  p.timeline__text
+                    a(href="#!") Anna Vargas
+                    | logged a chat with team
+                  p.timline__date.d-sm-none 3 hours ago
+                .timeline__date.d-none.d-sm-block 3 hours ago
+        .page-timeline__title Yesterday
+        ul.timeline
+          li.timline__item
+            .timeline__figure
+              span.avatar.avatar--circle.avatar--sm
+                i(class= "fa fa-tasks fa-lg")
+            .timeline__body
+              .media
+                .media-body
+                  p.timeline__heading
+                    +group-input-checkbox({id: 'task1'})
+                    a(href="#!") Daily Report - Dealing targeting
+                  p.timeline__text      
+                    a(href="#!") Arthur Carroll 
+                    | created a todo on task
+                  p.timline__date.d-sm-none 8:14pm
+                .timeline__date.d-none.d-sm-block 8:14pm
+        .page-timeline__title January 25, 2018
+        ul.timeline
+          li.timline__item
+            .timeline__figure
+              span.avatar.avatar--circle.avatar--sm
+                i(class= "fa fa-cube fa-lg")
+            .timeline__body
+              .media
+                .media-body
+                  p.timeline__heading
+                    a(href="#!") Project updated by Sara Carr 
+                  p.timeline__text
+                    a(href="#!") Sara Carr 
+                    | updated 
+                    strong Online Store App 
+                    | to 
+                    a(href="#!") Online Store
+                  p.timline__date.d-sm-none 3:21am
+                .timeline__date.d-none.d-sm-block 3:21am
+          li.timline__item
+            .timeline__figure
+              span.avatar.avatar--circle.avatar--sm
+                i(class= "fa fa-tasks fa-lg")
+            .timeline__body
+              .media
+                .media-body
+                  p.timeline__heading
+                    a(href="#!") Someone assigned you to a task 
+                  p.timeline__text
+                    a(href="#!") Angela Peterson 
+                    | assign
+                    a(href="#!") Make lemonade from scratch 
+                    | to you 
+                  p.timline__date.d-sm-none 5:21pm
+                .timeline__date.d-none.d-sm-block 5:21pm
+          li.timline__item
+            .timeline__figure
+              span.avatar.avatar--circle.avatar--sm
+                i(class= "oi oi-person fa-lg")
+            .timeline__body
+              .media
+                .media-body
+                  p.timeline__heading
+                    a(href="#!") You have new followers
+                  .timeline__group-avatar
+                    a.user-avatar.user-avatar--sm(href="#!")
+                      img(src="images/uifaces4.jpg", alt="user avatar")
+                    a.user-avatar.user-avatar--sm(href="#!")
+                      img(src="images/uifaces5.jpg", alt="user avatar")
+                    a.user-avatar.user-avatar--sm(href="#!")
+                      img(src="images/uifaces6.jpg", alt="user avatar")
+                    a.user-avatar.user-avatar--sm(href="#!")
+                      img(src="images/uifaces7.jpg", alt="user avatar")
+                  p.timeline__text
+                    a(href="#!") Willie Dixon 
+                    | and 3 others followed you 
+                  p.timline__date.d-sm-none 10:32pm
+                .timeline__date.d-none.d-sm-block 10:32pm
+
+        .page-timeline__loading
+          +buttons({
+            type: 'light',
+            text: ' Load more',
+            iconFont: 'fa fa-fw fa-angle-double-down'
+          })

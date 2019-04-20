@@ -132,6 +132,8 @@ $(document).ready(function () {
 
           },
 
+          maintainAspectRatio: false,
+
           scales: {
 
             xAxes: [{
@@ -261,6 +263,8 @@ $(document).ready(function () {
       options: {
 
         responsive: true,
+
+        maintainAspectRatio: false,
 
         tooltips: {
 

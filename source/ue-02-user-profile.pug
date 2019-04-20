@@ -103,7 +103,7 @@ block body
                           i.color--dark-purple(class= "fa fa-fw fa-circle")
                           | Completed tasks
                       .card-chart
-                        canvas(id="achievement" width="1200px" height= "253px")
+                        canvas(id="achievement" width="1200px" height= "237px")
 
                 .col-xl-4.col-12
                   .card.card-overview
@@ -151,18 +151,18 @@ block body
                 .col-xl-6.col-12
                   .card.card-time-projects
                     .card-header
-                      .card-header__title Time Spent: Projects
+                      h4.card-header__title Time Spent: Projects
                       .card-header__dropdown.dropdown
                         +buttons({
                           type: 'light',
                           iconFont: 'fa fa-fw fa-ellipsis-v'
-                        })(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                        })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
                         .dropdown-arrow
                         .dropdown-menu.dropdown-menu-right
                           a.dropdown-item(href="#!") Actions
                           a.dropdown-item(href="#!") Goes here
                           a.dropdown-item(href="#!") Remove
-                    .table-responsive
+                    .card-table.table-responsive
                       table.table
                         thead
                           tr
@@ -172,39 +172,103 @@ block body
                         tbody
                           tr
                             td
-                              a.avatar.bg--blue BA
-                              a(href="#!") Booking App
+                              a.avatar.bg--blue(href="#!") BA
+                              a.card-table__link(href="#!") Booking App
                             td
                               span.badge.bg--blue 35%
                             td 35:28
                           tr
                             td
-                              a.avatar.bg--light-green SB
-                              a(href="#!") SVG Icon Bundle
+                              a.avatar.bg--light-green(href="#!") SB
+                              a.card-table__link(href="#!") SVG Icon Bundle
                             td
                               span.badge.bg--light-green 35%
                             td 20:39
                           tr
                             td
-                              a.avatar.bg--light-purple SP
-                              a(href="#!") Syrena Project
+                              a.avatar.bg--light-purple(href="#!") SP
+                              a.card-table__link(href="#!") Syrena Project
                             td
                               span.badge.bg--light-purple 93%
                             td 35:28
                           tr
                             td
-                              a.avatar.bg--green MG
-                              a(href="#!") Mobile App Gex
+                              a.avatar.bg--green(href="#!") MG
+                              a.card-table__link(href="#!") Mobile App Gex
                             td
                               span.badge.bg--green 100%
                             td 35:10
                           tr
                             td
-                              a.avatar.bg--red LB
-                              a(href="#!") Landing Page Booster
+                              a.avatar.bg--red(href="#!") LB
+                              a.card-table__link(href="#!") Landing Page Booster
                             td
                               span.badge.bg--red 100%
                             td 21:21
                     .card-footer
-                      a(href="#!") View all
+                      a(href="#!") View report
                         i(class= 'fa fa-fw fa-angle-right')
+                
+                .col-xl-6.col-12
+                  .card.card-time-tasks
+                    .card-header
+                      h4.card-header__title Time Spent: Tasks
+                      .card-header__dropdown.dropdown
+                        +buttons({
+                          type: 'light',
+                          iconFont: 'fa fa-fw fa-ellipsis-v'
+                        })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                        .dropdown-arrow
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href="#!") Actions
+                          a.dropdown-item(href="#!") Goes here
+                          a.dropdown-item(href="#!") Remove
+                    .card-table.table-responsive
+                      table.table
+                        thead
+                          tr
+                            th Task
+                            th Due Date
+                            th Estimate
+                            th Worked
+                        tbody
+                          tr
+                            td
+                              a.avatar.avatar--circle.bg--indigo(href="#!") SP
+                              a.card-table__link(href="#!") Make lemonade from scratch
+                            td Apr 02
+                            td 24:00
+                            td 16:36
+                          tr
+                            td
+                              a.avatar.avatar--circle.bg--blue(href="#!") LT
+                              a.card-table__link(href="#!") Mix up a pitcher of sangria
+                            td In 3 days
+                            td 04:00
+                            td 03:36
+                          tr
+                            td
+                              a.avatar.avatar--circle.bg--yellow(href="#!") OS
+                              a.card-table__link(href="#!") Ride a roller coaster
+                            td Tomorrow
+                            td 48:00
+                            td 50:02
+                          tr
+                            td
+                              a.avatar.avatar--circle.bg--light-purple(href="#!") SP
+                              a.card-table__link(href="#!") Dangle your feet off a dock
+                            td Apr 07
+                            td 6:00
+                            td 03:11
+                          tr
+                            td
+                              a.avatar.avatar--circle.bg--yellow(href="#!") OS
+                              a.card-table__link(href="#!") Have a picnic in the park
+                            td In 2 days
+                            td 12:00
+                            td 08:36
+                    .card-footer
+                      a(href="#!") View report
+                        i(class= 'fa fa-fw fa-angle-right')
+      
+      +footer()

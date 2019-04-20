@@ -45,6 +45,7 @@ $(document).ready(function () {
             mode: 'nearest',
             intersect: true
           },
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -110,6 +111,7 @@ $(document).ready(function () {
       data: _data,
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         tooltips: {
           enabled: true,
           mode: 'index',

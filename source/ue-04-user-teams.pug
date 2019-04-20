@@ -4,4 +4,86 @@ block menupage
   +menuPage("Teams", "ue-04-user-teams.html")
       
 block content
-  .site-content__inner pppppppppppppppppppp
+  .site-content__inner
+    header.site-header-bar
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item.active
+            a(href="ue-02-user-profile.html")
+              i.breadcrumb-icon.mr-2(class= "fa fa-angle-left")
+              | Overview
+      h2.site-header-bar__title Teams
+        span.badge.text-small 23 Totals
+      
+    section.page-teams
+      .page-teams__inner
+        .row
+          .col-lg-6.col-12
+            .masonry-item
+              .masonry-item__header
+                a.user-avatar.user-avatar--lg(href="#!")
+                  img(src="images/team4.jpg", alt="user avatar")
+                .summary
+                  h4.title Creative Division
+                  p.subtitle Event Planner
+                +buttons({
+                  type: 'light',
+                  iconFont: 'oi oi-chat'
+                })(class= 'button--circle' data-toggle="tooltip" title="Chat with teams")
+              .masonry-item__body
+                p.masonry-item__intro 
+                | We make stunning and cool responsive web and app design which suitable for any project purpose for your business.
+                hr.masonry-item__divider
+                .masonry-item__rating
+                  i.color--yellow(class="fa fa-star")
+                  i.color--yellow(class="fa fa-star")
+                  i.color--yellow(class="fa fa-star")
+                  i.color--yellow(class="fa fa-star")
+                  i.color--yellow(class="far fa-star")
+                ul.masonry-item__position
+                  li
+                    span.masonry-item__icon
+                      i(class= "fa fa-map-marker")
+                      |  London
+                  li
+                    span.masonry-item__icon
+                      i(class= "fa fa-flag")
+                      |  Since Oct 10, 2013
+                .masonry-item__avatar-group
+                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Andrew Kim")
+                    img(src="images/uifaces6.jpg" alt="user-avatar")
+                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Bryan Morgan")
+                    img(src="images/uifaces7.jpg" alt="user-avatar")
+                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Larry Robinson")
+                    img(src="images/uifaces8.jpg" alt="user-avatar")
+                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Beverly Simpson")
+                    img(src="images/uifaces9.jpg" alt="user-avatar")
+                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Robinson")
+                    img(src="images/uifaces10.jpg" alt="user-avatar")
+                  a(href="#!" class= "avatar avatar--circle" data-toggle="modal" data-target= "#membersModal") +23
+
+              .masonry-item__footer
+                .footer-item
+                  a(href="#!")
+                    .footer-item__count 135
+                    .footer-item__text Projects
+                .footer-item
+                  a(href="#!")
+                    .footer-item__count 6
+                    .footer-item__text On Going
+                .footer-item
+                  a(href="#!")
+                    .footer-item__count 35
+                    .footer-item__text Tasks
+                  
+
+
+
+
+                
+                
+                  
+
+              
+                
+            

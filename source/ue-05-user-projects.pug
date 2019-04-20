@@ -4,4 +4,39 @@ block menupage
   +menuPage("Projects", "ue-05-user-projects.html")
       
 block content
-  .site-content__inner 
+  .site-content__inner
+    header.site-header-bar
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item.active
+            a(href="ue-02-user-profile.html")
+              i.breadcrumb-icon.mr-2(class= "fa fa-angle-left")
+              | Overview
+      h2.site-header-bar__title Projects
+        span.badge.text-small 42 Totals
+    
+    section.page-projects
+      .page-projects__inner
+        .row
+          .col-lg-6.col-12
+            .card.card-project
+              .card-header
+                .card-header__badge.badge(data-toggle="tooltip" data-placement="bottom" title="Deadline" )
+                  i(class= "fa fa-calendar-alt")
+                  |  07 Aug 2018
+                .card-header__dropdown.dropdown
+                  +buttons({
+                    type: 'light',
+                    iconFont: 'fa fa-fw fa-ellipsis-v'
+                  })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                  .dropdown-arrow
+                    .dropdown-menu.dropdown-menu-right
+                      a.dropdown-item(href="#!") View Project
+                      a.dropdown-item(href="#!") Add Member
+                      a.dropdown-item(href="#!") Edit
+                      a.dropdown-item(href="#!") Remove
+              .card-body
+                .card-avatar.has-badge
+                  a.avatar.bg--dark-purple(href="#!") LT
+                  .user-avatar.user-avatar--xs
+

@@ -171,6 +171,104 @@
   }
 }
 
+.card-time-projects,
+.card-time-tasks {
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 0;
+
+    &__title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    &__dropdown {
+      margin: -8px 0;
+
+      @extend %dropdown;
+      &.show .dropdown-arrow {
+        display: block;
+      }
+
+      .button > i {
+        margin-left: -4px;
+      }
+    }
+  }
+  .card-table {
+    .table {
+      margin-bottom: 0;
+    }
+    .table thead th {
+      border-top: 0;
+      border-bottom: 1px solid #ecedf1;
+    }
+    th,
+    td {
+      padding: 12px 16px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .avatar {
+      margin-right: 8px;
+      transition: all .3s;
+      color: $cl-gray;
+      &:hover {
+        color: #babfcd;
+      }
+    }
+    .badge {
+      color: $cl-gray;
+    }
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .card-footer {
+    padding: 0;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 16px;
+      text-align: center;
+    }
+  }
+}
+
+.card-time-projects {
+  .card-table {
+    th:first-child {
+      min-width: 260px;
+    }
+    th:nth-child(2) {
+      text-align: center;
+    }
+    th:last-child {
+      text-align: right;
+      min-width: 142px;
+    }
+    td:nth-child(n+2) {
+      text-align: center;
+    }
+  }
+}
+
+.card-time-tasks {
+  .card-table {
+    th:first-child {
+      min-width: 259px;
+    }
+  }
+}
+
+
 @media (min-width: 576px) {
   .site-header-cover {
     &__inner {

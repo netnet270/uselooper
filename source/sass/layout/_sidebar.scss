@@ -31,6 +31,10 @@
   .aside-footer {
     padding: 16px;
     border-top: 1px solid rgba(34, 34, 48, .1);
+
+    .button i {
+      margin-left: 8px;
+    }
   }
 }
 
@@ -50,7 +54,7 @@
 @media (min-width: 768px) {
   .aside-sidebar-expand-md {
     top: 56px;
-    width: 239px;
+    width: 240px;
     z-index: 5;
   }
 }

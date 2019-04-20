@@ -4,18 +4,23 @@
 
 .modal {
   .modal-dialog-scrollable {
-    .modal-body--scrolled {
-      box-shadow: none;
+    .modal-header,
+    .modal-footer {
+      z-index: 2;
     }
 
     .modal-header {
       border-bottom: 0;
-      box-shadow: 0 2px 0 0 rgba(20, 20, 31, .125);
+      box-shadow: 0 2px 0 0 #e2e2e3;
     }
 
     .modal-footer {
       border-top: 0;
-      box-shadow: 0 -2px 0 0 rgba(20, 20, 31, .125);
+      box-shadow: 0 -2px 0 0 #e2e2e3;
+    }
+
+    .modal-body--scrolled {
+      box-shadow: none;
     }
   }
 
