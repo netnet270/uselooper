@@ -4,6 +4,7 @@
 //=require bootstrap/dist/js/bootstrap.min.js
 //=require chart.js/dist/Chart.min.js
 // =require easy-pie-chart/dist/jquery.easypiechart.min.js
+// =require flatpickr/dist/flatpickr.min.js
 
 //=require _custom.js
  

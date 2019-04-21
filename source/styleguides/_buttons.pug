@@ -56,26 +56,26 @@ h2 Button Icon
     .col-3
       .code-example
         .demo
-          +buttons({ text: 'This Button', type: val, iconFont: 'fa fa-fw fa-caret-down'})
+          +buttons({ text: 'This Button', type: val, iconAfter: 'fa fa-fw fa-caret-down'})
         pre
           code
             | +button({
             |   text: 'This Week', 
             |   type: '#{val}'
-            |   iconFont: 'fa fa-fw fa-caret-down'
+            |   iconAfter: 'fa fa-fw fa-caret-down'
             | })
   each val, index in buttonType
     .col-3
       .code-example
         .demo
-          +buttons({ text: 'This Button', type: val, size: 'small', iconFont: 'fa fa-fw fa-caret-down'})
+          +buttons({ text: 'This Button', type: val, size: 'small', iconAfter: 'fa fa-fw fa-caret-down'})
         pre
           code
             | +button({
             |   text: 'This Week', 
             |   type: '#{val}',
             |   size: 'small',
-            |   iconFont: 'fa fa-fw fa-caret-down'
+            |   iconAfter: 'fa fa-fw fa-caret-down'
             | })
 
 h2 Button Full size

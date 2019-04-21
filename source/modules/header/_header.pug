@@ -12,7 +12,7 @@ mixin header()
       .main-header__list
         .main-header__btn-toggle.main-header-item.d-md-none
           +buttons({
-            iconFont: 'fas fa-bars'
+            iconAfter: 'fas fa-bars'
           })(class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
 
         .main-header__form-search.main-header-item
@@ -227,7 +227,7 @@ mixin header()
                   | Beni Arisandi
                 span.user-profile__position
                   | Marketing Manager
-            .dropdown-arrow.dropdown-arrow-left
+            .dropdown-arrow.dropdown-arrow--left
             .user-profile__setting.dropdown-menu
               -
                 var data = [

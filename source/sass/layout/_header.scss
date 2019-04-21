@@ -284,6 +284,10 @@
     width: 20px;
     height: 20px;
   }
+  &--sm {
+    width: 24px;
+    height: 24px;
+  }
   &--xl {
     width: 80px;
     height: 80px;
@@ -374,6 +378,7 @@
 
 .avatar {
   display: inline-block;
+  color: #888c9b;
   width: 32px;
   height: 32px;
   font-weight: 600;
@@ -382,6 +387,12 @@
   text-align: center;
   vertical-align: middle;
   border-radius: 4px;
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+  }
 
   &--md {
     width: 36px;
@@ -403,9 +414,10 @@
 .avatar.bg--indigo,
 .avatar.bg--light-purple,
 .avatar.bg--dark-purple,
-.avatar.bg--light-purple
-.avatar.bg--red,
+.avatar.bg--light-purple,
 .avatar.bg--light-green,
+.avatar.bg--red-3,
+.avatar.bg--orange-3,
 a.avatar.bg--blue:focus,
 a.avatar.bg--blue:hover,
 a.avatar.bg--dark:focus,
@@ -416,7 +428,8 @@ a.avatar.bg--light-purple:focus,
 a.avatar.bg--light-purple:hover,
 a.avatar.bg--dark-purple:focus,
 a.avatar.bg--dark-purple:hover,
-a.avatar.bg--red:focus,
+a.avatar.bg--red-3:focus,
+a.avatar.bg--red-3:hover,
 a.avatar.bg--red:hover,
 a.avatar.bg--light-green:focus,
 a.avatar.bg--light-green:hover, 
@@ -426,12 +439,12 @@ a.avatar.bg--light-purple:hover{
 }
 
 .avatar.bg--green,
-.avatar.bg--orange,
+.avatar.bg--orange-3,
 .avatar.bg--yellow,
 a.avatar.bg--green:focus,
 a.avatar.bg--green:hover,
-a.avatar.bg--orange:focus,
-a.avatar.bg--orange:hover,
+a.avatar.bg--orange-3:focus,
+a.avatar.bg--orange-3:hover,
 a.avatar.bg--yellow:focus,
 a.avatar.bg--yellow:hover {
   color: $cl-light-black;
@@ -473,7 +486,25 @@ button.bg--light-purple:focus,
 button.bg--light-purple:hover {
   background-color: $cl-purple-3;
 }
+a.bg--green:focus, 
+a.bg--green:hover, 
+button.bg--green:focus, 
+button.bg--green:hover {
+  background-color: #8bb575;
+}
 
+a.bg--red-3:focus, 
+a.bg--red-3:hover, 
+button.bg--red-3:focus, 
+button.bg--red-3:hover {
+  background-color: #e43e2c;
+}
+a.bg--orange-3:focus, 
+a.bg--orange-3:hover, 
+button.bg--orange-3:focus, 
+button.bg--orange-3:hover {
+  background-color: #e77430;
+}
 @media (min-width: 768px) {
   .main-header {
     .main-header-item {

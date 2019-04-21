@@ -11,19 +11,62 @@ block body
     main.site-content
       .site-content__inner
         header.header
-          .d-flex.flex-column.flex-md-row
+          .header__inner
             .header__lead
               p.header__pretitle Hi, Beni.
               p.header__text Here’s what’s happening with your business today.
-            .ml-auto
+            .header__dropdown
               .dropdown
                 +buttons({
                   text: 'This Week',
-                  iconFont: 'fa fa-fw fa-caret-down',
+                  iconAfter: 'fa fa-fw fa-caret-down',
                   type: 'secondary'
-                })
-                .dropdown-arrow.dropdown-arrow-right
-                .dropdown-menu
+                })(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static")
+                .dropdown-arrow.dropdown-arrow--right
+                .dropdown-menu.dropdown-menu-right
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpToday',
+                    value: '0',
+                    date: 'Today',
+                    time: 'Mar 27'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpYesterday',
+                    value: '1',
+                    date: 'Yesterday',
+                    time: 'Mar 26'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpWeek',
+                    value: '2',
+                    date: 'This Week',
+                    time: 'Mar 21-27',
+                    checked: true
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpMonth',
+                    value: '3',
+                    date: 'This Month',
+                    time: 'Mar 1-31'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpYear',
+                    value: '4',
+                    date: 'This Year',
+                    time: '2018'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpCustom',
+                    value: '5',
+                    date: 'Custom',
+                    flatpickr: true
+                  })
 
         section.section-metric
           .row

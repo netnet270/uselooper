@@ -15,6 +15,11 @@ $(document).ready(function () {
   //tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
+  $(".js-flatpickr").flatpickr({
+    mode: "range",
+    dateFormat: "Y-m-d"
+  });
+  
   // modal
   (function modalScrollable() {
     $('.modal').on('shown.bs.modal', function () {

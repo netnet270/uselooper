@@ -146,7 +146,7 @@
                 </li>
               </ul>
               <div class="user-profile dropdown nav-user"><a class="d-none d-md-flex" data-toggle="dropdown" role="button" aria-expanded="false"><span class="user-profile__avatar"><img src="images/profile.jpg" alt="user-avatar" /></span><span class="user-profile__info pr-lg-4 d-none d-lg-block"><span class="user-profile__name">Beni Arisandi</span><span class="user-profile__position">Marketing Manager</span></span></a>
-                <div class="dropdown-arrow dropdown-arrow-left"></div>
+                <div class="dropdown-arrow dropdown-arrow--left"></div>
                 <div class="user-profile__setting dropdown-menu"><a class="dropdown-item" href="user-profile.html"><span class="dropdown-item__icon oi oi-person"></span>Profile</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon oi oi-account-logout"></span>Logout</a>
                   <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Help Center</a><a class="dropdown-item" href="#!">Ask Forum</a><a class="dropdown-item" href="#!">Keyboard Shortcuts</a>
                 </div>
@@ -359,17 +359,51 @@
       <main class="site-content">
         <div class="site-content__inner">
           <header class="header">
-            <div class="d-flex flex-column flex-md-row">
+            <div class="header__inner">
               <div class="header__lead">
                 <p class="header__pretitle">Hi, Beni.</p>
                 <p class="header__text">Here’s what’s happening with your business today.</p>
               </div>
-              <div class="ml-auto">
+              <div class="header__dropdown">
                 <div class="dropdown">
-                  <button class="btn button button--secondary" type="button">This Week<i class="fa fa-fw fa-caret-down"></i>
+                  <button class="btn button button--secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">This Week<i class="fa fa-fw fa-caret-down"></i>
                   </button>
-                  <div class="dropdown-arrow dropdown-arrow-right"></div>
-                  <div class="dropdown-menu"></div>
+                  <div class="dropdown-arrow dropdown-arrow--right"></div>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <div class="form-group input-radio-dropdown">
+                      <input class="input-radio" type="radio" name="dpFilter" value="0" id="dpToday" />
+                      <label class="label-radio" for="dpToday"><span class="label-radio__date">Today</span><span class="label-radio__time">Mar 27</span>
+                      </label>
+                    </div>
+                    <div class="form-group input-radio-dropdown">
+                      <input class="input-radio" type="radio" name="dpFilter" value="1" id="dpYesterday" />
+                      <label class="label-radio" for="dpYesterday"><span class="label-radio__date">Yesterday</span><span class="label-radio__time">Mar 26</span>
+                      </label>
+                    </div>
+                    <div class="form-group input-radio-dropdown">
+                      <input class="input-radio" type="radio" name="dpFilter" value="2" id="dpWeek" checked="checked" />
+                      <label class="label-radio" for="dpWeek"><span class="label-radio__date">This Week</span><span class="label-radio__time">Mar 21-27</span>
+                      </label>
+                    </div>
+                    <div class="form-group input-radio-dropdown">
+                      <input class="input-radio" type="radio" name="dpFilter" value="3" id="dpMonth" />
+                      <label class="label-radio" for="dpMonth"><span class="label-radio__date">This Month</span><span class="label-radio__time">Mar 1-31</span>
+                      </label>
+                    </div>
+                    <div class="form-group input-radio-dropdown">
+                      <input class="input-radio" type="radio" name="dpFilter" value="4" id="dpYear" />
+                      <label class="label-radio" for="dpYear"><span class="label-radio__date">This Year</span><span class="label-radio__time">2018</span>
+                      </label>
+                    </div>
+                    <div class="form-group input-radio-dropdown">
+                      <input class="input-radio" type="radio" name="dpFilter" value="5" id="dpCustom" />
+                      <label class="label-radio" for="dpCustom"><span class="label-radio__date">Custom</span>
+                      </label>
+                      <div class="form-group form-customize form-readonly">
+                        <input class="form-control flatpickr-input js-flatpickr" type="text" data-toggle="flatpickr" data-mode="range" data-disable-mobile="true" data-date-format="Y-m-d" readonly="readonly" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,7 +1,7 @@
 //-------------------------------------------------------
 //- Modules :: Modal
 //-------------------------------------------------------
-mixin modal()
+mixin modalFollower()
   //- followers modal
   .modal.fade.has-shown#followersModal(tabindex='-1', role='dialog', aria-labelledby='followersModalLabel', aria-modal='true')
     .modal-dialog.modal-dialog-scrollable(role='document')
@@ -128,7 +128,7 @@ mixin modal()
             type: 'light'
           })(data-dismiss='modal')
 
-  //- modal following
+mixin modalFollowing()
   .modal.fade.has-shown#followingModal(tabindex='-1', role='dialog', aria-labelledby='followingModalLabel', aria-modal='true')
     .modal-dialog.modal-dialog-scrollable(role='document')
       .modal-content
@@ -136,7 +136,80 @@ mixin modal()
           h5.modal-title Following 
         .modal-body
           .list-group.list-group--flush.list-group--divider
-            each val in listFollower
+            -
+              var listFollowing = [
+                {
+                  img: 'images/uifaces2.jpg',
+                  name: 'Johnny Day',
+                  position: 'Computer Hardware Engineer'
+                },
+                {
+                  img: 'images/uifaces3.jpg',
+                  name: 'Sarah Bishop',
+                  position: 'Designer'
+                },
+                {
+                  img: 'images/uifaces4.jpg',
+                  name: 'Craig Hansen',
+                  position: 'Software Developer'
+                },
+                {
+                  img: 'images/uifaces5.jpg',
+                  name: 'Jane Barnes',
+                  position: 'Social Worker'
+                },
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Nicole Barnett',
+                  position: 'Marketing Manager'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Juan Fuller',
+                  position: 'Lawyer'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Johnny Day',
+                  position: 'Budget analyst'
+                },
+                {
+                  img: 'images/uifaces2.jpg',
+                  name: 'Joe Hanson',
+                  position: 'Logistician'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Julia Silva',
+                  position: 'Photographer'
+                },
+                {
+                  img: 'images/uifaces11.jpg',
+                  name: 'Brenda Griffin',
+                  position: 'Medical Assistant'
+                },
+                {
+                  img: 'images/uifaces12.jpg',
+                  name: 'Ryan Jimenez',
+                  position: 'Photographer'
+                },
+                {
+                  img: 'images/uifaces13.jpg',
+                  name: 'Bryan Hayes',
+                  position: 'Computer Systems Analyst'
+                },
+                {
+                  img: 'images/uifaces14.jpg',
+                  name: 'Cynthia Clark',
+                  position: 'Web Developer'
+                },
+                {
+                  img: 'images/uifaces15.jpg',
+                  name: 'Martha Myers',
+                  position: 'Writer'
+                }
+              ]
+            each val in listFollowing
               .list-group-item
                 .list-group-item__figure
                   a.user-avatar(href='#')
@@ -154,6 +227,100 @@ mixin modal()
           .text-center.p-3
             .spinner-border.spinner-border-sm.text-primary(role='status')
               span.sr-only Loading...
+        .modal-footer
+          +buttons({
+            text: 'Close', 
+            type: 'light'
+          })(data-dismiss='modal')
+
+mixin modalMember()
+  .modal.fade.has-shown#membersModal(tabindex='-1', role='dialog', aria-modal='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          .modal-header__form-search
+            form(action="#")
+              +input-field-icon({
+                placeholder: 'Search Members',
+                iconBefore: 'oi oi-magnifying-glass'
+              })
+        .modal-body
+          .list-group.list-group--flush
+            -
+              var members = [
+                {
+                  img: 'images/uifaces5.jpg',
+                  name: 'Craig Hansen',
+                  position: 'Software Developer'
+                },
+                {
+                  img: 'images/uifaces9.jpg',
+                  name: 'Jane Barnes',
+                  position: 'Social Worker'
+                },
+                {
+                  img: 'images/uifaces4.jpg',
+                  name: 'Nicole Barnett',
+                  position: 'Marketing Manager'
+                },
+                {
+                  img: 'images/uifaces6.jpg',
+                  name: 'Michael Ward',
+                  position: 'Lawyer'
+                },
+                {
+                  img: 'images/uifaces8.jpg',
+                  name: 'Juan Fuller',
+                  position: 'Budget analyst'
+                },
+                {
+                  img: 'images/uifaces7.jpg',
+                  name: 'Julia Silva',
+                  position: 'Photographer'
+                },
+                {
+                  img: 'images/uifaces10.jpg',
+                  name: 'Joe Hanson',
+                  position: 'Logistician'
+                },
+                {
+                  img: 'images/uifaces11.jpg',
+                  name: 'Brenda Griffin',
+                  position: 'Medical Assistant'
+                },
+                {
+                  img: 'images/uifaces11.jpg',
+                  name: 'Ryan Jimenez',
+                  position: 'Photographer'
+                },
+                {
+                  img: 'images/uifaces13.jpg',
+                  name: 'Bryan Hayes',
+                  position: 'Computer Systems Analyst'
+                }
+              ]
+            each val in members
+              .list-group-item
+                .list-group-item__figure
+                  a.user-avatar(href='#')
+                    img(src= val.img, alt='avatar user')
+                .list-group-item__body
+                  .list-group-item__title
+                    a(href='#')= val.name
+                  p.list-group-item__text= val.position
+                .list-group-item__figure
+                  .list-group-item__dropdown.dropdown
+                    +buttons({
+                      type: 'light',
+                      iconAfter: 'fa fa-fw fa-ellipsis-v'
+                    })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static")
+                    .dropdown-arrow
+                    .dropdown-menu.dropdown-menu-right
+                      a.dropdown-item(href="#!") Message
+                      a.dropdown-item(href="#!") Invite to a team
+                      a.dropdown-item(href="#!") Copy member ID
+                      .dropdown-divider
+                      a.dropdown-item(href="#!") Remove
         .modal-footer
           +buttons({
             text: 'Close', 

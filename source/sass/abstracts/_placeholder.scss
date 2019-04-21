@@ -59,17 +59,20 @@
       box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 2px 7px 1px rgba(20, 20, 31, .16);
       pointer-events: none;
     }
+    &--right {
+      left: auto;
+      right: 16px;
+    }
+    &--left {
+      left: 32px;
+    }
   }
-
-  .dropdown-arrow-left {
-    left: 32px;
-  }
-
   .dropdown-menu {
     animation-duration: .2s;
     margin-top: 10px;
     border: 0;
     font-weight: 400;
+    font-size: 14px;
     animation-fill-mode: both;
     box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 2px 7px 1px rgba(20, 20, 31, .16);
 

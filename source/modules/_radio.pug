@@ -23,3 +23,19 @@ mixin group-input-radio({name, id, label, disabled, isValid, isInValid, desc, no
         i.fa.fa-exclamation-circle.fa-fw
         | #{noticeError}
 
+mixin group-input-radio-dropdown({name, id, label, value, checked, date, time, flatpickr})
+  .form-group.input-radio-dropdown&attributes(attributes)
+    input.input-radio(
+      type= 'radio'
+      name= name ? `${name}` : null
+      value= value ? `${value}` : null
+      id= id ? `${id}` : null
+      checked= checked ? 'checked' : null
+    )
+    label.label-radio(for=id)
+      if date
+        span.label-radio__date= date
+      if time
+        span.label-radio__time= time
+    if flatpickr
+      +group-input-field-readonly({flatpickr: true})

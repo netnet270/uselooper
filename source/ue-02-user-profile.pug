@@ -41,7 +41,8 @@ block body
               data-target="#followingModal"
             )
 
-        +modal()
+        +modalFollower()
+        +modalFollowing()
 
         block menupage
           +menuPage("Overview", "ue-02-user-profile.html")
@@ -87,10 +88,55 @@ block body
               h3.achievement__title Achievement
               .achievement__dropdown.dropdown
                 +buttons({
-                  text: 'This Week',
-                  iconFont: 'fa fa-fw fa-caret-down',
+                  text: 'This Month',
+                  iconAfter: 'fa fa-fw fa-caret-down',
                   type: 'secondary'
-                })
+                })(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static")
+                .dropdown-arrow.dropdown-arrow--right
+                .dropdown-menu.dropdown-menu-right
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpToday',
+                    value: '0',
+                    date: 'Today',
+                    time: 'Mar 27'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpYesterday',
+                    value: '1',
+                    date: 'Yesterday',
+                    time: 'Mar 26'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpWeek',
+                    value: '2',
+                    date: 'This Week',
+                    time: 'Mar 21-27'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpMonth',
+                    value: '3',
+                    date: 'This Month',
+                    time: 'Mar 1-31',
+                    checked: true
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpYear',
+                    value: '4',
+                    date: 'This Year',
+                    time: '2018'
+                  })
+                  +group-input-radio-dropdown({
+                    name: 'dpFilter',
+                    id: 'dpCustom',
+                    value: '5',
+                    date: 'Custom',
+                    flatpickr: true
+                  })
             .achievement__content
               .row
                 .col-xl-8.col-12
@@ -156,8 +202,8 @@ block body
                       .card-header__dropdown.dropdown
                         +buttons({
                           type: 'light',
-                          iconFont: 'fa fa-fw fa-ellipsis-v'
-                        })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                          iconAfter: 'fa fa-fw fa-ellipsis-v'
+                        })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static")
                         .dropdown-arrow
                         .dropdown-menu.dropdown-menu-right
                           a.dropdown-item(href="#!") Actions
@@ -217,8 +263,8 @@ block body
                       .card-header__dropdown.dropdown
                         +buttons({
                           type: 'light',
-                          iconFont: 'fa fa-fw fa-ellipsis-v'
-                        })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                          iconAfter: 'fa fa-fw fa-ellipsis-v'
+                        })(class= "button--circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static")
                         .dropdown-arrow
                         .dropdown-menu.dropdown-menu-right
                           a.dropdown-item(href="#!") Actions

@@ -113,10 +113,16 @@ mixin group-input-field-states({ label, id, required, badge, iconAfter, labelInp
 
 
 //- Input Field Readonly
-mixin group-input-field-readonly({ label, value })
-  .form-group.form-customize.form-readonly
-    label= label
+mixin group-input-field-readonly({ label, type, placeholder, value, flatpickr })
+  .form-group.form-customize.form-readonly&attributes(attributes)
+    if label
+      label= label
     +input-field({ type, placeholder, value })(
+      class= flatpickr ? 'flatpickr-input js-flatpickr' : null,
+      data-toggle= flatpickr ? "flatpickr" : null
+      data-mode= flatpickr ? "range" : null 
+      data-disable-mobile= flatpickr ? "true" : null 
+      data-date-format= flatpickr ? "Y-m-d" : null
       readonly
     )
 
