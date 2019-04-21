@@ -37,3 +37,148 @@ ol {
   font-size: 11.2px;
   line-height: 1.5;
 }
+
+.avatar {
+  display: inline-block;
+  color: #888c9b;
+  width: 32px;
+  height: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+  }
+
+  &--md {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+
+  &--lg {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+  }
+
+  &--circle {
+    border-radius: 64px;
+  }
+}
+
+/* stylelint-disable */
+.avatar.bg--blue,
+.avatar.bg--indigo,
+.avatar.bg--light-purple,
+.avatar.bg--dark-purple,
+.avatar.bg--light-purple,
+.avatar.bg--light-green,
+.avatar.bg--red-3,
+.avatar.bg--orange-3,
+a.avatar.bg--blue:focus,
+a.avatar.bg--blue:hover,
+a.avatar.bg--dark:focus,
+a.avatar.bg--dark:hover,
+a.avatar.bg--indigo:focus,
+a.avatar.bg--indigo:hover,
+a.avatar.bg--light-purple:focus,
+a.avatar.bg--light-purple:hover,
+a.avatar.bg--dark-purple:focus,
+a.avatar.bg--dark-purple:hover,
+a.avatar.bg--red-3:focus,
+a.avatar.bg--red-3:hover,
+a.avatar.bg--red:hover,
+a.avatar.bg--light-green:focus,
+a.avatar.bg--light-green:hover, 
+a.avatar.bg--light-purple:focus,
+a.avatar.bg--light-purple:hover{
+  color: $cl-white;
+}
+.avatar.bg--green,
+.avatar.bg--orange-3,
+.avatar.bg--yellow,
+a.avatar.bg--green:focus,
+a.avatar.bg--green:hover,
+a.avatar.bg--orange-3:focus,
+a.avatar.bg--orange-3:hover,
+a.avatar.bg--yellow:focus,
+a.avatar.bg--yellow:hover {
+  color: $cl-light-black;
+}
+
+a.bg--dark-purple:focus,
+a.bg--dark-purple:hover,
+button.bg--dark-purple:focus,
+button.bg--dark-purple:hover {
+  background-color: $cl-purple-2 ;
+}
+a.bg--indigo:focus,
+a.bg--indigo:hover,
+button.bg--indigo:focus,
+button.bg--indigo:hover {
+  background-color: $cl-indigo-2;
+}
+a.bg--yellow:focus,
+a.bg--yellow:hover,
+button.bg--yellow:focus,
+button.bg--yellow:hover {
+  background-color: $cl-yellow-2;
+}
+a.bg--blue:focus,
+a.bg--blue:hover,
+button.bg--blue:focus,
+button.bg--blue:hover {
+  background-color: $cl-blue-2;
+}
+a.bg--light-green:focus,
+a.bg--light-green:hover,
+button.bg--light-green:focus,
+button.bg--light-green:hover {
+  background-color: $cl-green-2 ;
+}
+a.bg--light-purple:focus,
+a.bg--light-purple:hover,
+button.bg--light-purple:focus,
+button.bg--light-purple:hover {
+  background-color: $cl-purple-3;
+}
+a.bg--green:focus, 
+a.bg--green:hover, 
+button.bg--green:focus, 
+button.bg--green:hover {
+  background-color: #8bb575;
+}
+a.bg--red-3:focus, 
+a.bg--red-3:hover, 
+button.bg--red-3:focus, 
+button.bg--red-3:hover {
+  background-color: #e43e2c;
+}
+a.bg--orange-3:focus, 
+a.bg--orange-3:hover, 
+button.bg--orange-3:focus, 
+button.bg--orange-3:hover {
+  background-color: #e77430;
+}
+/* stylelint-enable */
+
+.overlay-mobile {
+  @include breakpoint-down(phone) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 31, .8);
+    left: 0;
+    top: 0;
+    z-index: 1031;
+    display: none;
+  }
+}

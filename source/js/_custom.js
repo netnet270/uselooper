@@ -1,5 +1,26 @@
 $(document).ready(function () {
 
+  $('[data-parent="#menu-sidebar"]').on('hide.bs.collapse', function (e) {
+    if ($(this).find('.nav-item--active').length > 0) {
+      e.preventDefault();
+    }
+  });
+
+  //sidebar collapse
+  function sidebarCollapse(){
+    $('.js-btn-collaspe').on('click', function(){
+      $('.js-sidebar-collapse').toggleClass('aside-sidebar--visible');
+  
+      $('.overlay-mobile').fadeToggle('200');
+  
+      $('.overlay-mobile').on('click', function(){         
+        $('.js-sidebar-collapse').removeClass('aside-sidebar--visible');
+        $(this).fadeOut();
+      });
+    })
+  }
+  sidebarCollapse();
+  
   //PerfectScrollbar
 
   function perfectScrollbar(element) {
@@ -111,56 +132,58 @@ $(document).ready(function () {
   });
 
   function drawAchievement(_data) {
-    var achievement = new Chart(document.getElementById('achievement'), {
-      type: "bar",
-      data: _data,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        tooltips: {
-          enabled: true,
-          mode: 'index',
-          intersect: true,
-          callbacks: {
-            label: function (a, e) {
-              var t = e.datasets[a.datasetIndex].label || "",
-                o = a.yLabel,
-                r = "";
-              return r += t + ': ' + o
+    if ($('#achievement').length > 0) {
+      var achievement = new Chart(document.getElementById('achievement'), {
+        type: "bar",
+        data: _data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          tooltips: {
+            enabled: true,
+            mode: 'index',
+            intersect: true,
+            callbacks: {
+              label: function (a, e) {
+                var t = e.datasets[a.datasetIndex].label || "",
+                  o = a.yLabel,
+                  r = "";
+                return r += t + ': ' + o
+              }
             }
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                fontColor: '#888c9b',
+                maxRotation: 0
+              },
+              gridLines: {
+                display: true,
+                drawBorder: false,
+                drawOnChartArea: false
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                stepSize: 20,
+                fontColor: '#888c9b',
+                beginAtZero: true
+              },
+              gridLines: {
+                display: true,
+                drawBorder: true,
+                borderDash: [8, 2],
+                color: "#e6edf7"
+              }
+            }]
+          },
+          legend: {
+            display: false
           }
-        },
-        scales: {
-          xAxes: [{
-            ticks: {
-              fontColor: '#888c9b',
-              maxRotation: 0
-            },
-            gridLines: {
-              display: true,
-              drawBorder: false,
-              drawOnChartArea: false
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              stepSize: 20,
-              fontColor: '#888c9b',
-              beginAtZero: true
-            },
-            gridLines: {
-              display: true,
-              drawBorder: true,
-              borderDash: [8, 2],
-              color: "#e6edf7"
-            }
-          }]
-        },
-        legend: {
-          display: false
         }
-      }
-    })
+      })
+    }
   }
 
   var dataAchievement = {

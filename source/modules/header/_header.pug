@@ -3,33 +3,34 @@
 //-------------------------------------------------------
 
 mixin header()
-  header.header.fixed-top
+  header.fixed-top
     .main-header
       .main-header__brand
         a(href='ue-01-home.html')
           img(src='images/brand-inverse.png')
 
       .main-header__list
-        .main-header__btn-toggle.main-header-item.d-md-none
-          +buttons({
-            iconAfter: 'fas fa-bars'
-          })(class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
-
-        .main-header__form-search.main-header-item
+        .main-header__btn-toggle
+          //- +buttons({
+          //-   iconAfter: 'fas fa-bars'
+          //- })(class="navbar-toggler js-btn-collaspe" type='button' data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+          button.js-btn-collaspe.navbar-toggler(type='button' data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+        .main-header__form-search
           form(action="#")
             +input-field-icon({
               placeholder: 'Search',
               iconBefore: 'oi oi-magnifying-glass'
             })
-        
-        nav.main-header__right.main-header-item.px-0.d-none.d-sm-flex
+
+        nav.main-header__right
           ul.nav.navbar.nav-icons
             li.nav-item.dropdown.nav-icons__activities
               a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
                 span(class= 'oi oi-pulse')
                 span.indicator
               .dropdown-arrow
-              .dropdown-menu.dropdown-menu-right.dropdown-activities
+              .dropdown-menu.dropdown-menu-right
                 .dropdown-header
                   span Activities 
                     span.badge (2)
@@ -94,7 +95,7 @@ mixin header()
                 span(class= 'oi oi-envelope-open')
                 span.indicator
               .dropdown-arrow
-              .dropdown-menu.dropdown-menu-right.dropdown-messages
+              .dropdown-menu.dropdown-menu-right
                 .dropdown-header
                   span Messages
                   a(href="#") Mark all as read

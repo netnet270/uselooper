@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="overlay-mobile"></div>
     <div class="main-wapper">
-      <header class="header fixed-top">
+      <header class="fixed-top">
         <div class="main-header">
           <div class="main-header__brand"><a href="ue-01-home.html"><img src="images/brand-inverse.png" /></a></div>
           <div class="main-header__list">
-            <div class="main-header__btn-toggle main-header-item d-md-none">
-              <button class="btn button navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
-              </button>
+            <div class="main-header__btn-toggle">
+              <button class="js-btn-collaspe navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             </div>
-            <div class="main-header__form-search main-header-item">
+            <div class="main-header__form-search">
               <form action="#">
                 <div class="form-group form-customize">
                   <div class="input-field input-field--icon-before">
@@ -28,11 +28,11 @@
                 </div>
               </form>
             </div>
-            <nav class="main-header__right main-header-item px-0 d-none d-sm-flex">
+            <nav class="main-header__right">
               <ul class="nav navbar nav-icons">
                 <li class="nav-item dropdown nav-icons__activities"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-pulse"></span><span class="indicator"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-activities">
+                  <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header"><span>Activities <span class="badge">(2)</span></span></div>
                     <div class="dropdown-scroll js-scrollbar-1"><a class="dropdown-item dropdown-item--unread" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/uifaces15.jpg" alt="user-avatar" /></div>
@@ -83,7 +83,7 @@
                 </li>
                 <li class="nav-item dropdown nav-icons__messages"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-envelope-open"></span><span class="indicator"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-messages">
+                  <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header"><span>Messages</span><a href="#">Mark all as read</a></div>
                     <div class="dropdown-scroll js-scrollbar-2"><a class="dropdown-item dropdown-item--unread" href="#">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/team1.jpg" alt="user-avatar" /></div>
@@ -155,16 +155,16 @@
           </div>
         </div>
       </header>
-      <aside class="aside-sidebar aside-sidebar-expand-md aside-sidebar-light">
-        <div class="aside-content">
-          <div class="aside-header d-block d-md-none">
-            <div class="user-profile dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="user-profile__avatar"><img src="../images/profile.jpg" alt="user-avatar" /></span><span class="user-profile__info"><span class="user-profile__name">Beni Arisandi</span><span class="user-profile__position">Marketing Manager</span></span></a>
-              <div class="user-profile__setting dropdown-menu"><a class="dropdown-item" href="user-profile.html"><span class="dropdown-item__icon oi oi-person"></span>Help Center</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon oi oi-account-logout"></span>Logout</a>
-                <div class="dropdown-divider"></div><a class="dropdown-item" href="#!"><span class="dropdown-item__icon"></span>Help Center</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon"></span>Ask Forum</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon"></span>Keyboard Shortcuts</a>
+      <aside class="aside-sidebar js-sidebar-collapse">
+        <div class="aside-sidebar__inner">
+          <div class="aside-sidebar__header">
+            <div class="user-profile"><a class="user-profile__btn" data-toggle="collapse" role="button" href="#dropdown-aside" aria-controls="dropdown-aside" aria-expanded="false"><span class="user-avatar user-avatar--lg"><img src="images/profile.jpg" alt="user-avatar" /></span><span class="user-profile__icon"><i class="fa fa-caret-down fa-lg"></i></span><span class="user-profile__summary"><span class="user-profile__name">Beni Arisandi</span><span class="user-profile__position">Marketing Manager</span></span></a>
+              <div class="user-profile__setting collapse" id="dropdown-aside"><a class="setting-item" href="ue-02-user-profile.html"><span class="setting-item__icon oi oi-person"></span>Profile</a><a class="setting-item" href="#!"><span class="setting-item__icon oi oi-account-logout"></span>Logout</a>
+                <div class="setting-divider"></div><a class="setting-item" href="#!">Help Center</a><a class="setting-item" href="#!">Ask Forum</a><a class="setting-item" href="#!">Keyboard Shortcuts</a>
               </div>
             </div>
           </div>
-          <div class="aside-menu js-scrollbar-menu" id="menu-sidebar">
+          <div class="aside-sidebar__menu js-scrollbar-menu" id="menu-sidebar">
             <ul class="navbar-nav js-navbar-nav">
               <li class="nav-item level1"><a class="nav-link" href="ue-01-home.html" aria-expanded="false" role="button"><i class="nav-icon fas fa-home"></i><span class="nav-text">Dashboard</span></a>
               </li>
@@ -350,7 +350,7 @@
               </li>
             </ul>
           </div>
-          <div class="aside-footer">
+          <div class="aside-sidebar__footer">
             <button class="btn button button--infor button--full" type="button">Night mode<i class="fas fa-moon"></i>
             </button>
           </div>
@@ -359,7 +359,7 @@
       <main class="site-content">
         <header class="site-header-cover">
           <div class="site-header-cover__inner">
-            <div class="site-profile"><a class="user-avatar user-avatar--xl" href="user-profile.html"><img src="images/profile.jpg" alt="user-avatar" /></a>
+            <div class="site-profile"><a class="user-avatar user-avatar--xl" href="ue-02-user-profile.html"><img src="images/profile.jpg" alt="user-avatar" /></a>
               <div class="site-profile__name"> Beni Arisandi </div>
               <div class="site-profile__rank"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow far fa-star"></i></div>
               <p class="site-profile__position"> Project Manager @CreativeDivision</p>
@@ -733,45 +733,330 @@
             <h2 class="site-header-bar__title">Teams<span class="badge text-small">23 Totals</span></h2>
           </header>
           <section class="page-teams">
-            <div class="page-teams__inner">
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <div class="masonry-item">
-                    <div class="masonry-item__header"><a class="user-avatar user-avatar--lg" href="#!"><img src="images/team4.jpg" alt="user avatar" /></a>
-                      <div class="summary">
-                        <h4 class="title">Creative Division</h4>
-                        <p class="subtitle">Event Planner</p>
+            <div class="page-teams__inner"></div>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="masonry-item bg--white">
+                  <div class="masonry-item__header"><a class="user-avatar user-avatar--lg" href="#!"><img src="images/team4.jpg" alt="user avatar" /></a>
+                    <div class="summary">
+                      <h3 class="title"><a class="color--light-black" href="#!">Creative Division</a></h3>
+                      <h6 class="subtitle color--dark-gray">Event Planner</h6>
+                    </div>
+                    <button class="btn button button--light button--circle" type="button" data-toggle="tooltip" title="Chat with teams"><i class="oi oi-chat"></i>
+                    </button>
+                  </div>
+                  <div class="masonry-item__body">
+                    <p class="masonry-item__intro">We make stunning and cool responsive web and app design which suitable for any project purpose for your business.</p>
+                    <hr />
+                    <div class="masonry-item__rating"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow far fa-star"></i>
+                    </div>
+                    <ul class="masonry-item__location">
+                      <li><span class="masonry-item__icon"><i class="fa fa-map-marker color--dark-gray"> </i></span>London</li>
+                      <li><span class="masonry-item__icon"><i class="fa fa-flag color--dark-gray"></i></span>Since Oct 10, 2013</li>
+                    </ul>
+                    <div class="masonry-item__avatar-group"><a class="user-avatar" href="#" data-toggle="tooltip" title="Andrew Kim"><img src="images/uifaces6.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Bryan Morgan"><img src="images/uifaces8.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Larry Robinson"><img src="images/uifaces7.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Beverly Simpson"><img src="images/uifaces9.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Robinson"><img src="images/uifaces10.jpg" alt="user-avatar" /></a><a class="avatar avatar--circle member color--dark-gray bg" href="#!" data-toggle="modal" data-target="#membersModal">+23</a>
+                    </div>
+                  </div>
+                  <div class="masonry-item__footer"><a class="footer-item" href="#!"><strong class="footer-item__count">135</strong>
+                      <div class="footer-item__text">Projects</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">6</strong>
+                      <div class="footer-item__text">On Going</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">35</strong>
+                      <div class="footer-item__text">Tasks</div>
+                    </a></div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="masonry-item bg--white">
+                  <div class="masonry-item__header"><a class="user-avatar user-avatar--lg" href="#!"><img src="images/bootstrap.svg" alt="user avatar" /></a>
+                    <div class="summary">
+                      <h3 class="title"><a class="color--light-black" href="#!">Bootstrap</a></h3>
+                      <h6 class="subtitle color--dark-gray">Design Team</h6>
+                    </div>
+                    <button class="btn button button--light button--circle" type="button" data-toggle="tooltip" title="Chat with teams"><i class="oi oi-chat"></i>
+                    </button>
+                  </div>
+                  <div class="masonry-item__body">
+                    <p class="masonry-item__intro">We make stunning and cool responsive web and app design which suitable for any project purpose for your business.</p>
+                    <hr />
+                    <div class="masonry-item__rating"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow far fa-star"></i>
+                    </div>
+                    <ul class="masonry-item__location">
+                      <li><span class="masonry-item__icon"><i class="fa fa-map-marker color--dark-gray"> </i></span>London</li>
+                      <li><span class="masonry-item__icon"><i class="fa fa-flag color--dark-gray"></i></span>Since Oct 10, 2013</li>
+                    </ul>
+                    <div class="masonry-item__avatar-group"><a class="user-avatar" href="#" data-toggle="tooltip" title="Andrew Kim"><img src="images/uifaces6.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Bryan Morgan"><img src="images/uifaces8.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Larry Robinson"><img src="images/uifaces7.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Beverly Simpson"><img src="images/uifaces9.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Robinson"><img src="images/uifaces10.jpg" alt="user-avatar" /></a><a class="avatar avatar--circle member color--dark-gray bg" href="#!" data-toggle="modal" data-target="#membersModal">+23</a>
+                    </div>
+                  </div>
+                  <div class="masonry-item__footer"><a class="footer-item" href="#!"><strong class="footer-item__count">135</strong>
+                      <div class="footer-item__text">Projects</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">6</strong>
+                      <div class="footer-item__text">On Going</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">35</strong>
+                      <div class="footer-item__text">Tasks</div>
+                    </a></div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="masonry-item bg--white">
+                  <div class="masonry-item__header"><a class="user-avatar user-avatar--lg" href="#!"><img src="images/sketch.svg" alt="user avatar" /></a>
+                    <div class="summary">
+                      <h3 class="title"><a class="color--light-black" href="#!">Sketch</a></h3>
+                      <h6 class="subtitle color--dark-gray">Creative Agency</h6>
+                    </div>
+                    <button class="btn button button--light button--circle" type="button" data-toggle="tooltip" title="Chat with teams"><i class="oi oi-chat"></i>
+                    </button>
+                  </div>
+                  <div class="masonry-item__body">
+                    <p class="masonry-item__intro">We make stunning and cool responsive web and app design which suitable for any project purpose for your business.</p>
+                    <hr />
+                    <div class="masonry-item__rating"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow far fa-star"></i>
+                    </div>
+                    <ul class="masonry-item__location">
+                      <li><span class="masonry-item__icon"><i class="fa fa-map-marker color--dark-gray"> </i></span>London</li>
+                      <li><span class="masonry-item__icon"><i class="fa fa-flag color--dark-gray"></i></span>Since Oct 10, 2013</li>
+                    </ul>
+                    <div class="masonry-item__avatar-group"><a class="user-avatar" href="#" data-toggle="tooltip" title="Andrew Kim"><img src="images/uifaces6.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Bryan Morgan"><img src="images/uifaces8.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Larry Robinson"><img src="images/uifaces7.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Beverly Simpson"><img src="images/uifaces9.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Robinson"><img src="images/uifaces10.jpg" alt="user-avatar" /></a><a class="avatar avatar--circle member color--dark-gray bg" href="#!" data-toggle="modal" data-target="#membersModal">+23</a>
+                    </div>
+                  </div>
+                  <div class="masonry-item__footer"><a class="footer-item" href="#!"><strong class="footer-item__count">135</strong>
+                      <div class="footer-item__text">Projects</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">6</strong>
+                      <div class="footer-item__text">On Going</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">35</strong>
+                      <div class="footer-item__text">Tasks</div>
+                    </a></div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="masonry-item bg--white">
+                  <div class="masonry-item__header"><a class="avatar avatar--lg avatar--circle bg--light-green" href="#!">LD</a>
+                    <div class="summary">
+                      <h3 class="title"><a class="color--light-black" href="#!">Good Deck</a></h3>
+                      <h6 class="subtitle color--dark-gray">Software Developer</h6>
+                    </div>
+                    <button class="btn button button--light button--circle" type="button" data-toggle="tooltip" title="Chat with teams"><i class="oi oi-chat"></i>
+                    </button>
+                  </div>
+                  <div class="masonry-item__body">
+                    <p class="masonry-item__intro">We make stunning and cool responsive web and app design which suitable for any project purpose for your business.</p>
+                    <hr />
+                    <div class="masonry-item__rating"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i>
+                    </div>
+                    <ul class="masonry-item__location">
+                      <li><span class="masonry-item__icon"><i class="fa fa-map-marker color--dark-gray"> </i></span>Jakarta</li>
+                      <li><span class="masonry-item__icon"><i class="fa fa-flag color--dark-gray"></i></span>Since May 21, 2016</li>
+                    </ul>
+                    <div class="masonry-item__avatar-group"><a class="user-avatar" href="#" data-toggle="tooltip" title="Andrew Kim"><img src="images/uifaces16.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Bryan Morgan"><img src="images/uifaces17.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Larry Robinson"><img src="images/uifaces18.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Beverly Simpson"><img src="images/uifaces19.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Robinson"><img src="images/uifaces20.jpg" alt="user-avatar" /></a><a class="avatar avatar--circle member color--dark-gray bg" href="#!" data-toggle="modal" data-target="#membersModal">+16</a>
+                    </div>
+                  </div>
+                  <div class="masonry-item__footer"><a class="footer-item" href="#!"><strong class="footer-item__count">63</strong>
+                      <div class="footer-item__text">Projects</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">11</strong>
+                      <div class="footer-item__text">On Going</div>
+                    </a><a class="footer-item" href="#!"><strong class="footer-item__count">65</strong>
+                      <div class="footer-item__text">Tasks</div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade has-shown" id="membersModal" tabindex="-1" role="dialog" aria-modal="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="modal-header__form-search">
+                      <form action="#">
+                        <div class="form-group form-customize">
+                          <div class="input-field input-field--icon-before">
+                            <input class="form-control" type="text" placeholder="Search Members" /><span class="input-field__icon input-field__icon--before"><i class="oi oi-magnifying-glass"></i></span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <div class="list-group list-group--flush">
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces5.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Craig Hansen</a></div>
+                          <p class="list-group-item__text">Software Developer</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <button class="btn button button--light button--circle" type="button" data-toggle="tooltip" title="Chat with teams"><i class="oi oi-chat"></i>
-                      </button>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces9.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Jane Barnes</a></div>
+                          <p class="list-group-item__text">Social Worker</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces4.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Nicole Barnett</a></div>
+                          <p class="list-group-item__text">Marketing Manager</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces6.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Michael Ward</a></div>
+                          <p class="list-group-item__text">Lawyer</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces8.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Juan Fuller</a></div>
+                          <p class="list-group-item__text">Budget analyst</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces7.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Julia Silva</a></div>
+                          <p class="list-group-item__text">Photographer</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces10.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Joe Hanson</a></div>
+                          <p class="list-group-item__text">Logistician</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces11.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Brenda Griffin</a></div>
+                          <p class="list-group-item__text">Medical Assistant</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces11.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Ryan Jimenez</a></div>
+                          <p class="list-group-item__text">Photographer</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="list-group-item__figure"><a class="user-avatar" href="#"><img src="images/uifaces13.jpg" alt="avatar user" /></a></div>
+                        <div class="list-group-item__body">
+                          <div class="list-group-item__title"><a href="#">Bryan Hayes</a></div>
+                          <p class="list-group-item__text">Computer Systems Analyst</p>
+                        </div>
+                        <div class="list-group-item__figure">
+                          <div class="list-group-item__dropdown dropdown">
+                            <button class="btn button button--light button--circle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"><i class="fa fa-fw fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Message</a><a class="dropdown-item" href="#!">Invite to a team</a><a class="dropdown-item" href="#!">Copy member ID</a>
+                              <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Remove</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="masonry-item__body">
-                      <p class="masonry-item__intro"> </p>We make stunning and cool responsive web and app design which suitable for any project purpose for your business.
-                      <hr class="masonry-item__divider" />
-                      <div class="masonry-item__rating"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow far fa-star"></i></div>
-                      <ul class="masonry-item__position">
-                        <li><span class="masonry-item__icon"><i class="fa fa-map-marker"></i> London</span></li>
-                        <li><span class="masonry-item__icon"><i class="fa fa-flag"></i> Since Oct 10, 2013</span></li>
-                      </ul>
-                      <div class="masonry-item__avatar-group"><a class="user-avatar" href="#" data-toggle="tooltip" title="Andrew Kim"><img src="images/uifaces6.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Bryan Morgan"><img src="images/uifaces7.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Larry Robinson"><img src="images/uifaces8.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Beverly Simpson"><img src="images/uifaces9.jpg" alt="user-avatar" /></a><a class="user-avatar" href="#" data-toggle="tooltip" title="Robinson"><img src="images/uifaces10.jpg" alt="user-avatar" /></a><a class="avatar avatar--circle" href="#!" data-toggle="modal" data-target="#membersModal">+23</a></div>
-                    </div>
-                    <div class="masonry-item__footer">
-                      <div class="footer-item"><a href="#!">
-                          <div class="footer-item__count">135</div>
-                          <div class="footer-item__text">Projects</div>
-                        </a></div>
-                      <div class="footer-item"><a href="#!">
-                          <div class="footer-item__count">6</div>
-                          <div class="footer-item__text">On Going</div>
-                        </a></div>
-                      <div class="footer-item"><a href="#!">
-                          <div class="footer-item__count">35</div>
-                          <div class="footer-item__text">Tasks</div>
-                        </a></div>
-                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn button button--light" type="button" data-dismiss="modal">Close
+                    </button>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="page-teams__loading">
+              <div class="spinner-border color--indigo" role="status"><span class="sr-only">Loading...</span></div>
             </div>
           </section>
         </div>

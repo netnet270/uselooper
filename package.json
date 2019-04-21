@@ -49,6 +49,7 @@
     "popper.js": "^1.14.7",
     "npm": "^3.10.6",
     "postcss-assets": "^5.0.0",
+    "pace-js": "^1.0.2",
     "pug": "^2.0.0-beta6",
     "perfect-scrollbar": "^1.4.0",
     "run-sequence": "^1.2.2",

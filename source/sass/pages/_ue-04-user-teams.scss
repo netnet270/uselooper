@@ -1,0 +1,157 @@
+// ======================================================
+// Pages :: User Teams
+// ======================================================
+
+.masonry-item {
+  border: none;
+  box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 1px 3px 0 rgba(20, 20, 31, .15);
+  margin-bottom: 20px;
+  border-radius: 4px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 16px 16px 0 16px;
+
+    .summary {
+      flex: 1;
+
+      .title {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+
+      a:hover,
+      a:active {
+        color: #363642;
+      }
+
+      .subtitle {
+        margin-top: -12px;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    .user-avatar,
+    .avatar {
+      margin-right: 16px;
+      cursor: pointer;
+    }
+
+    .button--circle > i {
+      margin-left: -2px;
+    }
+  }
+
+  &__body {
+    padding: 0 16px 16px 16px;
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgba(34, 34, 48, .1);
+    }
+  }
+
+  &__rating {
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 16px;
+  }
+
+  &__location {
+    padding-left: 0;
+    margin-left: 24px;
+    list-style-type: none;
+    margin-bottom: 16px;
+
+    li {
+      position: relative;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: -24px;
+    width: 16px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__avatar-group {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    .user-avatar {
+      box-shadow: 0 0 0 2px #fff;
+    }
+
+    .user-avatar + .user-avatar {
+      margin-left: -12px;
+    }
+
+    .user-avatar:hover {
+      z-index: 2;
+    }
+
+    .member {
+      text-decoration: none;
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #d7dae2;
+      margin-left: 4px;
+    }
+
+    .member:hover,
+    .member:active,
+    .member:focus {
+      color: #363642;
+    }
+  }
+
+  &__footer {
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    background-color: transparent;
+    border-top: 1px solid rgba(20, 20, 31, .12);
+
+    .footer-item {
+      padding: 1rem;
+      flex: 1;
+      text-align: center;
+      outline: 0;
+      text-decoration: none;
+      color: #888c9b;
+    }
+
+    .footer-item:hover,
+    .footer-item:focus {
+      color: #222230;
+    }
+
+    .footer-item:not(:last-child) {
+      border-right: 1px solid rgba(20, 20, 31, .12);
+    }
+  }
+}
+
+.page-teams__loading {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 12px;
+  }
+}

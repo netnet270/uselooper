@@ -2,65 +2,186 @@
 // Components :: Sidebar
 // ======================================================
 .aside-sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
   left: 0;
-  padding: 0;
+  top: 56px;
+  bottom: 0;
+  z-index: 1030;
+  position: fixed;
+  width: 240px;
   max-width: 264px;
-  transition: transform .2s ease-in-out;
+  height: 100%;
+  color: inherit;
+  overflow-x: hidden;
+  background-color: $bg-light-gray;
+  border-right: 1px solid rgba(20, 20, 31, .05);
 
-  .aside-content {
+  @include breakpoint-down(phone) {
+    margin-top: 0;
+    padding-bottom: 0;
+    top: 0;
+    left: -264px;
+    z-index: 1096;
+    width: 264px;
+    border-right: none;
+    transition: left .3s linear;
+
+    &--visible {
+      left: 0;
+    }
+  }
+
+  &__inner {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  .aside-header {
+  &__header {
     position: relative;
-    display: block;
+    display: none;
+    background-color: $cl-white;
     box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 1px 3px 0 rgba(20, 20, 31, .15);
     z-index: 3;
+
+    @include breakpoint-down(phone) {
+      display: block;
+    }
   }
 
-  .aside-menu {
+  .user-profile {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    &__btn {
+      position: relative;
+      display: flex;
+      padding: 16px;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:active {
+        color: #363642;
+        background-color: rgba(52, 108, 176, .08);
+      }
+
+      &[aria-expanded='true'] .user-profile__icon i {
+        transform: rotate(180deg);
+      }
+    }
+
+    .user-avatar {
+      margin-right: 12px;
+    }
+
+    &__icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      font-size: 14px;
+      transform: translateY(-50%);
+      opacity: .7;
+
+      > i {
+        transition: transform .2s ease-in-out;
+      }
+    }
+
+    &__summary {
+      margin-right: 12px;
+      display: block;
+      text-align: left;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: nowrap;
+    }
+
+    &__name,
+    &__position {
+      display: block;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 24px;
+      color: #363642;
+    }
+
+    &__position {
+      font-weight: 400;
+      opacity: .7;
+      font-size: 14px;
+      line-height: 16px;
+      color: $cl-dark-gray;
+    }
+
+    &__setting {
+      position: absolute;
+      top: 80px;
+      background-color: #fff;
+      width: 100%;
+      padding-bottom: 16px;
+      box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 1px 3px 0 rgba(20, 20, 31, .15);
+      z-index: 1;
+
+      &.show {
+        max-height: calc(100vh - 4.5rem);
+        overflow: auto;
+      }
+
+      .setting-item {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+        clear: both;
+        font-weight: 400;
+        font-size: 16px;
+        color: #191927;
+        text-align: inherit;
+        white-space: nowrap;
+        line-height: 24px;
+        background-color: transparent;
+        border: 0;
+      }
+
+      .setting-item:active {
+        color: #fff;
+        background-color: #346cb0;
+      }
+
+      .setting-item__icon {
+        text-align: center;
+        width: 24px;
+        margin-right: 10px;
+        color: #a6abbd;
+      }
+
+      .setting-divider {
+        height: 0;
+        margin: 8px 0;
+        overflow: hidden;
+        border-top: 1px solid #e6e8ed;
+      }
+    }
+  }
+
+  &__menu {
     position: relative;
     flex: 1;
   }
 
-  .aside-footer {
+  &__footer {
     padding: 16px;
     border-top: 1px solid rgba(34, 34, 48, .1);
 
     .button i {
       margin-left: 8px;
     }
-  }
-}
-
-.aside-sidebar-expand-md {
-  transform: translateZ(0);
-}
-
-.aside-sidebar-light {
-  color: inherit;
-  background-color: $bg-light-gray;
-
-  .aside-header {
-    background-color: $cl-white;
-  }
-}
-
-@media (min-width: 768px) {
-  .aside-sidebar-expand-md {
-    top: 56px;
-    width: 240px;
-    z-index: 5;
-  }
-}
-
-@media (min-width: 768px) {
-  .aside-sidebar {
-    border-right: 1px solid rgba(20, 20, 31, .05);
   }
 }

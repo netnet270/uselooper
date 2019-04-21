@@ -3,25 +3,27 @@
 //-------------------------------------------------------
              
 mixin sidebar(cat,href)
-  aside.aside-sidebar.aside-sidebar-expand-md.aside-sidebar-light
-    .aside-content
-      .aside-header.d-block.d-md-none
-        .user-profile.dropdown
-          a.dropdown-toggle(data-toggle="dropdown" role="button" aria-expanded="false")
-            span.user-profile__avatar
-              img(src='../images/profile.jpg' alt='user-avatar')
-            span.user-profile__info
+  aside.aside-sidebar.js-sidebar-collapse
+    .aside-sidebar__inner
+      .aside-sidebar__header
+        .user-profile
+          a.user-profile__btn(data-toggle="collapse" role="button" href="#dropdown-aside" aria-controls="dropdown-aside" aria-expanded="false")
+            span.user-avatar.user-avatar--lg
+              img(src='images/profile.jpg' alt='user-avatar')
+            span.user-profile__icon
+              i(class= "fa fa-caret-down fa-lg")
+            span.user-profile__summary
               span.user-profile__name
                 | Beni Arisandi
               span.user-profile__position
                 | Marketing Manager
-              
-          .user-profile__setting.dropdown-menu
+
+          .user-profile__setting.collapse#dropdown-aside
             -
               var data = [
                 {
-                  text: 'Help Center',
-                  href: 'user-profile.html',
+                  text: 'Profile',
+                  href: 'ue-02-user-profile.html',
                   icon: 'oi oi-person'
                 },
                 {
@@ -44,15 +46,16 @@ mixin sidebar(cat,href)
 
             each item in data
               if item.divider
-                .dropdown-divider
+                .setting-divider
               else
-                a.dropdown-item(href= item.href ? item.href : '#!')
-                  span.dropdown-item__icon(class= item.icon)
+                a.setting-item(href= item.href ? item.href : '#!')
+                  if item.icon
+                    span.setting-item__icon(class= item.icon)
                   | #{item.text}
-      .aside-menu#menu-sidebar.js-scrollbar-menu
+      .aside-sidebar__menu#menu-sidebar.js-scrollbar-menu
         +main-menu(cat,href)
         +sub-menu()
-      .aside-footer
+      .aside-sidebar__footer
         +buttons({
           text: 'Night mode',
           iconAfter: 'fas fa-moon',

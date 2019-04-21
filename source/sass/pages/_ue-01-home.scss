@@ -9,18 +9,35 @@
   padding-left: 239px;
   background-color: $bg-light-gray;
 
+  @include breakpoint-down(phone) {
+    padding-left: 0;
+  }
+
   &__inner {
     padding: 24px 32px;
     min-height: calc(100vh - 3.5rem);
+
+    @include breakpoint-down(tablet) {
+      padding: 24px 16px;
+    }
+
+    @include breakpoint-down(phone) {
+      padding: 24px 0;
+    }
   }
 
-  .header {
+  .dashboard-header {
     margin-bottom: 24px;
 
     &__inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include breakpoint-down(phone) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
 
     &__lead {
@@ -77,10 +94,15 @@
     }
   }
 
-  .section-metric {
+  .dashboard-metric {
     margin-top: 24px;
     margin-bottom: 24px;
     padding-top: 9px;
+
+    @include breakpoint-down(phone) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
 
     .card-metric {
       padding: 16px;

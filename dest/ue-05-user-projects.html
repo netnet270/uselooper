@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="overlay-mobile"></div>
     <div class="main-wapper">
-      <header class="header fixed-top">
+      <header class="fixed-top">
         <div class="main-header">
           <div class="main-header__brand"><a href="ue-01-home.html"><img src="images/brand-inverse.png" /></a></div>
           <div class="main-header__list">
-            <div class="main-header__btn-toggle main-header-item d-md-none">
-              <button class="btn button navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
-              </button>
+            <div class="main-header__btn-toggle">
+              <button class="js-btn-collaspe navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             </div>
-            <div class="main-header__form-search main-header-item">
+            <div class="main-header__form-search">
               <form action="#">
                 <div class="form-group form-customize">
                   <div class="input-field input-field--icon-before">
@@ -28,11 +28,11 @@
                 </div>
               </form>
             </div>
-            <nav class="main-header__right main-header-item px-0 d-none d-sm-flex">
+            <nav class="main-header__right">
               <ul class="nav navbar nav-icons">
                 <li class="nav-item dropdown nav-icons__activities"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-pulse"></span><span class="indicator"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-activities">
+                  <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header"><span>Activities <span class="badge">(2)</span></span></div>
                     <div class="dropdown-scroll js-scrollbar-1"><a class="dropdown-item dropdown-item--unread" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/uifaces15.jpg" alt="user-avatar" /></div>
@@ -83,7 +83,7 @@
                 </li>
                 <li class="nav-item dropdown nav-icons__messages"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-envelope-open"></span><span class="indicator"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-messages">
+                  <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header"><span>Messages</span><a href="#">Mark all as read</a></div>
                     <div class="dropdown-scroll js-scrollbar-2"><a class="dropdown-item dropdown-item--unread" href="#">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/team1.jpg" alt="user-avatar" /></div>
@@ -155,16 +155,16 @@
           </div>
         </div>
       </header>
-      <aside class="aside-sidebar aside-sidebar-expand-md aside-sidebar-light">
-        <div class="aside-content">
-          <div class="aside-header d-block d-md-none">
-            <div class="user-profile dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="user-profile__avatar"><img src="../images/profile.jpg" alt="user-avatar" /></span><span class="user-profile__info"><span class="user-profile__name">Beni Arisandi</span><span class="user-profile__position">Marketing Manager</span></span></a>
-              <div class="user-profile__setting dropdown-menu"><a class="dropdown-item" href="user-profile.html"><span class="dropdown-item__icon oi oi-person"></span>Help Center</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon oi oi-account-logout"></span>Logout</a>
-                <div class="dropdown-divider"></div><a class="dropdown-item" href="#!"><span class="dropdown-item__icon"></span>Help Center</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon"></span>Ask Forum</a><a class="dropdown-item" href="#!"><span class="dropdown-item__icon"></span>Keyboard Shortcuts</a>
+      <aside class="aside-sidebar js-sidebar-collapse">
+        <div class="aside-sidebar__inner">
+          <div class="aside-sidebar__header">
+            <div class="user-profile"><a class="user-profile__btn" data-toggle="collapse" role="button" href="#dropdown-aside" aria-controls="dropdown-aside" aria-expanded="false"><span class="user-avatar user-avatar--lg"><img src="images/profile.jpg" alt="user-avatar" /></span><span class="user-profile__icon"><i class="fa fa-caret-down fa-lg"></i></span><span class="user-profile__summary"><span class="user-profile__name">Beni Arisandi</span><span class="user-profile__position">Marketing Manager</span></span></a>
+              <div class="user-profile__setting collapse" id="dropdown-aside"><a class="setting-item" href="ue-02-user-profile.html"><span class="setting-item__icon oi oi-person"></span>Profile</a><a class="setting-item" href="#!"><span class="setting-item__icon oi oi-account-logout"></span>Logout</a>
+                <div class="setting-divider"></div><a class="setting-item" href="#!">Help Center</a><a class="setting-item" href="#!">Ask Forum</a><a class="setting-item" href="#!">Keyboard Shortcuts</a>
               </div>
             </div>
           </div>
-          <div class="aside-menu js-scrollbar-menu" id="menu-sidebar">
+          <div class="aside-sidebar__menu js-scrollbar-menu" id="menu-sidebar">
             <ul class="navbar-nav js-navbar-nav">
               <li class="nav-item level1"><a class="nav-link" href="ue-01-home.html" aria-expanded="false" role="button"><i class="nav-icon fas fa-home"></i><span class="nav-text">Dashboard</span></a>
               </li>
@@ -350,7 +350,7 @@
               </li>
             </ul>
           </div>
-          <div class="aside-footer">
+          <div class="aside-sidebar__footer">
             <button class="btn button button--infor button--full" type="button">Night mode<i class="fas fa-moon"></i>
             </button>
           </div>
@@ -359,7 +359,7 @@
       <main class="site-content">
         <header class="site-header-cover">
           <div class="site-header-cover__inner">
-            <div class="site-profile"><a class="user-avatar user-avatar--xl" href="user-profile.html"><img src="images/profile.jpg" alt="user-avatar" /></a>
+            <div class="site-profile"><a class="user-avatar user-avatar--xl" href="ue-02-user-profile.html"><img src="images/profile.jpg" alt="user-avatar" /></a>
               <div class="site-profile__name"> Beni Arisandi </div>
               <div class="site-profile__rank"><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow fa fa-star"></i><i class="color--yellow far fa-star"></i></div>
               <p class="site-profile__position"> Project Manager @CreativeDivision</p>
@@ -1032,7 +1032,7 @@
                         <form action="#">
                           <div class="form-group form-customize">
                             <div class="input-field input-field--icon-before">
-                              <input class="form-control" type="text" placeholder="Search" /><span class="input-field__icon input-field__icon--before"><i class="oi oi-magnifying-glass"></i></span>
+                              <input class="form-control" type="text" placeholder="Search Members" /><span class="input-field__icon input-field__icon--before"><i class="oi oi-magnifying-glass"></i></span>
                             </div>
                           </div>
                         </form>

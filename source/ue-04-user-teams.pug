@@ -20,73 +20,220 @@ block content
       
     section.page-teams
       .page-teams__inner
-        .row
+      -
+        var teams = [
+          {
+            title: 'Creative Division',
+            subTitle: 'Event Planner',
+            intro: 'We make stunning and cool responsive web and app design which suitable for any project purpose for your business.',
+            avatar: 'images/team4.jpg',
+            star: '4',
+            location: 'London',
+            since: 'Since Oct 10, 2013',
+            avatarGroup: [
+              {
+                img: 'images/uifaces6.jpg',
+                name: 'Andrew Kim'
+              },
+              {
+                img: 'images/uifaces8.jpg',
+                name: 'Bryan Morgan'
+              },
+              {
+                img: 'images/uifaces7.jpg',
+                name: 'Larry Robinson'
+              },
+              {
+                img: 'images/uifaces9.jpg',
+                name: 'Beverly Simpson'
+              },
+              {
+                img: 'images/uifaces10.jpg',
+                name: 'Robinson'
+              },
+              {
+                imgOther: '+23'
+              }
+            ],
+            footer: {
+              project: '135',
+              onGoing: '6',
+              tasks: '35'
+            }
+          },
+          {
+            title: 'Bootstrap',
+            subTitle: 'Design Team',
+            intro: 'We make stunning and cool responsive web and app design which suitable for any project purpose for your business.',
+            avatar: 'images/bootstrap.svg',
+            star: '4',
+            location: 'London',
+            since: 'Since Oct 10, 2013',
+            avatarGroup: [
+              {
+                img: 'images/uifaces6.jpg',
+                name: 'Andrew Kim'
+              },
+              {
+                img: 'images/uifaces8.jpg',
+                name: 'Bryan Morgan'
+              },
+              {
+                img: 'images/uifaces7.jpg',
+                name: 'Larry Robinson'
+              },
+              {
+                img: 'images/uifaces9.jpg',
+                name: 'Beverly Simpson'
+              },
+              {
+                img: 'images/uifaces10.jpg',
+                name: 'Robinson'
+              },
+              {
+                imgOther: '+23'
+              }
+            ],
+            footer: {
+              project: '135',
+              onGoing: '6',
+              tasks: '35'
+            }
+          },
+          {
+            title: 'Sketch',
+            subTitle: 'Creative Agency',
+            intro: 'We make stunning and cool responsive web and app design which suitable for any project purpose for your business.',
+            avatar: 'images/sketch.svg',
+            star: '4',
+            location: 'London',
+            since: 'Since Oct 10, 2013',
+            avatarGroup: [
+              {
+                img: 'images/uifaces6.jpg',
+                name: 'Andrew Kim'
+              },
+              {
+                img: 'images/uifaces8.jpg',
+                name: 'Bryan Morgan'
+              },
+              {
+                img: 'images/uifaces7.jpg',
+                name: 'Larry Robinson'
+              },
+              {
+                img: 'images/uifaces9.jpg',
+                name: 'Beverly Simpson'
+              },
+              {
+                img: 'images/uifaces10.jpg',
+                name: 'Robinson'
+              },
+              {
+                imgOther: '+23'
+              }
+            ],
+            footer: {
+              project: '135',
+              onGoing: '6',
+              tasks: '35'
+            }
+          },
+          {
+            title: 'Good Deck',
+            subTitle: 'Software Developer',
+            intro: 'We make stunning and cool responsive web and app design which suitable for any project purpose for your business.',
+            avatarText: {
+              text: 'LD',
+              bg: 'light-green'
+            },
+            star: '5',
+            location: 'Jakarta',
+            since: 'Since May 21, 2016',
+            avatarGroup: [
+              {
+                img: 'images/uifaces16.jpg',
+                name: 'Andrew Kim'
+              },
+              {
+                img: 'images/uifaces17.jpg',
+                name: 'Bryan Morgan'
+              },
+              {
+                img: 'images/uifaces18.jpg',
+                name: 'Larry Robinson'
+              },
+              {
+                img: 'images/uifaces19.jpg',
+                name: 'Beverly Simpson'
+              },
+              {
+                img: 'images/uifaces20.jpg',
+                name: 'Robinson'
+              },
+              {
+                imgOther: '+16'
+              }
+            ],
+            footer: {
+              project: '63',
+              onGoing: '11',
+              tasks: '65'
+            }
+          }
+        ]
+      .row
+        each val in teams
           .col-lg-6.col-12
-            .masonry-item
+            .masonry-item.bg--white
               .masonry-item__header
-                a.user-avatar.user-avatar--lg(href="#!")
-                  img(src="images/team4.jpg", alt="user avatar")
+                if val.avatar
+                  a.user-avatar.user-avatar--lg(href="#!")
+                    img(src= val.avatar, alt="user avatar")
+                else
+                  a.avatar.avatar--lg.avatar--circle(href='#!', class=`bg--${val.avatarText.bg}`)= val.avatarText.text
                 .summary
-                  h4.title Creative Division
-                  p.subtitle Event Planner
+                  h3.title
+                    a(href='#!', class='color--light-black')= val.title
+                  h6.subtitle(class='color--dark-gray')= val.subTitle
                 +buttons({
                   type: 'light',
                   iconAfter: 'oi oi-chat'
                 })(class= 'button--circle' data-toggle="tooltip" title="Chat with teams")
               .masonry-item__body
-                p.masonry-item__intro 
-                | We make stunning and cool responsive web and app design which suitable for any project purpose for your business.
-                hr.masonry-item__divider
+                p.masonry-item__intro= val.intro
+                hr
                 .masonry-item__rating
-                  i.color--yellow(class="fa fa-star")
-                  i.color--yellow(class="fa fa-star")
-                  i.color--yellow(class="fa fa-star")
-                  i.color--yellow(class="fa fa-star")
-                  i.color--yellow(class="far fa-star")
-                ul.masonry-item__position
+                  each _, index in Array(5)
+                    i.color--yellow(class= (val.star > index) ? "fa fa-star" : "far fa-star")
+                ul.masonry-item__location
                   li
                     span.masonry-item__icon
-                      i(class= "fa fa-map-marker")
-                      |  London
+                      i(class= "fa fa-map-marker color--dark-gray") 
+                    | #{val.location}
                   li
                     span.masonry-item__icon
-                      i(class= "fa fa-flag")
-                      |  Since Oct 10, 2013
+                      i(class= "fa fa-flag color--dark-gray")
+                    | #{val.since}
                 .masonry-item__avatar-group
-                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Andrew Kim")
-                    img(src="images/uifaces6.jpg" alt="user-avatar")
-                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Bryan Morgan")
-                    img(src="images/uifaces7.jpg" alt="user-avatar")
-                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Larry Robinson")
-                    img(src="images/uifaces8.jpg" alt="user-avatar")
-                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Beverly Simpson")
-                    img(src="images/uifaces9.jpg" alt="user-avatar")
-                  a(href="#" class="user-avatar" data-toggle="tooltip" title="Robinson")
-                    img(src="images/uifaces10.jpg" alt="user-avatar")
-                  a(href="#!" class= "avatar avatar--circle" data-toggle="modal" data-target= "#membersModal") +23
+                  each item in val.avatarGroup
+                    if item.imgOther
+                      a(href="#!" class= "avatar avatar--circle member color--dark-gray bg" data-toggle="modal" data-target= "#membersModal")= item.imgOther
+                    else
+                      a(href="#" class="user-avatar" data-toggle="tooltip" title= item.name)
+                        img(src= item.img alt="user-avatar")
 
               .masonry-item__footer
-                .footer-item
-                  a(href="#!")
-                    .footer-item__count 135
-                    .footer-item__text Projects
-                .footer-item
-                  a(href="#!")
-                    .footer-item__count 6
-                    .footer-item__text On Going
-                .footer-item
-                  a(href="#!")
-                    .footer-item__count 35
-                    .footer-item__text Tasks
-                  
-
-
-
-
-                
-                
-                  
-
-              
-                
-            
+                a.footer-item(href="#!")
+                  strong.footer-item__count #{val.footer.project}
+                  .footer-item__text Projects
+                a.footer-item(href="#!")
+                  strong.footer-item__count #{val.footer.onGoing}
+                  .footer-item__text On Going
+                a.footer-item(href="#!")
+                  strong.footer-item__count #{val.footer.tasks}
+                  .footer-item__text Tasks
+      +modalMember()
+      .page-teams__loading
+        .spinner-border.color--indigo(role='status')
+          span.sr-only Loading...

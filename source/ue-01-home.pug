@@ -1,21 +1,22 @@
 extends modules/layout/_core 
-         
+           
 block head
   +head(head.home.title)
       
 block body
+  .overlay-mobile
   .main-wapper
     +header()
     +sidebar('Dashboard','ue-01-home.html')
 
     main.site-content
       .site-content__inner
-        header.header
-          .header__inner
-            .header__lead
-              p.header__pretitle Hi, Beni.
-              p.header__text Here’s what’s happening with your business today.
-            .header__dropdown
+        header.dashboard-header
+          .dashboard-header__inner
+            .dashboard-header__lead
+              p.dashboard-header__pretitle Hi, Beni.
+              p.dashboard-header__text Here’s what’s happening with your business today.
+            .dashboard-header__dropdown
               .dropdown
                 +buttons({
                   text: 'This Week',
@@ -68,11 +69,11 @@ block body
                     flatpickr: true
                   })
 
-        section.section-metric
+        section.dashboard-metric
           .row
             .col-lg-9
               .row.m-0.metric-flush
-                .col.card-metric
+                .col-md-4.col-12.card-metric
                   a(href="user-teams.html")
                     .card-metric__title Teams
                     p.card-metric__value
@@ -80,7 +81,7 @@ block body
                         i(class= 'oi oi-people')
                       span.card-metric__count 8
 
-                .col.card-metric
+                .col-md-4.col-12.card-metric
                   a(href="user-projects.html")
                     .card-metric__title Projects 
                     p.card-metric__value
@@ -88,7 +89,7 @@ block body
                         i(class= 'oi oi-fork')
                       span.card-metric__count 12
 
-                .col.card-metric
+                .col-md-4.col-12.card-metric
                   a(href="user-tasks.html")
                     .card-metric__title Active Tasks
                     p.card-metric__value
@@ -237,7 +238,7 @@ block body
                           each item in val.progress
                             .progress-bar(class= `bg--${item.bg}` role="progressbar" style=`width: ${item.width}` aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
 
-        section.section-deck
+        section.dashboard-deck
           .row
             .col-xl-6.col-lg-12.col-12
               .card.active-projects

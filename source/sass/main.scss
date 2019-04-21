@@ -8,6 +8,7 @@
 @import 'vendor/perfect-scrollbar';
 @import 'vendor/bootstrap-override';
 @import 'vendor/flatpickr';
+@import 'vendor/pace';
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
@@ -37,5 +38,6 @@
 @import 'pages/ue-01-home';
 @import 'pages/ue-02-user-profile';
 @import 'pages/ue-03-user-activities';
+@import 'pages/ue-04-user-teams';
 @import 'pages/ue-05-user-projects';
 @import 'pages/page-list';
