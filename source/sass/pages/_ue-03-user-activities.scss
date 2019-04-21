@@ -3,6 +3,12 @@
 // ======================================================
 .site-header-bar {
   margin-bottom: 24px;
+  padding: 0;
+
+  @include breakpoint-down(phone) {
+    padding: 0 16px;
+  }
+
   .breadcrumb {
     margin-bottom: 8px;
     padding: 0;
@@ -20,6 +26,7 @@
         outline: 0;
       }
     }
+
     &.active {
       color: #888c9b;
     }
@@ -28,12 +35,27 @@
   &__title {
     font-size: 28px;
     font-weight: 600;
+
+    .text-small {
+      font-size: 14px;
+      color: #888c9b;
+      padding: 4px 6px;
+
+      @include breakpoint-down(phone) {
+        font-size: 16px;
+      }
+    }
   }
 }
 
 .page-timeline {
   &__inner {
     margin: 16px 0;
+
+    @include breakpoint-down(phone) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
   }
   &__title {
     margin-top: 0;
@@ -46,6 +68,10 @@
   .timeline {
     padding-right: 16px;
     padding-left: 16px;
+
+    @include breakpoint-down(phone) {
+      padding: 0;
+    }
 
     &__item {
       position: relative;

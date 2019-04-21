@@ -11,11 +11,9 @@ mixin header()
 
       .main-header__list
         .main-header__btn-toggle
-          //- +buttons({
-          //-   iconAfter: 'fas fa-bars'
-          //- })(class="navbar-toggler js-btn-collaspe" type='button' data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
-          button.js-btn-collaspe.navbar-toggler(type='button' data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
-            span.navbar-toggler-icon
+          +buttons({
+            iconAfter: 'fas fa-bars'
+          })(class="navbar-toggler js-btn-collaspe" type='button' data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
         .main-header__form-search
           form(action="#")
             +input-field-icon({
@@ -220,7 +218,7 @@ mixin header()
                         span.title-peek= item.text
 
           .user-profile.dropdown.nav-user
-            a.d-none.d-md-flex(data-toggle="dropdown" role="button" aria-expanded="false")
+            a.user-profile__btn(data-toggle="dropdown" role="button" aria-expanded="false")
               span.user-profile__avatar
                 img(src='images/profile.jpg' alt='user-avatar')
               span.user-profile__info.pr-lg-4.d-none.d-lg-block

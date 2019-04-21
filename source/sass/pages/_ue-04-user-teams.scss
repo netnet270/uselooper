@@ -22,9 +22,8 @@
         margin-bottom: 16px;
       }
 
-      a:hover,
-      a:active {
-        color: #363642;
+      .title a {
+        color: inherit;
       }
 
       .subtitle {
@@ -148,6 +147,7 @@
 
 .page-teams__loading {
   text-align: center;
+  padding: 16px;
 }
 
 @media (min-width: 768px) {

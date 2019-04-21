@@ -40,9 +40,9 @@
     display: flex;
     align-items: center;
     padding-left: 32px;
+    padding-right: 16px;
 
     @include breakpoint-down(tablet) {
-      padding-right: 16px;
       padding-left: 16px;
     }
 
@@ -58,7 +58,6 @@
       display: block;
       padding-left: 8px;
       padding-right: 8px;
-
       .navbar-toggler {
         padding: 8px;
       }
@@ -142,7 +141,7 @@
         width: 6px;
         position: absolute;
         top: 7px;
-        right: 8px;
+        right: 7px;
         border-radius: 3px;
         background-color: $bg-yellow ;
       }
@@ -353,6 +352,14 @@
   display: flex;
   @extend %dropdown;
 
+  &__btn {
+    align-items: center;
+    display: flex;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
   &__avatar {
     @extend %user-avatar;
     width: 36px;

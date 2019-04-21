@@ -22732,12 +22732,12 @@ span.flatpickr-weekday {
     object-fit: cover;
     object-position: top; }
 
-.main-header .nav-icons > .show .dropdown-arrow, .user-profile > .show .dropdown-arrow, .modal .list-group .dropdown > .show .dropdown-arrow, .site-content .dashboard-header__dropdown .dropdown > .show .dropdown-arrow, .achievement__dropdown > .show .dropdown-arrow, .card-time-projects .card-header__dropdown > .show .dropdown-arrow, .card-time-tasks .card-header__dropdown > .show .dropdown-arrow, .card-project .card-header__dropdown > .show .dropdown-arrow {
+.main-header .nav-icons > .show .dropdown-arrow, .user-profile > .show .dropdown-arrow, .modal .list-group .dropdown > .show .dropdown-arrow, .dashboard-header__dropdown .dropdown > .show .dropdown-arrow, .achievement__dropdown > .show .dropdown-arrow, .card-time-projects .card-header__dropdown > .show .dropdown-arrow, .card-time-tasks .card-header__dropdown > .show .dropdown-arrow, .card-project .card-header__dropdown > .show .dropdown-arrow {
   display: block;
   transform-origin: bottom;
   animation: showArrow .3s ease-in-out; }
 
-.main-header .nav-icons .dropdown-arrow, .user-profile .dropdown-arrow, .modal .list-group .dropdown .dropdown-arrow, .site-content .dashboard-header__dropdown .dropdown .dropdown-arrow, .achievement__dropdown .dropdown-arrow, .card-time-projects .card-header__dropdown .dropdown-arrow, .card-time-tasks .card-header__dropdown .dropdown-arrow, .card-project .card-header__dropdown .dropdown-arrow {
+.main-header .nav-icons .dropdown-arrow, .user-profile .dropdown-arrow, .modal .list-group .dropdown .dropdown-arrow, .dashboard-header__dropdown .dropdown .dropdown-arrow, .achievement__dropdown .dropdown-arrow, .card-time-projects .card-header__dropdown .dropdown-arrow, .card-time-tasks .card-header__dropdown .dropdown-arrow, .card-project .card-header__dropdown .dropdown-arrow {
   display: none;
   position: absolute;
   top: 100%;
@@ -22749,7 +22749,7 @@ span.flatpickr-weekday {
   margin-left: -10px;
   pointer-events: none;
   z-index: 1001; }
-  .main-header .nav-icons .dropdown-arrow:before, .user-profile .dropdown-arrow:before, .modal .list-group .dropdown .dropdown-arrow:before, .site-content .dashboard-header__dropdown .dropdown .dropdown-arrow:before, .achievement__dropdown .dropdown-arrow:before, .card-time-projects .card-header__dropdown .dropdown-arrow:before, .card-time-tasks .card-header__dropdown .dropdown-arrow:before, .card-project .card-header__dropdown .dropdown-arrow:before {
+  .main-header .nav-icons .dropdown-arrow:before, .user-profile .dropdown-arrow:before, .modal .list-group .dropdown .dropdown-arrow:before, .dashboard-header__dropdown .dropdown .dropdown-arrow:before, .achievement__dropdown .dropdown-arrow:before, .card-time-projects .card-header__dropdown .dropdown-arrow:before, .card-time-tasks .card-header__dropdown .dropdown-arrow:before, .card-project .card-header__dropdown .dropdown-arrow:before {
     content: '';
     position: absolute;
     bottom: -.375rem;
@@ -22762,13 +22762,13 @@ span.flatpickr-weekday {
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 0 0 1px rgba(20, 20, 31, 0.05), 0 2px 7px 1px rgba(20, 20, 31, 0.16);
     pointer-events: none; }
-  .main-header .nav-icons .dropdown-arrow--right, .user-profile .dropdown-arrow--right, .modal .list-group .dropdown .dropdown-arrow--right, .site-content .dashboard-header__dropdown .dropdown .dropdown-arrow--right, .achievement__dropdown .dropdown-arrow--right, .card-time-projects .card-header__dropdown .dropdown-arrow--right, .card-time-tasks .card-header__dropdown .dropdown-arrow--right, .card-project .card-header__dropdown .dropdown-arrow--right {
+  .main-header .nav-icons .dropdown-arrow--right, .user-profile .dropdown-arrow--right, .modal .list-group .dropdown .dropdown-arrow--right, .dashboard-header__dropdown .dropdown .dropdown-arrow--right, .achievement__dropdown .dropdown-arrow--right, .card-time-projects .card-header__dropdown .dropdown-arrow--right, .card-time-tasks .card-header__dropdown .dropdown-arrow--right, .card-project .card-header__dropdown .dropdown-arrow--right {
     left: auto;
     right: 16px; }
-  .main-header .nav-icons .dropdown-arrow--left, .user-profile .dropdown-arrow--left, .modal .list-group .dropdown .dropdown-arrow--left, .site-content .dashboard-header__dropdown .dropdown .dropdown-arrow--left, .achievement__dropdown .dropdown-arrow--left, .card-time-projects .card-header__dropdown .dropdown-arrow--left, .card-time-tasks .card-header__dropdown .dropdown-arrow--left, .card-project .card-header__dropdown .dropdown-arrow--left {
+  .main-header .nav-icons .dropdown-arrow--left, .user-profile .dropdown-arrow--left, .modal .list-group .dropdown .dropdown-arrow--left, .dashboard-header__dropdown .dropdown .dropdown-arrow--left, .achievement__dropdown .dropdown-arrow--left, .card-time-projects .card-header__dropdown .dropdown-arrow--left, .card-time-tasks .card-header__dropdown .dropdown-arrow--left, .card-project .card-header__dropdown .dropdown-arrow--left {
     left: 32px; }
 
-.main-header .nav-icons .dropdown-menu, .user-profile .dropdown-menu, .modal .list-group .dropdown .dropdown-menu, .site-content .dashboard-header__dropdown .dropdown .dropdown-menu, .achievement__dropdown .dropdown-menu, .card-time-projects .card-header__dropdown .dropdown-menu, .card-time-tasks .card-header__dropdown .dropdown-menu, .card-project .card-header__dropdown .dropdown-menu {
+.main-header .nav-icons .dropdown-menu, .user-profile .dropdown-menu, .modal .list-group .dropdown .dropdown-menu, .dashboard-header__dropdown .dropdown .dropdown-menu, .achievement__dropdown .dropdown-menu, .card-time-projects .card-header__dropdown .dropdown-menu, .card-time-tasks .card-header__dropdown .dropdown-menu, .card-project .card-header__dropdown .dropdown-menu {
   animation-duration: .2s;
   margin-top: 10px;
   border: 0;
@@ -22776,18 +22776,18 @@ span.flatpickr-weekday {
   font-size: 14px;
   animation-fill-mode: both;
   box-shadow: 0 0 0 1px rgba(20, 20, 31, 0.05), 0 2px 7px 1px rgba(20, 20, 31, 0.16); }
-  .main-header .nav-icons .dropdown-menu.show, .user-profile .dropdown-menu.show, .modal .list-group .dropdown .dropdown-menu.show, .site-content .dashboard-header__dropdown .dropdown .dropdown-menu.show, .achievement__dropdown .dropdown-menu.show, .card-time-projects .card-header__dropdown .dropdown-menu.show, .card-time-tasks .card-header__dropdown .dropdown-menu.show, .card-project .card-header__dropdown .dropdown-menu.show {
+  .main-header .nav-icons .dropdown-menu.show, .user-profile .dropdown-menu.show, .modal .list-group .dropdown .dropdown-menu.show, .dashboard-header__dropdown .dropdown .dropdown-menu.show, .achievement__dropdown .dropdown-menu.show, .card-time-projects .card-header__dropdown .dropdown-menu.show, .card-time-tasks .card-header__dropdown .dropdown-menu.show, .card-project .card-header__dropdown .dropdown-menu.show {
     animation-name: showDropdown; }
-  .main-header .nav-icons .dropdown-menu .dropdown-item, .user-profile .dropdown-menu .dropdown-item, .modal .list-group .dropdown .dropdown-menu .dropdown-item, .site-content .dashboard-header__dropdown .dropdown .dropdown-menu .dropdown-item, .achievement__dropdown .dropdown-menu .dropdown-item, .card-time-projects .card-header__dropdown .dropdown-menu .dropdown-item, .card-time-tasks .card-header__dropdown .dropdown-menu .dropdown-item, .card-project .card-header__dropdown .dropdown-menu .dropdown-item {
+  .main-header .nav-icons .dropdown-menu .dropdown-item, .user-profile .dropdown-menu .dropdown-item, .modal .list-group .dropdown .dropdown-menu .dropdown-item, .dashboard-header__dropdown .dropdown .dropdown-menu .dropdown-item, .achievement__dropdown .dropdown-menu .dropdown-item, .card-time-projects .card-header__dropdown .dropdown-menu .dropdown-item, .card-time-tasks .card-header__dropdown .dropdown-menu .dropdown-item, .card-project .card-header__dropdown .dropdown-menu .dropdown-item {
     padding: 8px 16px;
     font-weight: 400;
     color: #191927;
     font-size: 14px; }
-    .main-header .nav-icons .dropdown-menu .dropdown-item:hover, .user-profile .dropdown-menu .dropdown-item:hover, .modal .list-group .dropdown .dropdown-menu .dropdown-item:hover, .site-content .dashboard-header__dropdown .dropdown .dropdown-menu .dropdown-item:hover, .achievement__dropdown .dropdown-menu .dropdown-item:hover, .card-time-projects .card-header__dropdown .dropdown-menu .dropdown-item:hover, .card-time-tasks .card-header__dropdown .dropdown-menu .dropdown-item:hover, .card-project .card-header__dropdown .dropdown-menu .dropdown-item:hover {
+    .main-header .nav-icons .dropdown-menu .dropdown-item:hover, .user-profile .dropdown-menu .dropdown-item:hover, .modal .list-group .dropdown .dropdown-menu .dropdown-item:hover, .dashboard-header__dropdown .dropdown .dropdown-menu .dropdown-item:hover, .achievement__dropdown .dropdown-menu .dropdown-item:hover, .card-time-projects .card-header__dropdown .dropdown-menu .dropdown-item:hover, .card-time-tasks .card-header__dropdown .dropdown-menu .dropdown-item:hover, .card-project .card-header__dropdown .dropdown-menu .dropdown-item:hover {
       color: #fff;
       background-color: #346cb0; }
   @media (min-width: 768px) {
-    .main-header .nav-icons .dropdown-menu .dropdown-menu, .user-profile .dropdown-menu .dropdown-menu, .modal .list-group .dropdown .dropdown-menu .dropdown-menu, .site-content .dashboard-header__dropdown .dropdown .dropdown-menu .dropdown-menu, .achievement__dropdown .dropdown-menu .dropdown-menu, .card-time-projects .card-header__dropdown .dropdown-menu .dropdown-menu, .card-time-tasks .card-header__dropdown .dropdown-menu .dropdown-menu, .card-project .card-header__dropdown .dropdown-menu .dropdown-menu {
+    .main-header .nav-icons .dropdown-menu .dropdown-menu, .user-profile .dropdown-menu .dropdown-menu, .modal .list-group .dropdown .dropdown-menu .dropdown-menu, .dashboard-header__dropdown .dropdown .dropdown-menu .dropdown-menu, .achievement__dropdown .dropdown-menu .dropdown-menu, .card-time-projects .card-header__dropdown .dropdown-menu .dropdown-menu, .card-time-tasks .card-header__dropdown .dropdown-menu .dropdown-menu, .card-project .card-header__dropdown .dropdown-menu .dropdown-menu {
       font-size: 14px; } }
 
 @keyframes showDropdown {
@@ -22834,6 +22834,11 @@ ol {
 .text-small {
   font-size: 11.2px;
   line-height: 1.5; }
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 1px rgba(20, 20, 31, 0.05), 0 1px 3px 0 rgba(20, 20, 31, 0.15);
+  border: 0; }
 
 .avatar {
   display: inline-block;
@@ -23130,10 +23135,10 @@ button.bg--orange-3:hover {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    padding-left: 32px; }
+    padding-left: 32px;
+    padding-right: 16px; }
     @media (max-width: 991.98px) {
       .main-header__btn-toggle, .main-header__form-search, .main-header__right {
-        padding-right: 16px;
         padding-left: 16px; } }
     @media (max-width: 767.98px) {
       .main-header__btn-toggle, .main-header__form-search, .main-header__right {
@@ -23204,7 +23209,7 @@ button.bg--orange-3:hover {
         width: 6px;
         position: absolute;
         top: 7px;
-        right: 8px;
+        right: 7px;
         border-radius: 3px;
         background-color: #f7c46c; }
     .main-header .nav-icons > .show > .nav-link {
@@ -23359,6 +23364,14 @@ button.bg--orange-3:hover {
       align-items: center;
   display: -ms-flexbox;
   display: flex; }
+  .user-profile__btn {
+    -ms-flex-align: center;
+        align-items: center;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 767.98px) {
+      .user-profile__btn {
+        display: none; } }
   .user-profile__avatar {
     width: 36px;
     height: 36px;
@@ -23428,7 +23441,6 @@ button.bg--orange-3:hover {
   position: fixed;
   width: 240px;
   max-width: 264px;
-  height: 100%;
   color: inherit;
   overflow-x: hidden;
   background-color: #f6f7f9;
@@ -24651,164 +24663,180 @@ button.bg--orange-3:hover {
     @media (max-width: 767.98px) {
       .site-content__inner {
         padding: 24px 0; } }
-  .site-content .dashboard-header {
-    margin-bottom: 24px; }
-    .site-content .dashboard-header__inner {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-      -ms-flex-align: center;
-          align-items: center; }
-      @media (max-width: 767.98px) {
-        .site-content .dashboard-header__inner {
-          padding-left: 16px;
-          padding-right: 16px; } }
-    .site-content .dashboard-header__lead {
-      margin-bottom: 16px;
-      font-size: 20px;
-      line-height: 30px; }
-    .site-content .dashboard-header__pretitle {
-      margin-bottom: 0;
-      font-weight: 700; }
-    .site-content .dashboard-header__text {
-      margin-bottom: 0;
-      color: #888c9b; }
-    .site-content .dashboard-header__dropdown .dropdown.show .dropdown-arrow {
-      display: block; }
-    .site-content .dashboard-header__dropdown .dropdown .dropdown-menu {
-      min-width: 288px; }
-    .site-content .dashboard-header__dropdown .dropdown .dropdown-menu .input-radio-dropdown {
-      margin-bottom: 0;
-      padding: 8px 16px 8px 24px; }
-  .site-content .completion-tasks .card-title,
-  .site-content .tasks-performance .card-title,
-  .site-content .leaderboard .card-title {
-    margin-bottom: 16px;
-    color: #363642;
-    font-size: 16px;
-    font-weight: 600; }
-  .site-content .card {
-    margin-bottom: 20px;
-    box-shadow: 0 0 0 1px rgba(20, 20, 31, 0.05), 0 1px 3px 0 rgba(20, 20, 31, 0.15);
-    border: 0; }
-  .site-content .completion-tasks .card-chart {
-    padding-top: 11px; }
-  .site-content .dashboard-metric {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    padding-top: 9px; }
+
+.dashboard-header {
+  margin-bottom: 24px; }
+  .dashboard-header__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
     @media (max-width: 767.98px) {
-      .site-content .dashboard-metric {
+      .dashboard-header__inner {
         padding-left: 16px;
         padding-right: 16px; } }
-    .site-content .dashboard-metric .card-metric {
-      padding: 16px;
-      border: 1px solid #d6d8e1;
-      border-radius: 4px;
-      min-height: 8.5rem;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: center;
-          justify-content: center;
-      -ms-flex-align: center;
-          align-items: center; }
-      .site-content .dashboard-metric .card-metric__title {
-        font-size: 14px;
-        font-weight: 500;
-        color: #888c9b;
-        white-space: nowrap;
-        margin-bottom: 10px; }
-      .site-content .dashboard-metric .card-metric__value {
-        margin-bottom: 0;
-        white-space: nowrap; }
-      .site-content .dashboard-metric .card-metric__icon {
-        color: #a6abbd;
-        font-size: 14px;
-        margin-right: 5px;
-        vertical-align: text-bottom; }
-      .site-content .dashboard-metric .card-metric__count {
-        font-size: 28px;
-        font-weight: 600;
-        color: #363642; }
-      .site-content .dashboard-metric .card-metric__badge {
-        margin-bottom: 8px;
-        font-size: 14px; }
-      .site-content .dashboard-metric .card-metric:nth-child(2) {
-        border-radius: 0; }
-      .site-content .dashboard-metric .card-metric .pulse {
-        animation: pulse 2.5s ease infinite; }
-    .site-content .dashboard-metric .metric-flush > .col:first-child,
-    .site-content .dashboard-metric .metric-flush > [class='col-*']:first-child {
-      border-top-right-radius: 0;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      border-right: 0; }
-    .site-content .dashboard-metric .metric-flush > .col:last-child,
-    .site-content .dashboard-metric .metric-flush > [class='col-*']:last-child {
-      border-bottom-left-radius: 0;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border-left: 0; }
-  .site-content .tasks-performance .card-chart {
-    padding-top: 12px; }
-  .site-content .tasks-performance .chart-inline-group {
-    height: 214px;
-    position: relative;
-    min-height: 131px; }
-  .site-content .tasks-performance .easypiechart {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .site-content .tasks-performance .card-footer {
+  .dashboard-header__lead {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 30px; }
+  .dashboard-header__pretitle {
+    margin-bottom: 0;
+    font-weight: 700; }
+  .dashboard-header__text {
+    margin-bottom: 0;
+    color: #888c9b; }
+  .dashboard-header__dropdown .dropdown.show .dropdown-arrow {
+    display: block; }
+  .dashboard-header__dropdown .dropdown .dropdown-menu {
+    min-width: 288px; }
+  .dashboard-header__dropdown .dropdown .dropdown-menu .input-radio-dropdown {
+    margin-bottom: 0;
+    padding: 8px 16px 8px 24px; }
+
+.completion-tasks .card-title,
+.tasks-performance .card-title,
+.leaderboard .card-title {
+  margin-bottom: 16px;
+  color: #363642;
+  font-size: 16px;
+  font-weight: 600; }
+
+.completion-tasks .card-chart {
+  padding-top: 11px; }
+
+.dashboard-metric {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-top: 9px; }
+  @media (max-width: 767.98px) {
+    .dashboard-metric {
+      padding-left: 16px;
+      padding-right: 16px; } }
+  .dashboard-metric .card-metric {
+    padding: 16px;
+    border: 1px solid #d6d8e1;
+    border-radius: 4px;
+    min-height: 8.5rem;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: stretch;
-        align-items: stretch;
-    padding: 0;
-    background-color: transparent; }
-    .site-content .tasks-performance .card-footer__item {
-      padding: 16px;
-      -ms-flex: 1;
-          flex: 1;
-      text-align: center;
-      outline: 0; }
-    .site-content .tasks-performance .card-footer__icon i {
-      margin-right: 4px; }
-    .site-content .tasks-performance .card-footer__text {
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .dashboard-metric .card-metric__title {
+      font-size: 14px;
+      font-weight: 500;
       color: #888c9b;
-      font-size: 11.2px;
-      line-height: 16.8px; }
-  .site-content .leaderboard .card-legend {
-    display: -ms-flexbox;
-    display: flex; }
-    .site-content .leaderboard .card-legend__item {
-      color: #363642;
-      font-size: 11.2px;
-      line-height: 16.8px;
-      padding-right: 8px; }
-    .site-content .leaderboard .card-legend__item i {
-      margin-right: 4px; }
-  .site-content .leaderboard .card-body {
-    padding-bottom: 0; }
-  .site-content .leaderboard .card-list-group__item {
-    display: -ms-flexbox;
-    display: flex;
-    padding: 12px 0; }
-  .site-content .leaderboard .card-list-group__progress {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    font-size: 14px;
+      white-space: nowrap;
+      margin-bottom: 10px; }
+    .dashboard-metric .card-metric__value {
+      margin-bottom: 0;
+      white-space: nowrap;
+      text-align: center; }
+    .dashboard-metric .card-metric__icon {
+      color: #a6abbd;
+      font-size: 14px;
+      margin-right: 5px;
+      vertical-align: text-bottom; }
+    .dashboard-metric .card-metric__count {
+      font-size: 28px;
+      font-weight: 600;
+      color: #363642; }
+    .dashboard-metric .card-metric__badge {
+      margin-bottom: 8px;
+      font-size: 14px; }
+      .dashboard-metric .card-metric__badge + .card-metric__value {
+        text-align: left; }
+    .dashboard-metric .card-metric:nth-child(2) {
+      border-radius: 0; }
+    .dashboard-metric .card-metric .pulse {
+      animation: pulse 2.5s ease infinite; }
+  .dashboard-metric .metric-flush > .col:first-child,
+  .dashboard-metric .metric-flush > [class='col-*']:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0; }
+  .dashboard-metric .metric-flush > .col:last-child,
+  .dashboard-metric .metric-flush > [class='col-*']:last-child {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 0; }
+
+.tasks-performance .card-chart {
+  padding-top: 12px; }
+
+.tasks-performance .chart-inline-group {
+  height: 214px;
+  position: relative;
+  min-height: 131px; }
+
+.tasks-performance .easypiechart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.tasks-performance .card-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  padding: 0;
+  background-color: transparent; }
+  .tasks-performance .card-footer__item {
+    padding: 16px;
     -ms-flex: 1;
         flex: 1;
-    min-width: 0; }
-  .site-content .leaderboard .card-list-group .progress {
-    background: none;
-    border-radius: 0; }
-  .site-content .leaderboard .card-list-group .progress-animated {
-    animation: progressAnimated 1s; }
+    text-align: center;
+    outline: 0; }
+  .tasks-performance .card-footer__icon i {
+    margin-right: 4px; }
+  .tasks-performance .card-footer__text {
+    color: #888c9b;
+    font-size: 11.2px;
+    line-height: 16.8px; }
+
+.leaderboard .card-legend {
+  display: -ms-flexbox;
+  display: flex; }
+  .leaderboard .card-legend__item {
+    color: #363642;
+    font-size: 11.2px;
+    line-height: 16.8px;
+    padding-right: 8px; }
+  .leaderboard .card-legend__item i {
+    margin-right: 4px; }
+
+.leaderboard .card-body {
+  padding-bottom: 0; }
+
+.leaderboard .card-list-group__item {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 0; }
+
+.leaderboard .card-list-group__figure {
+  padding-right: 6px; }
+
+.leaderboard .card-list-group__progress {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 14px;
+  -ms-flex: 1;
+      flex: 1;
+  min-width: 0; }
+
+.leaderboard .card-list-group .progress {
+  background: none;
+  border-radius: 0; }
+
+.leaderboard .card-list-group .progress-animated {
+  animation: progressAnimated 1s; }
 
 .active-projects .card-header {
   padding: 16px;
@@ -25465,7 +25493,11 @@ span.flatpickr-weekday:last-child {
 
 /* stylelint-enable */
 .site-header-bar {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  padding: 0; }
+  @media (max-width: 767.98px) {
+    .site-header-bar {
+      padding: 0 16px; } }
   .site-header-bar .breadcrumb {
     margin-bottom: 8px;
     padding: 0;
@@ -25483,9 +25515,20 @@ span.flatpickr-weekday:last-child {
   .site-header-bar__title {
     font-size: 28px;
     font-weight: 600; }
+    .site-header-bar__title .text-small {
+      font-size: 14px;
+      color: #888c9b;
+      padding: 4px 6px; }
+      @media (max-width: 767.98px) {
+        .site-header-bar__title .text-small {
+          font-size: 16px; } }
 
 .page-timeline__inner {
   margin: 16px 0; }
+  @media (max-width: 767.98px) {
+    .page-timeline__inner {
+      padding-right: 16px;
+      padding-left: 16px; } }
 
 .page-timeline__title {
   margin-top: 0;
@@ -25498,6 +25541,9 @@ span.flatpickr-weekday:last-child {
 .page-timeline .timeline {
   padding-right: 16px;
   padding-left: 16px; }
+  @media (max-width: 767.98px) {
+    .page-timeline .timeline {
+      padding: 0; } }
   .page-timeline .timeline__item {
     position: relative;
     display: -ms-flexbox;
@@ -25585,9 +25631,8 @@ span.flatpickr-weekday:last-child {
       .masonry-item__header .summary .title {
         font-size: 16px;
         margin-bottom: 16px; }
-      .masonry-item__header .summary a:hover,
-      .masonry-item__header .summary a:active {
-        color: #363642; }
+      .masonry-item__header .summary .title a {
+        color: inherit; }
       .masonry-item__header .summary .subtitle {
         margin-top: -12px;
         font-size: 12px;
@@ -25670,7 +25715,8 @@ span.flatpickr-weekday:last-child {
       border-right: 1px solid rgba(20, 20, 31, 0.12); }
 
 .page-teams__loading {
-  text-align: center; }
+  text-align: center;
+  padding: 16px; }
 
 @media (min-width: 768px) {
   .subtitle {
