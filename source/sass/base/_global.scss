@@ -8,6 +8,10 @@ body {
   font-weight: $font-weight-base;
   line-height: 21px;
   color: $cl-light-black;
+
+  @include breakpoint-down(phone) {
+    font-size: $font-size-medium;
+  }
 }
 
 img {
@@ -46,7 +50,7 @@ ol {
 
 .avatar {
   display: inline-block;
-  color: #888c9b;
+  color: $cl-dark-gray;
   width: 32px;
   height: 32px;
   font-weight: 600;

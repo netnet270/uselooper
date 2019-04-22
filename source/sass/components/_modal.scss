@@ -15,7 +15,7 @@
 
       .modal-title {
         font-weight: 600;
-        font-size: 16px;
+        font-size: $font-size-medium;
       }
     }
 
@@ -70,7 +70,7 @@
       &__figure {
         display: flex;
         align-items: center;
-        color: #a6abbd;
+        color: $cl-gray-2;
       }
 
       &__figure:first-child {
@@ -78,10 +78,10 @@
       }
 
       &__title {
-        font-size: 16px;
+        font-size: $font-size-medium;
         margin: 0;
         line-height: 20px;
-        font-weight: 400;
+        font-weight: $font-weight-base;
       }
 
       &__title a {
@@ -91,7 +91,7 @@
       &__text {
         margin-bottom: 0;
         line-height: 20px;
-        color: #888c9b;
+        color: $cl-dark-gray;
       }
 
       &__body {

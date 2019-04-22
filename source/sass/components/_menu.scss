@@ -14,23 +14,23 @@
       .nav-link,
       .nav-link:hover {
         background-color: transparent;
-        color: #346cb0;
+        color: $cl-indigo;
       }
       .nav-link .nav-icon,
       .nav-link:hover .nav-icon {
-        color: #346cb0;
+        color: $cl-indigo;
       }
       &:not(.nav-item--has-children) .nav-link {
         font-weight: 600;
       }
       &.nav-item--has-children .nav-link {
-        color: #888c9b;
+        color: $cl-dark-gray;
       }
       &.nav-item--has-children .nav-link[aria-expanded='true'] {
-        color: #363642;
+        color: $cl-light-black;
       }
       &.level2 .nav-link {
-        color: #346cb0;
+        color: $cl-indigo;
       }
     }
     & + .nav-item {
@@ -55,7 +55,7 @@
     }
     &.level1 {
       &:not(.nav-item--active) [aria-expanded='true'] .nav-icon {
-        color: #888c9b;
+        color: $cl-dark-gray;
       }
     }
     &.level2 {
@@ -63,10 +63,10 @@
         padding-left: 52px;
       }
       &:not(.nav-item--active) .nav-link {
-        color: #888c9b;
+        color: $cl-dark-gray;
       }
       .nav-link:hover {
-        color: #346cb0;
+        color: $cl-indigo;
         background-color: transparent;
       }
     }
@@ -83,24 +83,31 @@
   }
   .nav-link {
     padding: 6px 24px 6px 16px;
-    color: #363642;
-    font-size: 14px;
+    color: $cl-light-black;
+    font-size: $font-size-base;
     line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     position: relative;
     transition: all .3s;
+
+    @include breakpoint-down(phone) {
+      font-size: $font-size-medium;
+      line-height: 28px;
+      padding: 8px 24px 8px 16px;
+    }
+
     &:hover {
       color: #222230;
       background-color: transparent;
 
       .nav-icon {
-        color: #888c9b;
+        color: $cl-dark-gray;
       }
     }
     .nav-icon {
-      color: #a6abbd;
+      color: $cl-gray-2;
       width: 22.5px;
       font-size: 18px;
       text-align: center;
@@ -127,7 +134,7 @@
   margin-bottom: 0;
   padding: 8px 16px;
   line-height: 20px;
-  color: #888c9b;
+  color: $cl-dark-gray;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -148,20 +155,20 @@
       display: inline-block;
       padding: 16px;
       border-bottom: 3px solid transparent;
-      color: #888c9b;
+      color: $cl-dark-gray;
       transition: all .3s;
 
       &.active {
         color: #222230;
         background-color: transparent;
-        border-color: #346cb0;
+        border-color: $cl-indigo;
         display: inline-block;
       }
 
       &:hover:not(.active),
       &:focus {
         color: #222230;
-        border-color: #e6e8ed #e6e8ed rgba(34, 34, 48, .1);
+        border-color: $cl-gray $cl-gray rgba(34, 34, 48, .1);
       }
     }
   }
@@ -178,15 +185,6 @@
       overflow-x: auto;
       text-align: center;
       white-space: nowrap;
-    }
-  }
-}
-
-@media (min-width: 576px) {
-  .site-header-cover {
-    &__inner {
-      padding-right: 32px;
-      padding-left: 32px;
     }
   }
 }

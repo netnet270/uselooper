@@ -18,7 +18,7 @@
       flex: 1;
 
       .title {
-        font-size: 16px;
+        font-size: $font-size-medium;
         margin-bottom: 16px;
       }
 
@@ -29,7 +29,8 @@
       .subtitle {
         margin-top: -12px;
         font-size: 12px;
-        font-weight: 400;
+        font-weight: $font-weight-base;
+        color: $cl-dark-gray;
       }
     }
 
@@ -55,7 +56,7 @@
   }
 
   &__rating {
-    font-size: 16px;
+    font-size: $font-size-medium;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -81,7 +82,7 @@
     position: absolute;
     left: -24px;
     width: 16px;
-    font-size: 16px;
+    font-size: $font-size-medium;
     text-align: center;
   }
 
@@ -90,7 +91,7 @@
     margin-bottom: 16px;
 
     .user-avatar {
-      box-shadow: 0 0 0 2px #fff;
+      box-shadow: 0 0 0 2px $cl-white;
     }
 
     .user-avatar + .user-avatar {
@@ -105,16 +106,16 @@
       text-decoration: none;
       width: 32px;
       height: 32px;
-      font-size: 16px;
+      font-size: $font-size-medium;
       font-weight: 600;
-      background-color: #d7dae2;
+      background-color: $cl-gray-6;
       margin-left: 4px;
     }
 
     .member:hover,
     .member:active,
     .member:focus {
-      color: #363642;
+      color: $cl-light-black;
     }
   }
 
@@ -131,12 +132,12 @@
       text-align: center;
       outline: 0;
       text-decoration: none;
-      color: #888c9b;
+      color: $cl-dark-gray;
     }
 
     .footer-item:hover,
     .footer-item:focus {
-      color: #222230;
+      color: $cl-dark;
     }
 
     .footer-item:not(:last-child) {

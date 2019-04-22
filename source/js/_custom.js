@@ -22,11 +22,12 @@ $(document).ready(function () {
   sidebarCollapse();
   
   //PerfectScrollbar
-
   function perfectScrollbar(element) {
-    new PerfectScrollbar(element, {
-      wheelPropagation: true
-    });
+    if ($(element).length > 0) {
+      new PerfectScrollbar(element, {
+        wheelPropagation: false
+      });
+    }
   }
 
   perfectScrollbar(".js-scrollbar-1");
@@ -40,7 +41,7 @@ $(document).ready(function () {
     mode: "range",
     dateFormat: "Y-m-d"
   });
-  
+
   // modal
   (function modalScrollable() {
     $('.modal').on('shown.bs.modal', function () {
@@ -57,7 +58,6 @@ $(document).ready(function () {
   })();
 
   //chart chartCompletionTask
-
 
   function drawCompletionTask(_data) {
     if ($('#completionTask').length > 0) {
@@ -271,16 +271,14 @@ $(document).ready(function () {
 
   togglePassword();
 
-  // input file : update input show value
+  // input file
   $('.input-field--file .form-control').on('change', function (e) {
     var files = this.files;
     var fileLabel = $(this).next('.input-field__file-label');
     var labelText = fileLabel.text();
 
-    // print count file if upload more than one
     fileLabel.text(files.length + ' files selected');
 
-    // print name file if upload one file
     if (files.length <= 2) {
       var fileNames = [];
       for (var i = 0; i < files.length; i++) {
@@ -292,16 +290,4 @@ $(document).ready(function () {
       fileLabel.text('Choose file');
     }
   });
-
-  // input floating label
-  $('.js-custom-input-floating-label').on('focus blur keyup change', function () {
-    var oldDataValue = $(this).val(); own
-    if (!oldDataValue) {
-      $(this).addClass('show-placeholder');
-    }
-    else {
-      $(this).removeClass('show-placeholder');
-    }
-  });
-
 });

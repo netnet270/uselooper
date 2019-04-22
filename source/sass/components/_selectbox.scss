@@ -10,12 +10,16 @@
   color: $cl-black;
   margin-bottom: 0;
   height: 36px;
-  font-size: 14px;
+  font-size: $font-size-base;
   background: url('#{$path-image}/ic-arrow-down-gray.svg') no-repeat right .75rem center, linear-gradient(180deg, $cl-white, $bg-light-gray);
+
+  &:not(.custom-select--disabled) {
+    cursor: pointer;
+  }
 
   &--disabled {
     color: $cl-dark-gray;
-    background-color: #e6e8ed;
+    background-color: $cl-gray;
   }
 
   &:focus {
@@ -56,14 +60,14 @@
   &--medium {
     height: 36px;
     line-height: 21px;
-    font-size: 14px;
+    font-size: $font-size-base;
     padding: 6px 28px 6px 12px;
   }
 
   &--large {
     height: 46px;
     line-height: 24px;
-    font-size: 16px;
+    font-size: $font-size-medium;
     padding: 8px 16px;
   }
 }
@@ -95,7 +99,7 @@
 
   select {
     padding: 20px 28px 4px 12px;
-    font-size: 14px;
+    font-size: $font-size-base;
     height: 47px;
     line-height: 21px;
   }

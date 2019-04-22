@@ -60,7 +60,7 @@
       justify-content: flex-start;
 
       &:active {
-        color: #363642;
+        color: $cl-light-black;
         background-color: rgba(52, 108, 176, .08);
       }
 
@@ -77,7 +77,7 @@
       position: absolute;
       right: 16px;
       top: 50%;
-      font-size: 14px;
+      font-size: $font-size-base;
       transform: translateY(-50%);
       opacity: .7;
 
@@ -109,13 +109,13 @@
     &__name {
       font-size: 18px;
       line-height: 24px;
-      color: #363642;
+      color: $cl-light-black;
     }
 
     &__position {
-      font-weight: 400;
+      font-weight: $font-weight-base;
       opacity: .7;
-      font-size: 14px;
+      font-size: $font-size-base;
       line-height: 16px;
       color: $cl-dark-gray;
     }
@@ -123,7 +123,7 @@
     &__setting {
       position: absolute;
       top: 80px;
-      background-color: #fff;
+      background-color: $cl-white;
       width: 100%;
       padding-bottom: 16px;
       box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 1px 3px 0 rgba(20, 20, 31, .15);
@@ -139,9 +139,9 @@
         width: 100%;
         padding: 8px 16px;
         clear: both;
-        font-weight: 400;
-        font-size: 16px;
-        color: #191927;
+        font-weight: $font-weight-base;
+        font-size: $font-size-medium;
+        color: $cl-black-2;
         text-align: inherit;
         white-space: nowrap;
         line-height: 24px;
@@ -150,22 +150,22 @@
       }
 
       .setting-item:active {
-        color: #fff;
-        background-color: #346cb0;
+        color: $cl-white;
+        background-color: $cl-indigo;
       }
 
       .setting-item__icon {
         text-align: center;
         width: 24px;
         margin-right: 10px;
-        color: #a6abbd;
+        color: $cl-gray-2;
       }
 
       .setting-divider {
         height: 0;
         margin: 8px 0;
         overflow: hidden;
-        border-top: 1px solid #e6e8ed;
+        border-top: 1px solid $cl-gray;
       }
     }
   }

@@ -59,7 +59,7 @@
     &#{$button}--disabled {
       color: $cl-light-black;
       background: linear-gradient(180deg, $cl-white, lighten($cl-light-gray, 6%));
-      border-color: $cl-light-gray;
+      border-color: $cl-gray;
       box-shadow: 0 1px 0 0 rgba(20, 20, 31, .05);
     }
   }
@@ -82,18 +82,18 @@
     }
   }
   &--slight {
-    color: $cl-gray;
-    border-color: $cl-light-gray;
+    color: $cl-dark-gray;
+    border-color: $cl-gray;
     background: transparent;
     &:hover {
-      background-color: lighten($cl-light-gray, 5%);
+      background-color: lighten($cl-gray, 5%);
     }
     &:focus {
       color: $cl-dark-gray;
     }
     &#{$button}--disabled {
-      color: $cl-gray;
-      border-color: $cl-light-gray;
+      color: $cl-dark-gray;
+      border-color: $cl-gray;
       background: transparent;
     }
   }
@@ -103,25 +103,24 @@
     border-color: transparent;
 
     &:hover {
-      color: #346cb0;
-      background-color: #e6e8ed;
-      border-color: #e6e8ed;
+      color: $cl-indigo;
+      background-color: $cl-gray;
+      border-color: $cl-gray;
       box-shadow: none;
     }
   }
   &--light {
-    color: #888c9b;
+    color: $cl-dark-gray;
     background-color: transparent;
     border-color: transparent;
 
     &:hover,
     &:focus {
-      background-color: #e6e8ed;
-      color: #363642;
-      border-color: #e6e8ed;
+      background-color: $cl-gray;
+      color: $cl-light-black;
+      border-color: $cl-gray;
       box-shadow: none;
     }
-
     &:active {
       color: #2e609c;
       border-color: transparent;
@@ -161,5 +160,10 @@
   &--full {
     display: block;
     width: 100%;
+  }
+
+  @include breakpoint-down(phone) {
+    font-size: $font-size-medium;
+    line-height: 24px;
   }
 }

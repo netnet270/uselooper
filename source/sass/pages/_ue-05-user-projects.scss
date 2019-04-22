@@ -37,10 +37,10 @@
       }
     }
     &__badge {
-      background-color: #e6e8ed;
+      background-color: $cl-gray;
       > i:not(.fa-check-circle) {
         margin-right: 4px;
-        color: #888c9b;
+        color: $cl-dark-gray;
       }
     }
   }
@@ -69,7 +69,7 @@
       }
       .user-avatar {
         line-height: 1.25;
-        border: 3px solid #fff;
+        border: 3px solid $cl-white;
         box-shadow: none;
         position: absolute;
         top: 0;
@@ -79,7 +79,7 @@
     }
 
     .card-title {
-      font-size: 16px;
+      font-size: $font-size-medium;
       margin-bottom: 16px;
 
       > a {
@@ -89,9 +89,9 @@
     }
     .card-subtitle {
       margin-top: -12px;
-      font-size: 14px;
-      font-weight: 400;
-      color: #888c9b;
+      font-size: $font-size-base;
+      font-weight: $font-weight-base;
+      color: $cl-dark-gray;
     }
 
     .card-group-avatar {
@@ -99,7 +99,7 @@
       display: inline-block;
 
       .user-avatar {
-        box-shadow: 0 0 0 2px #fff;
+        box-shadow: 0 0 0 2px $cl-white;
         width: 24px;
         height: 24px;
         font-size: 24px;
@@ -121,16 +121,16 @@
         height: 24px;
         font-size: 12px;
         line-height: 24px;
-        color: #888c9b;
+        color: $cl-dark-gray;
         font-weight: 600;
-        background-color: #d7dae2;
+        background-color: $cl-gray-6;
         margin-left: 4px;
       }
 
       .member:hover,
       .member:active,
       .member:focus {
-        color: #363642;
+        color: $cl-light-black;
       }
     }
   }

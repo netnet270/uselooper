@@ -10,7 +10,7 @@
           animation: none;
   direction: ltr;
   border: 0;
-  font-size: 14px;
+  font-size: $font-size-base;
   line-height: 24px;
   border-radius: 5px;
   position: absolute;
@@ -675,7 +675,7 @@ span.flatpickr-weekday {
   height: inherit;
   line-height: inherit;
   color: #393939;
-  font-size: 14px;
+  font-size: $font-size-base;
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

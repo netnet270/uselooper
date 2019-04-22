@@ -20,7 +20,7 @@
       border-radius: 1px;
       &:focus,
       &:active {
-        color: #2e609c;
+        color: $cl-blue-3;
         background-color: rgba(52, 108, 176, .08);
         box-shadow: 0 0 0 4px rgba(52, 108, 176, .08), 0 0 0 5px rgba(246, 247, 249, .5);
         outline: 0;
@@ -28,7 +28,7 @@
     }
 
     &.active {
-      color: #888c9b;
+      color: $cl-dark-gray;
     }
   }
 
@@ -37,12 +37,12 @@
     font-weight: 600;
 
     .text-small {
-      font-size: 14px;
-      color: #888c9b;
+      font-size: $font-size-base;
+      color: $cl-dark-gray;
       padding: 4px 6px;
 
       @include breakpoint-down(phone) {
-        font-size: 16px;
+        font-size: $font-size-medium;
       }
     }
   }
@@ -60,7 +60,7 @@
   &__title {
     margin-top: 0;
     padding: 16px 0;
-    font-size: 16px;
+    font-size: $font-size-medium;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 8px;
@@ -96,12 +96,12 @@
       }
       .avatar {
         position: relative;
-        box-shadow: 0 0 0 2px #f6f7f9;
-        background-color: #e6e8ed;
+        box-shadow: 0 0 0 2px $cl-light-gray;
+        background-color: $cl-gray;
         z-index: 2;
       }
       .avatar i {
-        font-size: 16px;
+        font-size: $font-size-medium;
       }
     }
     &__body {
@@ -112,7 +112,7 @@
     &__heading {
       margin-top: 4px;
       margin-bottom: 8px;
-      font-size: 14px;
+      font-size: $font-size-base;
       font-weight: 600;
       line-height: 1.2;
       display: flex;
@@ -129,12 +129,12 @@
     }
     &__date {
       font-size: 12px;
-      color: #888c9b;
+      color: $cl-dark-gray;
     }
     &__group-avatar {
       margin-bottom: 8px;
       .user-avatar {
-        box-shadow: 0 0 0 2px #fff;
+        box-shadow: 0 0 0 2px $cl-white;
       }
       .user-avatar + .user-avatar {
         display: inline-block;
@@ -150,10 +150,4 @@
     text-align: center;
     margin-bottom: 16px;
   }
-}
-
-@media (max-width: 767px) {
-  margin: 0;
-  padding: 0;
-  display: block;
 }
