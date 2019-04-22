@@ -2,34 +2,7 @@ extends modules/layout/_page-other
   
 block head
   +head(head.styleguide.title)
-  style.
-    body {
-      background-color: #fff;
-      background: none;
-      font-size: 14px;
-    }
-    .code-example {
-      margin-bottom: 25px;
-    }
-    .code-example .demo {
-      box-sizing: border-box;
-      padding: 1.5rem;
-      position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.125);
-      border-radius: 0.25rem 0.25rem 0 0;
-    }
-    .code-example pre {
-      margin: 0;
-      background-color: rgba(0, 0, 0, 0.125);
-      padding: 15px; 
-      border-radius: 0 0 0.25rem 0.25rem;
-    }
-    .list-group {
-      position: fixed;
-      z-index: 1;
-      width: 160px;
-      min-width: 160px;
-    }
+
 block main
   .container-fluid
     .row.justify-content-between.align-items-center.pt-4.pb-4
@@ -51,12 +24,10 @@ block main
       ];
 
     .row
-      .col-2
-        - var style = 'position: fixed; z-index: 1; width: 160px; min-width: 160px;';
+      .col-12.col-sm-3.col-md-3.col-lg-2.col-xl-2
         #v-pills-tab.list-group(
           role="tablist"
           aria-orientation="vertical"
-          style=`${style}`
         )
           each val, index in components
             - var findFirstItem = index === 0
@@ -69,7 +40,7 @@ block main
               aria-controls=`v-pills-${val.key}`
               class=findFirstItem ? 'list-group-item active' : 'list-group-item'
             )= val.value
-      .col-10
+      .col-12.col-sm-9.col-md-9.col-lg-10.col-xl-10
         #v-pills-tabContent.tab-content
           each val, index in components
             - var findFirstItem = index === 0
