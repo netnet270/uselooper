@@ -1,42 +1,46 @@
 // ======================================================
 // Pages :: Styleguides
 // ======================================================
-body {
-  background: none;
-  background-color: #fff;
-  font-size: 14px;
-}
 
-.code-example {
-  margin-bottom: 25px;
-}
+.styleguide {
+  body {
+    background: none;
+    background-color: #fff;
+    font-size: 14px;
+  }
 
-.code-example .demo {
-  box-sizing: border-box;
-  padding: 1.5rem;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, .125);
-  border-radius: .25rem .25rem 0 0;
-}
+  .code-example {
+    margin-bottom: 25px;
+  }
 
-.code-example pre {
-  margin: 0;
-  background-color: rgba(0, 0, 0, .125);
-  padding: 15px;
-  border-radius: 0 0 .25rem .25rem;
-}
-
-.list-group {
-  position: fixed;
-  z-index: 1;
-  width: 160px;
-  min-width: 160px;
-  max-height: 90vh;
-  overflow-y: auto;
-
-  @include breakpoint-down(phone) {
+  .code-example .demo {
+    box-sizing: border-box;
+    padding: 1.5rem;
     position: relative;
-    margin-bottom: 24px;
-    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem .25rem 0 0;
+  }
+
+  .code-example pre {
+    margin: 0;
+    background-color: rgba(0, 0, 0, .125);
+    padding: 15px;
+    border-radius: 0 0 .25rem .25rem;
+  }
+
+  .list-group {
+    position: fixed;
+    z-index: 1;
+    width: 160px;
+    min-width: 160px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    @include breakpoint-down(phone) {
+      position: relative;
+      margin-bottom: 24px;
+      width: 100%;
+    }
   }
 }
+
