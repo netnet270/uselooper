@@ -24015,6 +24015,8 @@ button.bg--orange-3:hover {
   .badge--secondary {
     color: #363642;
     background-color: #f6f7f9; }
+  .badge--lg {
+    padding: 6px 8px; }
 
 .input-checkbox-custom {
   position: relative;
@@ -24689,13 +24691,13 @@ button.bg--orange-3:hover {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center; }
+        justify-content: space-between; }
     @media (max-width: 767.98px) {
       .dashboard-header__inner {
         padding-left: 16px;
-        padding-right: 16px; } }
+        padding-right: 16px;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
   .dashboard-header__lead {
     margin-bottom: 16px;
     font-size: 20px;
@@ -24706,6 +24708,9 @@ button.bg--orange-3:hover {
   .dashboard-header__text {
     margin-bottom: 0;
     color: #888c9b; }
+  @media (max-width: 767.98px) {
+    .dashboard-header__dropdown {
+      margin-left: auto; } }
   .dashboard-header__dropdown .dropdown.show .dropdown-arrow {
     display: block; }
   .dashboard-header__dropdown .dropdown .dropdown-menu {
@@ -24935,7 +24940,7 @@ button.bg--orange-3:hover {
 
 .active-tasks .todo-list__header {
   padding: 16px 0;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: #888c9b; }
   .active-tasks .todo-list__header:first-child {

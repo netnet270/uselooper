@@ -32,11 +32,11 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     @include breakpoint-down(phone) {
       padding-left: 16px;
       padding-right: 16px;
+      flex-direction: column;
     }
   }
 
@@ -54,6 +54,12 @@
   &__text {
     margin-bottom: 0;
     color: $cl-dark-gray;
+  }
+
+  &__dropdown {
+    @include breakpoint-down(phone) {
+      margin-left: auto;
+    }
   }
 
   &__dropdown .dropdown {
@@ -358,7 +364,7 @@
   .todo-list {
     &__header {
       padding: 16px 0;
-      font-size: $font-size-base;
+      font-size: $font-size-small;
       font-weight: 600;
       color: $cl-dark-gray;
 
