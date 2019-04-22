@@ -31,9 +31,9 @@
             </div>
             <nav class="main-header__right">
               <ul class="nav navbar nav-icons">
-                <li class="nav-item dropdown nav-icons__activities"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-pulse"></span><span class="indicator"></span></a>
+                <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-pulse"></span><span class="indicator"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-menu">
                     <div class="dropdown-header"><span>Activities <span class="badge">(2)</span></span></div>
                     <div class="dropdown-scroll js-scrollbar-1"><a class="dropdown-item dropdown-item--unread" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/uifaces15.jpg" alt="user-avatar" /></div>
@@ -57,7 +57,7 @@
                         <div class="dropdown-item__avatar user-avatar"><img src="images/uifaces18.jpg" alt="user-avatar" /></div>
                         <div class="dropdown-item__body">
                           <p class="text">Arthur Carroll updated a project</p>
-                          <p class="time">6 hours ago</p>
+                          <p class="time">1 hours ago</p>
                         </div>
                       </a><a class="dropdown-item" href="#!">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/uifaces19.jpg" alt="user-avatar" /></div>
@@ -82,9 +82,9 @@
                     <div class="dropdown-footer"><a href="#">All activities<span class="fas fa-fw fa-long-arrow-alt-right"></span></a></div>
                   </div>
                 </li>
-                <li class="nav-item dropdown nav-icons__messages"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-envelope-open"></span><span class="indicator"></span></a>
+                <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-envelope-open"></span><span class="indicator"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-menu">
                     <div class="dropdown-header"><span>Messages</span><a href="#">Mark all as read</a></div>
                     <div class="dropdown-scroll js-scrollbar-2"><a class="dropdown-item dropdown-item--unread" href="#">
                         <div class="dropdown-item__avatar user-avatar"><img src="images/team1.jpg" alt="user-avatar" /></div>
@@ -133,9 +133,9 @@
                     <div class="dropdown-footer"><a href="#">All messages<span class="fas fa-fw fa-long-arrow-alt-right"></span></a></div>
                   </div>
                 </li>
-                <li class="nav-item dropdown nav-icons__sheets"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-grid-three-up"></span></a>
+                <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="oi oi-grid-three-up"></span></a>
                   <div class="dropdown-arrow"></div>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-sheets">
+                  <div class="dropdown-menu dropdown-sheets">
                     <div class="list-sheets">
                       <div class="dropdown-sheet-item"><a class="title-wrapper" href="#!"><span class="dropdown-sheet-item__avatar avatar bg--indigo"><i class="oi oi-people"></i></span><span class="title-peek">Teams</span></a></div>
                       <div class="dropdown-sheet-item"><a class="title-wrapper" href="#!"><span class="dropdown-sheet-item__avatar avatar bg--light-green"><i class="oi oi-fork"></i></span><span class="title-peek">Projects</span></a></div>
@@ -797,7 +797,7 @@
             </nav>
             <h2 class="site-header-bar__title"> Activities </h2>
           </header>
-          <section class="page-timeline">
+          <div class="page-timeline">
             <div class="page-timeline__inner">
               <div class="page-timeline__title">Today</div>
               <ul class="timeline">
@@ -858,7 +858,7 @@
                     <div class="media">
                       <div class="media-body">
                         <p class="timeline__heading"><a href="#!">Project updated by Sara Carr</a></p>
-                        <p class="timeline__text"><a href="#!">Sara Carr</a> updated <strong>Online Store App </strong>to <a href="#!">Online Store</a></p>
+                        <p class="timeline__text"><a href="#!">Sara Carr</a> updated <span class="text-strong">Online Store App </span>to <a href="#!">Online Store</a></p>
                         <p class="timeline__date d-sm-none">3:21am</p>
                       </div>
                       <div class="timeline__date d-none d-sm-block">3:21am</div>
@@ -893,12 +893,12 @@
                   </div>
                 </li>
               </ul>
-              <div class="page-timeline__loading">
-                <button class="btn button button--light" type="button"><i class="fa fa-fw fa-angle-double-down"></i> Load more
-                </button>
-              </div>
             </div>
-          </section>
+            <div class="page-timeline__loading">
+              <button class="btn button button--light" type="button"><i class="fa fa-fw fa-angle-double-down"></i> Load more
+              </button>
+            </div>
+          </div>
         </div>
         <footer class="footer">
           <ul class="list-inline">

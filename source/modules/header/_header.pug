@@ -23,12 +23,12 @@ mixin header()
 
         nav.main-header__right
           ul.nav.navbar.nav-icons
-            li.nav-item.dropdown.nav-icons__activities
+            li.nav-item.dropdown
               a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
                 span(class= 'oi oi-pulse')
                 span.indicator
               .dropdown-arrow
-              .dropdown-menu.dropdown-menu-right
+              .dropdown-menu
                 .dropdown-header
                   span Activities 
                     span.badge (2)
@@ -55,7 +55,7 @@ mixin header()
                       {
                         avatar: 'images/uifaces18.jpg',
                         nameActivity: 'Arthur Carroll updated a project',
-                        time: '6 hours ago'
+                        time: '1 hours ago'
                       },
                       {
                         avatar: 'images/uifaces19.jpg',
@@ -88,12 +88,12 @@ mixin header()
                   a(href='#') All activities
                     span(class= 'fas fa-fw fa-long-arrow-alt-right')
 
-            li.nav-item.dropdown.nav-icons__messages
+            li.nav-item.dropdown
               a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
                 span(class= 'oi oi-envelope-open')
                 span.indicator
               .dropdown-arrow
-              .dropdown-menu.dropdown-menu-right
+              .dropdown-menu
                 .dropdown-header
                   span Messages
                   a(href="#") Mark all as read
@@ -166,11 +166,11 @@ mixin header()
                   a(href='#') All messages
                     span(class= 'fas fa-fw fa-long-arrow-alt-right')
 
-            li.nav-item.dropdown.nav-icons__sheets
+            li.nav-item.dropdown
               a.nav-link(data-toggle="dropdown" role="button" aria-expanded="false")
                 span(class= 'oi oi-grid-three-up')
               .dropdown-arrow
-              .dropdown-menu.dropdown-menu-right.dropdown-sheets
+              .dropdown-menu.dropdown-sheets
                 .list-sheets
                   -
                     var listSheets = [

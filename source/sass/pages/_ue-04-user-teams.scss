@@ -17,16 +17,16 @@
     .summary {
       flex: 1;
 
-      .title {
+      &__title {
         font-size: $font-size-medium;
         margin-bottom: 16px;
       }
 
-      .title a {
+      &__title a {
         color: inherit;
       }
 
-      .subtitle {
+      &__subtitle {
         margin-top: -12px;
         font-size: 12px;
         font-weight: $font-weight-base;

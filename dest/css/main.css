@@ -22838,6 +22838,9 @@ ol {
   font-size: 11.2px;
   line-height: 1.5; }
 
+.text-strong {
+  font-weight: 700; }
+
 .card {
   margin-bottom: 20px;
   box-shadow: 0 0 0 1px rgba(20, 20, 31, 0.05), 0 1px 3px 0 rgba(20, 20, 31, 0.15);
@@ -22995,6 +22998,9 @@ button.bg--orange-3:hover {
 
 .color--light-gray {
   color: #f6f7f9; }
+
+.color--dark-gray {
+  color: #888c9b; }
 
 .color--orange {
   color: #f5b548; }
@@ -23229,10 +23235,14 @@ button.bg--orange-3:hover {
       color: #fff;
       background-color: rgba(20, 20, 31, 0.12); }
     .main-header .nav-icons .dropdown-menu {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
       padding: 0;
-      width: 320px; }
+      width: 320px;
+      position: absolute;
+      will-change: top, left;
+      top: 37px;
+      left: -276px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0; }
       .main-header .nav-icons .dropdown-menu .dropdown-header {
         display: -ms-flexbox;
         display: flex;
@@ -23276,8 +23286,7 @@ button.bg--orange-3:hover {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: start;
-            align-items: flex-start;
-        transition: all .3s; }
+            align-items: flex-start; }
         .main-header .nav-icons .dropdown-menu .dropdown-item--unread .text,
         .main-header .nav-icons .dropdown-menu .dropdown-item--unread .subject {
           font-weight: 600;
@@ -23293,6 +23302,10 @@ button.bg--orange-3:hover {
             font-size: 14px;
             margin-bottom: 0;
             line-height: 19.6px; }
+          .main-header .nav-icons .dropdown-menu .dropdown-item__body .text {
+            margin-bottom: 5px; }
+          .main-header .nav-icons .dropdown-menu .dropdown-item__body .subject + .text {
+            margin-bottom: 0; }
           .main-header .nav-icons .dropdown-menu .dropdown-item__body .time {
             margin-bottom: 0;
             font-size: 12px;
@@ -23310,11 +23323,6 @@ button.bg--orange-3:hover {
             color: #fff; }
         .main-header .nav-icons .dropdown-menu .dropdown-item:not(:first-child) {
           border-top: 1px solid rgba(34, 34, 48, 0.1); }
-    .main-header .nav-icons__activities .dropdown-menu {
-      position: absolute;
-      will-change: top, left;
-      top: 37px;
-      left: -276px; }
     .main-header .nav-icons .dropdown-sheets .list-sheets {
       padding-top: 24px;
       display: -ms-flexbox;
@@ -24490,6 +24498,13 @@ button.bg--orange-3:hover {
 .navbar-nav .nav-item.level4 .nav-link {
   padding-left: 84px; }
 
+.navbar-nav .nav-item.nav-item--has-children .nav-link[aria-expanded='true'] {
+  color: #222230; }
+
+.navbar-nav .nav-item:not(.level1) .nav-link[aria-expanded='true'] {
+  background-color: transparent;
+  color: #346cb0; }
+
 .navbar-nav .nav-link {
   padding: 6px 24px 6px 16px;
   color: #363642;
@@ -24536,16 +24551,21 @@ button.bg--orange-3:hover {
   text-transform: uppercase; }
 
 .site-page-nav {
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
   height: 56px;
   background-color: #fff;
   border-bottom: 1px solid #e0e1e5; }
+  @media (max-width: 991.98px) {
+    .site-page-nav {
+      padding-right: 16px;
+      padding-left: 16px; } }
   .site-page-nav .nav .nav-tabs {
     border-bottom: 0; }
   .site-page-nav .nav__link {
     display: inline-block;
     padding: 16px;
+    margin-right: 4px;
     border-bottom: 3px solid transparent;
     color: #888c9b;
     transition: all .3s; }
@@ -24842,9 +24862,7 @@ button.bg--orange-3:hover {
     color: #363642;
     font-size: 11.2px;
     line-height: 16.8px;
-    padding-right: 8px; }
-  .leaderboard .card-legend__item i {
-    margin-right: 4px; }
+    margin-right: 10px; }
 
 .leaderboard .card-body {
   padding-bottom: 0; }
@@ -24855,9 +24873,10 @@ button.bg--orange-3:hover {
   padding: 12px 0; }
 
 .leaderboard .card-list-group__figure {
-  padding-right: 6px; }
+  padding-right: 16px; }
 
 .leaderboard .card-list-group__progress {
+  padding: 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -25034,6 +25053,7 @@ button.bg--orange-3:hover {
             flex: 1; } }
 
 .section-metric {
+  margin-top: 16px;
   margin-bottom: 20px; }
   .section-metric__item {
     background-color: #fff;
@@ -25054,7 +25074,7 @@ button.bg--orange-3:hover {
     font-size: 14px;
     font-weight: 500;
     color: #888c9b;
-    margin-bottom: 10px; }
+    margin-top: 6px; }
   .section-metric__value {
     margin-bottom: 0;
     white-space: nowrap; }
@@ -25108,12 +25128,18 @@ button.bg--orange-3:hover {
   line-height: 1.5; }
   .achievement .card-legend__item i {
     margin-right: 4px; }
+  @media (max-width: 767.98px) {
+    .achievement .card-legend__item {
+      font-size: 13px; } }
 
 .card-overview .card-header {
   font-weight: 600;
   padding: 16px;
   font-size: 14px;
   background-color: transparent; }
+  @media (max-width: 767.98px) {
+    .card-overview .card-header {
+      font-size: 16px; } }
 
 .card-overview .card-body__item {
   display: -ms-flexbox;
@@ -25168,6 +25194,10 @@ button.bg--orange-3:hover {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 0; }
+    @media (max-width: 767.98px) {
+      .card-time-projects .card-header__title,
+      .card-time-tasks .card-header__title {
+        font-size: 16px; } }
   .card-time-projects .card-header__dropdown,
   .card-time-tasks .card-header__dropdown {
     margin: -8px 0; }
@@ -25595,7 +25625,8 @@ span.flatpickr-weekday:last-child {
 
 .page-timeline .timeline {
   padding-right: 16px;
-  padding-left: 16px; }
+  padding-left: 16px;
+  margin-bottom: 0; }
   @media (max-width: 767.98px) {
     .page-timeline .timeline {
       padding: 0; } }
@@ -25606,6 +25637,9 @@ span.flatpickr-weekday:last-child {
     .page-timeline .timeline__item:first-child .timeline__figure,
     .page-timeline .timeline__item:first-child .timeline__body {
       padding-top: 0; }
+    .page-timeline .timeline__item:last-child .timeline__figure,
+    .page-timeline .timeline__item:last-child .timeline__body {
+      margin-bottom: 20px; }
   .page-timeline .timeline__figure {
     position: relative;
     padding: 8px 0; }
@@ -25678,12 +25712,12 @@ span.flatpickr-weekday:last-child {
     .masonry-item__header .summary {
       -ms-flex: 1;
           flex: 1; }
-      .masonry-item__header .summary .title {
+      .masonry-item__header .summary__title {
         font-size: 16px;
         margin-bottom: 16px; }
-      .masonry-item__header .summary .title a {
+      .masonry-item__header .summary__title a {
         color: inherit; }
-      .masonry-item__header .summary .subtitle {
+      .masonry-item__header .summary__subtitle {
         margin-top: -12px;
         font-size: 12px;
         font-weight: 400;
@@ -25773,12 +25807,6 @@ span.flatpickr-weekday:last-child {
   .subtitle {
     font-size: 12px; } }
 
-.card .progress {
-  border-radius: 0; }
-
-.card .progress-xs {
-  height: 3px; }
-
 .card-project .card-header,
 .card-project .card-footer {
   padding: 16px;
@@ -25793,12 +25821,10 @@ span.flatpickr-weekday:last-child {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-  .card-project .card-header__dropdown {
-    margin: -8px 0; }
-    .card-project .card-header__dropdown.show .dropdown-arrow {
-      display: block; }
-    .card-project .card-header__dropdown .button > i {
-      margin-left: -4px; }
+  .card-project .card-header__dropdown.show .dropdown-arrow {
+    display: block; }
+  .card-project .card-header__dropdown .button > i {
+    margin-left: -4px; }
   .card-project .card-header__badge {
     background-color: #e6e8ed; }
     .card-project .card-header__badge > i:not(.fa-check-circle) {
@@ -25872,6 +25898,12 @@ span.flatpickr-weekday:last-child {
     .card-project .card-body .card-group-avatar .member:active,
     .card-project .card-body .card-group-avatar .member:focus {
       color: #363642; }
+
+.card-project .progress {
+  border-radius: 0; }
+
+.card-project .progress-xs {
+  height: 3px; }
 
 @media (min-width: 768px) {
   .badge {

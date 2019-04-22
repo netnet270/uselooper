@@ -17,7 +17,7 @@ block content
               | Overview
       h2.site-header-bar__title  Activities 
 
-    section.page-timeline
+    .page-timeline
       .page-timeline__inner
         .page-timeline__title Today
         ul.timeline
@@ -82,7 +82,7 @@ block content
                   p.timeline__text
                     a(href="#!") Sara Carr
                     |  updated 
-                    strong Online Store App 
+                    span.text-strong Online Store App 
                     | to 
                     a(href="#!") Online Store
                   p.timeline__date.d-sm-none 3:21am
@@ -127,9 +127,9 @@ block content
                   p.timeline__date.d-sm-none 10:32pm
                 .timeline__date.d-none.d-sm-block 10:32pm
 
-        .page-timeline__loading
-          +buttons({
-            type: 'light',
-            text: ' Load more',
-            iconBefore: 'fa fa-fw fa-angle-double-down'
-          })
+      .page-timeline__loading
+        +buttons({
+          type: 'light',
+          text: ' Load more',
+          iconBefore: 'fa fa-fw fa-angle-double-down'
+        })

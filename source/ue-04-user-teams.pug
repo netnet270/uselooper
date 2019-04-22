@@ -18,7 +18,7 @@ block content
       h2.site-header-bar__title  Teams 
         span.badge.text-small 23 Totals
       
-    section.page-teams
+    .page-teams
       .page-teams__inner
       -
         var teams = [
@@ -193,9 +193,9 @@ block content
                 else
                   a.avatar.avatar--lg.avatar--circle(href='#!', class=`bg--${val.avatarText.bg}`)= val.avatarText.text
                 .summary
-                  h3.title
+                  h3.summary__title
                     a(href='#!', class='color--light-black')= val.title
-                  h6.subtitle= val.subTitle
+                  .summary__subtitle= val.subTitle
                 +buttons({
                   type: 'light',
                   iconAfter: 'oi oi-chat'
@@ -209,16 +209,16 @@ block content
                 ul.masonry-item__location
                   li
                     span.masonry-item__icon
-                      i(class= "fa fa-map-marker color--dark-gray") 
+                      i.color--dark-gray(class= "fa fa-map-marker") 
                     | #{val.location}
                   li
                     span.masonry-item__icon
-                      i(class= "fa fa-flag color--dark-gray")
+                      i.color--dark-gray(class= "fa fa-flag")
                     | #{val.since}
                 .masonry-item__avatar-group
                   each item in val.avatarGroup
                     if item.imgOther
-                      a(href="#!" class= "avatar avatar--circle member color--dark-gray bg" data-toggle="modal" data-target= "#membersModal")= item.imgOther
+                      a(href="#!" class= "avatar avatar--circle member bg" data-toggle="modal" data-target= "#membersModal")= item.imgOther
                     else
                       a(href="#" class="user-avatar" data-toggle="tooltip" title= item.name)
                         img(src= item.img alt="user-avatar")

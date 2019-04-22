@@ -80,6 +80,16 @@
         padding-left: 84px;
       }
     }
+    &.nav-item--has-children .nav-link[aria-expanded='true'] {
+      color: $cl-dark;
+    }
+  }
+
+  .nav-item:not(.level1) {
+    .nav-link[aria-expanded='true'] {
+      background-color: transparent;
+      color: #346cb0;
+    }
   }
   .nav-link {
     padding: 6px 24px 6px 16px;
@@ -141,11 +151,16 @@
 }
 
 .site-page-nav {
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
   height: 56px;
   background-color: $bg-white;
   border-bottom: 1px solid #e0e1e5;
+
+  @include breakpoint-down(tablet) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 
   .nav {
     .nav-tabs {
@@ -154,6 +169,7 @@
     &__link {
       display: inline-block;
       padding: 16px;
+      margin-right: 4px;
       border-bottom: 3px solid transparent;
       color: $cl-dark-gray;
       transition: all .3s;

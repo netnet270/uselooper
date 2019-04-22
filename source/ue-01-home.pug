@@ -69,7 +69,7 @@ block body
                     flatpickr: true
                   })
 
-        section.dashboard-metric
+        .dashboard-metric
           .row
             .col-lg-9
               .row.metric-flush
@@ -163,17 +163,17 @@ block body
                 .card-title Leaderboard
                 ul.card-legend
                   li.card-legend__item
-                    i.color--gray(class= "fa fa-fw fa-circle")
-                    | Tasks
+                    i.color--light-gray(class= "fa fa-fw fa-circle")
+                    |  Tasks 
                   li.card-legend__item
                     i.color--dark-purple(class= "fa fa-fw fa-circle")
-                    | Completed
+                    |  Completed 
                   li.card-legend__item
                     i.color--light-green(class= "fa fa-fw fa-circle")
-                    | Active
+                    |  Active 
                   li.card-legend__item
                     i.color--red(class= "fa fa-fw fa-circle")
-                    | Overdue
+                    |  Overdue 
                 .card-list-group
                   -
                     var leaderboards = [
@@ -231,14 +231,14 @@ block body
                   each val in leaderboards
                     .card-list-group__item
                       .card-list-group__figure
-                        a.user-avatar(href="user-profile.html" data-toggle= "tooltip" title= val.name)
+                        a.user-avatar(href="ue-02-user-profile.html" data-toggle= "tooltip" title= val.name)
                           img(src= val.avatar, alt="user-avatar")
                       .card-list-group__progress.col
                         .progress.progress-animated(data-toggle = "tooltip" data-html="true" title= val.tooltip)
                           each item in val.progress
                             .progress-bar(class= `bg--${item.bg}` role="progressbar" style=`width: ${item.width}` aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
 
-        section.dashboard-deck
+        .dashboard-deck
           .row
             .col-xl-6.col-lg-12.col-12
               .card.active-projects
@@ -327,6 +327,7 @@ block body
                         name: 'checkbox',
                         id: 'todo2',
                         label: 'Mix up a pitcher of sangria',
+                        checked: true
                       })(class= 'input-checkbox-custom--line-through')
                     .todo-list__item
                       +group-input-checkbox({
