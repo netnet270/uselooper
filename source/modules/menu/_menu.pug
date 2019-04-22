@@ -32,8 +32,29 @@ mixin main-menu(cat,href)
                   class=sub.childmenu ? 'nav-item--has-children' : '',
                   class= (sub.href === href) ? 'nav-item--active' : ''
                 )
-                  a.nav-link(href= sub.href)
-                    span.nav-text=sub.text
+                  if sub.childmenu
+                    a.nav-link(
+                      href="#"+ sub.href
+                      data-toggle="collapse"
+                      aria-expanded=(item.href == href) ? "true" : "false"
+                      aria-controls=sub.href
+                      role="button"
+                    )
+                      span.nav-text=sub.text
+                  else
+                    a.nav-link(href= sub.href)
+                      span.nav-text=sub.text
+
+                  if sub.childmenu
+                    .collapse(id= sub.href)
+                      ul.nav.flex-column
+                        each child in sub.childmenu
+                          li.level3.nav-item(
+                            class= child.active ? 'nav-item--active' : ''
+                          )
+                            a.nav-link(
+                              href= child.href ? child.href : '#!'
+                            )= child.text
 
 mixin sub-menu()
   h3.navbar-heading Interfaces

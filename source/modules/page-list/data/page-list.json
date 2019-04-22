@@ -48,30 +48,6 @@
         "url": "ue-07-user-profile-settings",
         "categories": "Pages",
         "bg": "#dea604"
-      },
-      {
-        "title": "Account Settings",
-        "url": "ue-08-user-account-settings",
-        "categories": "Pages",
-        "bg": "#dea604"
-      },
-      {
-        "title": "Billing Settings",
-        "url": "ue-09-user-billing-settings",
-        "categories": "Pages",
-        "bg": "#dea604"
-      },
-      {
-        "title": "Notification Settings",
-        "url": "ue-10-user-notification-settings",
-        "categories": "Pages",
-        "bg": "#dea604"
-      },
-      {
-        "title": "Form Basic",
-        "url": "form-basic",
-        "categories": "Pages",
-        "bg": "#dea604"
       }
     ]
   }
