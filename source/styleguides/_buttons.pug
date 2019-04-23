@@ -2,13 +2,13 @@
 //- Styleguides :: Buttons
 //-------------------------------------------------------
 -
-  var buttonType = ['primary', 'secondary', 'plight', 'slight'];
+  var buttonType = ['primary', 'secondary', 'plight', 'light'];
 -
   var buttonSize = ['xsmall', 'small', 'medium', 'large'];
-h2 Buttons Type
+h3 Buttons Type
 .row
   each val, index in buttonType
-    .col-3
+    .col-lg-3.col-md-6.col-12
       .code-example
         .demo
           +buttons({ text: 'Button', type: val })
@@ -19,10 +19,10 @@ h2 Buttons Type
             |   type: '#{val}' 
             | })
 
-h2 Button Disable
+h3 Button Disable
 .row
   each val, index in buttonType
-    .col-3
+    .col-lg-3.col-md-6.col-12
       .code-example
         .demo
           +buttons({ text: 'Disabled', type: val, disabled: 'disabled' })
@@ -34,11 +34,11 @@ h2 Button Disable
             |   type: '#{val}'
             | })
 
-h2 Button Size
+h3 Button Size
 .row
   each val, btnIndex in buttonSize
     each item, typeIndex in buttonType
-      .col-3
+      .col-lg-3.col-md-6.col-12
         .code-example
           .demo
             +buttons({ text: 'Button', type: item, size: val })
@@ -50,10 +50,10 @@ h2 Button Size
               |   size: '#{val}' 
               | })
 
-h2 Button Icon
+h3 Button Icon
 .row
   each val, index in buttonType
-    .col-3
+    .col-lg-3.col-md-6.col-12
       .code-example
         .demo
           +buttons({ text: 'This Button', type: val, iconAfter: 'fa fa-fw fa-caret-down'})
@@ -65,7 +65,7 @@ h2 Button Icon
             |   iconAfter: 'fa fa-fw fa-caret-down'
             | })
   each val, index in buttonType
-    .col-3
+    .col-lg-3.col-md-6.col-12
       .code-example
         .demo
           +buttons({ text: 'This Button', type: val, size: 'small', iconAfter: 'fa fa-fw fa-caret-down'})
@@ -78,10 +78,10 @@ h2 Button Icon
             |   iconAfter: 'fa fa-fw fa-caret-down'
             | })
 
-h2 Button Full size
+h3 Button Full size
 .row
   each val, index in buttonType
-    .col-3
+    .col-lg-3.col-md-6.col-12
       .code-example
         .demo
           +buttons({ text: 'Button', type: val, size: 'large', isFull: true })

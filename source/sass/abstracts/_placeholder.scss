@@ -32,6 +32,7 @@
       animation: showArrow .3s ease-in-out;
     }
   }
+
   .dropdown-arrow {
     display: none;
     position: absolute;
@@ -48,7 +49,7 @@
     &:before {
       content: '';
       position: absolute;
-      bottom: -.375rem;
+      bottom: -6px;
       left: 50%;
       transform: rotate(45deg);
       display: block;
@@ -59,20 +60,22 @@
       box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 2px 7px 1px rgba(20, 20, 31, .16);
       pointer-events: none;
     }
+
     &--right {
       left: auto;
       right: 16px;
     }
+
     &--left {
       left: 32px;
     }
   }
+
   .dropdown-menu {
     animation-duration: .2s;
     margin-top: 10px;
     border: 0;
     font-weight: 400;
-    font-size: $font-size-base;
     animation-fill-mode: both;
     box-shadow: 0 0 0 1px rgba(20, 20, 31, .05), 0 2px 7px 1px rgba(20, 20, 31, .16);
 
@@ -90,11 +93,9 @@
         color: $cl-white;
         background-color: $cl-indigo;
       }
-    }
 
-    @media (min-width: 768px) {
-      .dropdown-menu {
-        font-size: $font-size-base;
+      @include breakpoint-down(phone) {
+        font-size: $font-size-medium;
       }
     }
 

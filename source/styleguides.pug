@@ -1,16 +1,31 @@
 extends modules/layout/_page-other
-  
+             
 block head
   +head(head.styleguide.title)
+  style.
+    .pace {
+      display: none;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #a6abbd; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
 
 block main
   .container-fluid.styleguide
-    .row.justify-content-between.align-items-center.pt-4.pb-4
-      .col-auto.mr-auto
-        h1 UseLooper Coding Style Guides
-      .col-auto
+    .d-flex.flex-column.flex-md-row.align-items-center.pt-4.pb-4
+      .title
+        h2 UseLooper Coding Style Guides
+      .ml-auto
         a.btn.btn-success(href="links.html") Back to list of page
-
     -
       var components = [
         { key: 'colors', value: 'Colors' },

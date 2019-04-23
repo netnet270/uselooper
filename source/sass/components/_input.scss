@@ -132,7 +132,7 @@
 
   &--isValid {
     .form-control {
-      background: url('#{$path-image}/ic-is-valid.svg');
+      background: url('../images/ic-is-valid.svg');
       border-color: $border-light-green;
       background-repeat: no-repeat;
       background-position: calc(100% - .75rem) calc(.375em + .1875rem);
@@ -148,7 +148,7 @@
 
   &--isInvalid {
     .form-control {
-      background: url('#{$path-image}/ic-is-invalid.svg');
+      background: url('../images/ic-is-invalid.svg');
       border-color: $cl-light-purple;
       background-repeat: no-repeat;
       background-position: calc(100% - .75rem) calc(.375em + .1875rem);
@@ -341,85 +341,6 @@
   }
 }
 
-.input-label {
-  position: relative;
-
-  > label {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 4px 12px;
-    width: 100%;
-    margin-bottom: 0;
-    line-height: 18px;
-    text-align: left;
-    font-size: 12px;
-    color: $cl-dark-gray;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: all .1s ease-in-out;
-    pointer-events: none;
-  }
-
-  .form-control {
-    padding: 20px 12px 4px;
-    font-size: $font-size-base;
-    height: 47px;
-    line-height: 21px;
-
-    &.placeholder-shown {
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-  }
-
-  &--spinner {
-    .form-control {
-      padding-right: 30px;
-    }
-
-    .spinner-border {
-      position: absolute;
-      top: 15px;
-      right: 12px;
-      color: $cl-indigo;
-    }
-  }
-
-  &--isValid {
-    .form-control {
-      background: url('#{$path-image}/ic-is-valid.svg');
-      border-color: $cl-light-green;
-      background-repeat: no-repeat;
-      background-position: calc(100% - .75rem) calc(.75em + .1875rem);
-      background-size: calc(.75em + .375rem) calc(.75em + .375rem);
-      padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
-
-      &:focus {
-        box-shadow: 0 0 0 1px $cl-light-green;
-        border-color: $cl-light-green;
-      }
-    }
-  }
-
-  &--isInvalid {
-    .form-control {
-      background: url('#{$path-image}/ic-is-invalid.svg');
-      border-color: $cl-light-purple;
-      background-repeat: no-repeat;
-      background-position: calc(100% - .75rem) calc(.75em + .1875rem);
-      background-size: calc(.75em + .375rem) calc(.75em + .375rem);
-      padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
-
-      &:focus {
-        box-shadow: 0 0 0 1px $cl-light-purple;
-        border-color: $cl-light-purple;
-      }
-    }
-  }
-}
-
 .badge {
   font-size: 11.2px;
   padding: 4px 6px;
@@ -433,6 +354,7 @@
     background: $bg-light-green;
     color: $cl-white;
   }
+
   &--warning {
     color: $cl-light-black;
     background-color: $bg-yellow;

@@ -2,7 +2,7 @@
 //- Styleguides :: Switch
 //-------------------------------------------------------
 
-h2 Switcher Normal
+h3 Switcher Normal
 .row
   .col-4
     .code-example
@@ -31,10 +31,10 @@ h2 Switcher Normal
         code
           |form.form-customize
           | +switcher({ 
-          |  isOn: true,
-          |  disabled: 'disabled',
+          |   isOn: true,
+          |   disabled: 'disabled',
           |})
-h2 Switcher Type
+h3 Switcher Type
 .row
   each val, index in ['success', 'danger']
     .col-4
@@ -46,10 +46,10 @@ h2 Switcher Type
           code
             |form.form-customize
             | +switcher({
-            |  isOn: true,
-            |  type: #{val}
+            |   isOn: true,
+            |   type: #{val}
             | })
-h2 Switcher Size
+h3 Switcher Size
 .row
   .col-4
     .code-example
@@ -60,7 +60,7 @@ h2 Switcher Size
         code
           |form.form-customize
           | +switcher({
-          |  isOn: true,
+          |   isOn: true,
           | })
   .col-4
     .code-example
@@ -71,10 +71,10 @@ h2 Switcher Size
         code
           |form.form-customize
           | +switcher({
-          |  isOn: true,
-          |  size: large
+          |   isOn: true,
+          |   size: large
           | })
-h2 Switcher Icon
+h3 Switcher Icon
 .row
   each val, typeIndex in ['success', 'danger']
     .col-4
@@ -91,11 +91,11 @@ h2 Switcher Icon
           code
             |form.form-customize
             | +switcher({
-            |  isOn: true,
-            |  type: #{val}
-            |  size: 'large'
-            |  onIcon: 'fas fa-check'
-            |  offIcon: 'fas fa-times'
+            |   isOn: true,
+            |   type: #{val}
+            |   size: 'large'
+            |   onIcon: 'fas fa-check'
+            |   offIcon: 'fas fa-times'
             | })
 .row
   each val, typeIndex in ['success', 'danger']
@@ -114,13 +114,13 @@ h2 Switcher Icon
           code
             |form.form-customize
             | +switcher({
-            |  isOn: true,
-            |  type: #{val}
-            |  size: 'large'
-            |  onIcon: 'fas fa-check'
-            |  offIcon: 'fas fa-times'
+            |   isOn: true,
+            |   type: #{val}
+            |   size: 'large'
+            |   onIcon: 'fas fa-check'
+            |   offIcon: 'fas fa-times'
             | })
-h2 Switcher Text
+h3 Switcher Text
 .row
   each val, typeIndex in ['success', 'danger']
     .col-4
@@ -137,10 +137,10 @@ h2 Switcher Text
           code
             |form.form-customize
             | +switcher({
-            |  isOn: true,
-            |  type: #{val}
-            |  onText: 'on'
-            |  offText: 'off'
+            |   isOn: true,
+            |   type: #{val}
+            |   onText: 'on'
+            |   offText: 'off'
             | })
 .row
   each val, typeIndex in ['success', 'danger']
@@ -159,12 +159,12 @@ h2 Switcher Text
           code
             |form.form-customize
             | +switcher({
-            |  isOn: true,
-            |  type: #{val}
-            |  onText: 'on'
-            |  offText: 'off'
+            |   isOn: true,
+            |   type: #{val}
+            |   onText: 'on'
+            |   offText: 'off'
             | })
-h2 Switcher Radio
+h3 Switcher Radio
 .row
   .col-4
     .code-example

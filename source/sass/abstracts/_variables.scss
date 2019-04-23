@@ -2,16 +2,12 @@
 // Abstracts :: Variables
 // ======================================================
 
-// Paths
-$path-image: '../images';
-$path-fonts: '../fonts';
-
 // Fonts
 // >> Font-family
 $font-family-base : 'Fira Sans', sans-serif;
 
 // >> Font-size
-$font-size-small  : 12px;
+$font-size-small  : 13px;
 $font-size-base   : 14px;
 $font-size-medium : 16px;
 $font-size-large  : 18px;
@@ -26,16 +22,17 @@ $border-radius-small : 2px;
 $border-radius-base  : 4px;
 $border-radius-medium: 8px;
 
-// z-index
-$z-indexes: (
-  base    : 1,
-  under   : -1,
-  modal   : 1001,
-  sidebar : 1000
-);
-
 //color
 $cl-white       : #fff;
+$cl-gray        : #e6e8ed;
+$cl-gray-2      : #a6abbd;
+$cl-gray-3      : #d6d8e1;
+$cl-gray-4      : #ecedf1;
+$cl-gray-5      : #babfcd;
+$cl-gray-6      : #d7dae2;
+$cl-light-gray  : #f6f7f9;
+$cl-dark-gray   : #888c9b;
+
 $cl-black       : #000;
 $cl-black-2     : #191927;
 $cl-dark        : #222230;
@@ -53,6 +50,7 @@ $cl-green       : #007c69;
 $cl-green-2     : #006f5f;
 $cl-light-green : #00a28a;
 $cl-dark-green  : #008974;
+
 $cl-red         : #f05151;
 $cl-red-2       : #e43e2c;
 $cl-red-3       : #ea6759;
@@ -67,15 +65,6 @@ $cl-purple      : #a95292;
 $cl-dark-purple : #5f4b8b;
 $cl-purple-2    : #48396a;
 $cl-purple-3    : #a14e8b;
-
-$cl-gray        : #e6e8ed;
-$cl-gray-2      : #a6abbd;
-$cl-gray-3      : #d6d8e1;
-$cl-gray-4      : #ecedf1;
-$cl-gray-5      : #babfcd;
-$cl-gray-6      : #d7dae2;
-$cl-light-gray  : #f6f7f9;
-$cl-dark-gray   : #888c9b;
 
 $cl-xdark-blue  : #2b5a92;
 $cl-xlight-blue : #5282bc;

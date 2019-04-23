@@ -12,11 +12,10 @@
       text-decoration: underline;
     }
   }
-}
 
-@media (min-width: 992px) {
-  .footer {
+  @include breakpoint-down(phone) {
     padding-right: 32px;
     padding-left: 32px;
   }
 }
+

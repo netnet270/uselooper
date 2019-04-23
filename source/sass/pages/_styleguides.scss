@@ -4,8 +4,7 @@
 
 .styleguide {
   body {
-    background: none;
-    background-color: #fff;
+    background: #fff;
     font-size: 14px;
   }
 
@@ -18,14 +17,14 @@
     padding: 1.5rem;
     position: relative;
     border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem .25rem 0 0;
+    border-radius: 4px 4px 0 0;
   }
 
   .code-example pre {
     margin: 0;
     background-color: rgba(0, 0, 0, .125);
     padding: 15px;
-    border-radius: 0 0 .25rem .25rem;
+    border-radius: 0 0 4px 4px;
   }
 
   .list-group {

@@ -138,29 +138,3 @@ mixin group-input-field-disabled({ label, id, type, placeholder, value, disabled
     +input-field({ type, placeholder, value })(
       disabled= disabled ? disabled : null
     )
-
-//- Input Field Float label has label
-mixin group-input-field-float-label({ label, id, value, placeholder, disabled, isValid, isInvalid, spinner, noticeError})
-  .form-group.form-customize&attributes(attributes)
-    .input-label(
-      class= isValid ? 'input-label--isValid' : null,
-      class= isInvalid ? 'input-label--isInvalid' : null
-      class= spinner ? 'input-label--spinner' : null
-    )
-      label(
-        for= id ? id : null
-      )= label
-
-      if spinner
-        .spinner-border.spinner-border-sm( role= "status" )
-          span.sr-only Loading...
-
-      +input-field({ type, placeholder, value })(
-        id= id ? id : null
-        disabled= disabled ? disabled : null
-      )
-
-    if noticeError
-      p.error-notice
-        i.error-notice__icon(class= noticeError )
-        | #{noticeError}

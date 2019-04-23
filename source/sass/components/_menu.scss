@@ -16,23 +16,29 @@
         background-color: transparent;
         color: $cl-indigo;
       }
+
       .nav-link .nav-icon,
       .nav-link:hover .nav-icon {
         color: $cl-indigo;
       }
+
       &:not(.nav-item--has-children) .nav-link {
         font-weight: 600;
       }
+
       &.nav-item--has-children .nav-link {
         color: $cl-dark-gray;
       }
+
       &.nav-item--has-children .nav-link[aria-expanded='true'] {
         color: $cl-light-black;
       }
+
       &.level2 .nav-link {
         color: $cl-indigo;
       }
     }
+
     & + .nav-item {
       margin-top: 0;
     }
@@ -53,33 +59,40 @@
         background: url('../images/arrow-right.svg') 50% no-repeat;
       }
     }
+
     &.level1 {
       &:not(.nav-item--active) [aria-expanded='true'] .nav-icon {
         color: $cl-dark-gray;
       }
     }
+
     &.level2 {
       .nav-link {
         padding-left: 52px;
       }
+
       &:not(.nav-item--active) .nav-link {
         color: $cl-dark-gray;
       }
+
       .nav-link:hover {
         color: $cl-indigo;
         background-color: transparent;
       }
     }
+
     &.level3 {
       .nav-link {
         padding-left: 4.25rem;
       }
     }
+
     &.level4 {
       .nav-link {
         padding-left: 84px;
       }
     }
+
     &.nav-item--has-children .nav-link[aria-expanded='true'] {
       color: $cl-dark;
     }
@@ -91,6 +104,7 @@
       color: #346cb0;
     }
   }
+
   .nav-link {
     padding: 6px 24px 6px 16px;
     color: $cl-light-black;
@@ -116,6 +130,7 @@
         color: $cl-dark-gray;
       }
     }
+
     .nav-icon {
       color: $cl-gray-2;
       width: 22.5px;
@@ -123,6 +138,7 @@
       text-align: center;
       margin-right: 13px;
     }
+
     .badge {
       right: 28px;
       position: absolute;
@@ -166,6 +182,7 @@
     .nav-tabs {
       border-bottom: 0;
     }
+
     &__link {
       display: inline-block;
       padding: 16px;
@@ -188,6 +205,7 @@
       }
     }
   }
+
   &__scroller {
     position: relative;
     z-index: 2;

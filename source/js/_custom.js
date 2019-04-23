@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  //handle event nav active 
   $('[data-parent="#menu-sidebar"]').on('hide.bs.collapse', function (e) {
     if ($(this).find('.nav-item--active').length > 0) {
       e.preventDefault();
@@ -11,16 +12,16 @@ $(document).ready(function () {
     $('.js-btn-collaspe').on('click', function(){
       $('.js-sidebar-collapse').toggleClass('aside-sidebar--visible');
   
-      $('.overlay-mobile').fadeToggle('200');
+      $('.js-overlay').fadeToggle('200');
   
-      $('.overlay-mobile').on('click', function(){         
+      $('.js-overlay').on('click', function(){         
         $('.js-sidebar-collapse').removeClass('aside-sidebar--visible');
         $(this).fadeOut();
       });
     })
   }
   sidebarCollapse();
-  
+
   //PerfectScrollbar
   function perfectScrollbar(element) {
     if ($(element).length > 0) {
@@ -37,6 +38,7 @@ $(document).ready(function () {
   //tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
+  //datetimepicker
   $(".js-flatpickr").flatpickr({
     mode: "range",
     dateFormat: "Y-m-d"
@@ -272,22 +274,26 @@ $(document).ready(function () {
   togglePassword();
 
   // input file
-  $('.input-field--file .form-control').on('change', function (e) {
-    var files = this.files;
-    var fileLabel = $(this).next('.input-field__file-label');
-    var labelText = fileLabel.text();
+  function inputFile() {
+    $('.input-field--file .form-control').on('change', function (e) {
+      var files = this.files;
+      var fileLabel = $(this).next('.input-field__file-label');
+      var labelText = fileLabel.text();
 
-    fileLabel.text(files.length + ' files selected');
+      fileLabel.text(files.length + ' files selected');
 
-    if (files.length <= 2) {
-      var fileNames = [];
-      for (var i = 0; i < files.length; i++) {
-        fileNames.push(files[i].name);
+      if (files.length <= 2) {
+        var fileNames = [];
+        for (var i = 0; i < files.length; i++) {
+          fileNames.push(files[i].name);
+        }
+        fileLabel.text(fileNames.join(', '));
       }
-      fileLabel.text(fileNames.join(', '));
-    }
-    if (!files.length) {
-      fileLabel.text('Choose file');
-    }
-  });
+      if (!files.length) {
+        fileLabel.text('Choose file');
+      }
+    });
+  }
+
+  inputFile();
 });

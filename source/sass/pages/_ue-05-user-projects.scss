@@ -22,10 +22,12 @@
       &.show .dropdown-arrow {
         display: block;
       }
+
       .button > i {
         margin-left: -4px;
       }
     }
+
     &__badge {
       background-color: $cl-gray;
       > i:not(.fa-check-circle) {
@@ -77,6 +79,7 @@
         text-decoration: none;
       }
     }
+
     .card-subtitle {
       margin-top: -12px;
       font-size: $font-size-base;
@@ -130,19 +133,5 @@
   }
   .progress-xs {
     height: 3px;
-  }
-}
-
-@media (min-width: 768px) {
-  .badge {
-    font-size: 80%;
-  }
-
-  .card-project {
-    .card-body {
-      .card-subtitle {
-        font-size: 12px;
-      }
-    }
   }
 }

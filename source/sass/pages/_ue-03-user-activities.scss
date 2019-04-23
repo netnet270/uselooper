@@ -14,6 +14,7 @@
     padding: 0;
     background-color: transparent;
   }
+
   .breadcrumb-item {
     > a {
       color: inherit;
@@ -57,6 +58,7 @@
       padding-left: 16px;
     }
   }
+
   &__title {
     margin-top: 0;
     padding: 16px 0;
@@ -65,6 +67,7 @@
     line-height: 1.2;
     margin-bottom: 8px;
   }
+
   .timeline {
     padding-right: 16px;
     padding-left: 16px;
@@ -86,6 +89,7 @@
         margin-bottom: 20px;
       }
     }
+
     &__figure {
       position: relative;
       padding: 8px 0;
@@ -99,21 +103,25 @@
         margin-left: -1px;
         border-left: 2px solid rgba(34, 34, 48, .1);
       }
+
       .avatar {
         position: relative;
         box-shadow: 0 0 0 2px $cl-light-gray;
         background-color: $cl-gray;
         z-index: 2;
       }
+
       .avatar i {
         font-size: $font-size-medium;
       }
     }
+
     &__body {
       width: 100%;
       margin-left: 20px;
       padding: 8px 0;
     }
+
     &__heading {
       margin-top: 4px;
       margin-bottom: 8px;
@@ -126,31 +134,37 @@
         text-decoration: underline;
       }
     }
+
     &__text {
       margin-bottom: 0;
       a:hover {
         text-decoration: underline;
       }
     }
+
     &__date {
       font-size: 12px;
       color: $cl-dark-gray;
     }
+
     &__group-avatar {
       margin-bottom: 8px;
       .user-avatar {
         box-shadow: 0 0 0 2px $cl-white;
       }
+
       .user-avatar + .user-avatar {
         display: inline-block;
         margin-left: -8px;
       }
+
       .user-avatar:focus,
       .user-avatar:hover {
         z-index: 2;
       }
     }
   }
+
   &__loading {
     text-align: center;
     margin-bottom: 16px;

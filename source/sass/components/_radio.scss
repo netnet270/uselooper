@@ -11,6 +11,7 @@
     position: relative;
     margin-bottom: 0;
     cursor: pointer;
+
     &:before {
       position: absolute;
       top: 2px;
@@ -25,6 +26,7 @@
       pointer-events: auto;
       border-radius: 50%;
     }
+
     &:after {
       position: absolute;
       top: 2px;
@@ -39,6 +41,7 @@
       background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='%230179A8' width='8' height='8' viewBox='0 0 8 8'><path d='M3 0c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z' transform='translate(1 1)' /></svg>");
     }
   }
+
   &--line-through {
     .input-radio:checked {
       & + label {
@@ -47,10 +50,12 @@
       }
     }
   }
+
   &--no-label {
     display: flex;
   }
 }
+
 .input-radio {
   $radio: &;
 
@@ -61,18 +66,21 @@
     & ~ label {
       color: $cl-green;
     }
+
     &:focus {
       & ~ label:before {
         box-shadow: 0 0 0 1px rgba(0, 162, 138, .25);
         border-color: $cl-green;
       }
     }
+
     &:focus:not(:checked) {
       & ~ label:before {
         box-shadow: 0 0 0 1px rgba(0, 162, 138, .25);
         border-color: $cl-green;
       }
     }
+
     &:checked {
       & ~ label:before {
         border-color: $cl-green;
@@ -80,32 +88,38 @@
       }
     }
   }
+
   &:checked {
     & ~ label {
       &:after {
         transform: scale(1);
       }
+
       &:before {
         border-color: $cl-indigo;
       }
     }
   }
+
   &#{$radio}--invalid {
     & ~ label {
       color: $cl-purple;
     }
+
     &:focus {
       & ~ label:before {
         box-shadow: 0 0 0 1px rgba(183, 107, 163, .25);
         border-color: $cl-purple;
       }
     }
+
     &:focus:not(:checked) {
       & ~ label:before {
         box-shadow: 0 0 0 1px rgba(183, 107, 163, .25);
         border-color: $cl-purple;
       }
     }
+
     &:checked {
       & ~ label:before {
         border-color: $cl-purple;
@@ -114,6 +128,7 @@
     }
   }
 }
+
 .error-notice {
   color: $cl-purple;
   font-size: 85%;
@@ -122,6 +137,7 @@
     margin-right: 4px;
   }
 }
+
 .input-desc {
   color: $cl-gray;
 }
@@ -132,11 +148,13 @@
       & ~ .label-radio:after {
         transform: scale(1.2);
       }
+
       & ~ .form-readonly {
         display: block;
       }
     }
   }
+
   .label-radio {
     display: flex;
     justify-content: space-between;
@@ -145,6 +163,7 @@
     &__time {
       color: $cl-dark-gray;
     }
+
     &:before {
       pointer-events: none;
       border: none;
@@ -156,6 +175,7 @@
       left: -20px;
     }
   }
+
   .form-readonly {
     margin: 4px 0;
     display: none;

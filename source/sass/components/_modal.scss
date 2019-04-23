@@ -1,7 +1,6 @@
 // ======================================================
 // Components :: Modal
 // ======================================================
-
 .modal {
   .modal-dialog-scrollable {
     .modal-header,
@@ -11,7 +10,7 @@
 
     .modal-header {
       border-bottom: 0;
-      box-shadow: 0 2px 0 0 #e2e2e3;
+      box-shadow: 0 2px 0 0 $cl-gray-4;
 
       .modal-title {
         font-weight: 600;
@@ -21,7 +20,7 @@
 
     .modal-footer {
       border-top: 0;
-      box-shadow: 0 -2px 0 0 #e2e2e3;
+      box-shadow: 0 -2px 0 0 $cl-gray-4;
     }
 
     .modal-body--scrolled {

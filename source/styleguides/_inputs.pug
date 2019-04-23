@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Text
     .code-example
       .demo
@@ -22,7 +22,7 @@
           |     placeholder: 'Placeholder'
           |   })
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input NoteText
     .code-example
       .demo
@@ -45,7 +45,7 @@
           |     noteText: "We'll never share your email with anyone else."
           |   })
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Readonly
     .code-example
       .demo
@@ -64,7 +64,7 @@
           |     value: 'Value'
           | })
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Disabled
     .code-example
       .demo
@@ -86,7 +86,7 @@
           |   })
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Number
     .code-example
       .demo
@@ -117,7 +117,7 @@
           |     placeholder: 'Amount (to the nearest dollar)'
           |   })
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Choose File
     .code-example
       .demo
@@ -139,7 +139,7 @@
           |   })
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Icon
     .code-example
       .demo
@@ -161,7 +161,7 @@
           |   })
           
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Clearable
     .code-example
       .demo
@@ -184,7 +184,7 @@
           |     placeholder: 'Type something...'
           |   })
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Spinner
     .code-example
       .demo
@@ -208,7 +208,7 @@
           |   })
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Valid
     .code-example
       .demo
@@ -231,7 +231,7 @@
           |     placeholder: 'Type something...'
           |   })
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     h4 Input Invalid
     .code-example
       .demo
@@ -256,7 +256,7 @@
           |     placeholder: 'Type something...'
           |   })
 
-h2 Input size
+h3 Input size
 -
   var InputSizes = [
     { size: 'small' },
@@ -266,7 +266,7 @@ h2 Input size
 
 .row
   each val, index in InputSizes
-    .col-4
+    .col-lg-4.col-12
       .code-example
         .demo
           form.form-custom
@@ -286,10 +286,10 @@ h2 Input size
             |     placeholder: 'e.g. johndoe@looper.com'
             |   })
 
-h2 Labels
+h3 Labels
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     .code-example
       .demo
         form.form-custom
@@ -314,7 +314,7 @@ h2 Labels
       { text: 'Required', type: 'danger' }
     ];
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     .code-example
       .demo
         form.form-custom
@@ -335,7 +335,7 @@ h2 Labels
           |   })
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     .code-example
       .demo
         form.form-custom
@@ -355,7 +355,7 @@ h2 Labels
           |     placeholder:'Label with description'
           |   })
 
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-lg-6.col-12
     .code-example
       .demo
         form.form-custom
@@ -375,117 +375,4 @@ h2 Labels
           |     type: 'password',
           |     iconShow: 'fa fa-eye fa-fw',
           |     value:'label_with_action'
-          |   })
-
-h2 Floating label
-.row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
-    .code-example
-      .demo
-        form.form-custom
-          +group-input-field-float-label({
-            label: 'Label',
-            id: 'input-16',
-            type: 'email',
-            value: 'johndoe@looper.com',
-            placeholder:'Email address'
-          })
-      pre
-        code
-          |form.form-custom
-          |   +group-input-field-float-label({
-          |     label: 'Label',
-          |     id: 'input-16',
-          |     type: 'email',
-          |     value: 'johndoe@looper.com',
-          |     placeholder:'Email address'
-          |   })
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
-    .code-example
-      .demo
-        form.form-custom
-          +group-input-field-float-label({
-            label: 'Label',
-            id: 'input-18',
-            type: 'email',
-            placeholder:'Email address',
-            disabled: 'disabled'
-          })
-      pre
-        code
-          |form.form-custom
-          |   +group-input-field-float-label({
-          |     label: 'Label',
-          |     id: 'input-18',
-          |     type: 'email',
-          |     placeholder:'Email address',
-          |     disabled: 'disabled'
-          |   })
-
-.row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
-    .code-example
-      .demo
-        form.form-custom
-          +group-input-field-float-label({
-            label: 'Label',
-            id: 'input-19',
-            spinner: true,
-            placeholder:'Email address',
-            value: 'hasloading@looper.com'
-          })
-      pre
-        code
-          |form.form-custom
-          |   +group-input-field-float-label({
-          |     label: 'Label',
-          |     id: 'input-19',
-          |     spinner: true,
-          |     placeholder:'Email address',
-          |     value: 'hasloading@looper.com'
-          |   })
-
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
-    .code-example
-      .demo
-        form.form-custom
-          +group-input-field-float-label({
-            label: 'Label',
-            id: 'input-20',
-            isValid: true,
-            placeholder:'Email address',
-            value: 'hasloading@looper.com'
-          })
-      pre
-        code
-          |form.form-custom
-          |   +group-input-field-float-label({
-          |     label: 'Label',
-          |     id: 'input-20',
-          |     isValid: true,
-          |     placeholder:'Email address',
-          |     value: 'hasloading@looper.com'
-          |   })
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
-    .code-example
-      .demo
-        form.form-custom
-          +group-input-field-float-label({
-            label: 'Label',
-            id: 'input-20',
-            isInvalid: true,
-            noticeError: "Sorry, that password isn't right.",
-            placeholder:'Email address',
-            value: 'hasloading@looper.com'
-          })
-      pre
-        code
-          |form.form-custom
-          |   +group-input-field-float-label({
-          |     label: 'Label',
-          |     id: 'input-20',
-          |     isInvalid: true,
-          |     noticeError: "Sorry, that password isn't right.",
-          |     placeholder:'Email address',
-          |     value: 'hasloading@looper.com'
           |   })

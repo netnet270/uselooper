@@ -51,6 +51,7 @@
         right: 28px;
       }
     }
+
     .switcher-label {
       &--on {
         width: calc(100% - 20px);
@@ -63,6 +64,7 @@
     }
   }
 }
+
 .switcher-label {
   &--on {
     position: absolute;
@@ -75,6 +77,7 @@
     display: none;
     color: $cl-white;
   }
+
   &--off {
     position: absolute;
     top: 0;
@@ -93,8 +96,8 @@
   overflow: hidden;
   cursor: pointer;
   padding: 0;
-  border: 2px solid $cl-light-gray;
-  background-color: $cl-light-gray;
+  border: 2px solid $cl-gray;
+  background-color: $cl-gray;
   transition: all .15s linear;
   height: 16px;
   line-height: 16px;
@@ -110,7 +113,7 @@
     bottom: 0;
     display: block;
     background: $cl-white;
-    border: 2px solid $cl-light-gray;
+    border: 2px solid $cl-gray;
     transition: all .15s ease-in-out;
   }
 }

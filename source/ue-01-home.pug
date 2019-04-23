@@ -4,7 +4,7 @@ block head
   +head(head.home.title)
       
 block body
-  .overlay-mobile
+  .overlay-mobile.js-overlay
   .main-wapper
     +header()
     +sidebar('Dashboard','ue-01-home.html')
@@ -120,7 +120,7 @@ block body
           .col-12.col-lg-6.col-xl-4
             .card.tasks-performance
               .card-body
-                .card-title Tasks Performance
+                h4.card-title Tasks Performance
                 .card-chart
                   .chart-inline-group
                     -
@@ -160,7 +160,7 @@ block body
           .col-12.col-lg-6.col-xl-4
             .card.leaderboard
               .card-body
-                .card-title Leaderboard
+                h4.card-title Leaderboard
                 ul.card-legend
                   li.card-legend__item
                     i.color--light-gray(class= "fa fa-fw fa-circle")
@@ -242,7 +242,7 @@ block body
           .row
             .col-xl-6.col-lg-12.col-12
               .card.active-projects
-                h3.card-header  Active Projects
+                h4.card-header  Active Projects
                 .card-body
                   .list-group
                     -
@@ -312,7 +312,7 @@ block body
 
             .col-xl-6.col-lg-12.col-12
               .card.active-tasks
-                h3.card-header Active Tasks: To-Dos
+                h4.card-header Active Tasks: To-Dos
                 .card-body
                   .todo-list
                     .todo-list__header Looper Admin Theme (1/3)
