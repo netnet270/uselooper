@@ -23469,7 +23469,7 @@ span.flatpickr-weekday:last-child {
       @media (max-width: 767.98px) {
         .main-header__form-search form {
           padding-right: 16px;
-          padding-left: 8px; } }
+          padding-left: 4px; } }
     .main-header__form-search .form-group {
       margin-bottom: 0; }
       .main-header__form-search .form-group input {
@@ -23728,6 +23728,9 @@ span.flatpickr-weekday:last-child {
     will-change: top, left;
     top: 5px;
     left: 0; }
+    @media (max-width: 991.98px) {
+      .user-profile .dropdown-menu {
+        left: -85px; } }
     .user-profile .dropdown-menu .dropdown-item__icon {
       margin-right: 4px;
       color: #a6abbd;

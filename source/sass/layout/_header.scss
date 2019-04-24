@@ -78,7 +78,7 @@
 
       @include breakpoint-down(phone) {
         padding-right: 16px;
-        padding-left: 8px;
+        padding-left: 4px;
       }
     }
 
@@ -441,6 +441,10 @@
     top: 5px;
     left: 0;
 
+    @include breakpoint-down(tablet) {
+      left: -85px;
+    }
+  
     .dropdown-item {
       &__icon {
         margin-right: 4px;

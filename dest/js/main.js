@@ -51,13 +51,13 @@ $(document).ready(function () {
   });
 
   //sidebar collapse
-  function sidebarCollapse(){
-    $('.js-btn-collaspe').on('click', function(){
+  function sidebarCollapse() {
+    $('.js-btn-collaspe').on('click', function () {
       $('.js-sidebar-collapse').toggleClass('aside-sidebar--visible');
-  
+
       $('.js-overlay').fadeToggle('200');
-  
-      $('.js-overlay').on('click', function(){         
+
+      $('.js-overlay').on('click', function () {
         $('.js-sidebar-collapse').removeClass('aside-sidebar--visible');
         $(this).fadeOut();
       });
@@ -150,15 +150,7 @@ $(document).ready(function () {
     }
   }
 
-  var dataCompletionTasks = {
-    labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
-    datasets: [{
-      data: [155, 65, 465, 265, 225, 325, 80],
-      backgroundColor: "#346cb0",
-      borderColor: "#346cb0"
-    }]
-  }
-  drawCompletionTask(dataCompletionTasks);
+  console.log($('#completionTask').data('dataset'));
 
   //chart Tasks Performance
   $('[data-toggle="easypiechart"]').each(function () {

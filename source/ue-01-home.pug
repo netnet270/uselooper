@@ -115,7 +115,17 @@ block body
               .card-body
                 .card-title Completion Tasks
                 .card-chart
-                  canvas(id="completionTask" width= "282px" height= "285px")
+                  -
+                    var dataCompletionTasks = {
+                      labels: ["21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar"],
+                      datasets: [{
+                        data: [155, 65, 465, 265, 225, 325, 80],
+                        backgroundColor: "#346cb0",
+                        borderColor: "#346cb0"
+                      }]
+                    }
+
+                  canvas(id="completionTask" width= "282px" height= "285px", dataset= dataCompletionTasks)
 
           .col-12.col-lg-6.col-xl-4
             .card.tasks-performance
