@@ -107,7 +107,9 @@ $(document).ready(function () {
     }
   }
 
-  console.log($('#completionTask').data('dataset'));
+  var dataCompletionTasks = $('#completionTask').attr('dataset');
+  parseDataset = JSON.parse(dataCompletionTasks);
+  drawCompletionTask(parseDataset);
 
   //chart Tasks Performance
   $('[data-toggle="easypiechart"]').each(function () {
@@ -179,25 +181,10 @@ $(document).ready(function () {
       })
     }
   }
-
-  var dataAchievement = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    datasets: [
-      {
-        label: "Assigned tasks",
-        data: [41, 20, 68, 17, 100, 83, 53],
-        backgroundColor: "#00a28a",
-        borderColor: "#00a28a"
-      },
-      {
-        label: "Completed tasks",
-        data: [51, 14, 51, 63, 59, 83, 34],
-        backgroundColor: "#5f4b8b",
-        borderColor: "#5f4b8b"
-      }
-    ]
-  }
-  drawAchievement(dataAchievement);
+  var dataAchievement = $('#achievement').attr('dataset');
+  datasetAchievement = JSON.parse(dataAchievement);
+  console.log(datasetAchievement[0])
+  drawAchievement(datasetAchievement[0]);
 
   //input Number
   function inputNumber() {
