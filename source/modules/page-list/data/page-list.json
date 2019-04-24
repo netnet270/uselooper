@@ -17,37 +17,37 @@
         "title": "User Profile",
         "url": "ue-02-user-profile",
         "categories": "Pages",
-        "bg": "#dea604"
+        "bg": "gray"
       },
       {
         "title": "User Activities",
         "url": "ue-03-user-activities",
         "categories": "Pages",
-        "bg": "#dea604"
+        "bg": "#1984c6"
       },
       {
         "title": "User Teams",
         "url": "ue-04-user-teams",
         "categories": "Pages",
-        "bg": "#dea604"
+        "bg": "gray"
       },
       {
         "title": "User Projects",
         "url": "ue-05-user-projects",
         "categories": "Pages",
-        "bg": "#dea604"
+        "bg": "#1984c6"
       },
       {
         "title": "User Tasks",
         "url": "ue-06-user-tasks",
         "categories": "Pages",
-        "bg": "#dea604"
+        "bg": "gray"
       },
       {
         "title": "Profile Settings",
         "url": "ue-07-user-profile-settings",
         "categories": "Pages",
-        "bg": "#dea604"
+        "bg": "#1984c6"
       }
     ]
   }
