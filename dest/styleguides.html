@@ -13,22 +13,6 @@
         display: none;
       }
 
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #a6abbd;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-
     </style>
   </head>
   <body>
@@ -232,7 +216,7 @@
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
-  disabled: 'disabled',
+  disabled: 'true',
   type: 'primary'
 })</code></pre>
                   </div>
@@ -245,7 +229,7 @@
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
-  disabled: 'disabled',
+  disabled: 'true',
   type: 'secondary'
 })</code></pre>
                   </div>
@@ -258,7 +242,7 @@
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
-  disabled: 'disabled',
+  disabled: 'true',
   type: 'plight'
 })</code></pre>
                   </div>
@@ -271,7 +255,7 @@
                     </div>
                     <pre><code>+button({
   text: 'Disabled', 
-  disabled: 'disabled',
+  disabled: 'true',
   type: 'light'
 })</code></pre>
                   </div>
@@ -749,7 +733,7 @@
     label: 'Label',
     id: 'input-4',
     placeholder: 'Placeholder',
-    disabled: 'disabled'
+    disabled: 'true'
   })</code></pre>
                   </div>
                 </div>
@@ -762,11 +746,11 @@
                       <form class="form-custom">
                         <div class="form-group form-customize">
                           <div>
-                            <label class="label" for="input-5">Label
+                            <label class="label" for="input-number">Label
                             </label>
                           </div>
                           <div class="input-field input-field--number js-input-number">
-                            <input class="form-control" type="number" placeholder="Amount (to the nearest dollar)" value="0" id="input-5" min="0" max="10" />
+                            <input class="form-control" type="number" placeholder="Amount (to the nearest dollar)" value="0" id="input-number" min="0" max="10" />
                             <div class="custom-number">
                               <div class="custom-number__btn custom-number__up js-btn-up"><i class="fas fa-plus"></i></div>
                               <div class="custom-number__btn custom-number__down js-btn-down"><i class="fas fa-minus"></i></div>
@@ -778,7 +762,7 @@
                     <pre><code>form.form-custom
   +group-input-field-base({
     label: 'Label',
-    id: 'input-5',
+    id: 'input-number',
     type: 'number',
     min: '0',
     max: '10',
@@ -796,12 +780,12 @@
                       <form class="form-custom">
                         <div class="form-group form-customize">
                           <div>
-                            <label class="label" for="input-6">Label
+                            <label class="label" for="input-file">Label
                             </label>
                           </div>
                           <div class="input-field input-field--file">
-                            <input class="form-control" type="file" id="input-6" multiple="multiple" />
-                            <label class="input-field__file-label" for="input-6">Choose file</label>
+                            <input class="form-control" type="file" id="input-file" multiple="multiple" />
+                            <label class="input-field__file-label" for="input-file">Choose file</label>
                           </div>
                         </div>
                       </form>
@@ -809,7 +793,7 @@
                     <pre><code>form.form-custom
   +group-input-field-base({
     label: 'Label',
-    id: 'input-6',
+    id: 'input-file',
     type: 'file',
     labelInput: 'Choose file'
   })</code></pre>
@@ -824,11 +808,11 @@
                       <form class="form-custom">
                         <div class="form-group form-customize">
                           <div>
-                            <label class="label" for="input-6">Label
+                            <label class="label" for="input-icon">Label
                             </label>
                           </div>
                           <div class="input-field input-field--icon-before"><span class="input-field__icon input-field__icon--before"><i class="oi oi-magnifying-glass"></i></span>
-                            <input class="form-control" type="text" placeholder="Input Icon" id="input-6" />
+                            <input class="form-control" type="text" placeholder="Input Icon" id="input-icon" />
                           </div>
                         </div>
                       </form>
@@ -836,7 +820,7 @@
                     <pre><code>form.form-custom
   +group-input-field-base({
     label: 'Label',
-    id: 'input-6',
+    id: 'input-icon',
     iconBefore: 'oi oi-magnifying-glass',
     placeholder: 'Input Icon'
   })</code></pre>
@@ -1763,7 +1747,7 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({ isOn: true})</code></pre>
+ +switcher({ isOn: true})</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1776,7 +1760,7 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher()</code></pre>
+ +switcher()</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1789,10 +1773,10 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({ 
-  isOn: true,
-  disabled: 'disabled',
-})</code></pre>
+ +switcher({ 
+    isOn: true,
+    disabled: 'disabled',
+ })</code></pre>
                   </div>
                 </div>
               </div>
@@ -1808,10 +1792,10 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: success
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: success
+ })</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1824,10 +1808,10 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: danger
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: danger
+ })</code></pre>
                   </div>
                 </div>
               </div>
@@ -1843,9 +1827,9 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-})</code></pre>
+ +switcher({
+   isOn: true,
+ })</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1858,10 +1842,10 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  size: large
-})</code></pre>
+ +switcher({
+   isOn: true,
+   size: large
+ })</code></pre>
                   </div>
                 </div>
               </div>
@@ -1877,13 +1861,13 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: success
-  size: 'large'
-  onIcon: 'fas fa-check'
-  offIcon: 'fas fa-times'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: success
+   size: 'large'
+   onIcon: 'fas fa-check'
+   offIcon: 'fas fa-times'
+ })</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1896,13 +1880,13 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: danger
-  size: 'large'
-  onIcon: 'fas fa-check'
-  offIcon: 'fas fa-times'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: danger
+   size: 'large'
+   onIcon: 'fas fa-check'
+   offIcon: 'fas fa-times'
+ })</code></pre>
                   </div>
                 </div>
               </div>
@@ -1917,13 +1901,13 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: success
-  size: 'large'
-  onIcon: 'fas fa-check'
-  offIcon: 'fas fa-times'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: success
+   size: 'large'
+   onIcon: 'fas fa-check'
+   offIcon: 'fas fa-times'
+ })</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1936,13 +1920,13 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: danger
-  size: 'large'
-  onIcon: 'fas fa-check'
-  offIcon: 'fas fa-times'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: danger
+   size: 'large'
+   onIcon: 'fas fa-check'
+   offIcon: 'fas fa-times'
+ })</code></pre>
                   </div>
                 </div>
               </div>
@@ -1958,12 +1942,12 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: success
-  onText: 'on'
-  offText: 'off'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: success
+   onText: 'on'
+   offText: 'off'
+ })</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -1976,12 +1960,12 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: danger
-  onText: 'on'
-  offText: 'off'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: danger
+   onText: 'on'
+   offText: 'off'
+ })</code></pre>
                   </div>
                 </div>
               </div>
@@ -1996,12 +1980,12 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: success
-  onText: 'on'
-  offText: 'off'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: success
+   onText: 'on'
+   offText: 'off'
+ })</code></pre>
                   </div>
                 </div>
                 <div class="col-4">
@@ -2014,12 +1998,12 @@
                       </form>
                     </div>
                     <pre><code>form.form-customize
-+switcher({
-  isOn: true,
-  type: danger
-  onText: 'on'
-  offText: 'off'
-})</code></pre>
+ +switcher({
+   isOn: true,
+   type: danger
+   onText: 'on'
+   offText: 'off'
+ })</code></pre>
                   </div>
                 </div>
               </div>

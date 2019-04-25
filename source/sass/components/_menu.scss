@@ -145,6 +145,11 @@
       font-size: 11.2px;
       padding: 4px 6px;
       top: 8px;
+
+      @include breakpoint-down(phone) {
+        top: 13px;
+        font-size: 12px;
+      }
     }
 
     &[aria-expanded='true'] {

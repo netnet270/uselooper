@@ -24454,7 +24454,7 @@ span.flatpickr-weekday:last-child {
     margin-right: 4px; }
 
 .input-desc {
-  color: #e6e8ed; }
+  color: #888c9b; }
 
 .input-radio-dropdown .input-radio:checked ~ .label-radio:after {
   transform: scale(1.2); }
@@ -24503,14 +24503,14 @@ span.flatpickr-weekday:last-child {
     outline: 0;
     box-shadow: 0 0 0 1px #346cb0; }
   .custom-select--isValid {
-    background: url("../images/ic-arrow-down-gray.svg") no-repeat right 0.75rem center, url("images/ic-is-valid.svg") no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
+    background: url("../images/ic-arrow-down-gray.svg") no-repeat right 0.75rem center, url("../images/ic-is-valid.svg") no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
     border-color: #00a28a;
     padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem); }
     .custom-select--isValid:focus {
       box-shadow: 0 0 0 1px #00a28a;
       border-color: #00a28a; }
   .custom-select--isInvalid {
-    background: url("../images/ic-arrow-down-gray.svg") no-repeat right 0.75rem center, url("images/ic-is-invalid.svg") no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
+    background: url("../images/ic-arrow-down-gray.svg") no-repeat right 0.75rem center, url("../images/ic-is-invalid.svg") no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, #fff, #f6f7f9);
     border-color: #b76ba3;
     padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem); }
     .custom-select--isInvalid:focus {
@@ -24785,6 +24785,10 @@ span.flatpickr-weekday:last-child {
     font-size: 11.2px;
     padding: 4px 6px;
     top: 8px; }
+    @media (max-width: 767.98px) {
+      .navbar-nav .nav-link .badge {
+        top: 13px;
+        font-size: 12px; } }
   .navbar-nav .nav-link[aria-expanded='true']:after {
     transform: rotate(90deg); }
 
@@ -25465,6 +25469,10 @@ span.flatpickr-weekday:last-child {
     .card-time-projects .card-header__dropdown .button > i,
     .card-time-tasks .card-header__dropdown .button > i {
       margin-left: -4px; }
+  @media (max-width: 767.98px) {
+    .card-time-projects .card-header .button > i,
+    .card-time-tasks .card-header .button > i {
+      margin-left: -5px; } }
 
 .card-time-projects .card-table .table,
 .card-time-tasks .card-table .table {

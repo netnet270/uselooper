@@ -1,9 +1,50 @@
-extends ue-02-user-profile
+extends modules/layout/_core
 
-block sidebar
-  +sidebar('User','ue-07-user-profile-settings.html')
+block head
+  +head(head.userProfile.title)
+     
+block body
+  .overlay-mobile.js-overlay
+  .main-wapper
+    +header()
+    block sidebar
+      +sidebar('User','ue-07-user-profile-settings.html')
 
-block menupage
-  +menuPage("Settings", "ue-07-user-profile-settings.html")
-      
-block content
+    main.site-content
+      header.site-header-cover
+        .site-header-cover__inner
+          .site-profile
+            a.user-avatar.user-avatar--xl(href="ue-02-user-profile.html")
+              img(src="images/profile.jpg", alt="user-avatar")
+            .site-profile__name  Beni Arisandi 
+            .site-profile__rank
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="fa fa-star")
+              i.color--yellow(class="far fa-star")
+            p.site-profile__position  Project Manager @CreativeDivision
+            p Huge fan of HTML, CSS and Javascript. Web design and open source lover.
+
+          .site-controls
+            +buttons-link({
+              text: '2,159 Followers', 
+              type: 'light'
+            })(
+              data-toggle="modal" 
+              data-target="#followersModal"
+            )
+            +buttons-link({
+              text: '136 Following', 
+              type: 'light'
+            })(
+              data-toggle="modal" 
+              data-target="#followingModal"
+            )
+
+        +modalFollower()
+        +modalFollowing()
+
+        block menupage
+          +menuPage("Settings", "ue-07-user-profile-settings.html")
+

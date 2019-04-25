@@ -29,7 +29,7 @@
   }
 
   &--isValid {
-    background: url('../images/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('images/ic-is-valid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, $bg-white, $bg-light-gray);
+    background: url('../images/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('../images/ic-is-valid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, $bg-white, $bg-light-gray);
     border-color: $cl-light-green;
     padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
 
@@ -40,7 +40,7 @@
   }
 
   &--isInvalid {
-    background: url('../images/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('images/ic-is-invalid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, $bg-white, $bg-light-gray);
+    background: url('../images/ic-arrow-down-gray.svg') no-repeat right .75rem center, url('../images/ic-is-invalid.svg') no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem), linear-gradient(180deg, $bg-white, $bg-light-gray);
     border-color: $cl-light-purple;
     padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
 

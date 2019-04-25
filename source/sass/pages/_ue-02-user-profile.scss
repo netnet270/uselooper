@@ -254,8 +254,15 @@
       &.show .dropdown-arrow {
         display: block;
       }
+
       .button > i {
         margin-left: -4px;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      .button > i {
+        margin-left: -5px;
       }
     }
   }

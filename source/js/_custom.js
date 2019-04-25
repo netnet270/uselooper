@@ -44,6 +44,11 @@ $(document).ready(function () {
     dateFormat: "Y-m-d"
   });
 
+  //close dropdown event handling
+  $(document).on('click', '.js-time-filter .dropdown-menu', function (e) {
+    e.stopPropagation();
+  });
+
   // modal
   (function modalScrollable() {
     $('.modal').on('shown.bs.modal', function () {
@@ -61,10 +66,10 @@ $(document).ready(function () {
 
   //chart chartCompletionTask
 
-  function drawCompletionTask(_data) {
+  function drawCompletionTask(element, _data) {
     if ($('#completionTask').length > 0) {
 
-      var _chart1 = new Chart(document.getElementById('completionTask'), {
+      var _chart1 = new Chart(document.getElementById(element), {
         type: "bar",
         data: _data,
         options: {
@@ -107,9 +112,7 @@ $(document).ready(function () {
     }
   }
 
-  var dataCompletionTasks = $('#completionTask').attr('dataset');
-  parseDataset = JSON.parse(dataCompletionTasks);
-  drawCompletionTask(parseDataset);
+  drawCompletionTask('completionTask', $('#completionTask').data('dataset'));
 
   //chart Tasks Performance
   $('[data-toggle="easypiechart"]').each(function () {
@@ -127,9 +130,9 @@ $(document).ready(function () {
     $(selector).easyPieChart(options);
   });
 
-  function drawAchievement(_data) {
+  function drawAchievement(element, _data) {
     if ($('#achievement').length > 0) {
-      var achievement = new Chart(document.getElementById('achievement'), {
+      var achievement = new Chart(document.getElementById(element), {
         type: "bar",
         data: _data,
         options: {
@@ -181,10 +184,8 @@ $(document).ready(function () {
       })
     }
   }
-  var dataAchievement = $('#achievement').attr('dataset');
-  datasetAchievement = JSON.parse(dataAchievement);
-  console.log(datasetAchievement[0])
-  drawAchievement(datasetAchievement[0]);
+
+  drawAchievement('achievement', $('#achievement').data('dataset'));
 
   //input Number
   function inputNumber() {

@@ -17,7 +17,7 @@ block body
               p.dashboard-header__pretitle Hi, Beni.
               p.dashboard-header__text Here’s what’s happening with your business today.
             .dashboard-header__dropdown
-              .dropdown
+              .dropdown.js-time-filter
                 +buttons({
                   text: 'This Week',
                   iconAfter: 'fa fa-fw fa-caret-down',
@@ -113,7 +113,7 @@ block body
           .col-12.col-lg-12.col-xl-4
             .card.completion-tasks
               .card-body
-                .card-title Completion Tasks
+                h4.card-title Completion Tasks
                 .card-chart
                   -
                     var dataCompletionTasks = {
@@ -125,7 +125,7 @@ block body
                       }]
                     }
 
-                  canvas(id="completionTask" width= "282px" height= "285px" dataset= dataCompletionTasks)
+                  canvas(id="completionTask" width= "282px" height= "285px" data-dataset= dataCompletionTasks)
 
           .col-12.col-lg-6.col-xl-4
             .card.tasks-performance

@@ -87,7 +87,7 @@ block body
           .achievement
             .achievement__header
               h3.achievement__title Achievement
-              .achievement__dropdown.dropdown
+              .achievement__dropdown.dropdown.js-time-filter
                 +buttons({
                   text: 'This Month',
                   iconAfter: 'fa fa-fw fa-caret-down',
@@ -153,24 +153,24 @@ block body
                       .card-chart
                         -
                           var dataAchievement = {
-                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-                            datasets: [
+                            'labels': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                            'datasets': [
                               {
-                                label: "Assigned tasks",
-                                data: [41, 20, 68, 17, 100, 83, 53],
-                                backgroundColor: "#00a28a",
-                                borderColor: "#00a28a"
+                                'label': 'Assigned tasks',
+                                'data': [41, 20, 68, 17, 100, 83, 53],
+                                'backgroundColor': '#00a28a',
+                                'borderColor': '#00a28a'
                               },
                               {
-                                label: "Completed tasks",
-                                data: [51, 14, 51, 63, 59, 83, 34],
-                                backgroundColor: "#5f4b8b",
-                                borderColor: "#5f4b8b"
+                                'label': 'Completed tasks',
+                                'data': [51, 14, 51, 63, 59, 83, 34],
+                                'backgroundColor': '#5f4b8b',
+                                'borderColor': '#5f4b8b'
                               }
                             ]
                           }
 
-                        canvas(id="achievement" width="1200px" height= "237px" dataset= dataAchievement)
+                        canvas(id="achievement" width="1200px" height= "237px" data-dataset= dataAchievement)
 
                 .col-xl-4.col-12
                   .card.card-overview
